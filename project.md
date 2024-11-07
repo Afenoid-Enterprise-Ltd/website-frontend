@@ -19,6 +19,7 @@ Basic description for the project
   ```
   `fix` representing fix indicates that the commit fixes a bug or sorts an issue, adjusted animation effect on home page transition
 
+
 ### Technologies in use
 - React + Typescript
 - Tailwind CSS

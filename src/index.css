@@ -1,68 +1,157 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-LightItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Regular.otf");
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
 }
 
-a {
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Italic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Medium.otf");
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  font-style: normal;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-MediumItalic.otf");
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-style: italic;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Semibold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-SemiboldItalic.otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Gambetta-BoldItalic.otf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-LightItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("/fonts/Proxima-Nova-RegularItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-MediumItalic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Semibold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-SemiboldItalic.otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-BoldItalic.otf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root{
+  --af-green: #224D20;
+  --af-lemon: #76A62E;
+  --af-yellow: #CCD311;
+  --af-light-lemon: #F0F7E2;
+  --af-dark-green: #0F261A;
+  --af-white: #F8FAF4;
+  --floral-white: #FFF9F2;
+  --af-light-grey: #EBEEEB;
+  --af-dark-grey: #9FA39B;
 }

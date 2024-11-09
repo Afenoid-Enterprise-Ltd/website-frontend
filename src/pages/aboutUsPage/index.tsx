@@ -1,9 +1,11 @@
 import { Outlet } from "../../ui";
+import { HeroSection, InfoSection } from "./components";
 
 const AboutUsPage = () => {
   return (
     <Outlet>
-      <p>This is the About Us Page</p>
+      <HeroSection/>
+      <InfoSection/>
     </Outlet>
   );
 }

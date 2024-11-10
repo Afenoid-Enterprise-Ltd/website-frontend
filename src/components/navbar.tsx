@@ -20,15 +20,18 @@ const Navbar: React.FC = () => {
       <MainLogo/>
       
       <div className="flex items-center justify-evenly gap-6">
-        {navlinks.map((navlink, index) => (
-          <Link 
+        {navlinks.map((navlink, index) => {
+
+          const isActive = location.pathname === navlink.link
+
+          return (<Link 
             to={navlink.link}
             key={index}
-            className={`text-afenoid-dark-green tracking-[0.09rem] cursor-pointer ${location.pathname === navlink.link ? "font-bold" : ""}`}
+            className={`transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer  duration-300 ${isActive ? "font-bold hover:scale-100" : "hover:scale-[1.05] hover:text-afenoid-lemon"}`}
           >
             {navlink.text}
           </Link>
-        ))}
+)})}
         <Button variant="primary" label="Contact Us" customClassName="font-light"/>
       </div>
     </nav>

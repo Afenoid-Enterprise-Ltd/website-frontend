@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { animate } from "framer-motion";
 import { Text, Button } from "../../../ui";
 import { HeroDiv } from "./heroDiv";
 import {
@@ -13,6 +14,60 @@ import {
   BankIcon,
   GlobeIcon,
 } from "../../../assets";
+
+interface CountUpProps {
+  start?: number;
+  end: number;
+}
+
+const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 } // Adjust as needed
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (observer) observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(start, end, {
+        duration: 8,
+        onUpdate(value) {
+          if (ref.current) {
+            ref.current.textContent = Math.round(value).toString();
+          }
+        },
+      });
+
+      return () => controls.stop();
+    }
+  }, [inView, start, end]);
+
+  return (
+    <span
+      ref={ref}
+      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green"
+    >
+      0
+    </span>
+  );
+};
 
 const InfoSection = () => {
   const heroStaticData = [
@@ -66,22 +121,22 @@ const InfoSection = () => {
   const numberData = [
     {
       icon: CreditCardIcon,
-      title: "200",
+      title: 200,
       description: "PCI DSS assessments carried out over the past 10 years.",
     },
     {
       icon: PeopleIcon,
-      title: "300",
+      title: 300,
       description: "Training sessions in the last 5years",
     },
     {
       icon: BankIcon,
-      title: "150",
+      title: 150,
       description: "Implementation conducted in the last 10 years",
     },
     {
       icon: GlobeIcon,
-      title: "50",
+      title: 50,
       description: "Providing services to clients in nearly 50 countries.",
     },
   ];
@@ -117,11 +172,11 @@ const InfoSection = () => {
         />
       </div>
       <div className="flex gap-12 mx-[5rem] my-[8rem]">
-        {numberData.map((solution, index) => (
+        {numberData.map((number, index) => (
           <Number
-            icon={solution.icon}
-            title={solution.title}
-            description={solution.description}
+            icon={number.icon}
+            title={number.title}
+            description={number.description}
             key={index}
           />
         ))}
@@ -205,7 +260,7 @@ export { InfoSection };
 
 type NumberProps = {
   icon: string;
-  title: string;
+  title: number;
   description: string;
 };
 
@@ -216,15 +271,10 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
         <img src={icon} alt="Icon Image" />
       </div>
       <div>
-        <Text
-          variant="h1"
-          fontFamily="gambetta"
-          fontWeight="medium"
-          align="center"
-          customClassName="my-[2rem]"
-        >
-          {title}<span className="text-[1.5rem]">+</span>
-        </Text>
+        <div className="my-[2rem]">
+          <CountUp end={title} />
+          <span className="text-[1.5rem]">+</span>
+        </div>
       </div>
       <div>
         <Text

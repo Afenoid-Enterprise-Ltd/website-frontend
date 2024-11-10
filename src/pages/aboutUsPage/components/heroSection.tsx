@@ -53,7 +53,7 @@ const HeroSection = () => {
             customClassName="text-[3rem]"
           >
             We <span className="font-bold">strengthen</span> organizations and{" "}
-            <span className="font-bold">equip</span> professionals
+            <span className="font-bold">equip</span> professionals.
           </Text>
         </div>
       </div>

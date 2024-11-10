@@ -20,7 +20,7 @@ export type TextAlign =
   | "start"
   | "justify";
 
-export type TextFamily = "gambetta" | "proxima-nova" | "playfair-display";
+export type TextFamily = "gambetta" | "proxima-nova" | "playfair-display" | "montserrat";
 
 export type TextWeight =
   | "thin"

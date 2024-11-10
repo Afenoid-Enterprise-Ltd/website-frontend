@@ -20,7 +20,8 @@ export default {
       fontFamily: {
         gambetta: ["Gambetta", "serif"],
         "proxima-nova": ["Proxima Nova", "sans-serif"],
-        "playfair-display": ["Playfair Display", "serif"]
+        "playfair-display": ["Playfair Display", "serif"],
+        montserrat: ["Montserrat", "sans-serif"]
       },
       screens: {
         xs: "320px",

@@ -1,10 +1,12 @@
 import { Outlet } from "../../ui";
+import { HeroSection, CaseStudySection } from "./components";
 
 
 const ResourcesPage = () => {
   return (
     <Outlet>
-      This is the Resources Page
+      <HeroSection/>
+      <CaseStudySection/>
      </Outlet>
   );
 }

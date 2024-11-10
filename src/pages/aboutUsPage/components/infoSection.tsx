@@ -47,7 +47,7 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   useEffect(() => {
     if (inView) {
       const controls = animate(start, end, {
-        duration: 8,
+        duration: 3,
         onUpdate(value) {
           if (ref.current) {
             ref.current.textContent = Math.round(value).toString();

@@ -13,6 +13,10 @@ import MissionImg from "./mission-img.png";
 import PurposeImg from "./purpose-img.png";
 import StoryImg from "./story-img.png";
 import TeamImg from "./team-img.png";
+import CaseStudyImg1 from "./case-study-1.png";
+import CaseStudyImg2 from "./case-study-2.png";
+import CaseStudyImg3 from "./case-study-3.png";
+import ArticleImg1 from "./article-1.png"
 
 export {
   MainLogoSVG,
@@ -29,5 +33,9 @@ export {
   CreditCardIcon,
   PeopleIcon,
   BankIcon,
-  GlobeIcon
+  GlobeIcon,
+  CaseStudyImg1,
+  CaseStudyImg2,
+  CaseStudyImg3,
+  ArticleImg1
 };

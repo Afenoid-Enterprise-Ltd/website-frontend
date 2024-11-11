@@ -16,10 +16,10 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
       <div className="w-1/2 flex flex-col gap-4">
         <div>
           <Text
+            variant="h3"
             color="af-dark-green"
             fontFamily="gambetta"
             fontWeight="medium"
-            customClassName="text-[2rem]"
           >
             {title}
           </Text>

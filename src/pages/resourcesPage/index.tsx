@@ -1,5 +1,5 @@
 import { Outlet } from "../../ui";
-import { HeroSection, CaseStudySection } from "./components";
+import { HeroSection, CaseStudySection, AccordionSection } from "./components";
 
 
 const ResourcesPage = () => {
@@ -7,6 +7,7 @@ const ResourcesPage = () => {
     <Outlet>
       <HeroSection/>
       <CaseStudySection/>
+      <AccordionSection/>
      </Outlet>
   );
 }

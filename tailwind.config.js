@@ -45,17 +45,17 @@ export default {
       },
       fontSize: {
         //Header element styles
-        "h1": ["3.25rem", { lineHeight: "114.286%", fontWeight: 700 }],
-        "h2": ["2.5rem", { lineHeight: "128%", fontWeight: 600 }],
-        "h3": ["2.00rem", { lineHeight: "128.571%", fontWeight: 600 }],
-        "h4": ["1.75rem", { lineHeight: "150%", fontWeight: 500 }],
-        "h5": ["1.25rem", { lineHeight: "140%", fontWeight: 500 }],
-        "h6": ["1.125rem", { lineHeight: "175%", fontWeight: 500 }],
+        "h1": ["3.25rem", ],
+        "h2": ["2.5rem", ],
+        "h3": ["2.00rem", ],
+        "h4": ["1.75rem", ],
+        "h5": ["1.25rem", ],
+        "h6": ["1.125rem", ],
 
         // Body variant styles - [Large, Medium, Regular, Small]
-        "body-reg": ["1rem", { lineHeight: "175%", fontWeight: 400 }],
-        "caption-mid": ["0.875rem", { lineHeight: "200%", fontWeight: 500 }],
-        "caption-reg": ["0.875rem", { lineHeight: "200%", fontWeight: 400 }],
+        "body-reg": ["1rem", ],
+        "caption-mid": ["0.875rem", ],
+        "caption-reg": ["0.875rem", ],
       }
     },
   },

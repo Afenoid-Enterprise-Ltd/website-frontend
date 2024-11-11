@@ -16,7 +16,8 @@ import TeamImg from "./team-img.png";
 import CaseStudyImg1 from "./case-study-1.png";
 import CaseStudyImg2 from "./case-study-2.png";
 import CaseStudyImg3 from "./case-study-3.png";
-import ArticleImg1 from "./article-1.png"
+import ArticleImg1 from "./article-1.png";
+import ResourcesPageHeroImg from "./resource-page-hero-img.png";
 
 export {
   MainLogoSVG,
@@ -37,5 +38,6 @@ export {
   CaseStudyImg1,
   CaseStudyImg2,
   CaseStudyImg3,
-  ArticleImg1
+  ArticleImg1,
+  ResourcesPageHeroImg
 };

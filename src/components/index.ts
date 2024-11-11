@@ -5,3 +5,4 @@ export * from "./mainLogo";
 export * from "./footerLogo";
 export * from "./articleCard";
 export * from "./caseStudyCard";
+export * from  "./consultation";

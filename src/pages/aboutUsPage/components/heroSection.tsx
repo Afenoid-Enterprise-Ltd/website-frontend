@@ -48,9 +48,11 @@ const HeroSection = () => {
             At Afenoid
           </Text>
           <Text
+            variant="h2"
             color="af-green"
             fontFamily="gambetta"
             customClassName="text-[3rem]"
+            fontWeight="light"
           >
             We <span className="font-bold">strengthen</span> organizations and{" "}
             <span className="font-bold">equip</span> professionals.
@@ -62,4 +64,3 @@ const HeroSection = () => {
 };
 
 export { HeroSection };
-

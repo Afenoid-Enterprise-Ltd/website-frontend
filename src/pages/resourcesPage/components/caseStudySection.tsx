@@ -62,7 +62,7 @@ const CaseStudySection = () => {
           we help businesses achieve compliance and drive growth.{" "}
         </Text>
       </div>
-      <div className="bg-afenoid-light-grey p-10">
+      <div className="bg-afenoid-light-grey p-[5rem]">
         <div className="my-4">
           <Text
             variant="h2"
@@ -101,7 +101,7 @@ const CaseStudySection = () => {
         </div>
       </div>
 
-      <div className="p-10">
+      <div className="p-[5rem]">
         <ArticleCard
           title={articleData.title}
           image={articleData.image}

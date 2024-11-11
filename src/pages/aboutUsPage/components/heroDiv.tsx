@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "../../../ui";
+import { motion } from "framer-motion";
 
 type HeroText = {
   caption: string;
@@ -13,11 +14,10 @@ type HeroDivProps = {
   reverse?: boolean;
 };
 
-const HeroDiv: React.FC<HeroDivProps> = ({
-  heroTexts,
-  image,
-  reverse,
-}) => {
+const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
+  const initialX = reverse ? 300 : -300;
+  const imgX = reverse ? -800 : 800;
+
   return (
     <div
       className={`flex justify-between items-center gap-32 ${
@@ -25,36 +25,59 @@ const HeroDiv: React.FC<HeroDivProps> = ({
       }`}
     >
       <div className="w-1/2 flex flex-col gap-3">
-        <Text
-          variant="h6"
-          color="af-green"
-          fontFamily="montserrat"
-          customClassName="uppercase"
+        <motion.div
+          initial={{ x: initialX, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
         >
-          {heroTexts.caption}
-        </Text>
-        <Text
-          variant="h1"
-          color="af-dark-green"
-          fontFamily="gambetta"
-          fontWeight="medium"
+          <Text
+            variant="h6"
+            color="af-green"
+            fontFamily="montserrat"
+            customClassName="uppercase"
+          >
+            {heroTexts.caption}
+          </Text>
+        </motion.div>
+
+        <motion.div
+          initial={{ x: initialX * 2.5, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
         >
-          {heroTexts.title}
-        </Text>
-        <Text variant="h5" fontFamily="proxima-nova" fontWeight="light">
-          {heroTexts.description}
-        </Text>
+          <Text
+            variant="h1"
+            color="af-dark-green"
+            fontFamily="gambetta"
+            fontWeight="medium"
+          >
+            {heroTexts.title}
+          </Text>
+        </motion.div>
+        <motion.div
+          initial={{ x: initialX * 2.5, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+        >
+          <Text variant="h5" fontFamily="proxima-nova" fontWeight="light">
+            {heroTexts.description}
+          </Text>
+        </motion.div>
       </div>
-      <div className="w-1/2 h-auto">
+      <motion.div
+        className="w-1/2 h-auto"
+        initial={{ x: imgX * 2.5, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+      >
         <img
           src={image}
           alt="An Image for the Hero Page"
           className="w-full h-full"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-
-export {HeroDiv};
+export { HeroDiv };

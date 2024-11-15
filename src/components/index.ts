@@ -5,4 +5,6 @@ export * from "./mainLogo";
 export * from "./footerLogo";
 export * from "./articleCard";
 export * from "./caseStudyCard";
-export * from  "./consultation";
+export * from  "./callToAction";
+export * from "./choiceAfenoid";
+export * from "./slogan";

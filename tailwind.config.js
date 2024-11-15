@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "afenoid-green": "#224D20",
+        "afenoid-green": "#224C1F",
         "afenoid-yellow": "#CCD311",
         "afenoid-lemon": "#76A62E",
         "afenoid-light-lemon": "#F0F7E2",

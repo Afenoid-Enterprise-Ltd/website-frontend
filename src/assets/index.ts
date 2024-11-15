@@ -18,10 +18,26 @@ import CaseStudyImg2 from "./case-study-2.png";
 import CaseStudyImg3 from "./case-study-3.png";
 import ArticleImg1 from "./article-1.png";
 import ResourcesPageHeroImg from "./resource-page-hero-img.png";
+import CenBankLogo from "./cen-bank-logo.svg";
+import EcobankLogo from "./ecobank-logo.svg";
+import GalaxyBackboneLogo from "./galaxy-backbone-logo.svg";
+import KeystoneBankLogo from "./keystone-bank-logo.svg";
+import MTNLogo from "./mtn-logo.svg";
+import PremiumPensionLogo from "./premium-pension-logo.svg";
+import StandardCharteredLogo from "./standard-chartered-logo.svg";
+import SterlingBankLogo from "./sterling-bank-logo.svg";
+import ServicesImg1 from "./services-1.png";
+import ServicesImg2 from "./services-2.png";
+import ServicesImg3 from "./services-3.png";
+import TrainingImg1 from "./training-1.png";
+import TrainingImg2 from "./training-2.png";
+import TrainingImg3 from "./training-3.png";
+import ProtectionImg from "./protection-img.png";
+import ReliabilityImg from "./reliability.png";
 
 export {
   MainLogoSVG,
-  FooterLogoSVG,
+  FooterLogoSVG, 
   SkylineImg,
   MissionImg,
   PurposeImg,
@@ -39,5 +55,21 @@ export {
   CaseStudyImg2,
   CaseStudyImg3,
   ArticleImg1,
-  ResourcesPageHeroImg
+  ResourcesPageHeroImg,
+  CenBankLogo,
+  EcobankLogo,
+  GalaxyBackboneLogo,
+  KeystoneBankLogo,
+  MTNLogo,
+  PremiumPensionLogo,
+  StandardCharteredLogo,
+  SterlingBankLogo,
+  ServicesImg1,
+  ServicesImg2,
+  ServicesImg3,
+  TrainingImg1,
+  TrainingImg2,
+  TrainingImg3,
+  ProtectionImg,
+  ReliabilityImg
 };

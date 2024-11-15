@@ -1,17 +1,23 @@
-import { Text, Button } from "../ui";
+import React from "react";
+import { Text, } from "../ui";
 
+type CallToActionProps = {
+  title: string;
+  explanation: string;
+  button: React.ReactNode;
+}
 
-const Consultation = () => {
+const CallToAction: React.FC<CallToActionProps> = ({title, explanation, button}) => {
   return (
     <div className="w-full flex justify-center items-center my-[10rem]">
-      <div className="flex flex-col justify-center items-center gap-3">
+      <div className="w-[50%] flex flex-col justify-center items-center gap-3">
         <Text
           variant="h3"
           align="center"
           color="af-dark-green"
           fontWeight="medium"
         >
-          Ready to have a conversation with us?
+          {title}
         </Text>
         <Text
           variant="h5"
@@ -20,16 +26,12 @@ const Consultation = () => {
           fontWeight="light"
           fontFamily="proxima-nova"
         >
-          Schedule a meeting with a consultant right away.
+         { explanation}
         </Text>
-        <Button
-          variant="primary"
-          label="Book a Consultation"
-          customClassName="mt-[2rem]"
-        />
+        {button}
       </div>
     </div>
   );
 };
 
-export { Consultation };
+export { CallToAction };

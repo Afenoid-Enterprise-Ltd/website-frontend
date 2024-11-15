@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { MainLogo } from "./mainLogo";
 import { Button } from "../ui";
 import { Link, useLocation } from "react-router-dom";
@@ -14,9 +14,25 @@ const Navbar: React.FC = () => {
 
   const location = useLocation();
 
+  const [scrollDetected, setScrollDetected] = useState<boolean>(false);
+  const [offset, setOffset] = useState<number >(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollDetected(true);
+      setOffset(window.pageYOffset)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, [])
 
   return (
-    <nav className="bg-afenoid-white flex items-center justify-between px-[5rem] py-2 sticky top-0 ">
+    <nav className={`h-[10vh] bg-afenoid-white flex items-center justify-between px-[5rem] py-2 sticky top-0 z-[9999] ${scrollDetected && offset !== 0 ? "shadow-lg" : ""}`}>
       <MainLogo/>
       
       <div className="flex items-center justify-evenly gap-6">
@@ -27,7 +43,7 @@ const Navbar: React.FC = () => {
           return (<Link 
             to={navlink.link}
             key={index}
-            className={`transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer  duration-300 ${isActive ? "font-bold hover:scale-100" : "hover:scale-[1.05] hover:text-afenoid-lemon"}`}
+            className={`font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer  duration-300 ${isActive ? "font-bold hover:scale-100" : "hover:scale-[1.05] hover:text-afenoid-lemon"}`}
           >
             {navlink.text}
           </Link>

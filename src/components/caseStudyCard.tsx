@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { Text, Button } from "../ui";
 
 type CaseStudyCardProps = {
@@ -14,7 +14,11 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
   return (
     <div className="flex flex-col gap-5 h-full">
       <div className="flex-grow-[4] flex">
-        <img src={image} alt="Case Study Image" className="h-full w-full object-cover flex-1" />
+        <img
+          src={image}
+          alt="Case Study Image"
+          className="h-full w-full object-cover flex-1"
+        />
       </div>
       <Text
         variant="h5"
@@ -33,7 +37,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         {description}
       </Text>
       <div>
-        <Button variant="secondary" label="Learn More" />
+        <Link to = "/">
+          <Button variant="secondary" label="Learn More" />
+        </Link>
       </div>
     </div>
   );

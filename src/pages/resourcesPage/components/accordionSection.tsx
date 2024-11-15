@@ -1,9 +1,7 @@
-
-
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "./accordion";
-import { Consultation } from "../../../components";
-import { Text } from "../../../ui";
+import { CallToAction } from "../../../components";
+import { Text, Button } from "../../../ui";
 
 const AccordionSection = () => {
   return (
@@ -19,6 +17,7 @@ const AccordionSection = () => {
           >
             Frequently Asked Questions
           </Text>
+          <p></p>
           <Text
             variant="h5"
             fontWeight="medium"
@@ -28,7 +27,7 @@ const AccordionSection = () => {
             Can't find the answer you're looking for? Reach out to our service
             support team with{" "}
             <Link
-              to=""
+              to="mailto:serveme@afenoid.com"
               className="font-semibold text-afenoid-lemon underline underline-offset-2"
             >
               serveme@afenoid.com
@@ -72,7 +71,17 @@ const AccordionSection = () => {
         </Accordion>
       </div>
 
-      <Consultation/>
+      <CallToAction
+          title="Ready to have a conversation with us?"
+          explanation="Schedule a meeting with a consultant right away"
+          button={
+            <Button
+              variant="primary"
+              label="Book a Consultation"
+              customClassName="mt-[2rem"
+            />
+          }
+        />
     </div>
   );
 };

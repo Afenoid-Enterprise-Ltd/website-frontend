@@ -5,15 +5,12 @@ import { HeroDiv } from "./heroDiv";
 import {
   StoryImg,
   TeamImg,
-  VerifiedIcon,
-  MoneyHandIcon,
-  SmileyIcon,
-  RecycleIcon,
   CreditCardIcon,
   PeopleIcon,
   BankIcon,
   GlobeIcon,
 } from "../../../assets";
+import { CallToAction, ChoiceAfenoid } from "../../../components";
 
 interface CountUpProps {
   start?: number;
@@ -88,33 +85,6 @@ const InfoSection = () => {
           "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISMS and BCMS experts, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our French-speaking auditors and implementers ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
       },
       image: TeamImg,
-    },
-  ];
-
-  const solutionData = [
-    {
-      icon: VerifiedIcon,
-      title: "Credible",
-      description:
-        "We are ethical, competent, proficient, professional, authentic, honest, trust-worthy and reliable.",
-    },
-    {
-      icon: RecycleIcon,
-      title: "Agile",
-      description:
-        "We are responsive, astute, enthusiastic, adaptable, dynamic, diligent and resilient.",
-    },
-    {
-      icon: SmileyIcon,
-      title: "Respectful",
-      description:
-        "We are relationship-centred, kind, compassionate, empathetic and friendly.",
-    },
-    {
-      icon: MoneyHandIcon,
-      title: "Enterprising",
-      description:
-        "We are profitable, resourceful, capable, creative and courageous.",
     },
   ];
 
@@ -194,38 +164,18 @@ const InfoSection = () => {
       </section>
 
       <div>
-        <Text
-          variant="h2"
-          align="center"
-          color="af-dark-green"
-          fontWeight="medium"
-          fontFamily="gambetta"
-          customClassName="mb-3"
-        >
-          Why choose Afenoid?
-        </Text>
-        <Text
-          variant="h3"
-          align="center"
-          color="af-dark-green"
-          fontWeight="light"
-          fontFamily="proxima-nova"
-        >
-          Here's why we are the best provider for your security solutions
-        </Text>
-
-        <div className="flex gap-12 my-12">
-          {solutionData.map((solution, index) => (
-            <Solution
-              icon={solution.icon}
-              title={solution.title}
-              description={solution.description}
-              key={index}
+        <ChoiceAfenoid />
+        <CallToAction
+          title="Ready to have a conversation with us?"
+          explanation="Schedule a meeting with a consultant right away"
+          button={
+            <Button
+              variant="primary"
+              label="Book a Consultation"
+              customClassName="mt-[2rem"
             />
-          ))}
-        </div>
-
-        
+          }
+        />
       </div>
     </section>
   );
@@ -254,48 +204,6 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
       <div>
         <Text
           variant="h6"
-          fontFamily="proxima-nova"
-          fontWeight="light"
-          align="center"
-          customClassName=""
-        >
-          {description}
-        </Text>
-      </div>
-    </div>
-  );
-};
-
-type SolutionProps = {
-  icon: string;
-  title: string;
-  description: string;
-};
-
-export const Solution: React.FC<SolutionProps> = ({
-  icon,
-  title,
-  description,
-}) => {
-  return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="bg-[#9bc73c28] p-4 rounded-full">
-        <img src={icon} alt="Icon Image" />
-      </div>
-      <div>
-        <Text
-          variant="h5"
-          fontFamily="gambetta"
-          fontWeight="semi-bold"
-          align="center"
-          customClassName="uppercase"
-        >
-          {title}
-        </Text>
-      </div>
-      <div>
-        <Text
-          variant="h5"
           fontFamily="proxima-nova"
           fontWeight="light"
           align="center"

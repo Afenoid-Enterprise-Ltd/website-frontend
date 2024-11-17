@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
       title: "Company",
       array: [
         { name: "About Us", route: "/about-us" },
-        { name: "Our Services", route: "/our-services" },
+        { name: "Our Services", route: "/services" },
         { name: "Resources", route: "/resources" },
         { name: "Careers", route: "/careers" },
       ],
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
     {
       title: "Support",
       array: [
-        { name: "FAQs", route: "/faqs" },
+        { name: "FAQs", route: "/resources/#faqs" },
         { name: "Contact Us", route: "/contact-us" },
       ],
     },

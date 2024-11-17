@@ -1,10 +1,10 @@
 import { Text, Button } from "../../../ui";
-import { SkylineImg } from "../../../assets";
+import { SkylineImg, HomeHeroImage } from "../../../assets";
 
 const HeroSection = () => {
   return (
-    <section className="w-screen h-[90vh] relative px-[5rem] py-[10rem]">
-      <div className="flex justify-between items-center">
+    <section className="w-screen h-[90vh] relative  ">
+      <div className="flex justify-between items-center px-[5rem]">
         <div className="w-1/2">
           <Text
             variant="h1"
@@ -29,7 +29,9 @@ const HeroSection = () => {
           </Text>
           <Button variant="primary" label="Book a Consultaion" customClassName="mb-6"/>
         </div>
-        <div></div>
+        <div className="w-1/2">
+          <img src={HomeHeroImage} alt="Hero Image" />
+        </div>
       </div>
 
       <div className="absolute bottom-0">

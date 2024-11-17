@@ -1,6 +1,7 @@
 import { HeroDiv } from "./heroDiv";
 import { MissionImg, PurposeImg } from "../../../assets";
 import { Slogan } from "../../../components";
+import { Text } from "../../../ui";
 
 const HeroSection = () => {
   const heroStaticData = [
@@ -36,7 +37,28 @@ const HeroSection = () => {
           />
         ))}
       </section>
-      <Slogan/>
+      <Slogan>
+        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
+          <Text
+            variant="body-reg"
+            color="af-green"
+            fontFamily="proxima-nova"
+            customClassName="uppercase"
+          >
+            At Afenoid
+          </Text>
+          <Text
+            variant="h2"
+            color="af-green"
+            fontFamily="gambetta"
+            customClassName="text-[3rem]"
+            fontWeight="light"
+          >
+            We <span className="font-bold">strengthen</span> organizations and{" "}
+            <span className="font-bold">equip</span> professionals.
+          </Text>
+        </div>
+      </Slogan>
     </section>
   );
 };

@@ -45,17 +45,17 @@ export default {
       },
       fontSize: {
         //Header element styles
-        "h1": ["3.25rem", ],
-        "h2": ["2.5rem", ],
-        "h3": ["2.00rem", ],
-        "h4": ["1.75rem", ],
-        "h5": ["1.25rem", ],
-        "h6": ["1.125rem", ],
+        "h1": ["3.25rem", ], //52px
+        "h2": ["2.5rem", ], //40px
+        "h3": ["2.00rem", ], //32px
+        "h4": ["1.75rem", ], //28px
+        "h5": ["1.25rem", ], //20px
+        "h6": ["1.125rem", ], //18px
 
         // Body variant styles - [Large, Medium, Regular, Small]
-        "body-reg": ["1rem", ],
-        "caption-mid": ["0.875rem", ],
-        "caption-reg": ["0.875rem", ],
+        "body-reg": ["1rem", ], //16px
+        "caption-mid": ["0.875rem", ], //14px
+        "caption-reg": ["0.875rem", ], //14px
       }
     },
   },

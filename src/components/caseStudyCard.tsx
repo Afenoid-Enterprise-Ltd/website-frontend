@@ -13,7 +13,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
 
   return (
     <div className="flex flex-col gap-5 h-full">
-      <div className="flex-grow-[4] flex">
+      <div className="flex-grow-[4] flex h-[15rem]">
         <img
           src={image}
           alt="Case Study Image"

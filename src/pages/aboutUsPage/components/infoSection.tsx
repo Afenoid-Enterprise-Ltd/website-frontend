@@ -172,7 +172,7 @@ const InfoSection = () => {
             <Button
               variant="primary"
               label="Book a Consultation"
-              customClassName="mt-[2rem"
+              customClassName="mt-[2rem]"
             />
           }
         />

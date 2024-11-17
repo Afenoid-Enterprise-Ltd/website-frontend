@@ -25,7 +25,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
 
   return (
     <div
-      className={`flex justify-between items-center gap-32  mb-12 ${
+      className={`flex justify-between items-center gap-32 mb-12 ${
         reverse ? "flex-row-reverse" : ""
       }`}
     >
@@ -60,7 +60,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </motion.div>
         <motion.div
-          initial={{ x: initialX * 2.5, opacity: 0 }}
+          initial={{ x: initialX * 3.0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
         >
@@ -68,7 +68,11 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
             {heroTexts.description}
           </Text>
         </motion.div>
-        <motion.div>
+        <motion.div
+        initial={{ x: initialX * 2, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+        >
           <Link to = "/">
             <Button variant="secondary" label="Learn more" />
           </Link>

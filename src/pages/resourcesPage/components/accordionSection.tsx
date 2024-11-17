@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Accordion, AccordionItem } from "./accordion";
+import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 

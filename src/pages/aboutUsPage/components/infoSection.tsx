@@ -152,7 +152,7 @@ const InfoSection = () => {
         ))}
       </div>
 
-      <section className="flex flex-col gap-28 my-[7rem]">
+      <section className="flex flex-col gap-28 my-[7rem] px-[15rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}
@@ -172,7 +172,7 @@ const InfoSection = () => {
             <Button
               variant="primary"
               label="Book a Consultation"
-              customClassName="mt-[2rem"
+              customClassName="mt-[2rem]"
             />
           }
         />

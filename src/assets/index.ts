@@ -32,8 +32,19 @@ import ServicesImg3 from "./services-3.png";
 import TrainingImg1 from "./training-1.png";
 import TrainingImg2 from "./training-2.png";
 import TrainingImg3 from "./training-3.png";
+import OverviewImg1 from "./overview-1.png";
+import OverviewImg2 from "./overview-2.png";
+import OverviewImg3 from "./overview-3.png";
+import DigitalTrustImg from "./digital-trust-img.png";
 import ProtectionImg from "./protection-img.png";
 import ReliabilityImg from "./reliability.png";
+import HomeHeroImage from "./home-hero.png";
+import IsacaLogo from "./isaca-logo.svg";
+import PecbLogo from "./pecb-logo.svg";
+import SwiftLogo from "./swift-logo.svg";
+import PciLogo from "./pci-logo.svg";
+import ApmgLogo from "./apmg-logo.svg";
+import NistLogo from "./nist-logo.svg";
 
 export {
   MainLogoSVG,
@@ -71,5 +82,16 @@ export {
   TrainingImg2,
   TrainingImg3,
   ProtectionImg,
-  ReliabilityImg
+  ReliabilityImg,
+  HomeHeroImage,
+  IsacaLogo,
+  PecbLogo,
+  SwiftLogo,
+  PciLogo,
+  ApmgLogo,
+  NistLogo,
+  OverviewImg1,
+  OverviewImg2,
+  OverviewImg3,
+  DigitalTrustImg
 };

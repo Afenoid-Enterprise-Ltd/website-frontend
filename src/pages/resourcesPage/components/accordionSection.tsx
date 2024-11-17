@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Accordion, AccordionItem } from "./accordion";
+import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
@@ -36,7 +36,7 @@ const AccordionSection = () => {
         </div>
       </div>
 
-      <div className="p-[5rem]">
+      <div className="p-[5rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas

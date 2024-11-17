@@ -1,9 +1,12 @@
 import { Outlet } from "../../ui";
+import { HeroSection, MainSection, MinorSection } from "./components";
 
 const ServicesPage = () => {
   return (
     <Outlet>
-      This is the Services Page
+      <HeroSection/>
+      <MainSection/>
+      <MinorSection/>
      </Outlet>
   );
 }

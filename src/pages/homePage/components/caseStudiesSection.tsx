@@ -1,12 +1,29 @@
+import React, { } from "react";
 import { Link } from "react-router-dom";
 import { Text, Button } from "../../../ui";
 import { CallToAction } from "../../../components";
 import { CaseStudyImg1 } from "../../../assets";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+
+import "flickity/css/flickity.css";
+import Flickity from "react-flickity-component";
+
+const flickityOptions = {
+  // Options for Flickity
+  groupCells: true,
+  wrapAround: true,
+  autoPlay: 3000, // AutoPlay in milliseconds
+  prevNextButtons: true,
+  pageDots: false,
+};
+
+type CarouselItem = {
+  image: string;
+  title: string;
+  type: string;
+};
 
 const CaseStudiesSection = () => {
-  const caseStudySlides = [
+  const caseStudySlides: CarouselItem[] = [
     {
       image: CaseStudyImg1,
       title: "How ISMS compliance is influence corporate information",
@@ -53,23 +70,25 @@ const CaseStudiesSection = () => {
             We help digital-age organisations to become more resilient and equip
             their professionals to become more competent.
           </Text>
-          <div>
-            {/* <HomeCaseStudyCard
-              image={CaseStudyImg1}
-              title="How ISMS compliance is influence corporate information"
-              type="pci dss"
-            /> */}
-            <Swiper>
+          <div className="w-full relative">
+            <Flickity
+              className="carousel"
+              elementType="div"
+              options={flickityOptions}
+              disableImagesLoaded={false}
+              reloadOnUpdate
+              static
+            >
               {caseStudySlides.map((caseStudySlide, index) => (
-                <SwiperSlide key={index}>
+                <div key={index} className="carousel-cell">
                   <HomeCaseStudyCard
                     image={caseStudySlide.image}
                     title={caseStudySlide.title}
                     type={caseStudySlide.type}
                   />
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
+            </Flickity>
           </div>
         </div>
       </div>
@@ -103,7 +122,7 @@ export const HomeCaseStudyCard: React.FC<HomeCaseStudyCardProps> = ({
   type,
 }) => {
   return (
-    <div className="bg-white w-[18.5rem]">
+    <div className="bg-white w-[30rem]">
       <div>
         <img src={image} alt="" />
       </div>

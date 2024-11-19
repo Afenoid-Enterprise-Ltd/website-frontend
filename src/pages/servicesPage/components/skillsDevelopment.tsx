@@ -4,7 +4,9 @@
 
 const SkillsDevelopment = () => {
   return (
-    <section></section>
+    <section>
+      
+    </section>
   );
 }
  

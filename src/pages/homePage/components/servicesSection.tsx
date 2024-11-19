@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Text } from "../../../ui";
 import {
   ServicesImg1,
@@ -8,6 +9,8 @@ import {
   TrainingImg3,
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ServicesSection = () => {
   const caseStudyData = [
@@ -52,6 +55,8 @@ const ServicesSection = () => {
     },
   ];
 
+
+
   return (
     <section>
       <div>
@@ -71,6 +76,7 @@ const ServicesSection = () => {
               description={caseStudy.description}
               image={caseStudy.image}
               key={index}
+              
             />
           ))}
         </div>
@@ -90,10 +96,9 @@ const ServicesSection = () => {
             color="af-green"
             fontFamily="gambetta"
             customClassName="text-[3rem]"
-            fontWeight="light"
+            fontWeight="medium"
           >
-            We <span className="font-bold">strengthen</span> organizations and{" "}
-            <span className="font-bold">equip</span> professionals.
+            We strengthen organizations and equip professionals.
           </Text>
         </div>
       </Slogan>
@@ -107,7 +112,7 @@ const ServicesSection = () => {
         >
           Our Training
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem]">
+        <div className="flex justify-between items-start gap-12 px-[5rem] mb-[10rem]">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

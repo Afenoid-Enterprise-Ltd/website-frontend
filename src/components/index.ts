@@ -8,3 +8,4 @@ export * from "./caseStudyCard";
 export * from  "./callToAction";
 export * from "./choiceAfenoid";
 export * from "./slogan";
+export * from "./accordion";

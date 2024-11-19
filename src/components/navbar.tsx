@@ -12,7 +12,9 @@ const Navbar: React.FC = () => {
     {text: "Case Studies", link: "/case-studies"},
   ];
 
-  const location = useLocation();
+  const {pathname} = useLocation();
+
+  let name = pathname.split("/")[1];
 
   const [scrollDetected, setScrollDetected] = useState<boolean>(false);
   const [offset, setOffset] = useState<number >(0);
@@ -38,7 +40,8 @@ const Navbar: React.FC = () => {
       <div className="flex items-center justify-evenly gap-6">
         {navlinks.map((navlink, index) => {
 
-          const isActive = location.pathname === navlink.link
+          const linkText = navlink.link.split("/")[1];
+          const isActive = name === linkText;
 
           return (<Link 
             to={navlink.link}

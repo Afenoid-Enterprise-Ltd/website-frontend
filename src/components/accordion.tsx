@@ -21,6 +21,7 @@ interface AccordionProps {
   value?: string | null;
   onChange?: (value: string | null) => void;
   [key: string]: any;
+  fontType?: string;
 }
 
 // Types for AccordionItem props
@@ -29,6 +30,8 @@ interface AccordionItemProps {
   value: string;
   trigger: ReactNode;
   [key: string]: any;
+  mainFontType?: string;
+  minorFontType?: string;
 }
 
 const AccordionContext = createContext<AccordionContextProps | undefined>(undefined);
@@ -56,7 +59,7 @@ const Accordion:React.FC<AccordionProps> = ({
 
 export {Accordion}
 
-const AccordionItem = ({ children, value, trigger, ...props }: AccordionItemProps) => {
+const AccordionItem = ({ children, value, trigger, mainFontType, minorFontType, ...props }: AccordionItemProps) => {
   const context = useContext(AccordionContext);
   if (!context) {
     throw new Error("AccordionItem must be used within an Accordion");
@@ -75,11 +78,11 @@ const AccordionItem = ({ children, value, trigger, ...props }: AccordionItemProp
   }, [open, children]); // Recalculate on open state change or children update
 
   return (
-    <li className="bg-afenoid-white" {...props}>
+    <li className = {`bg-afenoid-white`} {...props}>
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}
-        className="flex justify-between items-center p-4 font-medium text-afenoid-dark-green font-proxima-nova text-2xl"
+        className={`flex justify-between items-center p-4 font-medium text-afenoid-dark-green text-2xl font-${mainFontType}`}
         aria-expanded={open}
       >
         {trigger}
@@ -92,7 +95,7 @@ const AccordionItem = ({ children, value, trigger, ...props }: AccordionItemProp
         className="overflow-y-hidden transition-all"
         style={{ height: open ? height : 0 }}
       >
-        <div className="pt-2 p-4" ref={ref}>
+        <div className={`pt-2 p-4 font-${minorFontType}`} ref={ref}>
           {children}
         </div>
       </div>

@@ -1,55 +1,42 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
-import { Text, Button } from "../../../ui";
+import { Text, Button, Carousel } from "../../../ui";
 import { CallToAction } from "../../../components";
 import { CaseStudyImg1 } from "../../../assets";
 
-import "flickity/css/flickity.css";
-import Flickity from "react-flickity-component";
-
-const flickityOptions = {
-  // Options for Flickity
-  groupCells: true,
-  wrapAround: true,
-  autoPlay: 3000, // AutoPlay in milliseconds
-  prevNextButtons: true,
-  pageDots: false,
-};
-
-type CarouselItem = {
-  image: string;
-  title: string;
-  type: string;
-};
 
 const CaseStudiesSection = () => {
-  const caseStudySlides: CarouselItem[] = [
+  const carouselItems = [
     {
+      id: 1,
       image: CaseStudyImg1,
-      title: "How ISMS compliance is influence corporate information",
-      type: "pci dss",
+      title: "How ISMS compliance influences corporate information",
+      category: "PCI DSS 1",
     },
     {
+      id: 2,
       image: CaseStudyImg1,
       title: "How ISMS compliance is influence corporate information",
-      type: "pci dss",
+      category: "PCI DSS 2",
     },
     {
+      id: 3,
       image: CaseStudyImg1,
       title: "How ISMS compliance is influence corporate information",
-      type: "pci dss",
+      category: "PCI DSS 3",
     },
     {
+      id: 4,
       image: CaseStudyImg1,
       title: "How ISMS compliance is influence corporate information",
-      type: "pci dss",
+      category: "PCI DSS 4",
     },
   ];
 
   return (
     <section>
       <div className="bg-afenoid-light-grey">
-        <div className="flex flex-col justify-between items-center">
+        <div className="flex flex-col justify-between items-center w-full">
           <Text
             variant="h3"
             fontFamily="playfair-display"
@@ -70,26 +57,7 @@ const CaseStudiesSection = () => {
             We help digital-age organisations to become more resilient and equip
             their professionals to become more competent.
           </Text>
-          <div className="w-full relative">
-            <Flickity
-              className="carousel"
-              elementType="div"
-              options={flickityOptions}
-              disableImagesLoaded={false}
-              reloadOnUpdate
-              static
-            >
-              {caseStudySlides.map((caseStudySlide, index) => (
-                <div key={index} className="carousel-cell">
-                  <HomeCaseStudyCard
-                    image={caseStudySlide.image}
-                    title={caseStudySlide.title}
-                    type={caseStudySlide.type}
-                  />
-                </div>
-              ))}
-            </Flickity>
-          </div>
+          <Carousel items={carouselItems}/>
         </div>
       </div>
       <CallToAction

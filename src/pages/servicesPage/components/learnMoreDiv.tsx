@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, Button } from "../../../ui";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type HeroText = {
   caption?: string;
@@ -13,28 +15,33 @@ type HeroDivProps = {
   heroTexts: HeroText;
   image: string;
   reverse?: boolean;
+  btnText: string;
 };
 
 const LearnMoreDiv: React.FC<HeroDivProps> = ({
   heroTexts,
   image,
   reverse,
+  btnText,
 }) => {
-  const initialX = reverse ? 300 : -300;
-  const imgX = reverse ? -800 : 800;
+  
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div
-      className={`flex justify-between items-center gap-32 mb-12 ${
+      className={`flex justify-between items-center gap-32 mb-[10rem] ${
         reverse ? "flex-row-reverse" : ""
       }`}
+      data-aos="zoom-in"
+      data-aos-delay="50"
+      data-aos-duration="700"
     >
       <div className={`w-1/2 flex flex-col gap-3`}>
-        <motion.div
-          initial={{ x: initialX, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        >
+        <div>
           <Text
             variant="h6"
             color="af-green"
@@ -43,13 +50,9 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           >
             {heroTexts.caption}
           </Text>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ x: initialX * 2.5, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        >
+        <div>
           <Text
             variant="h3"
             color="af-dark-green"
@@ -58,38 +61,29 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           >
             {heroTexts.title}
           </Text>
-        </motion.div>
-        <motion.div
-          initial={{ x: initialX * 3.0, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        >
+        </div>
+        <div>
           <Text variant="h5" fontFamily="proxima-nova" fontWeight="light">
             {heroTexts.description}
           </Text>
-        </motion.div>
-        <motion.div
-        initial={{ x: initialX * 2, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        >
-          <Link to = "/">
-            <Button variant="secondary" label="Learn more" />
+        </div>
+        <div>
+          <Link to="/" className="w-[32%] block">
+            <Button
+              variant="secondary"
+              label={btnText}
+              customClassName="w-full"
+            />
           </Link>
-        </motion.div>
+        </div>
       </div>
-      <motion.div
-        className="w-1/2 h-auto"
-        initial={{ x: imgX * 2.5, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-      >
+      <div className="w-1/2 h-auto">
         <img
           src={image}
           alt="An Image for the Hero Page"
           className="w-auto h-full bg-cover"
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

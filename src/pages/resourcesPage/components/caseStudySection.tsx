@@ -101,7 +101,7 @@ const CaseStudySection = () => {
         </div>
       </div>
 
-      <div className="p-[5rem]">
+      <div className="px-[10rem] py-[5rem]">
         <ArticleCard
           title={articleData.title}
           image={articleData.image}

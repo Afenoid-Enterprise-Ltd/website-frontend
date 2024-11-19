@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Text } from "../../../ui";
-import { Slogan } from "../../../components";
 import { Overview } from "./overview";
 import { TrustServices } from "./trustServices";
 import { TransformationConsulting } from "./transformationConsulting";
@@ -42,13 +40,13 @@ const MainSection = () => {
 
   return (
     <section>
-      <div className="w-full flex justify-center items-center gap-4 my-[2rem]">
+      <div className="w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem]">
         <button
           onClick={setToOne}
           className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 1
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-lemon text-black"
+              : "bg-afenoid-light-grey text-black"
           }`}
         >
           Overview
@@ -58,7 +56,7 @@ const MainSection = () => {
           className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 2
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-lemon text-black"
+              : "bg-afenoid-light-grey text-black"
           }`}
         >
           Digital Trust Services
@@ -68,7 +66,7 @@ const MainSection = () => {
           className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 3
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-lemon text-black"
+              : "bg-afenoid-light-grey text-black"
           }`}
         >
           Digital Transformation Consulting
@@ -78,7 +76,7 @@ const MainSection = () => {
           className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 4
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-lemon text-black"
+              : "bg-afenoid-light-grey text-black"
           }`}
         >
           Digital Skills Development
@@ -86,29 +84,6 @@ const MainSection = () => {
       </div>
 
       <div>{renderContent()}</div>
-
-      <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
-          <Text
-            variant="body-reg"
-            color="af-green"
-            fontFamily="proxima-nova"
-            customClassName="uppercase"
-          >
-            WE BELIEVE
-          </Text>
-          <Text
-            variant="h2"
-            color="af-green"
-            fontFamily="gambetta"
-            customClassName="text-[3rem]"
-            fontWeight="light"
-          >
-            We mitigate enterprise weaknesses caused by practices, personnel and
-            technologies.
-          </Text>
-        </div>
-      </Slogan>
     </section>
   );
 };

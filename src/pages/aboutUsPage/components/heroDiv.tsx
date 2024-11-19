@@ -46,7 +46,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
         >
           <Text
-            variant="h1"
+            variant="h2"
             color="af-dark-green"
             fontFamily="gambetta"
             fontWeight="medium"

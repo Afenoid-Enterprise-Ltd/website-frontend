@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Text, Button } from "../ui";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type CaseStudyCardProps = {
   image: string;
@@ -11,8 +13,18 @@ type CaseStudyCardProps = {
 const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
   const { image, title, description } = props;
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="flex flex-col gap-5 h-full">
+    <div
+      className="flex flex-col justify-start gap-5"
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+    >
       <div className="flex-grow-[4] flex h-[15rem]">
         <img
           src={image}
@@ -37,8 +49,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         {description}
       </Text>
       <div>
-        <Link to = "/">
-          <Button variant="secondary" label="Learn More" />
+        <Link to="/" className="mt-[5rem] w-[40%] block">
+          <Button
+            variant="secondary"
+            label="Learn More"
+            customClassName="w-full"
+          />
         </Link>
       </div>
     </div>

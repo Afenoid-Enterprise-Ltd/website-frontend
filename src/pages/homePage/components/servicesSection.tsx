@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Text } from "../../../ui";
 import {
   ServicesImg1,
@@ -9,8 +8,6 @@ import {
   TrainingImg3,
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const ServicesSection = () => {
   const caseStudyData = [

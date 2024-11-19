@@ -27,7 +27,7 @@ const HeroSection = () => {
 
   return (
     <section className=" bg-afenoid-white">
-      <section className="px-[15rem] flex flex-col gap-28 py-40">
+      <section className="px-[5rem] flex flex-col gap-28 py-40">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}
@@ -52,10 +52,9 @@ const HeroSection = () => {
             color="af-green"
             fontFamily="gambetta"
             customClassName="text-[3rem]"
-            fontWeight="light"
+            fontWeight="medium"
           >
-            We <span className="font-bold">strengthen</span> organizations and{" "}
-            <span className="font-bold">equip</span> professionals.
+            We strengthen organizations and professionals.
           </Text>
         </div>
       </Slogan>

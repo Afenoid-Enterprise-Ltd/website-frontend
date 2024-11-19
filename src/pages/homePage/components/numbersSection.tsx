@@ -122,7 +122,7 @@ const NumbersSection = () => {
             Optimize Your Security
           </Text>
           <Text
-            variant="h4"
+            variant="h5"
             align="center"
             color="af-dark-green"
             fontWeight="light"

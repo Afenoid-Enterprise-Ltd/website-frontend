@@ -68,7 +68,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </div>
         <div>
-          <Link to="/" className="w-[32%] block">
+          <Link to="/" className="w-[35%] block">
             <Button
               variant="secondary"
               label={btnText}

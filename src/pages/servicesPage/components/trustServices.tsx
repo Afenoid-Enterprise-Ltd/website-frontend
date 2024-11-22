@@ -33,17 +33,19 @@ const TrustServices = () => {
         >
           Build Your Team's Security Excellence
         </Text>
-        <Text
-          variant="h4"
-          fontFamily="proxima-nova"
-          align="center"
-          color="af-dark-green"
-          fontWeight="light"
-          customClassName="text-[1.5rem] mt-[2rem]"
-        >
-          Empower your workforce with industry-recognized certifications and
-          practical training programs designed for real-world application.
-        </Text>
+        <div className="w-[70%] mx-auto">
+          <Text
+            variant="h5"
+            fontFamily="proxima-nova"
+            align="center"
+            color="af-dark-green"
+            fontWeight="light"
+            customClassName="text-[1.5rem]"
+          >
+            Empower your workforce with industry-recognized certifications and
+            practical training programs designed for real-world application.
+          </Text>
+        </div>
       </div>
       <div className="px-[10rem] py-[5rem]">
         <Accordion>

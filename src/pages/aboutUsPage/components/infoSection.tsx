@@ -125,7 +125,7 @@ const InfoSection = () => {
           Enterprise Security Within Your Reach
         </Text>
         <Text
-          variant="h3"
+          variant="h4"
           align="center"
           color="af-dark-green"
           fontWeight="light"

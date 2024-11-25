@@ -55,6 +55,9 @@ export default {
         "body-reg": ["1rem", { lineHeight: "175%", fontWeight: 400 }],
         "caption-mid": ["0.875rem", { lineHeight: "200%", fontWeight: 500 }],
         "caption-reg": ["0.875rem", { lineHeight: "200%", fontWeight: 400 }],
+      },
+      backgroundImage:{
+        "case-study": "url('./src/assets/caseStudyBg.svg')"
       }
     },
   },

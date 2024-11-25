@@ -11,17 +11,19 @@ import {
 const HomePage = () => {
   return (
     <motion.section
-      initial={{ x: 2500 }}
-      animate={{ x: 1 }}
-      exit={{ x: 2500 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <HeroSection />
-        <NumbersSection />
-        <ChoiceSection />
-        <ServicesSection />
-        <CaseStudiesSection />
+        <section className="overflow-x-hidden">
+          <HeroSection />
+          <NumbersSection />
+          <ChoiceSection />
+          <ServicesSection />
+          <CaseStudiesSection />
+        </section>
       </Outlet>
     </motion.section>
   );

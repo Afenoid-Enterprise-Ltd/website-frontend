@@ -26,7 +26,7 @@ const HeroDivs = () => {
         data-aos-delay="50"
         data-aos-duration="1000"
       >
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="w-1/2 flex flex-col gap-4 mmd:w-full">
           <Text
             variant="h3"
             fontFamily="gambetta"
@@ -35,6 +35,9 @@ const HeroDivs = () => {
           >
             Protect What Matters Most
           </Text>
+          <div className="hidden mmd:block">
+            <img src={ProtectionImg} alt="Accompanying Image" />
+          </div>
           <Text
             variant="h5"
             fontFamily="proxima-nova"
@@ -49,7 +52,7 @@ const HeroDivs = () => {
             <Button variant="primary" label="Contact Us" />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 mmd:hidden">
           <img src={ProtectionImg} alt="Accompanying Image" />
         </div>
       </div>
@@ -59,7 +62,7 @@ const HeroDivs = () => {
         data-aos-delay="50"
         data-aos-duration="1000"
       >
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="w-1/2 flex flex-col gap-4 mmd:w-full">
           <Text
             variant="h3"
             fontFamily="gambetta"
@@ -71,6 +74,9 @@ const HeroDivs = () => {
             <span className="text-afenoid-lemon">reliability</span> of digital
             systems, services, and transactions.
           </Text>
+          <div className="hidden mmd:block">
+          <img src={ReliabilityImg} alt="Accompanying IMage" />
+        </div>
           <ul>
             {listItems.map((listItem, index) => (
               <li className="flex justify-start items-center gap-4" key={index}>
@@ -90,7 +96,7 @@ const HeroDivs = () => {
             <Button variant="primary" label="Book a Consultation" />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 mmd:hidden">
           <img src={ReliabilityImg} alt="Accompanying IMage" />
         </div>
       </div>

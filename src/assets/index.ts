@@ -25,6 +25,11 @@ import KeystoneBankLogo from "./keystone-bank-logo.svg";
 import MTNLogo from "./mtn-logo.svg";
 import PremiumPensionLogo from "./premium-pension-logo.svg";
 import StandardCharteredLogo from "./standard-chartered-logo.svg";
+import BankOfAmericaLogo from "./boa-logo.svg";
+import BankOfBotswana from "./bank-of-botswana-logo.svg";
+import FidelityBankLogo from "./fidelity-logo.svg";
+import GTCOLogo from "./gtco-logo.svg";
+import AXAInsurance from "./axa-ins-logo.svg";
 import SterlingBankLogo from "./sterling-bank-logo.svg";
 import ServicesImg1 from "./services-1.png";
 import ServicesImg2 from "./services-2.png";
@@ -37,6 +42,10 @@ import OverviewImg2 from "./overview-2.png";
 import OverviewImg3 from "./overview-3.png";
 import DigitalTrustImg from "./digital-trust-img.png";
 import DigitalTransformationImg from "./digital-transformation.png";
+import DigitalSkillsDevImg from "./digital-skills-dev.png";
+import SkillsDevImg1 from "./skills-dev-img-1.png";
+import SkillsDevImg2 from "./skills-dev-img-2.png";
+import SkillsDevImg3 from "./skills-dev-img-3.png";
 import ProtectionImg from "./protection-img.png";
 import ReliabilityImg from "./reliability.png";
 import HomeHeroImage from "./home-hero.png";
@@ -46,6 +55,7 @@ import SwiftLogo from "./swift-logo.svg";
 import PciLogo from "./pci-logo.svg";
 import ApmgLogo from "./apmg-logo.svg";
 import NistLogo from "./nist-logo.svg";
+import FormCover from "./form-cover.png";
 
 
 export {
@@ -77,6 +87,11 @@ export {
   PremiumPensionLogo,
   StandardCharteredLogo,
   SterlingBankLogo,
+  BankOfAmericaLogo,
+  BankOfBotswana,
+  FidelityBankLogo,
+  GTCOLogo,
+  AXAInsurance,
   ServicesImg1,
   ServicesImg2,
   ServicesImg3,
@@ -96,5 +111,10 @@ export {
   OverviewImg2,
   OverviewImg3,
   DigitalTrustImg,
-  DigitalTransformationImg
+  DigitalTransformationImg,
+  DigitalSkillsDevImg,
+  SkillsDevImg1,
+  SkillsDevImg2,
+  SkillsDevImg3,
+  FormCover
 };

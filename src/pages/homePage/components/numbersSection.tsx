@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { animate } from "framer-motion";
+import Marquee from "react-fast-marquee";
 import {
   CreditCardIcon,
   PeopleIcon,
@@ -16,6 +17,11 @@ import {
   PremiumPensionLogo,
   StandardCharteredLogo,
   SterlingBankLogo,
+  BankOfAmericaLogo,
+  BankOfBotswana,
+  FidelityBankLogo,
+  GTCOLogo,
+  AXAInsurance,
 } from "../../../assets";
 
 interface CountUpProps {
@@ -65,7 +71,7 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   return (
     <span
       ref={ref}
-      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green"
+      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green mmd:text-[2rem]"
     >
       0
     </span>
@@ -105,12 +111,17 @@ const NumbersSection = () => {
     KeystoneBankLogo,
     PremiumPensionLogo,
     SterlingBankLogo,
+    BankOfAmericaLogo,
+    GTCOLogo,
+    BankOfBotswana,
+    AXAInsurance,
+    FidelityBankLogo,
   ];
 
   return (
     <section className="w-screen bg-afenoid-white">
-      <div className=" p-[5rem]">
-        <div className="flex flex-col items-center gap-4 px-[15rem]">
+      <div className="p-[5rem] mmd:px-[3rem]">
+        <div className="flex flex-col items-center gap-4 px-[15rem] mmd:px-[4rem] msm:px-0">
           <Text
             variant="h2"
             align="center"
@@ -133,7 +144,7 @@ const NumbersSection = () => {
             that set new standards for security and performance.
           </Text>
         </div>
-        <div className="flex gap-12 mx-[5rem] my-[8rem]">
+        <div className="flex gap-12 mx-[5rem] my-[8rem] mmd:grid mmd:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
           {numberData.map((number, index) => (
             <Number
               icon={number.icon}
@@ -145,10 +156,17 @@ const NumbersSection = () => {
         </div>
       </div>
 
-      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem]">
-        {clients.map((client, index) => (
-          <img src={client} alt="Logos of Clients" key={index} />
-        ))}
+      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem]">
+        <Marquee pauseOnHover={false} speed={20} direction="left">
+          {clients.map((client, index) => (
+            <img
+              src={client}
+              alt="Logos of Clients"
+              key={index}
+              className="max-w-auto mr-24 object-cover mmd:max-w-12 mmd:mr-16"
+            />
+          ))}
+        </Marquee>
       </div>
     </section>
   );
@@ -165,13 +183,13 @@ type NumberProps = {
 export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-[#9bc73c28] p-4 rounded-full">
-        <img src={icon} alt="Icon Image" />
+      <div className="bg-[#9bc73c28] p-4 rounded-full mmd:w-12 mmd:h-12 mmd:p-3">
+        <img src={icon} alt="Icon Image" className="w-full h-full" />
       </div>
       <div>
         <div className="my-[2rem]">
           <CountUp end={title} />
-          <span className="text-[1.5rem]">+</span>
+          <span className="text-[1.5rem] mmd:text-[1rem]">+</span>
         </div>
       </div>
       <div>
@@ -180,7 +198,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
           fontFamily="proxima-nova"
           fontWeight="light"
           align="center"
-          customClassName=""
+          customClassName="mmd:text-"
         >
           {description}
         </Text>

@@ -66,7 +66,7 @@ const ServicesSection = () => {
         >
           Our Services
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem]">
+        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem] mmd:flex-col msm:px-[3.5rem] mxs:px-[2.5rem]">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}
@@ -109,7 +109,7 @@ const ServicesSection = () => {
         >
           Our Training
         </Text>
-        <div className="flex justify-between items-start gap-12 px-[5rem] mb-[10rem]">
+        <div className="flex justify-between items-start gap-12 px-[5rem] mb-[10rem] mmd:flex-col msm:px-[3.5rem] mxs:px-[2.5rem]">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

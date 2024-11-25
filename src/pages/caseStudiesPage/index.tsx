@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { Outlet, Text } from "../../ui";
 import { Button } from "../../ui";
-import {caseStudy} from "./caseStudy.js";
+import { caseStudy } from "./caseStudy.js";
+import Image from "../../assets/Frame 981 (1).png";
 
-
-const caseStudyButtons = ['ALL', 'PCI DSS', 'ISO 27001 (ISMS)', 'ISO 22301 (BCMS)', 'ISO 9001 (QMS)']
-
-
+const caseStudyButtons = [
+  "ALL",
+  "PCI DSS",
+  "ISO 27001 (ISMS)",
+  "ISO 22301 (BCMS)",
+  "ISO 9001 (QMS)",
+];
 
 const CaseStudiesPage = () => {
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState('');
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState("");
 
   return (
     <Outlet>
@@ -19,6 +23,7 @@ const CaseStudiesPage = () => {
           align="center"
           fontWeight="medium"
           fontFamily="gambetta"
+          color="af-dark-green"
         >
           Security Success Stories
         </Text>
@@ -28,6 +33,7 @@ const CaseStudiesPage = () => {
           fontWeight="light"
           fontFamily="proxima-nova"
           customClassName="text-center w-[53%] mt-2"
+          color="af-dark-green"
         >
           Discover how organisations have transformed their security posture and
           achieved excellence with Afenoid's guidance.
@@ -36,19 +42,67 @@ const CaseStudiesPage = () => {
 
       <section className="bg-afenoid-light-grey h-[7.8rem] py-12 flex justify-center items-center gap-4">
         {caseStudyButtons.map((button, index) => {
-          return <Button key={index} variant="tertiary" label={button} customClassName="text-light" onClick={()=> {
-            setSelectedCaseStudy(button)
-            console.log(caseStudy)
-          }}/>
+          return (
+            <Button
+              key={index}
+              variant="tertiary"
+              label={button}
+              customClassName="text-light"
+              onClick={() => {
+                setSelectedCaseStudy(button);
+                console.log(caseStudy);
+              }}
+            />
+          );
         })}
       </section>
 
-      {/* <section>
-        {caseStudy.map((study) => {
-          return <h1>Hello World</h1>
-        })}
+      {/* grid grid-rows-3 grid-cols-3 gap-y-[120px] gap-x-[48px]*/}
 
-      </section> */}
+      <section className="px[110px] py-[120px] flex justify-center">
+        <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-center items-center w-full">
+          {caseStudy.map((study:[]) => {
+            return (
+              <div className="w-[350px]  flex flex-col">
+                <div className="h-[180px] w-full">
+                  <img src={Image} alt="Case Study 1" />
+                </div>
+                <div className="flex flex-col gap-[18px]">
+                  <Text
+                    align="left"
+                    fontFamily="gambetta"
+                    fontWeight="light"
+                    color="af-green"
+                    customClassName="text-[20px]"
+                  >
+                    How ISMS compliance is influence corporate information
+                  </Text>
+
+                  <Text
+                    align="left"
+                    fontFamily="proxima-nova"
+                    color="af-dark-green"
+                  >
+                    We support skill development in IT governance, service
+                    management, risk management, information security,
+                    cybersecurity, data privacy, and auditing.
+                  </Text>
+
+                  <Button
+                    buttonType="button"
+                    label="Learn More"
+                    variant="secondary"
+                    customClassName="w-fit"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </section>
+
+
     </Outlet>
   );
 };

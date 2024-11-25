@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Outlet, Text } from "../../ui";
 import { Button } from "../../ui";
 import { caseStudy } from "./caseStudy.js";
-import Image from "../../assets/Frame 981 (1).png";
 
 const caseStudyButtons = [
   "ALL",
@@ -13,8 +12,14 @@ const caseStudyButtons = [
   "ISO 9001 (QMS)",
 ];
 
+interface Case {
+  title: string;
+  description: string; 
+  imgUrl: string
+}
+
 const CaseStudiesPage = () => {
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState("");
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(caseStudyButtons[0]);
 
   return (
     <motion.section
@@ -24,7 +29,7 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col border ">
+        <section className="min-h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col border ">
           <Text
             variant="h1"
             align="center"
@@ -52,7 +57,7 @@ const CaseStudiesPage = () => {
             return (
               <Button
                 key={index}
-                variant="tertiary"
+                variant={selectedCaseStudy === button ? "primary" : "tertiary"}
                 label={button}
                 customClassName="text-light"
                 onClick={() => {
@@ -64,35 +69,33 @@ const CaseStudiesPage = () => {
           })}
         </section>
 
-        {/* grid grid-rows-3 grid-cols-3 gap-y-[120px] gap-x-[48px]*/}
-
         <section className="px[110px] py-[120px] flex justify-center">
           <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-center items-center w-full">
-            {caseStudy.map((study: []) => {
+            {caseStudy.map((study:Case, index:number) => {
               return (
-                <div className="w-[350px]  flex flex-col">
+                <div className="h-[504px] w-[350px] flex flex-col" key={index}>
                   <div className="h-[180px] w-full">
-                    <img src={Image} alt="Case Study 1" />
+                    <img src={study.imgUrl} alt="Case Study 1" className="h-full"/>
                   </div>
                   <div className="flex flex-col gap-[18px]">
                     <Text
+                    variant="h5"
                       align="left"
                       fontFamily="gambetta"
-                      fontWeight="light"
                       color="af-green"
-                      customClassName="text-[20px]"
+                      customClassName="font-medium"
                     >
-                      How ISMS compliance is influence corporate information
+                      {study.title}
                     </Text>
 
                     <Text
+                    variant="h5"
                       align="left"
                       fontFamily="proxima-nova"
                       color="af-dark-green"
+                      customClassName="font-normal"
                     >
-                      We support skill development in IT governance, service
-                      management, risk management, information security,
-                      cybersecurity, data privacy, and auditing.
+                      {study.description}
                     </Text>
 
                     <Button

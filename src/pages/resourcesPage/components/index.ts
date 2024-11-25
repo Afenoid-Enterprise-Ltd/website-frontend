@@ -1,3 +1,3 @@
 export * from "./heroSection";
 export * from "./caseStudySection";
-export * from "./accordionSection";
+export * from "../../aboutUsPage/components/accordionSection";

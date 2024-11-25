@@ -1,10 +1,18 @@
+import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 
 const CaseStudiesPage = () => {
   return (
-    <Outlet>
-      <p>This is the Case Studies Page</p>
-    </Outlet>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <Outlet>
+        <p>This is the Case Studies Page</p>
+      </Outlet>
+    </motion.section>
   );
 };
 

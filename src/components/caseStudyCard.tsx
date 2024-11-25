@@ -20,16 +20,16 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
 
   return (
     <div
-      className="flex flex-col justify-start gap-5"
+      className="flex flex-col justify-between gap-5"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className="flex-grow-[4] flex h-[15rem]">
+      <div className=" flex h-[15rem]">
         <img
           src={image}
           alt="Case Study Image"
-          className="h-full w-full object-cover flex-1"
+          className="h-full w-full object-cover "
         />
       </div>
       <Text
@@ -49,7 +49,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         {description}
       </Text>
       <div>
-        <Link to="/" className="mt-[5rem] w-[40%] block">
+        <Link to="/" className="mt-[5rem] w-[40%] block mmd:mt-4 mmd:w-[50%]">
           <Button
             variant="secondary"
             label="Learn More"

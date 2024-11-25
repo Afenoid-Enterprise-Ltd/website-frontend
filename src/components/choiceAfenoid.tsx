@@ -56,7 +56,7 @@ const ChoiceAfenoid = () => {
         Here's why we are the best provider for your security solutions
       </Text>
 
-      <div className="flex gap-12 my-12">
+      <div className="flex gap-12 my-12 mmd:flex-col ">
         {solutionData.map((solution, index) => (
           <Solution
             icon={solution.icon}
@@ -84,13 +84,14 @@ export const Solution: React.FC<SolutionProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center gap-6 mt-[3rem]">
+    <div className="flex flex-col items-center gap-6 mt-[3rem] ">
       <div className="bg-[#9bc73c28] p-4 rounded-full">
         <img src={icon} alt="Icon Image" />
       </div>
       <div>
         <Text
           variant="h5"
+          color="af-green"
           fontFamily="gambetta"
           fontWeight="bold"
           align="center"

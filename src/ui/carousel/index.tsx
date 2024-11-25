@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,6 +33,8 @@ const Previous = (props: {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 }) => {
   const { onClick } = props;
+  
+
   return (
     <div
       className="absolute top-1/2 left-[-3.5rem] z-10 transform -translate-y-1/2 cursor-pointer"
@@ -43,12 +46,16 @@ const Previous = (props: {
 };
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+
+  const numOfSlides = isSmallDevice ? 1 : 3;
+  
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: numOfSlides,
+    slidesToScroll: numOfSlides,
     nextArrow: <Next />,
     prevArrow: <Previous />,
   };

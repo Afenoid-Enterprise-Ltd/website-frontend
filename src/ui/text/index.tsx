@@ -6,12 +6,12 @@ import { TextProps, variantMapping } from "./index.types";
 const text = cva("", {
   variants: {
     variant: {
-      h1: "text-h1",
-      h2: "text-h2",
-      h3: "text-h3",
-      h4: "text-h4",
-      h5: "text-h5",
-      h6: "text-h6",
+      h1: "text-h1 mmd:text-h3",
+      h2: "text-h2 mmd:text-h4",
+      h3: "text-h3 mmd:text-h5",
+      h4: "text-h4 mmd:text-h6",
+      h5: "text-h5 mmd:text-caption-reg",
+      h6: "text-h6 mmd:text-caption-reg",
       "body-reg": "text-body-reg",
       "caption-mid": "text-caption-mid",
       "caption-reg": "text-caption-reg",
@@ -20,6 +20,7 @@ const text = cva("", {
       "proxima-nova": "font-proxima-nova",
       gambetta: "font-gambetta",
       "playfair-display": "font-playfair-display",
+      montserrat: "font-montserrat"
     },
     color: {
       "af-green": "text-afenoid-green",

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "afenoid-green": "#224D20",
+        "afenoid-green": "#224C1F",
         "afenoid-yellow": "#CCD311",
         "afenoid-lemon": "#76A62E",
         "afenoid-light-lemon": "#F0F7E2",
@@ -20,7 +20,8 @@ export default {
       fontFamily: {
         gambetta: ["Gambetta", "serif"],
         "proxima-nova": ["Proxima Nova", "sans-serif"],
-        "playfair-display": ["Playfair Display", "serif"]
+        "playfair-display": ["Playfair Display", "serif"],
+        montserrat: ["Montserrat", "sans-serif"]
       },
       screens: {
         xs: "320px",
@@ -44,17 +45,17 @@ export default {
       },
       fontSize: {
         //Header element styles
-        "h1": ["3.25rem", { lineHeight: "114.286%", fontWeight: 700 }],
-        "h2": ["2.5rem", { lineHeight: "128%", fontWeight: 600 }],
-        "h3": ["2.00rem", { lineHeight: "128.571%", fontWeight: 600 }],
-        "h4": ["1.75rem", { lineHeight: "150%", fontWeight: 500 }],
-        "h5": ["1.25rem", { lineHeight: "140%", fontWeight: 500 }],
-        "h6": ["1.125rem", { lineHeight: "175%", fontWeight: 500 }],
+        "h1": ["3.25rem", ], //52px
+        "h2": ["2.5rem", ], //40px
+        "h3": ["2.00rem", ], //32px
+        "h4": ["1.75rem", ], //28px
+        "h5": ["1.25rem", ], //20px
+        "h6": ["1.125rem", ], //18px
 
         // Body variant styles - [Large, Medium, Regular, Small]
-        "body-reg": ["1rem", { lineHeight: "175%", fontWeight: 400 }],
-        "caption-mid": ["0.875rem", { lineHeight: "200%", fontWeight: 500 }],
-        "caption-reg": ["0.875rem", { lineHeight: "200%", fontWeight: 400 }],
+        "body-reg": ["1rem", ], //16px
+        "caption-mid": ["0.875rem", ], //14px
+        "caption-reg": ["0.875rem", ], //14px
       },
       backgroundImage:{
         "case-study": "url('./src/assets/caseStudyBg.svg')"

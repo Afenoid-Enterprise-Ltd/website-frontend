@@ -1,8 +1,13 @@
+import React from "react";
 import { FooterLogoSVG } from "../assets";
 
-const FooterLogo = () => {
+interface FooterlogoProps {
+  customClassName: string
+}
+
+const FooterLogo: React.FC<FooterlogoProps> = ({customClassName}) => {
   return (
-    <div>
+    <div className={customClassName}>
       <img src={FooterLogoSVG} alt="Logo" />
     </div>
   );

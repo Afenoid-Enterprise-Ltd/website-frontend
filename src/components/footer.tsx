@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-screen bg-afenoid-white">
       <img src={SkylineImg} alt="Skyline Pattern" />
-      <div className="w-full h-auto bg-afenoid-green flex justify-between items-center p-[5rem] mmd:flex-col-reverse mmd:items-stretch">
+      <div className="w-full h-auto bg-afenoid-green flex justify-between items-center p-[5rem] mmd:flex-col-reverse mmd:items-stretch mmd:p-[3rem] mxs:p-4">
         <div className="flex flex-col gap-8">
           <FooterLogo customClassName="mmd:hidden" />
 
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
         </div>
         <div className=" ">
           <FooterLogo customClassName="hidden mmd:block" />
-          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-60 mmd:mt-6">
+          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-60 mmd:mt-6 msm:gap-x-48 mxxs:gap-x-36">
             {footerLinks.map((footerLink, index) => (
               <div key={index}>
                 <Text

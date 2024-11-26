@@ -49,7 +49,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         {description}
       </Text>
       <div>
-        <Link to="/" className="mt-[5rem] w-[40%] block mmd:mt-4 mmd:w-[50%]">
+        <Link to="/" className="mt-[5rem] w-[40%] block mmd:mt-4 mmd:w-[50%] mxs:w-[60%]">
           <Button
             variant="secondary"
             label="Learn More"

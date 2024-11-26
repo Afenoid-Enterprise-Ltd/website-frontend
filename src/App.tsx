@@ -39,9 +39,10 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-studies/:title" />
             <Route path="components" element={<ComponentsPage />} />
             <Route path="*" element={<ErrorPage />} />
-          </Routes>
+          </Routes> 
         </AnimatePresence>
       </Suspense>
     </>

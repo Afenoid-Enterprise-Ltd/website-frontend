@@ -15,9 +15,14 @@ export const caseStudy = [
     {
       title: "Securing Fintech for Multi-Market Compliance",
       description: "A peer-to-peer payment fintech overcame data breach concerns and achieved ISO 27001 certification, strengthening security with advanced encryption, access controls, and third-party risk assessments.",
-      segment: "",
       imgUrl: Fintech,
-      segment: "ISO 27001 (ISMS)"
+      segment: "ISO 27001 (ISMS)",
+      data: {
+        challenge: "",
+        methodology: "",
+        outcome: "",
+        recommendation: ""
+      }
     },
     {
       title: "Ensuring Resilience in Cryptocurrency Exchanges",

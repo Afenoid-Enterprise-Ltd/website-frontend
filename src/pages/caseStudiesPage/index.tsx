@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Outlet, Text } from "../../ui";
 import { Button } from "../../ui";
-import { caseStudy } from "./caseStudy.js";
+import { caseStudy } from "./caseStudy.ts";
 
 const caseStudyButtons = [
   "ALL",

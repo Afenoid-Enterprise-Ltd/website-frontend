@@ -56,6 +56,9 @@ export default {
         "body-reg": ["1rem", ], //16px
         "caption-mid": ["0.875rem", ], //14px
         "caption-reg": ["0.875rem", ], //14px
+      },
+      backgroundImage:{
+        "case-study": "url('./src/assets/caseStudyBg.svg')"
       }
     },
   },

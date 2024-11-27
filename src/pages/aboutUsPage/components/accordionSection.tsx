@@ -7,7 +7,7 @@ const AccordionSection = () => {
   return (
     <div className="w-full mt-20">
       <div className="w-full flex justify-center items-center">
-        <div className="w-[40%]">
+        <div className="w-[40%] mlg:w-[60%] msm:w-[70%] mxs:w-[80%]">
           <Text
             variant="h2"
             fontWeight="regular"
@@ -36,7 +36,7 @@ const AccordionSection = () => {
         </div>
       </div>
 
-      <div className="p-[5rem]" id="faqs">
+      <div className="p-[5rem] msm:p-[3rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas

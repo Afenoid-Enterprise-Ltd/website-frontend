@@ -22,9 +22,9 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
     <div
       className={`flex justify-between items-center gap-32 ${
         reverse ? "flex-row-reverse" : ""
-      }`}
+      } mlg:flex-col mlg:items-start mlg:gap-12 msm:gap-6`}
     >
-      <div className="w-1/2 flex flex-col gap-3">
+      <div className="w-1/2 flex flex-col gap-3 mlg:w-full">
         <motion.div
           initial={{ x: initialX, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -58,14 +58,20 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           initial={{ x: initialX * 2.5, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          className="block mlg:hidden"
         >
-          <Text variant="h5" fontFamily="proxima-nova" fontWeight="light">
+          <Text
+            variant="h5"
+            fontFamily="proxima-nova"
+            fontWeight="light"
+            align="left"
+          >
             {heroTexts.description}
           </Text>
         </motion.div>
       </div>
       <motion.div
-        className="w-1/2 h-auto"
+        className="w-1/2 h-auto mlg:w-full"
         initial={{ x: imgX * 2.5, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
@@ -75,6 +81,21 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           alt="An Image for the Hero Page"
           className="w-full h-full"
         />
+      </motion.div>
+      <motion.div
+        initial={{ x: initialX * 2.5, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+        className="hidden mlg:block"
+      >
+        <Text
+          variant="h5"
+          fontFamily="proxima-nova"
+          fontWeight="light"
+          align="left"
+        >
+          {heroTexts.description}
+        </Text>
       </motion.div>
     </div>
   );

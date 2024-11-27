@@ -40,13 +40,13 @@ const MainSection = () => {
 
   return (
     <section className="w-screen">
-      <div className="w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar">
+      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar">
         <button
           onClick={setToOne}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 1
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-grey text-black"
+              : "bg-floral-white text-black"
           }`}
         >
           Overview
@@ -56,7 +56,7 @@ const MainSection = () => {
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 2
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-grey text-black"
+              : "bg-floral-white text-black"
           }`}
         >
           Digital Trust Services
@@ -66,7 +66,7 @@ const MainSection = () => {
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 3
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-grey text-black"
+              : "bg-floral-white text-black"
           }`}
         >
           Digital Transformation Consulting
@@ -76,7 +76,7 @@ const MainSection = () => {
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 4
               ? "bg-afenoid-green text-floral-white"
-              : "bg-afenoid-light-grey text-black"
+              : "bg-floral-white text-black"
           }`}
         >
           Digital Skills Development

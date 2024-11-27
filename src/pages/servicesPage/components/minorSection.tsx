@@ -63,7 +63,7 @@ const MinorSection = () => {
                 src={partner}
                 alt="Our Partners"
                 key={index}
-                className="max-w-auto mr-24 object-cover mmd:mr-16"
+                className="max-w-auto mr-24 object-cover mmd:mr-16 msm:max-w-[6rem]"
               />
             ))}
           </Marquee>

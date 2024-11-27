@@ -11,9 +11,11 @@ const AboutUsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <HeroSection />
-        <InfoSection />
-        <AccordionSection />
+        <section className="overflow-x-hidden">
+          <HeroSection />
+          <InfoSection />
+          <AccordionSection />
+        </section>
       </Outlet>
     </motion.section>
   );

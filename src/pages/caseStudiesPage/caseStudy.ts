@@ -7,9 +7,6 @@ import CrossBorder from "../../assets/crossBorder.png"
 import CardData from "../../assets/cardData.png"
 import Continuity from "../../assets/continuityPaymentProcessing.png"
 import MobileTrust from "../../assets/trustMobile.png"
-import Swift2 from "../../assets/swift2.png"
-import Fintech2 from "../../assets/fintech2.png"
-import Compliance from "../../assets/compliance.png"
 
 export const caseStudy = [
     {
@@ -146,51 +143,6 @@ export const caseStudy = [
         outcome: "The bank improved its security infrastructure, reduced phishing incidents, and achieved ISO 27001 certification, restoring customer trust.",
         recommendation: "Regular phishing simulations should be conducted to ensure ongoing employee and customer vigilance."
       }
-    },
-    // {
-    //   title: "How ISMS compliance is influence corporate information",
-    //   description: "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",   
-    //   imgUrl: Compliance,
-    //   segment: "ISO 9001 (QMS)",
-    //   data: {
-    //     title: "",
-    //     industry: "",
-    //     duration: "",
-    //     challenge: "",
-    //     methodology: "",
-    //     outcome: "",
-    //     recommendation: ""
-    //   }
-    // },
-    // {
-    //   title: "How ISMS compliance is influence corporate information",
-    //   description: "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
-    //   imgUrl: Swift2,
-    //   segment: "ISO 9001 (QMS)",
-    //   data: {
-    //     title: "",
-    //     industry: "",
-    //     duration: "",
-    //     challenge: "",
-    //     methodology: "",
-    //     outcome: "",
-    //     recommendation: ""
-    //   }
-    // },
-    // {
-    //   title: "Fintech Payment Processing Platform",
-    //   description: "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
-    //   imgUrl: Fintech2,
-    //   segment: "ISO 9001 (QMS)",
-    //   data: {
-    //     title: "",
-    //     industry: "",
-    //     duration: "",
-    //     challenge: "",
-    //     methodology: "",
-    //     outcome: "",
-    //     recommendation: ""
-    //   }
-    // },
+    }
   ]
   

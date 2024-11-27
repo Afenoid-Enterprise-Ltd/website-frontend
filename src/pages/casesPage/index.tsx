@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Outlet, Button } from "../../ui";
 import { caseStudy } from "../caseStudiesPage/caseStudy.ts";

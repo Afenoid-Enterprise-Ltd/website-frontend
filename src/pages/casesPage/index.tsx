@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Outlet, Button } from "../../ui";
 import { caseStudy } from "../caseStudiesPage/caseStudy.ts";
@@ -12,7 +13,7 @@ const CasesPage = () => {
   const { title } = useParams();
 
   const item = caseStudy.find((study) => {
-    return study.title.toLowerCase().split(' ').join('-') === title;
+    return study.title.toLowerCase().split(" ").join("-") === title;
   });
 
   return (
@@ -23,8 +24,19 @@ const CasesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <HeaderSection />
-        <DataSection />
+        <HeaderSection
+          title={item?.data.title}
+          industry={item?.data.industry}
+          duration={item?.data.duration}
+          segment={item?.segment}
+          imgUrl={item?.imgUrl}
+        />
+        <DataSection
+          challenge={item?.data.challenge}
+          methodology={item?.data.methodology}
+          outcome={item?.data.outcome}
+          recommendation={item?.data.recommendation}
+        />
 
         <CallToAction
           title="Ready to have a conversation with us?"
@@ -41,7 +53,7 @@ const CasesPage = () => {
         <RelatedSection />
 
         <div className="w-[530px] mx-auto mt-[150px]">
-            <img src={HomeHeroImage} alt="" />
+          <img src={HomeHeroImage} alt="" />
         </div>
 
         <CallToAction

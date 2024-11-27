@@ -11,7 +11,6 @@ const caseStudyButtons = [
   "PCI DSS",
   "ISO 27001 (ISMS)",
   "ISO 22301 (BCMS)",
-  "ISO 9001 (QMS)",
 ];
 
 interface Case {
@@ -37,8 +36,6 @@ const CaseStudiesPage = () => {
     (item: Case) => item.segment === "ISO 9001 (QMS)"
   );
 
-  // const filteredCase = caseStudy.map(case => case.segment == selectedCaseStudy)
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -47,7 +44,7 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="min-h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col border ">
+        <section className="min-h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col">
           <Text
             variant="h1"
             align="center"

@@ -1,10 +1,18 @@
+import React from "react";
 import { Text } from "../../../ui";
 import ChallengeIcon from "../../../assets/challengeIcon.svg";
 import MethodologyIcon from "../../../assets/methodologyIcon.svg";
 import OutcomeIcon from "../../../assets/outcomeIcon.svg";
 import RecommendationIcon from "../../../assets/recommendationIcon.svg";
 
-const DataSection = () => {
+type DataSectionProps = {
+  challenge: string | undefined;
+  methodology: string | undefined;
+  outcome: string | undefined;
+  recommendation: string | undefined;
+}
+
+const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcome, recommendation}) => {
   return (
     <section className="px-[80px] flex flex-col gap-[64px] items-center">
       <div className="bg-[#E3F0C9] h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center">
@@ -29,9 +37,7 @@ const DataSection = () => {
             variant="h5"
             customClassName="w-[80]"
           >
-            A fintech company providing peer-to-peer payment services faced
-            growing concerns over data breaches and regulatory compliance in
-            multiple markets.
+            {challenge}
           </Text>
         </div>
       </div>
@@ -58,9 +64,7 @@ const DataSection = () => {
             variant="h5"
             customClassName="w-[80]"
           >
-            A fintech company providing peer-to-peer payment services faced
-            growing concerns over data breaches and regulatory compliance in
-            multiple markets.
+            {methodology}
           </Text>
         </div>
       </div>
@@ -87,9 +91,7 @@ const DataSection = () => {
             variant="h5"
             customClassName="w-[80]"
           >
-            A fintech company providing peer-to-peer payment services faced
-            growing concerns over data breaches and regulatory compliance in
-            multiple markets.
+            {outcome}
           </Text>
         </div>
       </div>
@@ -116,9 +118,7 @@ const DataSection = () => {
             variant="h5"
             customClassName="w-[80]"
           >
-            A fintech company providing peer-to-peer payment services faced
-            growing concerns over data breaches and regulatory compliance in
-            multiple markets.
+            {recommendation}
           </Text>
         </div>
       </div>

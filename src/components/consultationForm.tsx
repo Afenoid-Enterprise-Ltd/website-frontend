@@ -18,8 +18,8 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
     mode: "onChange",
   });
 
-  const { handleSubmit, formState } = methods;
-  const { isValid } = formState;  
+  const { handleSubmit} = methods;
+  
 
   const bookConsultation = async (
     data: z.infer<typeof consultationFormSchema>
@@ -67,19 +67,19 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
             <Input label="First Name" type="text" name="firstname" />
             <Input label="Last Name" type="text" name="lastname" />
             <Input label="Email Name" type="email" name="email" />
-            <Input label="Phone Number" type="phoneNumber" name="number" />
+            <Input label="Phone Number"  type="number" name="phoneNumber"/>
             <Input label="Country" type="text" name="country" />
             <Input label="Company" type="text" name="company" />
+
+            <Button
+              label="Submit"
+              variant="primary"
+              customClassName="mb-8"
+              type="submit"
+              
+            />
           </form>
         </FormProvider>
-
-        <Button
-          label="Submit"
-          variant="primary"
-          customClassName="mb-8"
-          type="submit"
-          disabled={!isValid}
-        />
       </section>
     </Modal>
   );

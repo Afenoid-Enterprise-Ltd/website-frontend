@@ -7,9 +7,9 @@ import { HeroDivs } from "./heroDivs";
 
 const ChoiceSection = () => {
   return (
-    <section className="my-[3.5rem] px-[5rem]">
+    <section className="my-[3.5rem] px-[5rem] msm:px-[3.5rem]">
       <HeroDivs/>
-      <div className="px-[3rem] flex flex-col">
+      <div className="px-[3rem] flex flex-col mxs:px-0">
         <ChoiceAfenoid />
         <div className="flex justify-center">
           <Link to="/about-us">

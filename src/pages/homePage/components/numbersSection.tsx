@@ -121,7 +121,8 @@ const NumbersSection = () => {
   return (
     <section className="w-screen bg-afenoid-white">
       <div className="p-[5rem] mmd:px-[3rem]">
-        <div className="flex flex-col items-center gap-4 px-[15rem] mmd:px-[4rem] msm:px-0">
+        <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0">
+          
           <Text
             variant="h2"
             align="center"
@@ -144,7 +145,7 @@ const NumbersSection = () => {
             that set new standards for security and performance.
           </Text>
         </div>
-        <div className="flex gap-12 mx-[5rem] my-[8rem] mmd:grid mmd:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
+        <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
           {numberData.map((number, index) => (
             <Number
               icon={number.icon}

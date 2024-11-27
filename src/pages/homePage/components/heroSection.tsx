@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { Text, Button } from "../../../ui";
-import { SkylineImg, HomeHeroImage } from "../../../assets";
+import { HomeHeroImage } from "../../../assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,7 +14,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-screen h-[90vh] relative overflow-x-hidden ">
+    <section className="w-screen h-[87.5vh] relative overflow-x-hidden">
       <div className="flex justify-between items-center px-[5rem] mmd:flex-col msm:px-[3rem]">
         <div className="w-1/2 mmd:w-full mmd:pt-[3.5rem]">
           <Text
@@ -69,9 +69,7 @@ const HeroSection = () => {
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 w-screen overflow-x-auto">
-        <img src={SkylineImg} alt="Skyline Pattern" className="w-full object-cover" />
-      </div>
+     
     </section>
   );
 };

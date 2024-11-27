@@ -51,8 +51,8 @@ const CaseStudiesSection = () => {
             fontFamily="proxima-nova"
             color="af-dark-green"
             fontWeight="medium"
-            align="left"
-            customClassName="mb-6"
+            align="center"
+            customClassName="mb-6 mmd:mx-[3rem]"
           >
             We help digital-age organisations to become more resilient and equip
             their professionals to become more competent.

@@ -46,9 +46,9 @@ const Previous = (props: {
 };
 
 const Carousel: React.FC<CarouselProps> = ({ items }) => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const isMidScreens = useMediaQuery("only screen and (max-width : 976px)");
 
-  const numOfSlides = isSmallDevice ? 1 : 3;
+  const numOfSlides = isMidScreens ? 1 : 3;
   
   const settings = {
     dots: true,
@@ -61,7 +61,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   };
 
   return (
-    <div className="py-10 w-[60%]">
+    <div className="py-10 w-[60%] mxl:w-[70%]">
       <div className="px-3"> {/* Add padding to container to prevent cut-off */}
         <Slider {...settings}>
           {items.map((item) => (

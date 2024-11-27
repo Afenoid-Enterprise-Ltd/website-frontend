@@ -35,12 +35,12 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
     <div
       className={`flex justify-between items-center gap-32 mb-[10rem] ${
         reverse ? "flex-row-reverse" : ""
-      }`}
+      } mlg:flex-col-reverse mlg:gap-8 mlg:mb-[5rem]`}
       data-aos="zoom-in"
       data-aos-delay="50"
       data-aos-duration="700"
     >
-      <div className={`w-1/2 flex flex-col gap-3`}>
+      <div className={`w-1/2 flex flex-col gap-3 mlg:w-full`}>
         <div>
           <Text
             variant="h6"
@@ -52,7 +52,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </div>
 
-        <div>
+        <div className="block mlg:hidden">
           <Text
             variant="h3"
             color="af-dark-green"
@@ -68,7 +68,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </div>
         <div>
-          <Link to="/" className="w-[35%] block">
+          <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
             <Button
               variant="secondary"
               label={btnText}
@@ -77,13 +77,24 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Link>
         </div>
       </div>
-      <div className="w-1/2 h-auto">
+      <div className="w-1/2 h-auto mlg:w-full">
         <img
           src={image}
           alt="An Image for the Hero Page"
           className="w-auto h-full bg-cover"
         />
       </div>
+      <div className="hidden self-start mlg:block">
+          <Text
+            variant="h3"
+            color="af-dark-green"
+            fontFamily="gambetta"
+            fontWeight="medium"
+            align="left"
+          >
+            {heroTexts.title}
+          </Text>
+        </div>
     </div>
   );
 };

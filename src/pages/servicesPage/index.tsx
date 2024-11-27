@@ -11,8 +11,10 @@ const ServicesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <HeroSection />
-        <MainSection />
+        <section className="overflow-x-hidden">
+          <HeroSection />
+          <MainSection />
+        </section>
       </Outlet>
     </motion.section>
   );

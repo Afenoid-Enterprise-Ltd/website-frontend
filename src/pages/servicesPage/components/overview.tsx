@@ -18,7 +18,7 @@ const Overview = () => {
     {
       heroTexts: {
         caption: "",
-        title: "Management System Standards",
+        title: "Management System Standard",
         description:
           "We help establish, operate, and improve management system standards such as ISO 27001 (ISMS), ISO 22301 (BCMS), ISO 9001 (QMS), ensuring clarity and efficiency in organizational processes.",
       },
@@ -74,7 +74,7 @@ const Overview = () => {
         </Text>
       </div>
 
-      <div className="mb-[5rem] px-[15rem]">
+      <div className="mb-[5rem] px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] mxs:px-[3rem]">
         {dataItems.map((dataItem, index) => (
           <LearnMoreDiv
             key={index}

@@ -56,7 +56,7 @@ const ChoiceAfenoid = () => {
         Here's why we are the best provider for your security solutions
       </Text>
 
-      <div className="flex gap-12 my-12 mmd:flex-col ">
+      <div className="flex gap-12 my-12 mlg:grid mlg:grid-cols-2 mmd:flex mmd:flex-col ">
         {solutionData.map((solution, index) => (
           <Solution
             icon={solution.icon}

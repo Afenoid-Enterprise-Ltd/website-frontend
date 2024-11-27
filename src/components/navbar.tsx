@@ -6,7 +6,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { ConsultationForm } from "./consultationForm";
 
 const Navbar: React.FC = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
 
   const navlinks = [
     { text: "Home", link: "/" },
@@ -58,9 +58,9 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`w-full h-[10vh] bg-afenoid-white flex items-center justify-between px-[5rem] py-2 sticky top-0 z-[9999] ${
+      className={`w-full h-[12.5vh] bg-afenoid-white flex items-center justify-between px-[5rem] sticky top-0 z-[9999] ${
         scrollDetected && offset !== 0 ? "shadow-lg" : ""
-      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-0`} 
+      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4`} 
     >
       <MainLogo />
 

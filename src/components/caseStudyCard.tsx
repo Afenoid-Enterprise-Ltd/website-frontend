@@ -8,10 +8,11 @@ type CaseStudyCardProps = {
   image: string;
   title: string;
   description: string;
+  optionalWidth?: boolean;
 };
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
-  const { image, title, description } = props;
+  const { image, title, description, optionalWidth = false } = props;
 
   useEffect(() => {
     AOS.init();
@@ -49,7 +50,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         {description}
       </Text>
       <div>
-        <Link to="/" className="mt-[5rem] w-[40%] block mmd:mt-4 mmd:w-[50%]">
+        <Link
+          to="/"
+          className={`mt-[5rem] w-[50%] ${
+            optionalWidth ? "mmlg:w-full" : "mmlg:w-[60%]"
+          } block mmd:mt-4 msm:w-[60%] mxs:w-[65%] mxxs:w-full`}
+        >
           <Button
             variant="secondary"
             label="Learn More"

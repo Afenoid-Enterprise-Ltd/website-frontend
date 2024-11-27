@@ -1,16 +1,20 @@
 import React from "react";
-import { Text, } from "../ui";
+import { Text } from "../ui";
 
 type CallToActionProps = {
   title: string;
   explanation: string;
   button: React.ReactNode;
-}
+};
 
-const CallToAction: React.FC<CallToActionProps> = ({title, explanation, button}) => {
+const CallToAction: React.FC<CallToActionProps> = ({
+  title,
+  explanation,
+  button,
+}) => {
   return (
     <div className="w-full flex justify-center items-center my-[10rem]">
-      <div className="w-[50%] flex flex-col justify-center items-center gap-3">
+      <div className="w-[50%] flex flex-col justify-center items-center gap-3 mmd:w-[60%] msm:w-[70%] mxs:w-full">
         <Text
           variant="h3"
           align="center"
@@ -26,7 +30,7 @@ const CallToAction: React.FC<CallToActionProps> = ({title, explanation, button})
           fontWeight="light"
           fontFamily="proxima-nova"
         >
-         { explanation}
+          {explanation}
         </Text>
         {button}
       </div>

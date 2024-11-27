@@ -25,6 +25,9 @@ const ResourcesPage = lazy(() =>
 const CaseStudiesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.CaseStudiesPage }))
 );
+const CasesPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.CasesPage }))
+);
 
 function App() {
   const location = useLocation();
@@ -39,9 +42,10 @@ function App() {
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-studies/:title" element={<CasesPage />}/>
             <Route path="components" element={<ComponentsPage />} />
             <Route path="*" element={<ErrorPage />} />
-          </Routes>
+          </Routes> 
         </AnimatePresence>
       </Suspense>
     </>

@@ -5,6 +5,8 @@ Basic description for the project
 ## Table of Contents
 - [Usage](#usage)
 - [Technologies in use](#technologies-in-use)
+- [Folder Structure](#folder-structure)
+
 
 ### Usage
 - After git cloning and the local repo setup, create your branch `dev/prosper` from `staging` branch. 
@@ -17,7 +19,8 @@ Basic description for the project
   ```
   fix: adjusted animation effect on home page transition
   ```
-  `fix` representing fix indicates that the commit fixes a bug or sorts an issue, adjusted animation effect on home page transition
+  `fix` representing fix indicates that the commit fixes a bug, made updates to the code or sorts an issue, in the case in the code block, adjusted animation effect on home page transition.
+- If there is any other info, such as if code you have written would directly affect one on my branch, please let me know in the description while making a PR. Also remember to tag me as a reviewer when making a PR.
 
 
 ### Technologies in use
@@ -26,3 +29,5 @@ Basic description for the project
 - Framer Motion
 - React Router DOM
 - NPM Package Manager
+
+### Folder Structure

@@ -5,3 +5,4 @@ export * from  "./aboutUsPage";
 export * from "./resourcesPage";
 export * from "./servicesPage";
 export * from "./caseStudiesPage";
+export * from "./casesPage";

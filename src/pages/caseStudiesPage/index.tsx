@@ -4,13 +4,13 @@ import { Outlet, Text } from "../../ui";
 import { Button } from "../../ui";
 import { caseStudy } from "./caseStudy.ts";
 import { Link } from "react-router-dom";
+import { CallToAction } from "../../components/callToAction.tsx";
 
 const caseStudyButtons = [
   "ALL",
   "PCI DSS",
   "ISO 27001 (ISMS)",
   "ISO 22301 (BCMS)",
-  "ISO 9001 (QMS)",
 ];
 
 interface Case {
@@ -36,8 +36,6 @@ const CaseStudiesPage = () => {
     (item: Case) => item.segment === "ISO 9001 (QMS)"
   );
 
-  // const filteredCase = caseStudy.map(case => case.segment == selectedCaseStudy)
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -46,7 +44,7 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="min-h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col border ">
+        <section className="h-[80vh] max-h-[1600px] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col">
           <Text
             variant="h1"
             align="center"
@@ -87,15 +85,15 @@ const CaseStudiesPage = () => {
         </section>
 
         <section className="px-[110px] py-[120px] flex justify-center">
-          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full">
+          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full max-w-[1440px]">
             {selectedCaseStudy === "ALL" &&
               caseStudy.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -138,10 +136,10 @@ const CaseStudiesPage = () => {
               pciCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -184,10 +182,10 @@ const CaseStudiesPage = () => {
               ismsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -230,10 +228,10 @@ const CaseStudiesPage = () => {
               bcmsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -276,10 +274,10 @@ const CaseStudiesPage = () => {
               qmsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -319,6 +317,18 @@ const CaseStudiesPage = () => {
               })}
           </div>
         </section>
+
+        <CallToAction
+          title="Ready to have a conversation with us?"
+          explanation="Schedule a meeting with a consultant right away"
+          button={
+            <Button
+              variant="primary"
+              label="Book a Consultation"
+              customClassName="mt-[2rem]"
+            />
+          }
+        />
       </Outlet>
     </motion.section>
   );

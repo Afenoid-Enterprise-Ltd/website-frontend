@@ -1,0 +1,47 @@
+import React from 'react'
+import { Text } from '../../../ui'
+
+type HeaderSectionProps = {
+    title: string | undefined;
+    industry: string | undefined;
+    duration: string | undefined;
+    segment: string | undefined;
+    imgUrl: string | undefined;
+}
+
+const HeaderSection: React.FC<HeaderSectionProps> = ({title, industry, segment, duration, imgUrl}) => {
+  return (
+    <section className="py-[120px] px-[80px] flex flex-col items-center gap-[47px]">
+       <Text
+       variant='h3'
+       fontWeight='medium'
+       fontFamily='gambetta'
+       color='af-dark-green'
+       align='center'
+       >
+        {title}
+       </Text>
+
+        <div className="max-w-[1280px] h-[318px] w-[1280px]">
+            <img src={imgUrl} alt="" className="w-full h-full"/>
+        </div>
+
+        <div className="w-full flex justify-center px-[220px] max-w-[1500px]">
+            <table className="w-full">
+                <tr className="text-[20px] font-proxima-nova font-normal text-[#999590]">
+                    <td>Industry</td>
+                    <td className="pl-[156px]">Services</td>
+                    <td className="pl-[156px]">Project Timeline</td>
+                </tr>
+                <tr className="text-[24px] font-proxima-nova text-[#11240F] font-normal">
+                    <td>{industry}</td>
+                    <td className="pl-[156px]">{segment} Implementation</td>
+                    <td className="pl-[156px]">{duration}</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+  )
+}
+
+export { HeaderSection }

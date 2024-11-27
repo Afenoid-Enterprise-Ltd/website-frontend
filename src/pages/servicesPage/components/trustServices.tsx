@@ -16,14 +16,14 @@ const TrustServices = () => {
 
   return (
     <section>
-      <div className="px-[15rem]">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem]">
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
           btnText="Contact Us"
         />
       </div>
-      <div className="w-[80%] mx-auto my-[8rem] px-[3rem]">
+      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] msm:px-[2rem]">
         <Text
           variant="h2"
           fontFamily="gambetta"
@@ -33,7 +33,7 @@ const TrustServices = () => {
         >
           Build Your Team's Security Excellence
         </Text>
-        <div className="w-[70%] mx-auto">
+        <div className="w-[70%] mx-auto  msm:w-full ">
           <Text
             variant="h5"
             fontFamily="proxima-nova"
@@ -47,7 +47,7 @@ const TrustServices = () => {
           </Text>
         </div>
       </div>
-      <div className="px-[10rem] py-[5rem]">
+      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem]">
         <Accordion>
           <AccordionItem
             value="1"

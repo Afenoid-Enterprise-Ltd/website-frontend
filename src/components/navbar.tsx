@@ -6,7 +6,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { ConsultationForm } from "./consultationForm";
 
 const Navbar: React.FC = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
 
   const navlinks = [
     { text: "Home", link: "/" },

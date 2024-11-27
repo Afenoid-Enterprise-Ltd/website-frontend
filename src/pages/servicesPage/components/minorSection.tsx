@@ -11,6 +11,7 @@ import {
   ApmgLogo,
   NistLogo,
 } from "../../../assets";
+import Marquee from "react-fast-marquee";
 
 const MinorSection = () => {
   const trainingData = [
@@ -55,18 +56,25 @@ const MinorSection = () => {
         >
           Partnering for Excellence
         </Text>
-        <div className="flex justify-center items-center gap-6 my-[3rem]">
-          {partners.map((partner, index) => (
-            <img src={partner} alt="Our Partners" key={index} />
-          ))}
+        <div className="flex justify-center items-center gap-6 my-[3rem] mlg:px-[5rem]">
+          <Marquee pauseOnHover={false} speed={20} direction="left">
+            {partners.map((partner, index) => (
+              <img
+                src={partner}
+                alt="Our Partners"
+                key={index}
+                className="max-w-auto mr-24 object-cover mmd:mr-16"
+              />
+            ))}
+          </Marquee>
         </div>
-        <div className="w-[60%]">
+        <div className="w-[60%] msm:w-[75%] mxs:w-[80%]">
           <Text
             variant="h5"
             fontFamily="proxima-nova"
             fontWeight="medium"
             align="center"
-            customClassName=""
+            customClassName="mxxss:text-xs"
           >
             We collaborate with industry-leading technology providers and
             certification bodies to deliver comprehensive services. Our
@@ -86,7 +94,7 @@ const MinorSection = () => {
           Our Courses
         </Text>
 
-        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem]">
+        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem] mxxl:grid mxxl:grid-cols-2 mlg:grid-cols-1 mxs:px-[3rem]">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

@@ -19,7 +19,7 @@ const HeroSection = () => {
         caption: "Our Purpose",
         title: "To help digital-age organisations become more resilient",
         description:
-          "And equip their professionals everywhere to become more competent",
+          "We achieve this by improving an organization’s digital strategy, performance, compliance assurance, and staff competence levels.",
       },
       image: PurposeImg,
     },
@@ -27,7 +27,7 @@ const HeroSection = () => {
 
   return (
     <section className=" bg-afenoid-white">
-      <section className="px-[5rem] flex flex-col gap-28 py-40">
+      <section className="px-[5rem] flex flex-col gap-28 py-4 mlg:gap-14 msm:px-[3rem] mxs:px-[2rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}

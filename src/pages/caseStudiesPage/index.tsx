@@ -44,7 +44,7 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="min-h-[70vh] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col">
+        <section className="h-[80vh] max-h-[1600px] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col">
           <Text
             variant="h1"
             align="center"
@@ -85,15 +85,15 @@ const CaseStudiesPage = () => {
         </section>
 
         <section className="px-[110px] py-[120px] flex justify-center">
-          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full">
+          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full max-w-[1440px]">
             {selectedCaseStudy === "ALL" &&
               caseStudy.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -136,10 +136,10 @@ const CaseStudiesPage = () => {
               pciCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -182,10 +182,10 @@ const CaseStudiesPage = () => {
               ismsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -228,10 +228,10 @@ const CaseStudiesPage = () => {
               bcmsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
@@ -274,10 +274,10 @@ const CaseStudiesPage = () => {
               qmsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[350px] flex flex-col"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
-                    <div className="h-[180px] w-full">
+                    <div className="max-h-[180px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"

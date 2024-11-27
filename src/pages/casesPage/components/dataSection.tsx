@@ -15,8 +15,8 @@ type DataSectionProps = {
 const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcome, recommendation}) => {
   return (
     <section className="px-[80px] flex flex-col gap-[64px] items-center">
-      <div className="bg-[#E3F0C9] h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center">
-        <div className="w-[60px]">
+      <div className="bg-[#E3F0C9] max-h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center">
+        <div className="max-w-[60px]">
           <img src={ChallengeIcon} alt="" />
         </div>
         <div className="flex flex-col gap-[12px]">
@@ -35,7 +35,6 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
             align="left"
             color="af-dark-green"
             variant="h5"
-            customClassName="w-[80]"
           >
             {challenge}
           </Text>
@@ -43,7 +42,7 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
       </div>
 
       <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#DBEEF4]">
-        <div className="w-[60px]">
+        <div className="max-w-[60px]">
           <img src={MethodologyIcon} alt="" />
         </div>
         <div className="flex flex-col gap-[12px]">
@@ -62,15 +61,14 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
             align="left"
             color="af-dark-green"
             variant="h5"
-            customClassName="w-[80]"
           >
             {methodology}
           </Text>
         </div>
       </div>
 
-      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#FFEBE5]">
-        <div className="w-[60px]">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#FFEBE5]">
+        <div className="max-w-[60px]">
           <img src={OutcomeIcon} alt="" />
         </div>
         <div className="flex flex-col gap-[12px]">
@@ -89,15 +87,14 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
             align="left"
             color="af-dark-green"
             variant="h5"
-            customClassName="w-[80]"
           >
             {outcome}
           </Text>
         </div>
       </div>
 
-      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#9BBB59]">
-        <div className="w-[60px]">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#9BBB59]">
+        <div className="max-w-[60px]">
           <img src={RecommendationIcon} alt="" />
         </div>
         <div className="flex flex-col gap-[12px]">
@@ -116,7 +113,6 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
             align="left"
             color="af-dark-green"
             variant="h5"
-            customClassName="w-[80]"
           >
             {recommendation}
           </Text>

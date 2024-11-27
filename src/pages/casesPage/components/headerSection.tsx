@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text } from '../../../ui'
-import Fintech from "../../../assets/fintech1.png"
 
 type HeaderSectionProps = {
     title: string | undefined;
@@ -23,11 +22,11 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({title, industry, segment, 
         {title}
        </Text>
 
-        <div className="w-[1280px] h-[400px]">
+        <div className="max-w-[1280px] h-[318px] w-[1280px]">
             <img src={imgUrl} alt="" className="w-full h-full"/>
         </div>
 
-        <div className="w-full flex justify-center px-[220px]">
+        <div className="w-full flex justify-center px-[220px] max-w-[1500px]">
             <table className="w-full">
                 <tr className="text-[20px] font-proxima-nova font-normal text-[#999590]">
                     <td>Industry</td>

@@ -39,11 +39,11 @@ const MainSection = () => {
   };
 
   return (
-    <section>
-      <div className="w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem]">
+    <section className="w-screen">
+      <div className="w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar">
         <button
           onClick={setToOne}
-          className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 1
               ? "bg-afenoid-green text-floral-white"
               : "bg-afenoid-light-grey text-black"
@@ -53,7 +53,7 @@ const MainSection = () => {
         </button>
         <button
           onClick={setToTwo}
-          className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 2
               ? "bg-afenoid-green text-floral-white"
               : "bg-afenoid-light-grey text-black"
@@ -63,7 +63,7 @@ const MainSection = () => {
         </button>
         <button
           onClick={setToThree}
-          className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 3
               ? "bg-afenoid-green text-floral-white"
               : "bg-afenoid-light-grey text-black"
@@ -73,7 +73,7 @@ const MainSection = () => {
         </button>
         <button
           onClick={setToFour}
-          className={` font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 4
               ? "bg-afenoid-green text-floral-white"
               : "bg-afenoid-light-grey text-black"

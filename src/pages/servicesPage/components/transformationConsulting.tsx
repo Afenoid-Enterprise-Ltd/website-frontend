@@ -16,7 +16,7 @@ const TransformationConsulting = () => {
 
   return (
     <section>
-      <div className="px-[15rem]">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem]">
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
@@ -48,7 +48,7 @@ const TransformationConsulting = () => {
           </Text>
         </div>
       </div>
-      <div className="px-[10rem] py-[5rem]">
+      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem]">
         <Accordion>
           <AccordionItem
             value="1"

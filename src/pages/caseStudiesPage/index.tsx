@@ -4,6 +4,7 @@ import { Outlet, Text } from "../../ui";
 import { Button } from "../../ui";
 import { caseStudy } from "./caseStudy.ts";
 import { Link } from "react-router-dom";
+import { CallToAction } from "../../components/callToAction.tsx";
 
 const caseStudyButtons = [
   "ALL",
@@ -319,6 +320,18 @@ const CaseStudiesPage = () => {
               })}
           </div>
         </section>
+
+        <CallToAction
+          title="Ready to have a conversation with us?"
+          explanation="Schedule a meeting with a consultant right away"
+          button={
+            <Button
+              variant="primary"
+              label="Book a Consultation"
+              customClassName="mt-[2rem]"
+            />
+          }
+        />
       </Outlet>
     </motion.section>
   );

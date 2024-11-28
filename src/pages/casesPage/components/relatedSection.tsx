@@ -154,4 +154,3 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
 };
 
 export { RelatedSection };
-

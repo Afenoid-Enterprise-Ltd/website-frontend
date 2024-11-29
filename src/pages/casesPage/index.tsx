@@ -57,7 +57,7 @@ const CasesPage = () => {
           }
         />
 
-        <RelatedSection />
+        <RelatedSection relatedCases={relateditems}/>
 
         <div className="max-w-[530px] mx-auto mt-[150px]">
           <img src={HomeHeroImage} alt="" />

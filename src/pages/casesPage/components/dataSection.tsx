@@ -41,7 +41,7 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#DBEEF4] w-full">
+      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#DBEEF4] w-full">
         <div className="max-w-[60px]">
           <img src={MethodologyIcon} alt="" />
         </div>
@@ -67,7 +67,7 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#FFEBE5] w-full">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#FFEBE5] w-full">
         <div className="max-w-[60px]">
           <img src={OutcomeIcon} alt="" />
         </div>
@@ -93,7 +93,7 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] w-[1270px] flex gap-[42px] items-center bg-[#9BBB59] w-full">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#9BBB59] w-full">
         <div className="max-w-[60px]">
           <img src={RecommendationIcon} alt="" />
         </div>

@@ -3,6 +3,7 @@ import { Loader } from "./ui";
 import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Toaster } from 'sonner';
 
 const HomePage = lazy(() =>
   import("./pages").then((module) => ({ default: module.HomePage }))
@@ -18,6 +19,9 @@ const AboutUsPage = lazy(() =>
 );
 const ServicesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.ServicesPage }))
+);
+const ServicesSkillsPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.ServiceSkillsPage }))
 );
 const ResourcesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.ResourcesPage }))
@@ -41,12 +45,14 @@ function App() {
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:service" element = {<ServicesSkillsPage/>} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-studies/:title" element={<CasesPage />}/>
             <Route path="components" element={<ComponentsPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes> 
         </AnimatePresence>
+        <Toaster richColors={true} position="top-right" expand={true}/>
       </Suspense>
     </>
   );

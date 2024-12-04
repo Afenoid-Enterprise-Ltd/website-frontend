@@ -11,8 +11,10 @@ const ResourcesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <HeroSection />
-        <CaseStudySection />
+        <section className="overflow-x-hidden">
+          <HeroSection />
+          <CaseStudySection />
+        </section>
       </Outlet>
     </motion.section>
   );

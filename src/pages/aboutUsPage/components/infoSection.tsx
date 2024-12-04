@@ -112,36 +112,42 @@ const InfoSection = () => {
   ];
 
   return (
-    <section className="p-[5rem] bg-afenoid-white">
-      <div className="flex flex-col items-center gap-4 px-[15rem]">
-        <Text
-          variant="h2"
-          align="center"
-          color="af-dark-green"
-          fontWeight="medium"
-          fontFamily="gambetta"
-          customClassName="mb-3"
-        >
-          Enterprise Security Within Your Reach
-        </Text>
-        <Text
-          variant="h4"
-          align="center"
-          color="af-dark-green"
-          fontWeight="light"
-          fontFamily="proxima-nova"
-        >
-          Transform your organization's security posture with Afenoid's
-          comprehensive suite of GRC services, making world-class standards
-          accessible and achievable.
-        </Text>
-        <Button
-          variant="primary"
-          label="Book a Consultation"
-          customClassName=""
-        />
+    <section className="p-[5rem] bg-afenoid-white msm:p-[3rem]">
+      <div className="flex flex-col items-center gap-4 px-[15rem] mxl:px-[10rem] mmlg:px-[5rem] msm:px-[3rem] mxs:px-[2rem]">
+        <div className="">
+          <Text
+            variant="h2"
+            align="center"
+            color="af-dark-green"
+            fontWeight="medium"
+            fontFamily="gambetta"
+            customClassName="mb-3"
+          >
+            Enterprise Security Within Your Reach
+          </Text>
+        </div>
+        <div>
+          <Text
+            variant="h5"
+            align="center"
+            color="af-dark-green"
+            fontWeight="light"
+            fontFamily="proxima-nova"
+          >
+            Transform your organization's security posture with Afenoid's
+            comprehensive suite of GRC services, making world-class standards
+            accessible and achievable.
+          </Text>
+        </div>
+        <div>
+          <Button
+            variant="primary"
+            label="Book a Consultation"
+            customClassName=""
+          />
+        </div>
       </div>
-      <div className="flex gap-12 mx-[5rem] my-[8rem]">
+      <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
         {numberData.map((number, index) => (
           <Number
             icon={number.icon}

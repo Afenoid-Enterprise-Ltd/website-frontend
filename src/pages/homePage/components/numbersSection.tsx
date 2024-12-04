@@ -22,6 +22,7 @@ import {
   FidelityBankLogo,
   GTCOLogo,
   AXAInsurance,
+  SkylineImg,
 } from "../../../assets";
 
 interface CountUpProps {
@@ -157,6 +158,7 @@ const NumbersSection = () => {
         </div>
       </div>
 
+      <img src={SkylineImg} alt="Skyline Pattern" />
       <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem]">
         <Marquee pauseOnHover={false} speed={20} direction="left">
           {clients.map((client, index) => (

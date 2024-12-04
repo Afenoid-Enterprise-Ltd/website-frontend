@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HeroSection = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
 
   useEffect(() => {
     AOS.init();
@@ -14,16 +14,16 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-screen h-[87.5vh] relative overflow-x-hidden">
-      <div className="flex justify-between items-center px-[5rem] mmd:flex-col msm:px-[3rem]">
-        <div className="w-1/2 mmd:w-full mmd:pt-[3.5rem]">
+    <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
+      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-[3rem]">
+        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem]">
           <Text
             variant="h1"
             color="af-dark-green"
             fontWeight="medium"
             align="left"
             fontFamily="gambetta"
-            customClassName="mb-6 mmd:text-h4 mmd:text-center"
+            customClassName="mb-6 mmlg:text-h4 mmlg:text-center"
           >
             Helping organizations to establish digital trust
           </Text>
@@ -33,7 +33,7 @@ const HeroSection = () => {
             color="af-dark-green"
             fontWeight="medium"
             align="left"
-            customClassName="mb-6 mmd:hidden"
+            customClassName="mb-6 mmlg:hidden"
           >
             We help digital-age organisations to become more resilient and equip
             their professionals to become more competent.
@@ -41,11 +41,15 @@ const HeroSection = () => {
           <Button
             variant="primary"
             label="Book a Consultaion"
-            customClassName="mb-6 mmd:hidden"
+            customClassName="mb-6 mmlg:hidden"
           />
         </div>
-        <div className="w-1/2 mmd:w-full mmd:px-4">
-          <img src={HomeHeroImage} alt="Hero Image" className="scale-75 mmd:scale-100" />
+        <div className="w-1/2 mmlg:w-full mmd:px-4">
+          <img
+            src={HomeHeroImage}
+            alt="Hero Image"
+            // className="scale-75 mmd:scale-100"
+          />
         </div>
       </div>
 
@@ -68,8 +72,6 @@ const HeroSection = () => {
           <div></div>
         )}
       </div>
-
-     
     </section>
   );
 };

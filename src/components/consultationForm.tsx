@@ -3,9 +3,11 @@ import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Modal, Input } from "../ui";
-import { Text, Button } from "../ui";
+import { Text, Button, Dropdown } from "../ui";
 import { FormCover } from "../assets";
 import { consultationFormSchema } from "../schema";
+import { useCountries } from "use-react-countries";
+import { toast } from "sonner";
 
 interface FormProps {
   isOpen: boolean;
@@ -18,14 +20,61 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
     mode: "onChange",
   });
 
-  const { handleSubmit} = methods;
-  
+  const { handleSubmit, reset } = methods;
 
   const bookConsultation = async (
     data: z.infer<typeof consultationFormSchema>
   ) => {
-    console.log("Submitted Data:", data);
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycby8lGqxlsEA9mPgpbwLkEgao4COkn3ZkgRlwE5YYpYrmRGxky3qyZMS6sUiPV01BmiK9Q/exec?name=Sheet1",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "no-cache",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const responseData = await response.json();
+      if (response.ok && responseData.status === "success") {
+        console.log("Submitted Data:", data);
+        reset();
+        toast.success("You have successfully booked for a consultation");
+        onClose();
+      } else {
+        toast.error(
+          responseData.message || "Failed to submit consultation request"
+        );
+      }
+    } catch (e: any) {
+      console.error("Submission error:", e);
+      toast.error("An unexpected error occurred");
+    }
   };
+
+  const servicesData = [
+    { label: "Digital Trust Services", value: "Digital Trust Services" },
+    {
+      label: "Digital Transformation Consulting",
+      value: "Digital Transformation Consulting",
+    },
+    {
+      label: "Digital Skills Development",
+      value: "Digital Skills Development",
+    },
+  ];
+
+  const { countries } = useCountries();
+  const formattedCountriesData = countries
+    .map(({ name, emoji }: { name: string; emoji: string }) => ({
+      value: name,
+      label: `${emoji} ${name}`,
+    }))
+    .sort((a, b) => a.value.localeCompare(b.value));
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -64,19 +113,54 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
 
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(bookConsultation)}>
-            <Input label="First Name" type="text" name="firstname" />
-            <Input label="Last Name" type="text" name="lastname" />
-            <Input label="Email Name" type="email" name="email" />
-            <Input label="Phone Number"  type="number" name="phoneNumber"/>
-            <Input label="Country" type="text" name="country" />
-            <Input label="Company" type="text" name="company" />
+            <Input
+              label="First Name"
+              type="text"
+              name="firstname"
+              placeholder="Enter your first name"
+            />
+            <Input
+              label="Last Name"
+              type="text"
+              name="lastname"
+              placeholder="Enter your last name"
+            />
+            <Input
+              label="Email"
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+            />
+            <Input
+              label="Phone Number"
+              type="text"
+              name="phoneNumber"
+              placeholder="Enter your mobile number"
+            />
+            <Dropdown
+              label="Service"
+              name="service"
+              options={servicesData}
+              placeholder="Select a service"
+            />
+            <Dropdown
+              label="Country"
+              name="country"
+              options={formattedCountriesData}
+              placeholder="Select a country"
+            />
+            <Input
+              label="Company"
+              type="text"
+              name="company"
+              placeholder="Enter your company"
+            />
 
             <Button
               label="Submit"
               variant="primary"
               customClassName="mb-8"
               type="submit"
-              
             />
           </form>
         </FormProvider>

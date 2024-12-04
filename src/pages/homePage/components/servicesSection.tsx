@@ -1,15 +1,18 @@
-import { Text } from "../../../ui";
+
+import { Text, Button } from "../../../ui";
 import {
   ServicesImg1,
   ServicesImg2,
   ServicesImg3,
-  TrainingImg1,
-  TrainingImg2,
-  TrainingImg3,
+  HomePageServicesImg,
+  HomeServicesIconBg
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
+// import { useMediaQuery } from "@uidotdev/usehooks";
 
 const ServicesSection = () => {
+  const currentScreenWidth = window.innerWidth;
+
   const caseStudyData = [
     {
       title: "DIGITAL SKILLS DEVELOPMENT",
@@ -31,29 +34,6 @@ const ServicesSection = () => {
     },
   ];
 
-  const trainingData = [
-    {
-      title: "Information Security Management System (ISO 27001)",
-      description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: TrainingImg1,
-    },
-    {
-      title: "Business Continuity Management System (ISO 22301)",
-      description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
-      image: TrainingImg2,
-    },
-    {
-      title: "Certified in Risk and Information Systems Control (CRISC)",
-      description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
-      image: TrainingImg3,
-    },
-  ];
-
-
-
   return (
     <section>
       <div>
@@ -66,14 +46,13 @@ const ServicesSection = () => {
         >
           Our Services
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem] mmd:flex-col msm:px-[3.5rem] mxs:px-[2.5rem]">
+        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-[3.5rem] mxs:px-[2.5rem]">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}
               description={caseStudy.description}
               image={caseStudy.image}
               key={index}
-              
             />
           ))}
         </div>
@@ -99,25 +78,80 @@ const ServicesSection = () => {
           </Text>
         </div>
       </Slogan>
-      <div>
-        <Text
-          variant="h3"
-          fontFamily="gambetta"
-          fontWeight="semi-bold"
-          align="center"
-          customClassName="my-[5rem]"
-        >
-          Our Training
-        </Text>
-        <div className="flex justify-between items-start gap-12 px-[5rem] mb-[10rem] mmd:flex-col msm:px-[3.5rem] mxs:px-[2.5rem]">
-          {trainingData.map((training, index) => (
-            <CaseStudyCard
-              title={training.title}
-              description={training.description}
-              image={training.image}
-              key={index}
-            />
-          ))}
+      <div className=" bg-afenoid-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
+        <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0">
+          <div className="w-full relative">
+            <div className="w-[60%] flex flex-col gap-8 pb-[10rem] mlg:w-full">
+              <Text
+                variant="h2"
+                fontFamily="gambetta"
+                align="left"
+                color="floral-white"
+                fontWeight="medium"
+              >
+                Ready to equip your professionals with skills and competencies?
+              </Text>
+              <Text
+                variant="h5"
+                fontFamily="proxima-nova"
+                align="left"
+                color="floral-white"
+                fontWeight="light"
+              >
+                Our courses are designed to build expertise in IT governance,
+                service management, risk management, cybersecurity, data
+                privacy, and audit.
+              </Text>
+              <div>
+                <Button
+                  variant="secondary"
+                  label=" Learn More"
+                  customClassName="font-light border-white text-white"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden w-full relative mlg:flex mlg:justify-center">
+            <div className="absolute bottom-[5rem] animate-pulse">
+              <img
+                src={HomeServicesIconBg}
+                alt="Image"
+                className="mr-4"
+                width={250}
+                height={500}
+              />
+            </div>
+            <div className="">
+              <img
+                src={HomePageServicesImg}
+                alt="Image"
+                className="mr-4"
+                width={200}
+                height={500}
+              />
+            </div>
+          </div>
+          <div className="w-full relative mlg:hidden">
+          <div className="absolute z-10 bottom-[8rem] -right-8 animate-pulse">
+              <img
+                src={HomeServicesIconBg}
+                alt="Image"
+                className="mr-4"
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 300}
+                height={500}
+              />
+            </div>
+            <div className={`absolute bottom-0 ${currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? "-right-8" : "right-0"} `}>
+              <img
+                src={HomePageServicesImg}
+                alt="Image"
+                className="mr-4"
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 300}
+                height={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 300 : 500}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -4,5 +4,6 @@ export * from "./componentsPage";
 export * from  "./aboutUsPage";
 export * from "./resourcesPage";
 export * from "./servicesPage";
+export * from "./servicesSkillsPage";
 export * from "./caseStudiesPage";
 export * from "./casesPage";

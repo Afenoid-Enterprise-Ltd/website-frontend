@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
-import { HeroSection, CaseStudySection } from "./components";
+// import { useParams } from "react-router-dom";
 
-const ResourcesPage = () => {
+const ServiceSkillsPage = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -11,13 +11,10 @@ const ResourcesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="overflow-x-hidden">
-          <HeroSection />
-          <CaseStudySection />
-        </section>
+        <section className="overflow-x-hidden"></section>
       </Outlet>
     </motion.section>
   );
 };
 
-export { ResourcesPage };
+export {ServiceSkillsPage};

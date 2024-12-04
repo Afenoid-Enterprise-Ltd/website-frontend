@@ -56,7 +56,15 @@ import PciLogo from "./pci-logo.svg";
 import ApmgLogo from "./apmg-logo.svg";
 import NistLogo from "./nist-logo.svg";
 import FormCover from "./form-cover.png";
-
+import HomePageServicesImg from "./home-page-services-icon.png";
+import HomePageCaseStudiesImg from "./home-page-case-study-image.png";
+import MotionMacbook from "./motion-macbook-icon.svg";
+import MotionBulb from "./motion-bulb-icon.svg";
+import MotionCoins from "./motion-coins-icon.svg";
+import MotionGraduation from "./motion-graduation-icon.svg";
+import MotionGrowth from "./motion-growth-icon.svg";
+import MotionBrain from "./motion-brain-icon.svg";
+import HomeServicesIconBg from "./home-services-icons-img.png";
 
 export {
   MainLogoSVG,
@@ -116,5 +124,14 @@ export {
   SkillsDevImg1,
   SkillsDevImg2,
   SkillsDevImg3,
-  FormCover
+  FormCover,
+  HomePageServicesImg,
+  HomePageCaseStudiesImg,
+  MotionMacbook,
+  MotionBulb,
+  MotionCoins,
+  MotionGraduation,
+  MotionGrowth,
+  MotionBrain,
+  HomeServicesIconBg
 };

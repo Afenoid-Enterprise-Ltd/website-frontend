@@ -1,64 +1,22 @@
-import React, { } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Text, Button, Carousel } from "../../../ui";
-import { CallToAction } from "../../../components";
-import { CaseStudyImg1 } from "../../../assets";
+import { Text, Button,  } from "../../../ui";
+import { CallToAction, ArticleCard } from "../../../components";
+import { HomePageCaseStudiesImg } from "../../../assets";
 
 
 const CaseStudiesSection = () => {
-  const carouselItems = [
-    {
-      id: 1,
-      image: CaseStudyImg1,
-      title: "How ISMS compliance influences corporate information",
-      category: "PCI DSS 1",
-    },
-    {
-      id: 2,
-      image: CaseStudyImg1,
-      title: "How ISMS compliance is influence corporate information",
-      category: "PCI DSS 2",
-    },
-    {
-      id: 3,
-      image: CaseStudyImg1,
-      title: "How ISMS compliance is influence corporate information",
-      category: "PCI DSS 3",
-    },
-    {
-      id: 4,
-      image: CaseStudyImg1,
-      title: "How ISMS compliance is influence corporate information",
-      category: "PCI DSS 4",
-    },
-  ];
+  
 
   return (
     <section>
-      <div className="bg-afenoid-light-grey">
-        <div className="flex flex-col justify-between items-center w-full">
-          <Text
-            variant="h3"
-            fontFamily="playfair-display"
-            fontWeight="semi-bold"
-            align="center"
-            customClassName=""
-          >
-            Case Studies
-          </Text>
-          <Text
-            variant="h5"
-            fontFamily="proxima-nova"
-            color="af-dark-green"
-            fontWeight="medium"
-            align="center"
-            customClassName="mb-6 mmd:mx-[3rem]"
-          >
-            We help digital-age organisations to become more resilient and equip
-            their professionals to become more competent.
-          </Text>
-          <Carousel items={carouselItems}/>
-        </div>
+      <div className="bg-afenoid-light-grey px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
+        <ArticleCard
+          title="Security Success Stories"
+          description = "Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
+          image={HomePageCaseStudiesImg}
+          caseStudy = {true}
+        />
       </div>
       <CallToAction
         title="Our journey with you starts here"

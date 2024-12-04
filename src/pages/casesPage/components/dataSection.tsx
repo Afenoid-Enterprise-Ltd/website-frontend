@@ -14,12 +14,12 @@ type DataSectionProps = {
 
 const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcome, recommendation}) => {
   return (
-    <section className="px-[80px] flex flex-col gap-[64px] items-center">
-      <div className="bg-[#E3F0C9] max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center w-full">
-        <div className="max-w-[60px]">
+    <section className="px-[80px] flex flex-col gap-[64px] items-center msm:px-[20px] msm:w-full msm:overflow-x-hidden">
+      <div className="bg-[#E3F0C9] max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:items-start msm:gap-5">
+        <div className="max-w-[60px] msm:max-w-[40px]">
           <img src={ChallengeIcon} alt="" />
         </div>
-        <div className="flex flex-col gap-[12px]">
+        <div className="flex flex-col gap-[12px] msm:gap-2">
           <Text
             fontFamily="gambetta"
             fontWeight="medium"
@@ -41,11 +41,11 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#DBEEF4] w-full">
-        <div className="max-w-[60px]">
+      <div className="h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#DBEEF4] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:items-start msm:gap-5">
+        <div className="max-w-[60px] msm:max-w-[40px]">
           <img src={MethodologyIcon} alt="" />
         </div>
-        <div className="flex flex-col gap-[12px]">
+        <div className="flex flex-col gap-[12px] msm:gap-2">
           <Text
             fontFamily="gambetta"
             fontWeight="medium"
@@ -67,11 +67,11 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#FFEBE5] w-full">
-        <div className="max-w-[60px]">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#FFEBE5] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:items-start msm:gap-5">
+        <div className="max-w-[60px] msm:max-w-[40px]">
           <img src={OutcomeIcon} alt="" />
         </div>
-        <div className="flex flex-col gap-[12px]">
+        <div className="flex flex-col gap-[12px] msm:gap-2">
           <Text
             fontFamily="gambetta"
             fontWeight="medium"
@@ -93,11 +93,11 @@ const DataSection: React.FC<DataSectionProps> = ({challenge, methodology, outcom
         </div>
       </div>
 
-      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#9BBB59] w-full">
-        <div className="max-w-[60px]">
+      <div className="max-h-[204px] py-[37px] pl-[45px] pr-[110px] flex gap-[42px] items-center bg-[#9BBB59] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:items-start msm:gap-5">
+        <div className="max-w-[60px] msm:max-w-[40px]">
           <img src={RecommendationIcon} alt="" />
         </div>
-        <div className="flex flex-col gap-[12px]">
+        <div className="flex flex-col gap-[12px] msm:gap-2">
           <Text
             fontFamily="gambetta"
             fontWeight="medium"

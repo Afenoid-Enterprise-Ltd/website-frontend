@@ -13,7 +13,7 @@ export const caseStudy = [
       title: "Securing Fintech for Multi-Market Compliance",
       description: "A peer-to-peer payment fintech overcame data breach concerns and achieved ISO 27001 certification, strengthening security with advanced encryption, access controls, and third-party risk assessments.",
       imgUrl: Fintech,
-      segment: "ISO 27001 (ISMS)",
+      segment: "ISO 27001",
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
@@ -28,7 +28,7 @@ export const caseStudy = [
       title: "Ensuring Resilience in Cryptocurrency Exchanges",
       description: "A cryptocurrency exchange adopted ISO 22301 to safeguard operations during cyberattacks and market volatility, achieving uninterrupted service and improved crisis management.",
       imgUrl: Crypto,
-      segment: "ISO 22301 (BCMS)",
+      segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
@@ -58,7 +58,7 @@ export const caseStudy = [
       title: "Enhancing Resilience for Retail Banking Operations",
       description: "A retail bank implemented ISO 22301, ensuring operational continuity during disasters and power outages, reducing downtime and enhancing customer confidence.",
       imgUrl: RetailBanking,
-      segment: "ISO 22301 (BCMS)",
+      segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
@@ -88,7 +88,7 @@ export const caseStudy = [
       title: "Strengthening Cross-Border Payment Security",
       description: "A high-volume transaction provider implemented ISO 27001 to secure international transactions, reduce breaches, and ensure regulatory compliance, gaining ISO 27001 certification.",
       imgUrl: CrossBorder,
-      segment: "ISO 27001 (ISMS)",
+      segment: "ISO 27001",
       data: {
         title: "Top Tier Bank in Nigeria",
         industry: "Banking",
@@ -118,7 +118,7 @@ export const caseStudy = [
       title: "Strengthening Continuity for Payment Processing",
       description: "A payment switch provider utilized ISO 22301 to maintain uninterrupted transactions during system failures, earning certification and customer trust in their resilience.",
       imgUrl: Continuity,
-      segment: "ISO 22301 (BCMS)",
+      segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
@@ -133,7 +133,7 @@ export const caseStudy = [
       title: "Building Trust in Mobile Transactions",
       description: "A mobile payment gateway achieved ISO 27001 certification by implementing robust encryption, secure APIs, and breach response protocols, significantly improving customer trust.",
       imgUrl: MobileTrust,
-      segment: "ISO 27001 (ISMS)",
+      segment: "ISO 27001",
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",

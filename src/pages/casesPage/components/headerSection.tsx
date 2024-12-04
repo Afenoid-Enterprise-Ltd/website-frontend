@@ -11,7 +11,7 @@ type HeaderSectionProps = {
 
 const HeaderSection: React.FC<HeaderSectionProps> = ({title, industry, segment, duration, imgUrl}) => {
   return (
-    <section className="py-[120px]  flex flex-col gap-[47px] px-[80px]">
+    <section className="py-[120px]  flex flex-col gap-[47px] px-[80px] msm:px-[80px] border border-red-700">
        <Text
        variant='h3'
        fontWeight='medium'
@@ -26,7 +26,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({title, industry, segment, 
             <img src={imgUrl} alt="" className="w-full h-full"/>
         </div>
 
-        <div className="w-full flex justify-center px-[220px] max-w-[1500px]">
+        <div className="w-full flex justify-center px-[220px] max-w-[1500px] border border-blue-700 msm:px-5">
             <table className="w-full">
                 <tbody>
                     <tr className="text-[20px] font-proxima-nova font-normal text-[#999590]">

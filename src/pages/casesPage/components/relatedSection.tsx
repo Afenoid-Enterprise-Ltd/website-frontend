@@ -1,5 +1,4 @@
 import { Text } from "../../../ui";
-import Fintech2 from "../../../assets/fintech2.png";
 import { Link } from "react-router-dom";
 
 type RelatedSectionProps = {

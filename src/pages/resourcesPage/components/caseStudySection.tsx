@@ -14,6 +14,7 @@ const CaseStudySection = () => {
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: CaseStudyImg1,
+      route: ""
     },
     {
       title: "Fintech Payment Processing Platform",
@@ -38,7 +39,7 @@ const CaseStudySection = () => {
 
   return (
     <section className="bg-afenoid-white">
-      <div className="w-[80%] mx-auto my-[8rem] px-[3rem]">
+      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] msm:w-full">
         <Text
           variant="h2"
           fontFamily="gambetta"
@@ -62,7 +63,7 @@ const CaseStudySection = () => {
           we help businesses achieve compliance and drive growth.{" "}
         </Text>
       </div>
-      <div className="bg-afenoid-light-grey p-[5rem]">
+      <div className="bg-afenoid-light-grey p-[5rem] msm:px-[3rem] mxs:px-[2rem]" >
         <div className="my-4">
           <Text
             variant="h2"
@@ -85,13 +86,14 @@ const CaseStudySection = () => {
           </Text>
         </div>
 
-        <div className="flex justify-between items-start gap-10">
+        <div className="flex justify-between items-start gap-10 mxl:grid mxl:grid-cols-2 mmd:grid-cols-1">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}
               description={caseStudy.description}
               image={caseStudy.image}
               key={index}
+              // optionalWidth = {true}
             />
           ))}
         </div>
@@ -101,7 +103,7 @@ const CaseStudySection = () => {
         </div>
       </div>
 
-      <div className="px-[10rem] py-[5rem]">
+      <div className="px-[10rem] py-[5rem] mxl:px-[8rem] mlg:px-[6rem] mmd:px-[5rem]">
         <ArticleCard
           title={articleData.title}
           image={articleData.image}

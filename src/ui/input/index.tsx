@@ -6,10 +6,11 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string;
   type?: string;
+  placeholder: string;
 }
 
 const Input: FC<InputProps> = (props) => {
-  const { name, label, type = "text", ...rest } = props;
+  const { name, label, type = "text", placeholder, ...rest } = props;
 
   const {
     register,
@@ -38,6 +39,7 @@ const Input: FC<InputProps> = (props) => {
         className={clsx(
           `block w-full border-2 border-afenoid-light-grey p-4 bg-transparent focus:outline-afenoid-dark-grey`
         )}
+        placeholder={placeholder}
       />
       {errMessage && typeof errMessage === "string" && (
         <div className="text-red-500 text-xs">{errMessage}</div>

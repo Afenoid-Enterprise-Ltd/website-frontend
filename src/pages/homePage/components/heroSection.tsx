@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
       <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-[3rem]">
-        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[1rem]">
+        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem]">
           <div className="w-[95%]">
             <Text
               variant="body-reg"

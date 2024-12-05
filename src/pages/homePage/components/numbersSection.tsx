@@ -159,14 +159,16 @@ const NumbersSection = () => {
       </div>
 
       <img src={SkylineImg} alt="Skyline Pattern" />
-      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem]">
+      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem] ">
         <Marquee pauseOnHover={false} speed={20} direction="left">
           {clients.map((client, index) => (
             <img
               src={client}
               alt="Logos of Clients"
               key={index}
-              className="max-w-auto mr-24 object-cover mmd:max-w-12 mmd:mr-16"
+              className=" mr-24 object-cover mmd:max-w-12 mmd:mr-16"
+              width={50}
+              height={50}
             />
           ))}
         </Marquee>

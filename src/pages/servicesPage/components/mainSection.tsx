@@ -83,7 +83,7 @@ const MainSection = () => {
         </button>
       </div>
 
-      <div>{renderContent()}</div>
+      <section>{renderContent()}</section>
     </section>
   );
 };

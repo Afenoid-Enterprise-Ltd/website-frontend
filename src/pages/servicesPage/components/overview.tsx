@@ -87,7 +87,7 @@ const Overview = () => {
       </div>
 
       <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
+        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
           <Text
             variant="body-reg"
             color="af-green"

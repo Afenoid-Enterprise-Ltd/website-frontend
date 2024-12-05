@@ -19,7 +19,7 @@ const MainLogo = () => {
       <img
         src={MainLogoSVG}
         alt="Logo"
-        width={screenWidth <= 425 ? 100 : 120}
+        width={screenWidth <= 425 ? 80 : 120}
       />
     </div>
   );

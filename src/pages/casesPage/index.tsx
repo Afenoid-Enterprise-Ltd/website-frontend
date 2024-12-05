@@ -15,6 +15,14 @@ const CasesPage = () => {
     return study.title.toLowerCase().split(" ").join("-") === title;
   });
 
+  const relateditems = caseStudy.filter(study =>{
+    return study.segment === item?.segment
+  }).filter(study => {
+    return study.title !== item?.title
+  })
+
+  console.log(relateditems)
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -49,7 +57,7 @@ const CasesPage = () => {
           }
         />
 
-        <RelatedSection />
+        <RelatedSection relatedCases={relateditems}/>
 
         <div className="max-w-[530px] mx-auto mt-[150px]">
           <img src={HomeHeroImage} alt="" />

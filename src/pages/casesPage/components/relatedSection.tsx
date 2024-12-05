@@ -1,4 +1,4 @@
-import { Carousel, Text } from "../../../ui";
+import { Text } from "../../../ui";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import Slider from "react-slick";

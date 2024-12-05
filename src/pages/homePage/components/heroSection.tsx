@@ -19,6 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
     AOS.refresh();
   }, []);
 
+
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
       <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-[3rem]">

@@ -57,7 +57,7 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
               <Slider {...settings}>
               {relatedCases?.map((relatedCase: RelatedCases) => {
                 return (
-                  <div className="h-[504px] w-[370px] flex flex-col gap-[20px] msm:w-full msm:h-fit">
+                  <div className="h-[504px] w-[370px] flex flex-col gap-[20px] msm:w-full msm:h-fit msm:mb-3">
                     <div className="h-[180px] w-full">
                       <img src={relatedCase.imgUrl} alt="Case Study 1" className="h-full" />
                     </div>

@@ -7,13 +7,9 @@ import { Button } from "../../ui";
 import { caseStudy } from "./caseStudy.ts";
 import { Link } from "react-router-dom";
 import { CallToAction } from "../../components/callToAction.tsx";
+import { SkylineImg } from "../../assets";
 
-const caseStudyButtons = [
-  "ALL",
-  "PCI DSS",
-  "ISO 27001",
-  "ISO 22301",
-];
+const caseStudyButtons = ["ALL", "PCI DSS", "ISO 27001", "ISO 22301"];
 
 interface Case {
   title: string;
@@ -35,7 +31,6 @@ const CaseStudiesPage = () => {
     }
   }, [isSmallDevice]);
 
-
   const pciCases = caseStudy.filter((item: Case) => item.segment === "PCI DSS");
 
   const ismsCases = caseStudy.filter(
@@ -56,7 +51,8 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="h-[90vh] max-h-[1600px] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col ">
+        <section className="h-[90vh] max-h-[1600px] bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col relative ">
+          <div></div>
           <Text
             variant="h1"
             align="center"
@@ -77,8 +73,11 @@ const CaseStudiesPage = () => {
             Discover how organisations have transformed their security posture
             and achieved excellence with Afenoid's guidance.
           </Text>
+          <div className="w-screen absolute bottom-0">
+            <img src={SkylineImg} alt="Skyline Pattern" />
+          </div>
         </section>
-       
+
         <section className="bg-afenoid-light-grey h-[7.8rem] py-12 flex justify-center items-center gap-4 msm:px-6 msm:w-full">
           {caseStudyButtons.map((button, index) => {
             // Hide "ALL" button on mobile using conditional rendering
@@ -285,7 +284,10 @@ const CaseStudiesPage = () => {
                       </Text>
 
                       <Link
-                        to={`/case-studies/${study.title.split(' ').join('-').toLowerCase()}`}
+                        to={`/case-studies/${study.title
+                          .split(" ")
+                          .join("-")
+                          .toLowerCase()}`}
                         className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
                       >
                         Learn More
@@ -331,7 +333,10 @@ const CaseStudiesPage = () => {
                       </Text>
 
                       <Link
-                        to={`/case-studies/${study.title.split(' ').join('-').toLowerCase()}`}
+                        to={`/case-studies/${study.title
+                          .split(" ")
+                          .join("-")
+                          .toLowerCase()}`}
                         className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
                       >
                         Learn More

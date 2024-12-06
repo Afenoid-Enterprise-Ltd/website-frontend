@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 const HeroDivs = () => {
   const listItems = [
     "Digital Strategy",
-    "Performance Improvment",
+    "Performance Improvement",
     "Compliance Assurance",
     "Competence Development",
   ];

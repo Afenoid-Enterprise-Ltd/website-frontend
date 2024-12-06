@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem]">
           <div className="w-[95%]">
             <Text
-              variant="h1"
+              variant="h2"
               color="af-dark-green"
               fontWeight="medium"
               align="left"
@@ -51,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             </Text>
             <Button
               variant="primary"
-              label="Book a Consultaion"
+              label="Book a Consultation"
               customClassName="mb-6 mmlg:hidden"
               onClick={openModal}
             />

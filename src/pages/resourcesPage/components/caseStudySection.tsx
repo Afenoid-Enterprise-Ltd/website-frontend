@@ -12,7 +12,7 @@ const CaseStudySection = () => {
   };
 
   return (
-    <section className="bg-afenoid-white">
+    <section className="bg-white">
       <div className="w-[80%] mx-auto my-[8rem] px-[3rem] msm:w-full">
         <Text
           variant="h2"

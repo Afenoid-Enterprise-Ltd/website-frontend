@@ -112,7 +112,7 @@ const InfoSection = () => {
   ];
 
   return (
-    <section className="p-[5rem] bg-afenoid-white msm:p-[3rem]">
+    <section className="p-[5rem] bg-white msm:p-[3rem]">
       <div className="flex flex-col items-center gap-4 px-[15rem] mxl:px-[10rem] mmlg:px-[5rem] msm:px-[3rem] mxs:px-[2rem]">
         <div className="">
           <Text

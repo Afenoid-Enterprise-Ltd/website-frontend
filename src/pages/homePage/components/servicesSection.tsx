@@ -8,7 +8,6 @@ import {
   HomeServicesIconBg
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
-// import { useMediaQuery } from "@uidotdev/usehooks";
 
 const ServicesSection = () => {
   const currentScreenWidth = window.innerWidth;
@@ -58,12 +57,12 @@ const ServicesSection = () => {
         </div>
       </div>
       <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
+        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
           <Text
             variant="body-reg"
             color="af-green"
             fontFamily="proxima-nova"
-            customClassName="uppercase"
+            customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
           >
             At Afenoid
           </Text>
@@ -71,7 +70,7 @@ const ServicesSection = () => {
             variant="h2"
             color="af-green"
             fontFamily="gambetta"
-            customClassName="text-[3rem]"
+            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
             fontWeight="medium"
           >
             We strengthen organizations and equip professionals.
@@ -88,6 +87,7 @@ const ServicesSection = () => {
                 align="left"
                 color="floral-white"
                 fontWeight="medium"
+                customClassName="mxxss:text-h5"
               >
                 Ready to equip your professionals with skills and competencies?
               </Text>
@@ -133,12 +133,12 @@ const ServicesSection = () => {
             </div>
           </div>
           <div className="w-full relative mlg:hidden">
-          <div className="absolute z-10 bottom-[8rem] -right-8 animate-pulse">
+          <div className="absolute z-10 bottom-[8rem] -right-8 ">
               <img
                 src={HomeServicesIconBg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 300}
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 370}
                 height={500}
               />
             </div>
@@ -147,7 +147,7 @@ const ServicesSection = () => {
                 src={HomePageServicesImg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 300}
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 280}
                 height={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 300 : 500}
               />
             </div>

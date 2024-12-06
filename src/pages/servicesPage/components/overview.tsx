@@ -47,7 +47,7 @@ const Overview = () => {
   return (
     <section>
       <div
-        className="w-[80%] mx-auto my-[8rem] px-[3rem]"
+        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"
@@ -87,12 +87,12 @@ const Overview = () => {
       </div>
 
       <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
+        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
           <Text
             variant="body-reg"
             color="af-green"
             fontFamily="proxima-nova"
-            customClassName="uppercase"
+            customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
           >
             WE BELIEVE
           </Text>
@@ -100,7 +100,7 @@ const Overview = () => {
             variant="h2"
             color="af-green"
             fontFamily="gambetta"
-            customClassName="text-[3rem]"
+            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
             fontWeight="medium"
           >
             We mitigate enterprise weaknesses caused by practices, personnel and

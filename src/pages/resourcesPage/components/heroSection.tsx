@@ -26,6 +26,10 @@ const HeroSection = () => {
         >
           Let’s explore opportunities that meet your organizational needs.
         </Text>
+        <div className="flex justify-center items-center">
+          <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-regular mt-8 hover:bg-afenoid-lemon/75">Download Brochure</button>
+        </div>
+        
       </div>
     </section>
   );

@@ -16,6 +16,7 @@ const CaseStudiesSection = () => {
           description = "Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
           image={HomePageCaseStudiesImg}
           caseStudy = {true}
+          reverse = {true}
         />
       </div>
       <CallToAction

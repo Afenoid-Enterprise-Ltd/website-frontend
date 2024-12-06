@@ -159,7 +159,7 @@ const NumbersSection = () => {
       </div>
 
       <img src={SkylineImg} alt="Skyline Pattern" />
-      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem]">
+      <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem] ">
         <Marquee pauseOnHover={false} speed={20} direction="left">
           {clients.map((client, index) => (
             <img
@@ -192,7 +192,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
       <div>
         <div className="my-[2rem]">
           <CountUp end={title} />
-          <span className="text-[1.5rem] mmd:text-[1rem]">+</span>
+          <span className="text-[1.5rem]">+</span>
         </div>
       </div>
       <div>
@@ -201,7 +201,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
           fontFamily="proxima-nova"
           fontWeight="light"
           align="center"
-          customClassName="mmd:text-"
+          customClassName=""
         >
           {description}
         </Text>

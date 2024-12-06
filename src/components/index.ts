@@ -9,3 +9,4 @@ export * from "./choiceAfenoid";
 export * from "./slogan";
 export * from "./accordion";
 export * from "./consultationForm";
+export * from "./scrollTop";

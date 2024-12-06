@@ -120,7 +120,7 @@ const NumbersSection = () => {
   ];
 
   return (
-    <section className="w-screen bg-afenoid-white">
+    <section className="w-screen bg-white">
       <div className="p-[5rem] mmd:px-[3rem]">
         <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0">
           

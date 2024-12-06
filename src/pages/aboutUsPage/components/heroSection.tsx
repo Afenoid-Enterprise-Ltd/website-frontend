@@ -26,7 +26,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className=" bg-afenoid-white">
+    <section className=" bg-white">
       <section className="px-[5rem] flex flex-col gap-28 py-4 mb-[5rem] mlg:gap-14 msm:px-[3rem] mxs:px-[2rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv

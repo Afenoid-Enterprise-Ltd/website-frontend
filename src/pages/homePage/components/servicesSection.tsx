@@ -77,7 +77,7 @@ const ServicesSection = () => {
           </Text>
         </div>
       </Slogan>
-      <div className=" bg-afenoid-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
+      <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
         <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0">
           <div className="w-full relative">
             <div className="w-[60%] flex flex-col gap-8 pb-[10rem] mlg:w-full">

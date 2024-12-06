@@ -26,18 +26,18 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
         <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem]">
           <div className="w-[95%]">
             <Text
-              variant="body-reg"
+              variant="h1"
               color="af-dark-green"
               fontWeight="medium"
               align="left"
               fontFamily="gambetta"
-              customClassName="mb-6 text-[3.375rem] mmlg:text-h4 mmlg:text-center msm:text-h5"
+              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h5"
             >
               Strengthening organizations,
               <br /> Equipping professionals.
             </Text>
             <Text
-              variant="body-reg"
+              variant="h4"
               fontFamily="gambetta"
               color="af-dark-green"
               fontWeight="light"

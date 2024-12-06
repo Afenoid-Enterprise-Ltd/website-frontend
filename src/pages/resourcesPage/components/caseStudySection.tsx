@@ -1,35 +1,9 @@
 import { Text, Button } from "../../../ui";
-import { CaseStudyCard, ArticleCard } from "../../../components";
-import {
-  CaseStudyImg1,
-  CaseStudyImg2,
-  CaseStudyImg3,
-  ArticleImg1,
-} from "../../../assets";
+import { ArticleCard } from "../../../components";
+import { ArticleImg1, HomePageCaseStudiesImg } from "../../../assets";
+import { CallToAction } from "../../../components";
 
 const CaseStudySection = () => {
-  const caseStudyData = [
-    {
-      title: "How ISMS compliance is influence corporate information",
-      description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: CaseStudyImg1,
-      route: ""
-    },
-    {
-      title: "Fintech Payment Processing Platform",
-      description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
-      image: CaseStudyImg2,
-    },
-    {
-      title: "How ISMS compliance is influence corporate information",
-      description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
-      image: CaseStudyImg3,
-    },
-  ];
-
   const articleData = {
     title: "Dive Deeper into Digital Trust",
     description:
@@ -62,52 +36,38 @@ const CaseStudySection = () => {
           showcase successful collaborations across sectors, demonstrating how
           we help businesses achieve compliance and drive growth.{" "}
         </Text>
+        
       </div>
-      <div className="bg-afenoid-light-grey p-[5rem] msm:px-[3rem] mxs:px-[2rem]" >
-        <div className="my-4">
-          <Text
-            variant="h2"
-            fontFamily="gambetta"
-            align="center"
-            color="af-dark-green"
-            fontWeight="medium"
-          >
-            Case Studies
-          </Text>
-          <Text
-            variant="h5"
-            fontFamily="proxima-nova"
-            align="center"
-            color="af-dark-green"
-            fontWeight="light"
-          >
-            Our case studies showcase our expertise and approach to ensuring
-            organizational resilience.
-          </Text>
-        </div>
-
-        <div className="flex justify-between items-start gap-10 mxl:grid mxl:grid-cols-2 mmd:grid-cols-1">
-          {caseStudyData.map((caseStudy, index) => (
-            <CaseStudyCard
-              title={caseStudy.title}
-              description={caseStudy.description}
-              image={caseStudy.image}
-              key={index}
-              // optionalWidth = {true}
-            />
-          ))}
-        </div>
+      <div className="bg-afenoid-light-grey p-[5rem] msm:px-[3rem] mxs:px-[2rem]">
+        <ArticleCard
+          title="Security Success Stories"
+          description="Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
+          image={HomePageCaseStudiesImg}
+          caseStudy={true}
+          reverse={true}
+        />
 
         <div className="mx-auto flex justify-center items-center my-[4rem]">
           <Button label="View More" variant="primary" />
         </div>
       </div>
 
-      <div className="px-[10rem] py-[5rem] mxl:px-[8rem] mlg:px-[6rem] mmd:px-[5rem]">
+      <div className="px-[5rem] py-[5rem] msm:px-[3rem] mxs:px-[2rem]">
         <ArticleCard
           title={articleData.title}
           image={articleData.image}
           description={articleData.description}
+        />
+        <CallToAction
+          title="Ready to have a conversation with us?"
+          explanation="Schedule a meeting with a consultant right away"
+          button={
+            <Button
+              variant="primary"
+              label="Book a Consultation"
+              customClassName="mt-[2rem]"
+            />
+          }
         />
       </div>
     </section>

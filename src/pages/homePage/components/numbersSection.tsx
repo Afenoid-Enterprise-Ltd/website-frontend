@@ -166,9 +166,7 @@ const NumbersSection = () => {
               src={client}
               alt="Logos of Clients"
               key={index}
-              className=" mr-24 object-cover mmd:max-w-12 mmd:mr-16"
-              width={50}
-              height={50}
+              className="max-w-auto mr-24 object-cover mmd:max-w-12 mmd:mr-16"
             />
           ))}
         </Marquee>

@@ -133,12 +133,12 @@ const ServicesSection = () => {
             </div>
           </div>
           <div className="w-full relative mlg:hidden">
-          <div className="absolute z-10 bottom-[8rem] -right-8 animate-pulse">
+          <div className="absolute z-10 bottom-[8rem] -right-8 ">
               <img
                 src={HomeServicesIconBg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 350}
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 370}
                 height={500}
               />
             </div>
@@ -147,7 +147,7 @@ const ServicesSection = () => {
                 src={HomePageServicesImg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 300}
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 280}
                 height={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 300 : 500}
               />
             </div>

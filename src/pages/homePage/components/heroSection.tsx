@@ -1,17 +1,24 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { Text, Button } from "../../../ui";
 import { HomeHeroImage } from "../../../assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  openModal: () => void
+}
+
+const HeroSection:React.FC<HeroSectionProps> = (props) => {
+  const {openModal} = props
+
   const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+
 
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
@@ -42,13 +49,13 @@ const HeroSection = () => {
             variant="primary"
             label="Book a Consultaion"
             customClassName="mb-6 mmlg:hidden"
+            onClick={openModal}
           />
         </div>
         <div className="w-1/2 mmlg:w-full mmd:px-4">
           <img
             src={HomeHeroImage}
             alt="Hero Image"
-            // className="scale-75 mmd:scale-100"
           />
         </div>
       </div>

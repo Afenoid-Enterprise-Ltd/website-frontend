@@ -1,3 +1,5 @@
+
+import { useState,  } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import {
@@ -7,8 +9,19 @@ import {
   ServicesSection,
   CaseStudiesSection,
 } from "./components";
+import { ConsultationForm } from "../../components";
 
 const HomePage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -18,13 +31,16 @@ const HomePage = () => {
     >
       <Outlet>
         <section className="overflow-x-hidden">
-          <HeroSection />
+          <HeroSection openModal={openModal} />
           <NumbersSection />
           <ChoiceSection />
           <ServicesSection />
           <CaseStudiesSection />
         </section>
       </Outlet>
+      {isModalOpen && (
+        <ConsultationForm isOpen={isModalOpen} onClose={closeModal} />
+      )}
     </motion.section>
   );
 };

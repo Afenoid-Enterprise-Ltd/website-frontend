@@ -192,7 +192,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
       <div>
         <div className="my-[2rem]">
           <CountUp end={title} />
-          <span className="text-[1.5rem] mmd:text-[1rem]">+</span>
+          <span className="text-[1.5rem]">+</span>
         </div>
       </div>
       <div>
@@ -201,7 +201,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
           fontFamily="proxima-nova"
           fontWeight="light"
           align="center"
-          customClassName="mmd:text-"
+          customClassName=""
         >
           {description}
         </Text>

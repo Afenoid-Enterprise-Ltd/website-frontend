@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <section className="fixed inset-0 z-[500] transition duration-150 ease-in-out bg-black bg-opacity-50">
+    <section className="fixed inset-0 z-[9999] transition duration-150 ease-in-out bg-black bg-opacity-50">
       <div className="bg-white rounded-lg shadow-lg w-[55%] mx-auto mt-[3rem] overflow-hidden mlg:w-[65%] mmd:w-[70%] mxs:w-[85%]">
         {/* Close button */}
         <div className="flex justify-end items-center px-10 py-4">

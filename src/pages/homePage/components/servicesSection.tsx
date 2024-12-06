@@ -8,7 +8,6 @@ import {
   HomeServicesIconBg
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
-// import { useMediaQuery } from "@uidotdev/usehooks";
 
 const ServicesSection = () => {
   const currentScreenWidth = window.innerWidth;
@@ -63,7 +62,7 @@ const ServicesSection = () => {
             variant="body-reg"
             color="af-green"
             fontFamily="proxima-nova"
-            customClassName="uppercase"
+            customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
           >
             At Afenoid
           </Text>
@@ -71,7 +70,7 @@ const ServicesSection = () => {
             variant="h2"
             color="af-green"
             fontFamily="gambetta"
-            customClassName="text-[3rem]"
+            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
             fontWeight="medium"
           >
             We strengthen organizations and equip professionals.
@@ -138,7 +137,7 @@ const ServicesSection = () => {
                 src={HomeServicesIconBg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 300}
+                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 350}
                 height={500}
               />
             </div>

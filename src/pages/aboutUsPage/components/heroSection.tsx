@@ -38,12 +38,12 @@ const HeroSection = () => {
         ))}
       </section>
       <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem]">
+        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
           <Text
             variant="body-reg"
             color="af-green"
             fontFamily="proxima-nova"
-            customClassName="uppercase"
+            customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
           >
             At Afenoid
           </Text>
@@ -51,7 +51,7 @@ const HeroSection = () => {
             variant="h2"
             color="af-green"
             fontFamily="gambetta"
-            customClassName="text-[3rem]"
+            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
             fontWeight="medium"
           >
             We strengthen organizations and professionals.

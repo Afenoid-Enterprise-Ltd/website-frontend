@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`w-full h-[12.5vh] bg-afenoid-white flex items-center justify-between px-[5rem] sticky top-0 z-[9999] max-h-[200px] ${
+      className={`w-full h-[10vh] bg-afenoid-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] ${
         scrollDetected && offset !== 0 ? "shadow-lg" : ""
       } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4`} 
     >

@@ -59,7 +59,7 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   return (
     <span
       ref={ref}
-      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green"
+      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green mmd:text-[2rem]"
     >
       0
     </span>

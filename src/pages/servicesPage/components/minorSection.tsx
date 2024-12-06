@@ -12,8 +12,11 @@ import {
   NistLogo,
 } from "../../../assets";
 import Marquee from "react-fast-marquee";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const MinorSection = () => {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
+
   const trainingData = [
     {
       title: "Information Security Management System (ISO 27001)",
@@ -57,16 +60,24 @@ const MinorSection = () => {
           Partnering for Excellence
         </Text>
         <div className="flex justify-center items-center gap-6 my-[3rem] mlg:px-[5rem]">
-          <Marquee pauseOnHover={false} speed={20} direction="left">
-            {partners.map((partner, index) => (
-              <img
-                src={partner}
-                alt="Our Partners"
-                key={index}
-                className="max-w-auto mr-24 object-cover mmd:mr-16 msm:max-w-[6rem]"
-              />
-            ))}
-          </Marquee>
+          {isSmallDevice ? (
+            <Marquee pauseOnHover={false} speed={20} direction="left">
+              {partners.map((partner, index) => (
+                <img
+                  src={partner}
+                  alt="Our Partners"
+                  key={index}
+                  className="max-w-auto mr-24 object-cover mmd:mr-16 msm:max-w-[6rem]"
+                />
+              ))}
+            </Marquee>
+          ) : (
+            <div className="flex justify-center items-center gap-6 my-[3rem]">
+              {partners.map((partner, index) => (
+                <img src={partner} alt="Our Partners" key={index} />
+              ))}
+            </div>
+          )}
         </div>
         <div className="w-[60%] msm:w-[75%] mxs:w-[80%]">
           <Text

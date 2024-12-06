@@ -4,6 +4,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from 'sonner';
+import { ScrollToTop } from "./components";
 
 const HomePage = lazy(() =>
   import("./pages").then((module) => ({ default: module.HomePage }))
@@ -40,6 +41,7 @@ function App() {
     <>
       <Suspense fallback={<Loader />}>
         <AnimatePresence mode="wait" initial = {false}>
+          <ScrollToTop/>                                    
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />

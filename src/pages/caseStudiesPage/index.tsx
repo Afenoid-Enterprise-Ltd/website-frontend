@@ -42,7 +42,10 @@ const CaseStudiesPage = () => {
     (item: Case) => item.segment === "ISO 27001"
   );
   const bcmsCases = caseStudy.filter(
-    (item: Case) => item.segment === "ISO 22301"
+    (item: Case) => item.segment === "ISO 22301 (BCMS)"
+  );
+  const qmsCases = caseStudy.filter(
+    (item: Case) => item.segment === "ISO 9001 (QMS)"
   );
 
   return (
@@ -53,7 +56,7 @@ const CaseStudiesPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="h-[87.5vh] max-h-[1600px] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col overflow-hidden">
+        <section className="h-[90vh] max-h-[1600px] bg-case-study bg-no-repeat bg-contain bg-bottom flex items-center justify-center flex-col ">
           <Text
             variant="h1"
             align="center"
@@ -97,13 +100,13 @@ const CaseStudiesPage = () => {
           })}
         </section>
 
-        <section className=" py-[120px] flex justify-center overflow-hidden">
-          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] items-center w-full px-[80px] msm:flex-col msm:px-6 msm:gap-y-[100px]">
+        <section className="px-[110px] py-[120px] flex justify-center">
+          <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full max-w-[1440px]">
             {selectedCaseStudy === "ALL" &&
               caseStudy.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[30%] flex flex-col gap-[20px] "
+                    className="h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
                     <div className="max-h-[200px] w-full">
@@ -152,7 +155,7 @@ const CaseStudiesPage = () => {
               pciCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[30%] flex flex-col gap-[20px] msm:w-full"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
                     <div className="max-h-[200px] w-full">
@@ -201,7 +204,7 @@ const CaseStudiesPage = () => {
               ismsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[30%] flex flex-col gap-[20px] msm:w-full"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
                     <div className="max-h-[200px] w-full">
@@ -250,14 +253,14 @@ const CaseStudiesPage = () => {
               bcmsCases.map((study: Case, index: number) => {
                 return (
                   <div
-                    className="h-[504px] w-[30%] flex flex-col gap-[20px] msm:w-full"
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
                     key={index}
                   >
                     <div className="max-h-[200px] w-full">
                       <img
                         src={study.imgUrl}
                         alt="Case Study 1"
-                        className="h-full w-full"
+                        className="h-full"
                       />
                     </div>
                     <div className="flex flex-col gap-[18px]">
@@ -282,10 +285,53 @@ const CaseStudiesPage = () => {
                       </Text>
 
                       <Link
-                        to={`/case-studies/${study.title
-                          .split(" ")
-                          .join("-")
-                          .toLowerCase()}`}
+                        to={`/case-studies/${study.title.split(' ').join('-').toLowerCase()}`}
+                        className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+
+            {selectedCaseStudy === "ISO 9001 (QMS)" &&
+              qmsCases.map((study: Case, index: number) => {
+                return (
+                  <div
+                    className="max-h-[504px] max-w-[350px] flex flex-col"
+                    key={index}
+                  >
+                    <div className="max-h-[180px] w-full">
+                      <img
+                        src={study.imgUrl}
+                        alt="Case Study 1"
+                        className="h-full"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-[18px]">
+                      <Text
+                        variant="h5"
+                        align="left"
+                        fontFamily="gambetta"
+                        color="af-green"
+                        customClassName="font-medium"
+                      >
+                        {study.title}
+                      </Text>
+
+                      <Text
+                        variant="h5"
+                        align="left"
+                        fontFamily="proxima-nova"
+                        color="af-dark-green"
+                        customClassName="font-normal"
+                      >
+                        {study.description}
+                      </Text>
+
+                      <Link
+                        to={`/case-studies/${study.title.split(' ').join('-').toLowerCase()}`}
                         className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
                       >
                         Learn More

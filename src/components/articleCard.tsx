@@ -7,13 +7,18 @@ interface ArticleCardProps {
   title: string;
   description: string;
   caseStudy?: boolean;
+  reverse?: boolean;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = (props) => {
-  const { image, title, description, caseStudy = false } = props;
+  const { image, title, description, caseStudy = false, reverse } = props;
 
   return (
-    <div className="flex justify-between items-center gap-28 mmlg:grid mmlg:gap-16">
+    <div
+      className={`flex justify-between items-center gap-28 mmlg:grid mmlg:gap-16 ${
+        reverse ? "flex-row-reverse" : ""
+      }`}
+    >
       <div className="w-1/2 flex flex-col gap-4 mmlg:w-full">
         <div>
           <Text
@@ -36,18 +41,21 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
           </Text>
         </div>
         <div>
-          {!caseStudy ?  <Link
-            to="https://substack.com/"
-            className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
-          >
-            Read Our Articles
-          </Link> :  <Link
-            to="https://substack.com/"
-            className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
-          >
-            Read Our Case Studies
-          </Link>}
-         
+          {!caseStudy ? (
+            <Link
+              to="https://substack.com/"
+              className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
+            >
+              Read Our Articles
+            </Link>
+          ) : (
+            <Link
+              to="https://substack.com/"
+              className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
+            >
+              Read Our Case Studies
+            </Link>
+          )}
         </div>
       </div>
 

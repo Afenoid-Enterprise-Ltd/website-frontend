@@ -50,7 +50,7 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
             </Link>
           ) : (
             <Link
-              to="https://substack.com/"
+              to="/case-studies"
               className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
             >
               Read Our Case Studies

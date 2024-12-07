@@ -9,14 +9,10 @@ import {
   SwiftLogo,
   PciLogo,
   ApmgLogo,
-  NistLogo,
 } from "../../../assets";
-import Marquee from "react-fast-marquee";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { Link } from "react-router-dom";
 
 const MinorSection = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 976px)");
-
   const trainingData = [
     {
       title: "Information Security Management System (ISO 27001)",
@@ -39,12 +35,25 @@ const MinorSection = () => {
   ];
 
   const partners = [
-    IsacaLogo,
-    PecbLogo,
-    SwiftLogo,
-    PciLogo,
-    ApmgLogo,
-    NistLogo,
+    {
+      logo: IsacaLogo,
+      route: "https://www.isaca.org/search#q=afenoid&sort=relevancy",
+    },
+    {
+      logo: PecbLogo,
+      route:
+        "https://pecb.com/en/partner/active_partners?Partner%5Bpecb_country_id%5D=156&Partner%5Bpecb_state_id%5D=&Partner%5Bcity%5D=&Partner%5Bcompany_name%5D=Afenoid&yt0=Search",
+    },
+    { logo: SwiftLogo, route: "" },
+    {
+      logo: PciLogo,
+      route:
+        "https://www.pcisecuritystandards.org/assessors_and_solutions/qualified_security_assessors/?search=Afenoid+Enterprise+Limited#searchresult",
+    },
+    {
+      logo: ApmgLogo,
+      route: "https://apmg-international.com/ato/afenoid-enterprise-limited",
+    },
   ];
 
   return (
@@ -59,25 +68,14 @@ const MinorSection = () => {
         >
           Partnering for Excellence
         </Text>
-        <div className="flex justify-center items-center gap-6 my-[3rem] mlg:px-[5rem]">
-          {isSmallDevice ? (
-            <Marquee pauseOnHover={false} speed={20} direction="left">
-              {partners.map((partner, index) => (
-                <img
-                  src={partner}
-                  alt="Our Partners"
-                  key={index}
-                  className="max-w-auto mr-24 object-cover mmd:mr-16 msm:max-w-[6rem]"
-                />
-              ))}
-            </Marquee>
-          ) : (
-            <div className="flex justify-center items-center gap-6 my-[3rem]">
-              {partners.map((partner, index) => (
-                <img src={partner} alt="Our Partners" key={index} />
-              ))}
-            </div>
-          )}
+        <div className="flex justify-center items-center gap-6 my-[3rem] mlg:px-[5rem] mxs:my-[1rem]">
+          <div className="flex justify-center items-center gap-6 my-[3rem] mxs:my-[1.5rem]">
+            {partners.map((partner, index) => (
+              <Link to={partner.route}>
+                <img src={partner.logo} alt="Our Partners" key={index} />
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="w-[60%] msm:w-[75%] mxs:w-[80%]">
           <Text

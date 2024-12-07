@@ -6,6 +6,8 @@ import {
   PeopleIcon,
   BankIcon,
   GlobeIcon,
+  
+  
 } from "../../../assets";
 import { Text } from "../../../ui";
 import {
@@ -22,6 +24,10 @@ import {
   FidelityBankLogo,
   GTCOLogo,
   AXAInsurance,
+  FIRSLogo,
+  IsacaLogo,
+  EtranzactLogo,
+  ShellLogo,
   SkylineImg,
 } from "../../../assets";
 
@@ -117,6 +123,10 @@ const NumbersSection = () => {
     BankOfBotswana,
     AXAInsurance,
     FidelityBankLogo,
+    FIRSLogo,
+    IsacaLogo,
+    ShellLogo,
+    EtranzactLogo,
   ];
 
   return (

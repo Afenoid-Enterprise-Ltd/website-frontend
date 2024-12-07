@@ -14,19 +14,19 @@ const ServicesSection = () => {
 
   const caseStudyData = [
     {
-      title: "DIGITAL SKILLS DEVELOPMENT",
+      title: "TRAINING",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: ServicesImg1,
     },
     {
-      title: "DIGITAL TRUST SERVICES",
+      title: "AUDITING",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: ServicesImg2,
     },
     {
-      title: "TRANSFORMATION CONSULTING",
+      title: "CONSULTING",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
       image: ServicesImg3,

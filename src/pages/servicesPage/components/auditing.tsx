@@ -3,7 +3,7 @@ import { Text, Button } from "../../../ui";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
 
-const TrustServices = () => {
+const Auditing = () => {
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -170,4 +170,4 @@ const TrustServices = () => {
   );
 };
 
-export { TrustServices };
+export { Auditing };

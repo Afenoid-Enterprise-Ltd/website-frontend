@@ -9,17 +9,17 @@ import {
   ServicesSection,
   CaseStudiesSection,
 } from "./components";
-import { ConsultationForm } from "../../components";
+import { RequestConsultation} from "../../components";
 
 const HomePage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setIsConsultationOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setIsConsultationOpen(false);
   };
 
   return (
@@ -38,8 +38,8 @@ const HomePage = () => {
           <CaseStudiesSection />
         </section>
       </Outlet>
-      {isModalOpen && (
-        <ConsultationForm isOpen={isModalOpen} onClose={closeModal} />
+      {isConsultationOpen && (
+        <RequestConsultation isOpen={isConsultationOpen} onClose={closeModal} />
       )}
     </motion.section>
   );

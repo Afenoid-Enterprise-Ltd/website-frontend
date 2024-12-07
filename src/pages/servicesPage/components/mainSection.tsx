@@ -59,7 +59,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Digital Trust Services
+          Audit
         </button>
         <button
           onClick={setToThree}
@@ -69,7 +69,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Digital Transformation Consulting
+          Consulting
         </button>
         <button
           onClick={setToFour}
@@ -79,7 +79,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Digital Skills Development
+          Training
         </button>
       </div>
 

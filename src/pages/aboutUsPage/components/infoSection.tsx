@@ -10,7 +10,7 @@ import {
   BankIcon,
   GlobeIcon,
 } from "../../../assets";
-import { CallToAction, ChoiceAfenoid } from "../../../components";
+import { ChoiceAfenoid } from "../../../components";
 
 interface CountUpProps {
   start?: number;
@@ -171,17 +171,6 @@ const InfoSection = () => {
 
       <div>
         <ChoiceAfenoid />
-        <CallToAction
-          title="Ready to have a conversation with us?"
-          explanation="Schedule a meeting with a consultant right away"
-          button={
-            <Button
-              variant="primary"
-              label="Book a Consultation"
-              customClassName="mt-[2rem]"
-            />
-          }
-        />
       </div>
     </section>
   );

@@ -31,6 +31,9 @@ import FidelityBankLogo from "./fidelity-logo.svg";
 import GTCOLogo from "./gtco-logo.svg";
 import AXAInsurance from "./axa-ins-logo.svg";
 import SterlingBankLogo from "./sterling-bank-logo.svg";
+import FIRSLogo from "./firs-logo.svg";
+import EtranzactLogo from "./e-tranzact-logo.svg";
+import ShellLogo from "./shell-logo.svg";
 import ServicesImg1 from "./services-1.png";
 import ServicesImg2 from "./services-2.png";
 import ServicesImg3 from "./services-3.png";
@@ -99,6 +102,9 @@ export {
   BankOfBotswana,
   FidelityBankLogo,
   GTCOLogo,
+  FIRSLogo,
+  EtranzactLogo,
+  ShellLogo,
   AXAInsurance,
   ServicesImg1,
   ServicesImg2,

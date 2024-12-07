@@ -14,7 +14,7 @@ import {
   SkillsDevImg3,
 } from "../../../assets";
 
-const SkillsDevelopment = () => {
+const Training = () => {
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -145,4 +145,4 @@ const SkillsDevelopment = () => {
   );
 };
 
-export { SkillsDevelopment };
+export { Training };

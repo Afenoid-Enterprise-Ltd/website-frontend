@@ -3,7 +3,7 @@ import { DigitalTransformationImg } from "../../../assets";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
-const TransformationConsulting = () => {
+const Consulting = () => {
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -253,4 +253,4 @@ const TransformationConsulting = () => {
   );
 };
 
-export { TransformationConsulting };
+export { Consulting };

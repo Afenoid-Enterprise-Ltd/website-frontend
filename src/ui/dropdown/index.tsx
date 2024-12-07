@@ -100,7 +100,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
         <span className="text-red-400">*</span>
       </label>
       <div
-        className={`cursor-pointer border-2 p-4 ${styles.dropdown} ${
+        className={`cursor-pointer border-2 p-4 mxs:p-2 ${styles.dropdown} ${
           errMessage ? " border-red-400" : "border-afenoid-light-grey"
         } ${
           isActive ? "border-afenoid-dark-grey" : "border-afenoid-light-grey"

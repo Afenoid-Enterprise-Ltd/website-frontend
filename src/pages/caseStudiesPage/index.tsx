@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Outlet } from "../../ui";
-import { Button } from "../../ui";
+import { Button, Outlet } from "../../ui";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";

@@ -6,31 +6,6 @@ import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
 
 const CaseStudiesPage = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
-
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState(
-    isSmallDevice ? "PCI DSS" : caseStudyButtons[0]
-  );
-
-  useEffect(() => {
-    if (isSmallDevice) {
-      setSelectedCaseStudy("PCI DSS");
-    }
-  }, [isSmallDevice]);
-
-
-  const pciCases = caseStudy.filter((item: Case) => item.segment === "PCI DSS");
-
-  const ismsCases = caseStudy.filter(
-    (item: Case) => item.segment === "ISO 27001"
-  );
-  const bcmsCases = caseStudy.filter(
-    (item: Case) => item.segment === "ISO 22301 (BCMS)"
-  );
-  const qmsCases = caseStudy.filter(
-    (item: Case) => item.segment === "ISO 9001 (QMS)"
-  );
-
   return (
     <motion.section
       initial={{ opacity: 0 }}

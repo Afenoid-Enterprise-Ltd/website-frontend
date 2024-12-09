@@ -2,8 +2,7 @@ import React from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Modal, Input } from "../ui";
-import { Text, Button, Dropdown } from "../ui";
+import { Text, Button, Dropdown, Modal, Input } from "../ui";
 import { FormCover } from "../assets";
 import { consultationFormSchema } from "../schema";
 import { useCountries } from "use-react-countries";
@@ -57,14 +56,14 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
   };
 
   const servicesData = [
-    { label: "Digital Trust Services", value: "Digital Trust Services" },
+    { label: "Auditing", value: "Auditing" },
     {
-      label: "Digital Transformation Consulting",
-      value: "Digital Transformation Consulting",
+      label: "Consulting",
+      value: "Consulting",
     },
     {
-      label: "Digital Skills Development",
-      value: "Digital Skills Development",
+      label: "Training",
+      value: "Training",
     },
   ];
 

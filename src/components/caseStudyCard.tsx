@@ -37,7 +37,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       <Text
         variant="h5"
         color="af-dark-green"
-        fontFamily="playfair-display"
+        fontFamily="gambetta"
         fontWeight="medium"
       >
         {title}
@@ -53,7 +53,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       <div>
         <Link
           to={route}
-          className={`mt-[5rem] w-[50%] ${
+          className={`mt-[1.5rem] w-[50%] ${
             optionalWidth ? "mmlg:w-full" : "mmlg:w-[60%]"
           } block mmd:mt-4 mmd:w-[70%] msm:w-[65%] mxs:w-[65%] mxxs:w-full`}
         >

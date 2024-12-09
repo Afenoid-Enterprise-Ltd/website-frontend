@@ -14,19 +14,19 @@ const ServicesSection = () => {
 
   const caseStudyData = [
     {
-      title: "DIGITAL SKILLS DEVELOPMENT",
+      title: "TRAINING",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: ServicesImg1,
     },
     {
-      title: "DIGITAL TRUST SERVICES",
+      title: "AUDITING",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: ServicesImg2,
     },
     {
-      title: "TRANSFORMATION CONSULTING",
+      title: "CONSULTING",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
       image: ServicesImg3,
@@ -77,7 +77,7 @@ const ServicesSection = () => {
           </Text>
         </div>
       </Slogan>
-      <div className=" bg-afenoid-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
+      <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
         <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0">
           <div className="w-full relative">
             <div className="w-[60%] flex flex-col gap-8 pb-[10rem] mlg:w-full">

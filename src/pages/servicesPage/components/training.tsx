@@ -14,11 +14,11 @@ import {
   SkillsDevImg3,
 } from "../../../assets";
 
-const SkillsDevelopment = () => {
+const Training = () => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Digital Skills Development",
+      title: "Training",
       description:
         "Our courses focus on developing skills and competencies in corporate governance of information and technology, service management, risk management, information security, cybersecurity, data privacy, and audit and assurance.",
     },
@@ -145,4 +145,4 @@ const SkillsDevelopment = () => {
   );
 };
 
-export { SkillsDevelopment };
+export { Training };

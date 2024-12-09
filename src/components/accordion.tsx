@@ -78,7 +78,7 @@ const AccordionItem = ({ children, value, trigger, mainFontType, minorFontType, 
   }, [open, children]); // Recalculate on open state change or children update
 
   return (
-    <li className = {`bg-afenoid-white`} {...props}>
+    <li className = {`bg-white`} {...props}>
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}

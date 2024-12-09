@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Overview } from "./overview";
-import { TrustServices } from "./trustServices";
-import { TransformationConsulting } from "./transformationConsulting";
-import { SkillsDevelopment } from "./skillsDevelopment";
+import { Auditing } from "./auditing";
+import { Consulting } from "./consulting";
+import { Training } from "./training";
 
 const MainSection = () => {
   const [activeTabId, setActiveTabId] = useState<number>(1);
@@ -28,11 +28,11 @@ const MainSection = () => {
       case 1:
         return <Overview />;
       case 2:
-        return <TrustServices />;
+        return <Consulting />;
       case 3:
-        return <TransformationConsulting />;
+        return <Auditing />;
       case 4:
-        return <SkillsDevelopment />;
+        return <Training />;
       default:
         return <Overview />;
     }
@@ -54,23 +54,24 @@ const MainSection = () => {
         <button
           onClick={setToTwo}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 2
-              ? "bg-afenoid-green text-floral-white"
-              : "bg-white text-black"
-          }`}
-        >
-          Digital Trust Services
-        </button>
-        <button
-          onClick={setToThree}
-          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
             activeTabId === 3
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
         >
-          Digital Transformation Consulting
+          Consulting
         </button>
+        <button
+          onClick={setToThree}
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+            activeTabId === 2
+              ? "bg-afenoid-green text-floral-white"
+              : "bg-white text-black"
+          }`}
+        >
+          Auditing
+        </button>
+
         <button
           onClick={setToFour}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
@@ -79,7 +80,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Digital Skills Development
+          Training
         </button>
       </div>
 

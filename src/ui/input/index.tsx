@@ -37,7 +37,7 @@ const Input: FC<InputProps> = (props) => {
         })}
         {...rest}
         className={clsx(
-          `block w-full border-2 border-afenoid-light-grey p-4 bg-transparent focus:outline-afenoid-dark-grey`
+          `block w-full border-2 border-afenoid-light-grey p-4 bg-transparent focus:outline-afenoid-dark-grey mxs:p-2`
         )}
         placeholder={placeholder}
       />

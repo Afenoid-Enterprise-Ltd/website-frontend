@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 const HeroDivs = () => {
   const listItems = [
     "Digital Strategy",
-    "Performance Improvment",
+    "Performance Improvement",
     "Compliance Assurance",
     "Competence Development",
   ];
@@ -75,7 +75,7 @@ const HeroDivs = () => {
             systems, services, and transactions.
           </Text>
           <div className="hidden mmd:block">
-          <img src={ReliabilityImg} alt="Accompanying IMage" />
+          <img src={ReliabilityImg} alt="Accompanying Image" />
         </div>
           <ul>
             {listItems.map((listItem, index) => (

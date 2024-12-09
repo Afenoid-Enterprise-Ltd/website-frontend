@@ -3,11 +3,11 @@ import { DigitalTransformationImg } from "../../../assets";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
-const TransformationConsulting = () => {
+const Consulting = () => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Digital Transformation Consultation",
+      title: "Consulting",
       description:
         "Our digital transformation consulting services help to leverage digital technologies, tools, and platforms needful to transform your business operations and processes, improve performance and drive growth.",
     },
@@ -253,4 +253,4 @@ const TransformationConsulting = () => {
   );
 };
 
-export { TransformationConsulting };
+export { Consulting };

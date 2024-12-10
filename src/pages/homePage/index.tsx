@@ -1,5 +1,4 @@
-
-import { useState,  } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import {
@@ -9,17 +8,26 @@ import {
   ServicesSection,
   CaseStudiesSection,
 } from "./components";
-import { RequestConsultation} from "../../components";
+import { ConsultationForm, RequestConsultation } from "../../components";
 
 const HomePage = () => {
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
-  const openModal = () => {
+  const openConsultationModal = () => {
     setIsConsultationOpen(true);
   };
 
-  const closeModal = () => {
+  const closeConsultationModal = () => {
     setIsConsultationOpen(false);
+  };
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
   };
 
   return (
@@ -31,15 +39,24 @@ const HomePage = () => {
     >
       <Outlet>
         <section className="overflow-x-hidden">
-          <HeroSection openModal={openModal} />
+          <HeroSection openModal={openConsultationModal} />
           <NumbersSection />
-          <ChoiceSection />
+          <ChoiceSection
+            openContactModal={openContactModal}
+            openConsultationModal={openConsultationModal}
+          />
           <ServicesSection />
-          <CaseStudiesSection />
+          <CaseStudiesSection openConsultationModal={openConsultationModal} />
         </section>
       </Outlet>
       {isConsultationOpen && (
-        <RequestConsultation isOpen={isConsultationOpen} onClose={closeModal} />
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </motion.section>
   );

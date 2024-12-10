@@ -7,6 +7,7 @@ import { FormCover } from "../assets";
 import { consultationFormSchema } from "../schema";
 import { useCountries } from "use-react-countries";
 import { toast } from "sonner";
+import { SCRIPT_DETAILS } from "../utils/constants";
 
 interface FormProps {
   isOpen: boolean;
@@ -25,18 +26,15 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
     data: z.infer<typeof consultationFormSchema>
   ) => {
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby8lGqxlsEA9mPgpbwLkEgao4COkn3ZkgRlwE5YYpYrmRGxky3qyZMS6sUiPV01BmiK9Q/exec?name=Sheet1",
-        {
-          method: "POST",
-          mode: "cors",
-          cache: "no-cache",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch(SCRIPT_DETAILS.link, {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       const responseData = await response.json();
       if (response.ok && responseData.status === "success") {

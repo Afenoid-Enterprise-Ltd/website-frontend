@@ -1,18 +1,8 @@
-import Fintech from "../../assets/fintech1.png"
-import Crypto from "../../assets/crypto.png"
-import NationalPayment from "../../assets/nationalPayment.png"
-import RetailBanking from "../../assets/retailBanking.png"
-import CardProcessing from "../../assets/cardProcessing.png"
-import CrossBorder from "../../assets/crossBorder.png"
-import CardData from "../../assets/cardData.png"
-import Continuity from "../../assets/continuityPaymentProcessing.png"
-import MobileTrust from "../../assets/trustMobile.png"
-
 export const caseStudy = [
     {
       title: "Securing Fintech for Multi-Market Compliance",
       description: "A peer-to-peer payment fintech overcame data breach concerns and achieved ISO 27001 certification, strengthening security with advanced encryption, access controls, and third-party risk assessments.",
-      imgUrl: Fintech,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077875/Afenoid%20Project%20Images/fintech3x_gz7yro.png",
       segment: "ISO 27001",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -27,7 +17,7 @@ export const caseStudy = [
     {
       title: "Ensuring Resilience in Cryptocurrency Exchanges",
       description: "A cryptocurrency exchange adopted ISO 22301 to safeguard operations during cyberattacks and market volatility, achieving uninterrupted service and improved crisis management.",
-      imgUrl: Crypto,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077879/Afenoid%20Project%20Images/resillience3x_hninvp.png",
       segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -42,7 +32,7 @@ export const caseStudy = [
     {
       title: "Securing National Payment Transactions",
       description: "A payment switch provider implemented PCI DSS to encrypt transaction data and conduct regular scans, ensuring secure processing across financial institutions.",
-      imgUrl: NationalPayment,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/nationalPayment3x_jkx3l0.png",
       segment: "PCI DSS",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -57,7 +47,7 @@ export const caseStudy = [
     {
       title: "Enhancing Resilience for Retail Banking Operations",
       description: "A retail bank implemented ISO 22301, ensuring operational continuity during disasters and power outages, reducing downtime and enhancing customer confidence.",
-      imgUrl: RetailBanking,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/retailBanking3x_ovlmwp.png",
       segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -72,7 +62,7 @@ export const caseStudy = [
     {
       title: "Ensuring Secure Card Processing for a Global Bank",
       description: "A retail bank secured its card systems with PCI DSS compliance, leveraging encryption, tokenization, and penetration testing to maintain client trust and avoid breaches.",
-      imgUrl: CardProcessing,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077877/Afenoid%20Project%20Images/cardProcessing3x_kbsnnd.png",
       segment: "PCI DSS",
       data: {
         title: "Fintech Processing Platform",
@@ -87,7 +77,7 @@ export const caseStudy = [
     {
       title: "Strengthening Cross-Border Payment Security",
       description: "A high-volume transaction provider implemented ISO 27001 to secure international transactions, reduce breaches, and ensure regulatory compliance, gaining ISO 27001 certification.",
-      imgUrl: CrossBorder,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/crossBorder3x_dkpmzh.png",
       segment: "ISO 27001",
       data: {
         title: "Top Tier Bank in Nigeria",
@@ -102,7 +92,7 @@ export const caseStudy = [
     {
       title: "Protecting Payment Card Data for Fintech Growth",
       description: "A digital wallet fintech achieved PCI DSS compliance through end-to-end encryption, multi-factor authentication, and regular audits, boosting customer trust and market expansion.",
-      imgUrl: CardData,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/paymentCard3x_npjlsa.png",
       segment: "PCI DSS",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -117,7 +107,7 @@ export const caseStudy = [
     {
       title: "Strengthening Continuity for Payment Processing",
       description: "A payment switch provider utilized ISO 22301 to maintain uninterrupted transactions during system failures, earning certification and customer trust in their resilience.",
-      imgUrl: Continuity,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/continuity3x_acmvva.png",
       segment: "ISO 22301",
       data: {
         title: "Fintech Payment Processing Platform",
@@ -132,7 +122,7 @@ export const caseStudy = [
     {
       title: "Building Trust in Mobile Transactions",
       description: "A mobile payment gateway achieved ISO 27001 certification by implementing robust encryption, secure APIs, and breach response protocols, significantly improving customer trust.",
-      imgUrl: MobileTrust,
+      imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077879/Afenoid%20Project%20Images/trustMobile3x_ayicrd.png",
       segment: "ISO 27001",
       data: {
         title: "Fintech Payment Processing Platform",

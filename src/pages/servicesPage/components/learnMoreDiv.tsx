@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Text } from "../../../ui";
-
+import { Text, Button } from "../../../ui";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,15 +14,15 @@ type HeroDivProps = {
   heroTexts: HeroText;
   image: string;
   reverse?: boolean;
+  btnText?: string;
 };
 
 const LearnMoreDiv: React.FC<HeroDivProps> = ({
   heroTexts,
   image,
   reverse,
+  btnText,
 }) => {
-  
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -65,13 +65,15 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </div>
         <div>
-          {/* <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
-            <Button
-              variant="secondary"
-              label={btnText}
-              customClassName="w-full"
-            />
-          </Link> */}
+          {btnText ? (
+            <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
+              <Button
+                variant="secondary"
+                label={btnText}
+                customClassName="w-full"
+              />
+            </Link>
+          ) : null}
         </div>
       </div>
       <div className="w-1/2 h-auto mlg:w-full">
@@ -82,16 +84,16 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
         />
       </div>
       <div className="hidden self-start mlg:block">
-          <Text
-            variant="h3"
-            color="af-dark-green"
-            fontFamily="gambetta"
-            fontWeight="medium"
-            align="left"
-          >
-            {heroTexts.title}
-          </Text>
-        </div>
+        <Text
+          variant="h3"
+          color="af-dark-green"
+          fontFamily="gambetta"
+          fontWeight="medium"
+          align="left"
+        >
+          {heroTexts.title}
+        </Text>
+      </div>
     </div>
   );
 };

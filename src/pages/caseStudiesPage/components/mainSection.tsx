@@ -48,7 +48,7 @@ const MainSection = () => {
 
   return (
     <section className="w-screen">
-      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar">
+      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto msm:justify-start no-scrollbar mxl:justify-center">
         <button
           onClick={setToOne}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white msm:hidden ${
@@ -92,7 +92,7 @@ const MainSection = () => {
       </div>
 
       <section className="px-[110px] flex justify-center msm:px-6">
-        <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full max-w-[1440px]">
+        <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full">
           {renderContent()}
         </div>
       </section>

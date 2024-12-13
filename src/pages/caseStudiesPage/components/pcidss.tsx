@@ -18,7 +18,7 @@ const PCIDSS = () => {
       {pciCases.map((study: Case, index: number) => {
           return (
             <div
-              className="max-h-[504px] max-w-[350px] flex flex-col"
+              className="max-h-[504px] flex flex-col w-[30%]"
               key={index}
             >
               <div className="max-h-[200px] w-full">

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Text, Button } from "../../../ui";
-import { Link } from "react-router-dom";
+import { Text } from "../../../ui";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,14 +14,12 @@ type HeroDivProps = {
   heroTexts: HeroText;
   image: string;
   reverse?: boolean;
-  btnText: string;
 };
 
 const LearnMoreDiv: React.FC<HeroDivProps> = ({
   heroTexts,
   image,
   reverse,
-  btnText,
 }) => {
   
 
@@ -68,13 +65,13 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           </Text>
         </div>
         <div>
-          <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
+          {/* <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
             <Button
               variant="secondary"
               label={btnText}
               customClassName="w-full"
             />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="w-1/2 h-auto mlg:w-full">

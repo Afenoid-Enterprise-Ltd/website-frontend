@@ -22,9 +22,9 @@ const HomePage = () => {
     setIsConsultationOpen(false);
   };
 
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
+  // const openContactModal = () => {
+  //   setIsContactOpen(true);
+  // };
 
   const closeContactModal = () => {
     setIsContactOpen(false);
@@ -41,10 +41,7 @@ const HomePage = () => {
         <section className="overflow-x-hidden">
           <HeroSection openModal={openConsultationModal} />
           <NumbersSection />
-          <ChoiceSection
-            openContactModal={openContactModal}
-            openConsultationModal={openConsultationModal}
-          />
+          <ChoiceSection/>
           <ServicesSection />
           <CaseStudiesSection openConsultationModal={openConsultationModal} />
         </section>

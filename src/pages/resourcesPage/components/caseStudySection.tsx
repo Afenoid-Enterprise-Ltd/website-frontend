@@ -46,10 +46,6 @@ const CaseStudySection = () => {
           caseStudy={true}
           reverse={true}
         />
-
-        <div className="mx-auto flex justify-center items-center my-[4rem]">
-          <Button label="View More" variant="primary" />
-        </div>
       </div>
 
       <div className="px-[5rem] py-[5rem] msm:px-[3rem] mxs:px-[2rem]">

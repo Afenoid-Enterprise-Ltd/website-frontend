@@ -46,10 +46,25 @@ const Footer: React.FC = () => {
     {
       title: "Partners",
       array: [
-        { name: "PECB", route: "/pecb" },
-        { name: "ISACA", route: "/isaca" },
-        { name: "PCISSC", route: "/pcissc" },
-        { name: "SWIFT", route: "/swift" },
+        {
+          name: "PECB",
+          route:
+            "https://pecb.com/en/partner/active_partners?Partner%5Bpecb_country_id%5D=156&Partner%5Bpecb_state_id%5D=&Partner%5Bcity%5D=&Partner%5Bcompany_name%5D=Afenoid&yt0=Search",
+        },
+        {
+          name: "ISACA",
+          route: "https://www.isaca.org/search#q=afenoid&sort=relevancy",
+        },
+        {
+          name: "PCISSC",
+          route:
+            "https://www.pcisecuritystandards.org/assessors_and_solutions/qualified_security_assessors/?search=Afenoid+Enterprise+Limited#searchresult",
+        },
+        {
+          name: "APMG",
+          route:
+            "https://apmg-international.com/ato/afenoid-enterprise-limited",
+        },
       ],
     },
     {
@@ -62,7 +77,7 @@ const Footer: React.FC = () => {
     {
       title: "Support",
       array: [
-        { name: "FAQs", route: "/resources/#faqs" },
+        { name: "FAQs", route: "/about-us/#faqs" },
         { name: "Contact Us", route: "/contact-us" },
       ],
     },

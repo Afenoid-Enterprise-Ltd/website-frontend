@@ -31,24 +31,28 @@ const Training = () => {
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: TrainingImg1,
+      route: "/services/information-security-management-system"
     },
     {
       title: "Business Continuity Management System (ISO 22301)",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
       image: TrainingImg2,
+      route: "/services/business-continuity-management-system"
     },
     {
       title: "Certified in Risk and Information Systems Control (CRISC)",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: TrainingImg3,
+      route: "/services/crisc"
     },
     {
       title: "Business Relationship Management Professional (BRMP)",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: CaseStudyImg1,
+      route: "/services/business-relationship-management-professional"
     },
     {
       title:
@@ -56,30 +60,35 @@ const Training = () => {
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: CaseStudyImg2,
+      route: "/services/federated-IT-service-management"
     },
     {
       title: "APMG Change Management",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
       image: CaseStudyImg3,
+      route: "/services/apmg-change-management"
     },
     {
       title: "Neuroscience for Change",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: SkillsDevImg1,
+      route: "/services/neuroscience-for-change"
     },
     {
       title: "Quality Management System (ISO 27001)",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: SkillsDevImg2,
+      route: "/services/quality-management-system"
     },
     {
       title: "How ISMS compliance is influence corporate information",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
       image: SkillsDevImg3,
+      route: "/services/isms-compliance"
     },
   ];
 
@@ -89,7 +98,6 @@ const Training = () => {
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
-          btnText="Contact Us"
         />
       </div>
 
@@ -126,6 +134,7 @@ const Training = () => {
             image={card.image}
             key={index}
             optionalWidth = {true}
+            route={card.route}
           />
         ))}
       </div>

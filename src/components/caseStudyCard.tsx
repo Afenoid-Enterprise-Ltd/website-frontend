@@ -13,7 +13,7 @@ type CaseStudyCardProps = {
 };
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
-  const { image, title, description, optionalWidth = false, route = "/"} = props;
+  const { image, title, description, optionalWidth = false, route = ""} = props;
 
   useEffect(() => {
     AOS.init();

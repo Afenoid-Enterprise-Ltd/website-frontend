@@ -1,9 +1,17 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
-const AccordionSection = () => {
+
+interface AccordionProps {
+  openConsultationModal: () => void;
+}
+
+const AccordionSection: React.FC<AccordionProps> = (props) => {
+  const {openConsultationModal} = props
+
   return (
     <div className="w-full mt-20">
       <div className="w-full flex justify-center items-center">
@@ -79,6 +87,7 @@ const AccordionSection = () => {
               variant="primary"
               label="Book a Consultation"
               customClassName="mt-[2rem]"
+              onClick={openConsultationModal}
             />
           }
         />

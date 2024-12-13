@@ -22,13 +22,19 @@ const HomePage = () => {
     setIsConsultationOpen(false);
   };
 
-  // const openContactModal = () => {
-  //   setIsContactOpen(true);
-  // };
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
 
   const closeContactModal = () => {
     setIsContactOpen(false);
   };
+
+  const redirectToContactForm = () => {
+    closeConsultationModal();
+    openContactModal();
+  };
+
 
   return (
     <motion.section
@@ -50,6 +56,7 @@ const HomePage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm} 
         />
       )}
       {isContactOpen && (

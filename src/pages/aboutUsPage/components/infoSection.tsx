@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { animate } from "framer-motion";
-import { Text, Button } from "../../../ui";
+import { Text, } from "../../../ui";
 import { HeroDiv } from "./heroDiv";
 import {
   StoryImg,
@@ -139,13 +139,13 @@ const InfoSection = () => {
             accessible and achievable.
           </Text>
         </div>
-        <div>
+        {/* <div>
           <Button
             variant="primary"
             label="Book a Consultation"
             customClassName=""
           />
-        </div>
+        </div> */}
       </div>
       <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
         {numberData.map((number, index) => (

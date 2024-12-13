@@ -5,7 +5,6 @@ import { CallToAction, ArticleCard } from "../../../components";
 import { HomePageCaseStudiesImg } from "../../../assets";
 
 interface ConsultationProps {
-  
   openConsultationModal: () => void;
 }
 

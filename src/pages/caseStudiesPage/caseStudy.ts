@@ -1,13 +1,3 @@
-import Fintech from "../../assets/fintech1.png"
-import Crypto from "../../assets/crypto.png"
-import NationalPayment from "../../assets/nationalPayment.png"
-import RetailBanking from "../../assets/retailBanking.png"
-import CardProcessing from "../../assets/cardProcessing.png"
-import CrossBorder from "../../assets/crossBorder.png"
-import CardData from "../../assets/cardData.png"
-import Continuity from "../../assets/continuityPaymentProcessing.png"
-import MobileTrust from "../../assets/trustMobile.png"
-
 export const caseStudy = [
     {
       title: "Securing Fintech for Multi-Market Compliance",

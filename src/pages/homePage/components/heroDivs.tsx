@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { Text, Button } from "../../../ui";
+import { Text } from "../../../ui";
 import { ProtectionImg, ReliabilityImg } from "../../../assets";
 import { IoCheckmarkOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HeroDivs = () => {
+
   const listItems = [
     "Digital Strategy",
     "Performance Improvement",
@@ -48,9 +49,7 @@ const HeroDivs = () => {
             frameworks and industry standards. Our comprehensive approach
             addresses risks across your practices, people, and technology.
           </Text>
-          <div>
-            <Button variant="primary" label="Contact Us" />
-          </div>
+          
         </div>
         <div className="w-1/2 mmd:hidden">
           <img src={ProtectionImg} alt="Accompanying Image" />
@@ -75,8 +74,8 @@ const HeroDivs = () => {
             systems, services, and transactions.
           </Text>
           <div className="hidden mmd:block">
-          <img src={ReliabilityImg} alt="Accompanying Image" />
-        </div>
+            <img src={ReliabilityImg} alt="Accompanying Image" />
+          </div>
           <ul>
             {listItems.map((listItem, index) => (
               <li className="flex justify-start items-center gap-4" key={index}>
@@ -92,9 +91,6 @@ const HeroDivs = () => {
               </li>
             ))}
           </ul>
-          <div>
-            <Button variant="primary" label="Book a Consultation" />
-          </div>
         </div>
         <div className="w-1/2 mmd:hidden">
           <img src={ReliabilityImg} alt="Accompanying IMage" />

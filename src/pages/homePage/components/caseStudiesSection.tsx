@@ -4,9 +4,12 @@ import { Text, Button,  } from "../../../ui";
 import { CallToAction, ArticleCard } from "../../../components";
 import { HomePageCaseStudiesImg } from "../../../assets";
 
+interface ConsultationProps {
+  openConsultationModal: () => void;
+}
 
-const CaseStudiesSection = () => {
-  
+const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
+  const {openConsultationModal} = props
 
   return (
     <section>
@@ -28,6 +31,7 @@ const CaseStudiesSection = () => {
             variant="secondary"
             label="Book a Consultation"
             customClassName="mt-[2rem]"
+            onClick={openConsultationModal}
           />
         }
       />

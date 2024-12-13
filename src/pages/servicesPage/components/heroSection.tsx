@@ -1,8 +1,23 @@
+import React from "react";
 import { Text, Button } from "../../../ui";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { ResourcesPageHeroImg } from "../../../assets";
 
-const HSDesktop = () => {
+interface HeroSectionProps {
+  openModal: () => void;
+}
+
+interface HeroDesktopProps {
+  modalProp: () => void;
+}
+
+interface HeroMobileProps {
+  modalProp: () => void;
+}
+
+const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
+  const { modalProp } = props;
+
   return (
     <section
       className="w-screen h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
@@ -34,13 +49,16 @@ const HSDesktop = () => {
           variant="secondary"
           label="Book a Consultation"
           customClassName="border-white text-white mt-8"
+          onClick={modalProp}
         />
       </div>
     </section>
   );
 };
 
-const HSMobile = () => {
+const HSMobile: React.FC<HeroMobileProps> = (props) => {
+  const { modalProp } = props;
+
   return (
     <section className="w-screen h-[82.5vh] px-[3rem]">
       <div className="w-full">
@@ -79,16 +97,23 @@ const HSMobile = () => {
           variant="secondary"
           label="Book a Consultation"
           customClassName="mt-8"
+          onClick={modalProp}
         />
       </div>
     </section>
   );
 };
 
-const HeroSection = () => {
+const HeroSection: React.FC<HeroSectionProps> = (props) => {
+  const { openModal } = props;
+
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
-  return isSmallDevice ? <HSMobile /> : <HSDesktop />;
+  return isSmallDevice ? (
+    <HSMobile modalProp={openModal} />
+  ) : (
+    <HSDesktop modalProp={openModal} />
+  );
 };
 
 export { HeroSection };

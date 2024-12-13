@@ -30,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
         {/* Close button */}
         <div className="flex justify-end items-center px-10 py-4">
           <button
-            className="w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center bg-red-400"
+            className="w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center bg-red-600 hover:bg-red-400"
             onClick={onClose}
           >
             <FiX size={25} color="white" />

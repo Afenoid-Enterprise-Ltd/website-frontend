@@ -12,24 +12,26 @@ import { CaseStudyCard, Slogan } from "../../../components";
 const ServicesSection = () => {
   const currentScreenWidth = window.innerWidth;
 
-  const caseStudyData = [
-    {
-      title: "TRAINING",
-      description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: ServicesImg1,
-    },
+  const caseStudyData = [{
+    title: "CONSULTING",
+    description:
+      "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
+    image: ServicesImg3,
+    route: "/services#consulting"
+  },
     {
       title: "AUDITING",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: ServicesImg2,
+      route: "/services#auditing"
     },
     {
-      title: "CONSULTING",
+      title: "TRAINING",
       description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
-      image: ServicesImg3,
+        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
+      image: ServicesImg1,
+      route: "/services#training"
     },
   ];
 
@@ -52,6 +54,7 @@ const ServicesSection = () => {
               description={caseStudy.description}
               image={caseStudy.image}
               key={index}
+              route={caseStudy.route}
             />
           ))}
         </div>

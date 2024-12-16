@@ -1,8 +1,34 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import { HeroSection, CaseStudySection } from "./components";
+import { ConsultationForm, RequestConsultation } from "../../components";
 
 const ResourcesPage = () => {
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
+
+  const closeConsultationModal = () => {
+    setIsConsultationOpen(false);
+  };
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const redirectToContactForm = () => {
+    closeConsultationModal();
+    openContactModal();
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -13,9 +39,19 @@ const ResourcesPage = () => {
       <Outlet>
         <section className="overflow-x-hidden">
           <HeroSection />
-          <CaseStudySection />
+          <CaseStudySection openConsultationModal={openConsultationModal} />
         </section>
       </Outlet>
+      {isConsultationOpen && (
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm} 
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
     </motion.section>
   );
 };

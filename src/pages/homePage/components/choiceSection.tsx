@@ -1,11 +1,10 @@
-
-
 import { Link } from "react-router-dom";
 import { Button } from "../../../ui";
 import { ChoiceAfenoid } from "../../../components";
 import { HeroDivs } from "./heroDivs";
 
 const ChoiceSection = () => {
+
   return (
     <section className="my-[3.5rem] px-[5rem] msm:px-[3.5rem]">
       <HeroDivs/>

@@ -1,0 +1,107 @@
+import React from "react";
+import { Text } from "../../../ui";
+import { GoShieldCheck, GoOrganization } from "react-icons/go";
+import { IoWarningOutline } from "react-icons/io5";
+import { FaTasks } from "react-icons/fa";
+import { AiOutlineFileSearch } from "react-icons/ai";
+import { VscTools } from "react-icons/vsc";
+import { GrTask } from "react-icons/gr";
+import { MdOutlineGroups2 } from "react-icons/md";
+
+const iconMapping: { [key: string]: React.ComponentType<{ size?: number }> } = {
+  GoShieldCheck,
+  GoOrganization,
+  FaTasks,
+  IoWarningOutline,
+  AiOutlineFileSearch,
+  VscTools,
+  GrTask,
+  MdOutlineGroups2
+};
+
+interface TableProps {
+  gains: { icon: any; benefit: string }[] | undefined;
+  attendees: { icon: any; benefit: string }[] | undefined;
+}
+
+const TableSection: React.FC<TableProps> = ({ gains, attendees }) => {
+  const changeToComponent = (iconName: string, size: number = 32) => {
+    const IconComponent = iconMapping[iconName]; // Find component by name
+    return IconComponent ? <IconComponent size={size} /> : null;
+  };
+
+  return (
+    <section>
+      <div className="grid grid-cols-2 border-y">
+        {gains?.map((item, index) => {
+          const realIndex = index + 1;
+
+          return (
+            <div
+              className={`flex items-center justify-start p-4 ${
+                index % 2 === 0 ? "border-r" : ""
+              } ${
+                gains.length === realIndex || gains.length - 1 === realIndex
+                  ? ""
+                  : "border-b"
+              }`}
+              key={index}
+            >
+              <span className="mr-4">{changeToComponent(item.icon)}</span>
+              <Text
+                variant="h5"
+                align="left"
+                fontFamily="proxima-nova"
+                fontWeight="light"
+              >
+                {item.benefit}
+              </Text>
+            </div>
+          );
+        })}
+      </div>
+
+      <Text
+        variant="h3"
+        align="center"
+        fontFamily="gambetta"
+        color="af-dark-green"
+        fontWeight="regular"
+        customClassName="my-[5rem]"
+      >
+        Who Should Attend?
+      </Text>
+
+      <div className="grid grid-cols-2 border-y">
+        {attendees?.map((item, index) => {
+          const realIndex = index + 1;
+
+          return (
+            <div
+              className={`flex items-center justify-start p-4 ${
+                index % 2 === 0 ? "border-r" : ""
+              } ${
+                attendees.length === realIndex || attendees.length - 1 === realIndex
+                  ? ""
+                  : "border-b"
+              }`}
+              key={index}
+            >
+              <span className="mr-4">{changeToComponent(item.icon)}</span>
+              <Text
+                variant="h5"
+                align="left"
+                fontFamily="proxima-nova"
+                fontWeight="light"
+              >
+                {item.benefit}
+              </Text>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export { TableSection };

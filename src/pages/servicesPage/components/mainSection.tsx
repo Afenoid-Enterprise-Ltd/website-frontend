@@ -1,50 +1,45 @@
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Overview } from "./overview";
 import { Auditing } from "./auditing";
 import { Consulting } from "./consulting";
 import { Training } from "./training";
 
 const MainSection = () => {
-  const [activeTabId, setActiveTabId] = useState<number>(1);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const setToOne = () => {
-    setActiveTabId(1);
-  };
+  // Extract the current service from the hash
+  const currentService = (() => {
+    const hash = location.hash.replace("#", "");
+    return hash || "overview";
+  })();
 
-  const setToTwo = () => {
-    setActiveTabId(2);
-  };
-
-  const setToThree = () => {
-    setActiveTabId(3);
-  };
-
-  const setToFour = () => {
-    setActiveTabId(4);
-  };
-
+  // Render content based on the current tab
   const renderContent = () => {
-    switch (activeTabId) {
-      case 1:
-        return <Overview />;
-      case 2:
+    switch (currentService) {
+      case "consulting":
         return <Consulting />;
-      case 3:
+      case "auditing":
         return <Auditing />;
-      case 4:
+      case "training":
         return <Training />;
       default:
         return <Overview />;
     }
   };
 
+  // Button click handlers to update the URL with hash
+  const handleNavigation = (tab: string) => {
+    navigate(`/services#${tab}`);
+  };
+
   return (
     <section className="w-screen">
       <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar">
         <button
-          onClick={setToOne}
+          onClick={() => handleNavigation("overview")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 1
+            currentService === "overview"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -52,9 +47,9 @@ const MainSection = () => {
           Overview
         </button>
         <button
-          onClick={setToTwo}
+          onClick={() => handleNavigation("consulting")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 3
+            currentService === "consulting"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -62,20 +57,19 @@ const MainSection = () => {
           Consulting
         </button>
         <button
-          onClick={setToThree}
+          onClick={() => handleNavigation("auditing")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 2
+            currentService === "auditing"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
         >
           Auditing
         </button>
-
         <button
-          onClick={setToFour}
+          onClick={() => handleNavigation("training")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 4
+            currentService === "training"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -83,7 +77,6 @@ const MainSection = () => {
           Training
         </button>
       </div>
-
       <section>{renderContent()}</section>
     </section>
   );

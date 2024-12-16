@@ -1,9 +1,16 @@
+import React from "react";
 import { Text, Button } from "../../../ui";
 import { ArticleCard } from "../../../components";
 import { ArticleImg1, HomePageCaseStudiesImg } from "../../../assets";
 import { CallToAction } from "../../../components";
 
-const CaseStudySection = () => {
+interface CaseStudyProps {
+  openConsultationModal: () => void;
+}
+
+const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
+  const {openConsultationModal} = props
+
   const articleData = {
     title: "Dive Deeper into Digital Trust",
     description:
@@ -46,10 +53,6 @@ const CaseStudySection = () => {
           caseStudy={true}
           reverse={true}
         />
-
-        <div className="mx-auto flex justify-center items-center my-[4rem]">
-          <Button label="View More" variant="primary" />
-        </div>
       </div>
 
       <div className="px-[5rem] py-[5rem] msm:px-[3rem] mxs:px-[2rem]">
@@ -66,6 +69,7 @@ const CaseStudySection = () => {
               variant="primary"
               label="Book a Consultation"
               customClassName="mt-[2rem]"
+              onClick={openConsultationModal}
             />
           }
         />

@@ -18,10 +18,10 @@ const PCIDSS = () => {
       {pciCases.map((study: Case, index: number) => {
           return (
             <div
-              className="max-h-[504px] flex flex-col w-[30%]"
+              className="h-[504px] flex flex-col w-[30%] msm:w-full mxxl:w-full"
               key={index}
             >
-              <div className="max-h-[200px] w-full">
+              <div className="max-h-[250px] w-full">
                 <img
                   src={study.imgUrl}
                   alt="Case Study 1"

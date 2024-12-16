@@ -14,8 +14,8 @@ const ALLCASES = () => {
     <>
       {caseStudy.map((study: Case, index: number) => {
           return (
-            <div className="h-[504px] flex flex-col w-[30%]" key={index} >
-              <div className="max-h-[200px] w-full">
+            <div className="h-[504px] flex flex-col w-[30%] mxxl:w-full" key={index} >
+              <div className="max-h-[250px] w-full">
                 <img
                   src={study.imgUrl}
                   alt="Case Study 1"

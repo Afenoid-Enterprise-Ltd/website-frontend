@@ -82,7 +82,7 @@ const AccordionItem = ({ children, value, trigger, mainFontType, minorFontType, 
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}
-        className={`flex justify-between items-center p-4 font-medium text-afenoid-dark-green text-2xl msm:text-xl mxs:text-lg mxxs:text-base font-${mainFontType}`}
+        className={`flex justify-between items-center p-4 font-medium text-afenoid-dark-green text-2xl mxxs:text-[0.875rem] mxs:text-base msm:text-xl font-${mainFontType}`}
         aria-expanded={open}
       >
         {trigger}

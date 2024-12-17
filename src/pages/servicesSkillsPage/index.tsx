@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button, Outlet } from "../../ui";
 import { useParams, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { Text } from "../../ui";
 import { MainSection, TableSection } from "./components";
 import { CallToAction } from "../../components";
 import { skillsData } from "./components/skillsData";
+import { ConsultationForm } from "../../components";
 
 const validSkills = [
   "information-security-management-system",
@@ -15,11 +16,21 @@ const validSkills = [
   "federated-IT-service-management",
   "apmg-change-management",
   "neuroscience-for-change",
-  "quality-management-system",
-  "isms-compliance",
+  "service-management-system",
+  "dora-lead-manager",
 ];
 
 const ServiceSkillsPage = () => {
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
   const { skills } = useParams();
   const navigate = useNavigate();
 
@@ -39,18 +50,18 @@ const ServiceSkillsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="overflow-x-hidden px-[5rem]">
-          <p>Services Skills - {skills}</p>
+        <section className="overflow-x-hidden px-[5rem] msm:px-[3rem] mxs:px-[2rem]">
           <MainSection
             title={selectedSkill?.title}
             image={selectedSkill?.image}
             subtitle={selectedSkill?.subtitle}
             description={selectedSkill?.description}
+            expectation={selectedSkill?.expectation}
           />
           <div className="w-full flex items-center justify-center my-[5rem]">
-            <div className="w-[60%]">
+            <div className="w-[60%] mlg:w-[70%] mmlg:w-[80%] msm:w-full">
               <Text
-                variant="h3"
+                variant="h4"
                 align="center"
                 fontFamily="gambetta"
                 color="af-dark-green"
@@ -73,11 +84,15 @@ const ServiceSkillsPage = () => {
                 variant="secondary"
                 label="Contact Us"
                 customClassName="mt-[2rem] mb-[150px]"
+                onClick={openContactModal}
               />
             }
           />
         </section>
       </Outlet>
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
     </motion.section>
   );
 };

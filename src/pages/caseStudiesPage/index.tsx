@@ -1,10 +1,36 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button, Outlet } from "../../ui";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
+import { RequestConsultation, ConsultationForm } from "../../components";
 
 const CaseStudiesPage = () => {
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
+
+  const closeConsultationModal = () => {
+    setIsConsultationOpen(false);
+  };
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const redirectToContactForm = () => {
+    closeConsultationModal();
+    openContactModal();
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -23,10 +49,21 @@ const CaseStudiesPage = () => {
               variant="primary"
               label="Book a Consultation"
               customClassName="mt-[2rem] mb-[150px]"
+              onClick={openConsultationModal}
             />
           }
         />
       </Outlet>
+      {isConsultationOpen && (
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm} 
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
     </motion.section>
   );
 };

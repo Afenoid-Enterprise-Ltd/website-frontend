@@ -3,7 +3,7 @@ import { Loader } from "./ui";
 import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Toaster } from 'sonner';
+import { Toaster } from "sonner";
 import { ScrollToTop } from "./components";
 
 const HomePage = lazy(() =>
@@ -33,6 +33,15 @@ const CaseStudiesPage = lazy(() =>
 const CasesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.CasesPage }))
 );
+const CareerPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.CareerPage }))
+);
+const TermsOfServicePage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.TermsOfServicePage }))
+);
+const PrivacyPolicyPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.PrivacyPolicyPage }))
+);
 
 function App() {
   const location = useLocation();
@@ -40,21 +49,24 @@ function App() {
   return (
     <>
       <Suspense fallback={<Loader />}>
-        <AnimatePresence mode="wait" initial = {false}>
-          <ScrollToTop/>                                    
+        <AnimatePresence mode="wait" initial={false}>
+          <ScrollToTop />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/:skills" element = {<ServicesSkillsPage/>} />
+            <Route path="/services/:skills" element={<ServicesSkillsPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/case-studies/:title" element={<CasesPage />}/>
+            <Route path="/case-studies/:title" element={<CasesPage />} />
+            <Route path="/careers" element={<CareerPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="components" element={<ComponentsPage />} />
             <Route path="*" element={<ErrorPage />} />
-          </Routes> 
+          </Routes>
         </AnimatePresence>
-        <Toaster richColors={true} position="top-right" expand={true}/>
+        <Toaster richColors={true} position="top-right" expand={true} />
       </Suspense>
     </>
   );

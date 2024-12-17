@@ -13,10 +13,11 @@ interface MainProps {
   image: string | undefined;
   description: string | undefined;
   subtitle: string | undefined;
+  expectation: string | undefined ;
 }
 
 const MainSection: React.FC<MainProps> = (props) => {
-  const { title, image, subtitle, description } = props;
+  const { title, image, subtitle, description, expectation } = props;
 
   const expectations = [
     {
@@ -34,7 +35,7 @@ const MainSection: React.FC<MainProps> = (props) => {
       icon: <RiFolderDownloadFill size={32} color="#0F261A" />,
       text: "Additional Resources",
     },
-    { icon: <PiBank size={32} color="#0F261A" />, text: "ISACA" },
+    { icon: <PiBank size={32} color="#0F261A" />, text: expectation },
     {
       icon: <GoVerified size={32} color="#0F261A" />,
       text: "Certificate of Completion",
@@ -51,10 +52,20 @@ const MainSection: React.FC<MainProps> = (props) => {
           color="af-dark-green"
           fontWeight="medium"
         >
-          {title}
+          
+          {title?.split("*").map((part, index) => (
+              <React.Fragment key={index}>
+                {part}
+                {index < title.split("*").length - 1 && (
+                  <>
+                    <br />
+                  </>
+                )}
+              </React.Fragment>
+            ))}
         </Text>
       </div>
-      <div className="w-full h-[500px] mb-8 msm:h-[234px]">
+      <div className="w-full h-[31.25rem] mb-8 msm:h-[234px]">
         <img
           src={image}
           alt="Services Skills Image"
@@ -62,8 +73,8 @@ const MainSection: React.FC<MainProps> = (props) => {
         />
       </div>
 
-      <div className="w-full flex gap-6">
-        <div className="w-[60%]">
+      <div className="w-full flex gap-6 mmd:flex-col">
+        <div className="w-[60%] mmd:w-full">
           <Text
             variant="h3"
             align="left"
@@ -95,12 +106,12 @@ const MainSection: React.FC<MainProps> = (props) => {
             ))}
           </Text>
         </div>
-        <div className="w-[40%] bg-afenoid-light-grey p-4">
-          {expectations.map((expectation, index) => (
+        <div className="w-[40%] bg-afenoid-light-grey p-4 mmd:w-full">
+          {expectations.map((expectationItem, index) => (
             <div key={index} className="p-4 flex items-center">
-              <span className="text-2xl mr-4">{expectation.icon}</span>
+              <span className="text-2xl mr-6">{expectationItem.icon}</span>
               <span className="text-h5 text-afenoid-dark-green font-proxima-nova font-normal">
-                {expectation.text}
+                {expectationItem.text}
               </span>
             </div>
           ))}

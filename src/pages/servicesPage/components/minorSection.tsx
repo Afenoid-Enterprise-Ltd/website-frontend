@@ -19,18 +19,21 @@ const MinorSection = () => {
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: TrainingImg1,
+      route: "/services/information-security-management-system"
     },
     {
       title: "Business Continuity Management System (ISO 22301)",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
       image: TrainingImg2,
+      route: "/services/business-continuity-management-system"
     },
     {
       title: "Certified in Risk and Information Systems Control (CRISC)",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: TrainingImg3,
+      route: "/services/crisc"
     },
   ];
 
@@ -110,6 +113,7 @@ const MinorSection = () => {
               description={training.description}
               image={training.image}
               key={index}
+              route={training.route}
             />
           ))}
         </div>

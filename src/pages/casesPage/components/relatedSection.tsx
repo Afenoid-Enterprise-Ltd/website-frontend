@@ -102,7 +102,7 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
                 {relatedCases?.map((relatedCase: RelatedCases) => {
                   return (
                     <div className="h-[504px] w-[370px] flex flex-col gap-[20px] msm:w-full">
-                      <div className="h-[180px] w-full">
+                      <div className="h-auto w-full">
                         <img
                           src={relatedCase.imgUrl}
                           alt="Case Study 1"

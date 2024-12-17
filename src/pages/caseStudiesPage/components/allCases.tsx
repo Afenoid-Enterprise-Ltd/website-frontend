@@ -14,15 +14,15 @@ const ALLCASES = () => {
     <>
       {caseStudy.map((study: Case, index: number) => {
           return (
-            <div className="h-[504px] flex flex-col w-[30%]" key={index} >
-              <div className="max-h-[200px] w-full">
+            <div className="h-[32rem] flex flex-col w-[30%] mxxl:w-full" key={index} >
+              <div className="max-h-[16rem] w-full">
                 <img
                   src={study.imgUrl}
                   alt="Case Study 1"
                   className="h-full w-full"
                 />
               </div>
-              <div className="flex flex-col gap-[18px]">
+              <div className="flex flex-col gap-5">
                 <Text
                   variant="h5"
                   align="left"
@@ -48,7 +48,7 @@ const ALLCASES = () => {
                     .split(" ")
                     .join("-")
                     .toLowerCase()}`}
-                  className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
+                  className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[0.2rem] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
                 >
                   Learn More
                 </Link>

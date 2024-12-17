@@ -92,7 +92,7 @@ const MainSection = () => {
       </div>
 
       <section className="px-[110px] flex justify-center msm:px-6">
-        <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full">
+        <div className="flex flex-wrap gap-x-[48px] gap-y-[120px] justify-around items-center w-full msm:flex-col mxxl:grid mxxl:grid-cols-2 ">
           {renderContent()}
         </div>
       </section>

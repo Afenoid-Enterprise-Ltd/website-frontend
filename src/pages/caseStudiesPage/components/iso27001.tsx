@@ -19,17 +19,17 @@ const ISO27001 = () => {
       {ismsCases.map((study: Case, index: number) => {
           return (
             <div
-              className="max-h-[504px] flex flex-col w-[30%]"
+              className="h-[32rem] flex flex-col w-[30%] msm:w-full mxxl:w-full"
               key={index}
             >
-              <div className="max-h-[200px] w-full">
+              <div className="max-h-[16rem] w-full">
                 <img
                   src={study.imgUrl}
                   alt="Case Study 1"
                   className="h-full w-full"
                 />
               </div>
-              <div className="flex flex-col gap-[18px]">
+              <div className="flex flex-col gap-5">
                 <Text
                   variant="h5"
                   align="left"

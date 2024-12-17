@@ -1,11 +1,11 @@
 import React from "react";
 import { Text } from "../../../ui";
-import { GoShieldCheck, GoOrganization } from "react-icons/go";
+import { GoShieldCheck, GoOrganization, GoPeople } from "react-icons/go";
 import { IoWarningOutline } from "react-icons/io5";
 import { FaTasks } from "react-icons/fa";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { VscTools } from "react-icons/vsc";
-import { GrTask } from "react-icons/gr";
+import { GrTask, GrPowerCycle } from "react-icons/gr";
 import { MdOutlineGroups2 } from "react-icons/md";
 
 const iconMapping: { [key: string]: React.ComponentType<{ size?: number }> } = {
@@ -16,7 +16,9 @@ const iconMapping: { [key: string]: React.ComponentType<{ size?: number }> } = {
   AiOutlineFileSearch,
   VscTools,
   GrTask,
-  MdOutlineGroups2
+  MdOutlineGroups2,
+  GoPeople,
+  GrPowerCycle
 };
 
 interface TableProps {
@@ -32,19 +34,30 @@ const TableSection: React.FC<TableProps> = ({ gains, attendees }) => {
 
   return (
     <section>
-      <div className="grid grid-cols-2 border-y">
+       <Text
+        variant="h3"
+        align="center"
+        fontFamily="proxima-nova"
+        color="af-dark-green"
+        fontWeight="regular"
+        customClassName="my-[5rem] uppercase"
+      >
+        Key Benefits
+      </Text>
+
+      <div className="grid grid-cols-2 border-y msm:grid-cols-1">
         {gains?.map((item, index) => {
           const realIndex = index + 1;
 
           return (
             <div
               className={`flex items-center justify-start p-4 ${
-                index % 2 === 0 ? "border-r" : ""
+                index % 2 === 0 ? "border-r msm:border-r-0" : ""
               } ${
                 gains.length === realIndex || gains.length - 1 === realIndex
-                  ? ""
+                  ? "msm:border-b"
                   : "border-b"
-              }`}
+              } `}
               key={index}
             >
               <span className="mr-4">{changeToComponent(item.icon)}</span>
@@ -64,25 +77,25 @@ const TableSection: React.FC<TableProps> = ({ gains, attendees }) => {
       <Text
         variant="h3"
         align="center"
-        fontFamily="gambetta"
+        fontFamily="proxima-nova"
         color="af-dark-green"
         fontWeight="regular"
-        customClassName="my-[5rem]"
+        customClassName="my-[5rem] uppercase"
       >
         Who Should Attend?
       </Text>
 
-      <div className="grid grid-cols-2 border-y">
+      <div className="grid grid-cols-2 border-y msm:grid-cols-1">
         {attendees?.map((item, index) => {
           const realIndex = index + 1;
 
           return (
             <div
               className={`flex items-center justify-start p-4 ${
-                index % 2 === 0 ? "border-r" : ""
+                index % 2 === 0 ? "border-r msm:border-r-0" : ""
               } ${
                 attendees.length === realIndex || attendees.length - 1 === realIndex
-                  ? ""
+                  ? "msm:border-b"
                   : "border-b"
               }`}
               key={index}

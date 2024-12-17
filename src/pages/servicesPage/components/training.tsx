@@ -27,20 +27,6 @@ const Training = () => {
 
   const cardData = [
     {
-      title: "Information Security Management System (ISO 27001)",
-      description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: TrainingImg1,
-      route: "/services/information-security-management-system"
-    },
-    {
-      title: "Business Continuity Management System (ISO 22301)",
-      description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
-      image: TrainingImg2,
-      route: "/services/business-continuity-management-system"
-    },
-    {
       title: "Certified in Risk and Information Systems Control (CRISC)",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
@@ -48,26 +34,19 @@ const Training = () => {
       route: "/services/crisc"
     },
     {
-      title: "Business Relationship Management Professional (BRMP)",
+      title: "DORA Lead Manager",
       description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: CaseStudyImg1,
-      route: "/services/business-relationship-management-professional"
+        "The PECB Certified DORA Lead Manager course equips you to lead digital resilience strategies, ensuring compliance with the EU’s Digital Operational Resilience Act (DORA).",
+      image: SkillsDevImg2,
+      route: "/services/dora-lead-manager"
     },
     {
       title:
-        "Federated IT Service Management (FitSM) Foundation Certification ",
+        "Federated IT Service Management (FitSM) Foundation Certification",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: CaseStudyImg2,
       route: "/services/federated-IT-service-management"
-    },
-    {
-      title: "APMG Change Management",
-      description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
-      image: CaseStudyImg3,
-      route: "/services/apmg-change-management"
     },
     {
       title: "Neuroscience for Change",
@@ -77,19 +56,41 @@ const Training = () => {
       route: "/services/neuroscience-for-change"
     },
     {
-      title: "Quality Management System (ISO 27001)",
+      title: "Business Relationship Management Professional (BRMP)",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: SkillsDevImg2,
-      route: "/services/quality-management-system"
+      image: CaseStudyImg1,
+      route: "/services/business-relationship-management-professional"
     },
     {
-      title: "How ISMS compliance is influence corporate information",
+      title: "APMG Change Management",
       description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
-      image: SkillsDevImg3,
-      route: "/services/isms-compliance"
+        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
+      image: CaseStudyImg3,
+      route: "/services/apmg-change-management"
     },
+    {
+      title: "Business Continuity Management System (ISO 22301)",
+      description:
+        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
+      image: TrainingImg2,
+      route: "/services/business-continuity-management-system"
+    },
+    {
+      title: "Information Security Management System (ISO 27001)",
+      description:
+        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
+      image: TrainingImg1,
+      route: "/services/information-security-management-system"
+    },
+    {
+      title: "Service Management System (ISO 20000)",
+      description:
+        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+      image: SkillsDevImg3,
+      route: "/services/service-management-system"
+    },
+    
   ];
 
   return (

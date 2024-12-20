@@ -77,8 +77,8 @@ const ServiceSkillsPage = () => {
             attendees={selectedSkill?.attendees}
           />
           <CallToAction
-            title="Navigate Your Compliance Journey"
-            explanation="From ISO certifications to PCI DSS assessments, we guide you through every step of your security and compliance transformation with expert training and support."
+            title="Your Next Step Awaits"
+            explanation="Imagine mastering the skills that set you and your organization apart and open doors to new opportunities."
             button={
               <Button
                 variant="secondary"

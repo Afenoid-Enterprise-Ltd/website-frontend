@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
+import { OfficeLocationImg } from "../../../assets";
 
 interface AccordionProps {
   openConsultationModal: () => void;
@@ -46,38 +47,66 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
       <div className="p-[5rem] msm:p-[3rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            Established in 2011, Afenoid Enterprise Limited is a Business and
+            Technology service firm, that enables credible solutions to
+            organizations and individuals for cyber resilience, digital trust,
+            competence development, and managed services. Our top clients are
+            dominant players in sub-Saharan Africa and the Middle East.
           </AccordionItem>
           <AccordionItem value="2" trigger="What services does Afenoid offer?">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            Digital Strategy: We orchestrate and catalyse your digital
+            transformation investments from conceptualization to value
+            realization.
+            <br />
+            <br />
+            Performance Improvement: We accelerate your cybersecurity maturity
+            and help to minimize your breach likelihood.
+            <br />
+            <br />
+            Compliance Assurance: We supply capabilities you need to adopt,
+            adapt and optimize regulatory frameworks and comply with industry
+            standards.
+            <br />
+            <br />
+            Competence Development: We train and mentor your personnel to comply
+            with various Governance, Information Technology, Cybersecurity, and
+            Privacy requirements across global markets.
           </AccordionItem>
           <AccordionItem
             value="3"
             trigger="What management systems and frameworks does Afenoid provide?"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            <ul className="list-disc pl-[1rem]">
+              <li>
+                ISO (International Organization for Standardization): ISO/IEC
+                27001; 27005; 22301; 9001
+              </li>
+              <li>COBIT Framework</li>
+              <li>COBIT Framework</li>
+              <li>SWIFT</li>
+              <li>PCI DSS</li>
+              <li>NIST</li>
+            </ul>
           </AccordionItem>
           <AccordionItem value="4" trigger="Who does Afenoid serve?">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            Established in 2011, Afenoid Enterprise Limited is a Business and
+            Technology service firm, that enables credible solutions to
+            organizations and individuals for cyber resilience, digital trust,
+            competence development, and managed services. Our top clients are
+            dominant players in sub-Saharan Africa and the Middle East.
           </AccordionItem>
         </Accordion>
       </div>
 
-      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
-        <div className="w-1/2 mxs:w-full"></div>
-        <div className="w-1/2 mxs:w-full">
+      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 mmd:flex-col msm:px-[3rem] mxs:flex-col">
+        <div className="w-1/2 h-[25rem] mmd:w-full">
+          <img
+            src={OfficeLocationImg}
+            alt="Office Location Image"
+            className="object-cover h-full w-full "
+          />
+        </div>
+        <div className="w-1/2 mmd:w-full">
           <Text
             variant="h2"
             fontFamily="gambetta"

@@ -4,9 +4,9 @@ import { GoShieldCheck, GoOrganization, GoPeople } from "react-icons/go";
 import { IoWarningOutline } from "react-icons/io5";
 import { FaTasks } from "react-icons/fa";
 import { AiOutlineFileSearch } from "react-icons/ai";
-import { VscTools } from "react-icons/vsc";
-import { GrTask, GrPowerCycle } from "react-icons/gr";
+import { VscTools, VscNotebook, VscChecklist, VscSync } from "react-icons/vsc";
 import { MdOutlineGroups2 } from "react-icons/md";
+import { BsPersonWorkspace } from "react-icons/bs";
 
 const iconMapping: { [key: string]: React.ComponentType<{ size?: number }> } = {
   GoShieldCheck,
@@ -15,10 +15,12 @@ const iconMapping: { [key: string]: React.ComponentType<{ size?: number }> } = {
   IoWarningOutline,
   AiOutlineFileSearch,
   VscTools,
-  GrTask,
   MdOutlineGroups2,
   GoPeople,
-  GrPowerCycle
+  VscNotebook,
+  VscChecklist,
+  VscSync,
+  BsPersonWorkspace
 };
 
 interface TableProps {
@@ -51,7 +53,7 @@ const TableSection: React.FC<TableProps> = ({ gains, attendees }) => {
 
           return (
             <div
-              className={`flex items-center justify-start p-4 ${
+              className={`flex items-center justify-start p-8 ${
                 index % 2 === 0 ? "border-r msm:border-r-0" : ""
               } ${
                 gains.length === realIndex || gains.length - 1 === realIndex
@@ -91,7 +93,7 @@ const TableSection: React.FC<TableProps> = ({ gains, attendees }) => {
 
           return (
             <div
-              className={`flex items-center justify-start p-4 ${
+              className={`flex items-center justify-start p-8 ${
                 index % 2 === 0 ? "border-r msm:border-r-0" : ""
               } ${
                 attendees.length === realIndex || attendees.length - 1 === realIndex

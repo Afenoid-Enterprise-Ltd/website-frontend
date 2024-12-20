@@ -81,7 +81,7 @@ const Overview = () => {
             heroTexts={dataItem.heroTexts}
             image={dataItem.image}
             reverse={index % 2 === 0}
-            btnText="Learn More"
+            // btnText="Learn More"
           />
         ))}
       </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet, Button } from "../../ui";
 import { caseStudy } from "../caseStudiesPage/caseStudy.ts";
@@ -7,6 +8,7 @@ import { DataSection } from "./components/dataSection.tsx";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { RelatedSection } from "./components/relatedSection.tsx";
 import { HomeHeroImage } from "../../assets";
+import { ConsultationForm, RequestConsultation } from "../../components";
 
 const CasesPage = () => {
   const { title } = useParams();
@@ -21,7 +23,29 @@ const CasesPage = () => {
     return study.title !== item?.title
   })
 
-  console.log(relateditems)
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
+
+  const closeConsultationModal = () => {
+    setIsConsultationOpen(false);
+  };
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const redirectToContactForm = () => {
+    closeConsultationModal();
+    openContactModal();
+  };
 
   return (
     <motion.section
@@ -53,14 +77,15 @@ const CasesPage = () => {
               variant="primary"
               label="Book a Consultation"
               customClassName="mt-[2rem]"
+              onClick={openConsultationModal}
             />
           }
         />
 
         <RelatedSection relatedCases={relateditems}/>
 
-        <div className="max-w-[530px] mx-auto mt-[150px] msm:mx-6">
-          <img src={HomeHeroImage} alt="" />
+        <div className="w-full flex justify-center items-center mt-[8rem] msm:px-[3rem]">
+          <img src={HomeHeroImage} alt="Hero Image" className="w-[30%] mmd:w-[70%] mxs:w-[80%]" />
         </div>
 
         <CallToAction
@@ -71,10 +96,21 @@ const CasesPage = () => {
               variant="secondary"
               label="Contact Us"
               customClassName="mt-[2rem]"
+              onClick={openContactModal}
             />
           }
         />
       </Outlet>
+      {isConsultationOpen && (
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm} 
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
     </motion.section>
   );
 };

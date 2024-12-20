@@ -44,6 +44,7 @@ const countryOptions = [
   "Cambodia",
   "Cameroon",
   "Canada",
+  "Cayman Islands",
   "Central African Republic",
   "Chad",
   "Chile",
@@ -212,28 +213,28 @@ const countryOptions = [
 ];
 
 export const consultationFormSchema = z.object({
-  firstname: z.string().min(1, { message: "Please enter your first name" }),
-  lastname: z.string().min(1, { message: "Please enter your last name" }),
-  email: z.string().email({
+  Firstname: z.string().min(1, { message: "Please enter your first name" }),
+  Lastname: z.string().min(1, { message: "Please enter your last name" }),
+  Email: z.string().email({
     message: "Please enter your email address in the format: text@example.com",
   }),
-  phoneNumber: z
+  Phone: z
     .string()
     .trim()
     .refine((value) => phoneNumberRegExp.test(value), {
       message: "Phone number entered is not valid",
     }),
-  service: z
+  Service: z
     .string()
     .min(1)
     .refine((value) => serviceOptions.includes(value), {
       message: "Please select the service that you would like to receive",
     }),
-  country: z
+  Country: z
     .string()
     .min(1)
     .refine((value) => countryOptions.includes(value), {
       message: "Please select your country",
     }),
-  company: z.string().min(1, { message: "Please enter your company's name" }),
+  Company: z.string().min(1, { message: "Please enter your company's name" }),
 });

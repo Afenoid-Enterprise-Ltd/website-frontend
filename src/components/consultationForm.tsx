@@ -22,34 +22,66 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
 
   const { handleSubmit, reset } = methods;
 
+  // const bookConsultation = async (
+  //   data: z.infer<typeof consultationFormSchema>
+  // ) => {
+  //   try {
+  //     const response = await fetch(SCRIPT_DETAILS.link, {
+  //       method: "POST",
+  //       mode: "cors",
+  //       cache: "no-cache",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+
+  //     const responseData = await response.json();
+  //     if (response.ok && responseData.status === "success") {
+  //       console.log("Submitted Data:", data);
+  //       reset();
+  //       toast.success("You have successfully booked for a consultation");
+  //       onClose();
+  //     } else {
+  //       toast.error(
+  //         responseData.message || "Failed to submit consultation request"
+  //       );
+  //       console.log(data)
+  //     }
+  //   } catch (e: any) {
+  //     console.error("Submission error:", e);
+  //     toast.error("An unexpected error occurred");
+  //   }
+  // };
+
   const bookConsultation = async (
     data: z.infer<typeof consultationFormSchema>
   ) => {
     try {
-      const response = await fetch(SCRIPT_DETAILS.link, {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+      const formData = new URLSearchParams();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, String(value));
       });
-
-      const responseData = await response.json();
-      if (response.ok && responseData.status === "success") {
-        console.log("Submitted Data:", data);
-        reset();
-        toast.success("You have successfully booked for a consultation");
-        onClose();
-      } else {
-        toast.error(
-          responseData.message || "Failed to submit consultation request"
-        );
-      }
+  
+      const url = `${SCRIPT_DETAILS.link}?${formData.toString()}`;
+      
+      await fetch(url, {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      // Handle success case
+      reset();
+      toast.success("Thank you! Your consultation request has been submitted successfully.");
+      onClose();
+  
     } catch (e: any) {
-      console.error("Submission error:", e);
-      toast.error("An unexpected error occurred");
+      // Handle error case
+      console.error("Error submitting form:", e);
+      toast.error("Unable to submit your request. Please try again later.");
     }
   };
 
@@ -113,44 +145,44 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
             <Input
               label="First Name"
               type="text"
-              name="firstname"
+              name="Firstname"
               placeholder="Enter your first name"
             />
             <Input
               label="Last Name"
               type="text"
-              name="lastname"
+              name="Lastname"
               placeholder="Enter your last name"
             />
             <Input
               label="Email"
               type="email"
-              name="email"
+              name="Email"
               placeholder="Enter your email address"
             />
             <Input
               label="Phone Number"
               type="text"
-              name="phoneNumber"
-              placeholder="Enter your mobile number"
+              name="Phone"
+              placeholder="Enter your mobile number with its country code"
             />
             <Dropdown
               label="Service"
-              name="service"
+              name="Service"
               options={servicesData}
               placeholder="Select a service"
             />
             <Dropdown
               label="Country"
-              name="country"
+              name="Country"
               options={formattedCountriesData}
               placeholder="Select a country"
             />
             <Input
               label="Company"
               type="text"
-              name="company"
-              placeholder="Enter your company"
+              name="Company"
+              placeholder="Enter your company name"
             />
 
             <Button

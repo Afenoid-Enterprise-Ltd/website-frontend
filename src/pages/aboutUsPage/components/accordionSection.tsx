@@ -89,11 +89,14 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
             </ul>
           </AccordionItem>
           <AccordionItem value="4" trigger="Who does Afenoid serve?">
-            Established in 2011, Afenoid Enterprise Limited is a Business and
-            Technology service firm, that enables credible solutions to
-            organizations and individuals for cyber resilience, digital trust,
-            competence development, and managed services. Our top clients are
-            dominant players in sub-Saharan Africa and the Middle East.
+            <ul className="list-disc pl-[1rem]">
+              <li>Financial Institutions</li>
+              <li>Government Agencies</li>
+              <li>Technology Companies</li>
+              <li>Telecommunications Providers</li>
+              <li>Manufacturing and Supply Chain</li>
+              <li>Small and Medium Enterprises (SMEs)</li>
+            </ul>
           </AccordionItem>
         </Accordion>
       </div>

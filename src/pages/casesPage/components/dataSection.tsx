@@ -19,8 +19,8 @@ const DataSection: React.FC<DataSectionProps> = ({
   recommendation,
 }) => {
   return (
-    <section className="px-[80px] flex flex-col gap-[64px] items-center msm:px-[20px] msm:w-full msm:overflow-x-hidden msm:gap-[24px]">
-      <div className="relative bg-[#E3F0C9] max-h-[204px] py-[37px] pl-[45px] pr-[110px]  w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
+    <section className="px-[5rem] flex flex-col gap-[64px] items-center msm:px-[3rem] msm:w-full msm:overflow-x-hidden msm:gap-[24px] mxs:px-[2rem]">
+      <div className="relative bg-[#E3F0C9] max-h-auto py-[37px] px-[3rem]  w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
         {/* Wrapper for image and h3 */}
         <div className="flex items-center gap-4 msm:w-full msm:justify-start msm:gap-4">
           <div className="flex-shrink-0 flex items-center absolute top-1/2  -translate-y-1/2 msm:relative msm:translate-y-0">
@@ -36,7 +36,7 @@ const DataSection: React.FC<DataSectionProps> = ({
             align="left"
             color="af-dark-green"
             variant="h3"
-            customClassName="msm:text-base w-full  pl-[80px] msm:pl-0"
+            customClassName="msm:text-base w-full pl-[80px] msm:pl-0"
           >
             Challenge
           </Text>
@@ -54,7 +54,7 @@ const DataSection: React.FC<DataSectionProps> = ({
         </Text>
       </div>
 
-      <div className="relative bg-[#DBEEF4] max-h-[204px] py-[37px] pl-[45px] pr-[110px]  w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
+      <div className="relative bg-[#DBEEF4] max-h-auto py-[37px] px-[3rem] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
         {/* Wrapper for image and h3 */}
         <div className="flex items-center gap-4 msm:w-full msm:justify-start msm:gap-4">
           <div className="flex-shrink-0  flex items-center absolute top-1/2  -translate-y-1/2 msm:relative msm:translate-y-0">
@@ -88,7 +88,7 @@ const DataSection: React.FC<DataSectionProps> = ({
         </Text>
       </div>
 
-      <div className="relative bg-[#FFEBE5] max-h-[204px] py-[37px] pl-[45px] pr-[110px]  w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
+      <div className="relative bg-[#FFEBE5] max-h-auto py-[37px] px-[3rem] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
         {/* Wrapper for image and h3 */}
         <div className="flex items-center gap-4 msm:w-full msm:justify-start msm:gap-4">
           <div className="flex-shrink-0  flex items-center absolute top-1/2  -translate-y-1/2 msm:relative msm:translate-y-0">
@@ -122,7 +122,7 @@ const DataSection: React.FC<DataSectionProps> = ({
         </Text>
       </div>
 
-      <div className="relative bg-[#9BBB59] max-h-[204px] py-[37px] pl-[45px] pr-[110px]  w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
+      <div className="relative bg-[#9BBB59] max-h-auto py-[37px] px-[3rem] w-full msm:h-full msm:px-5 msm:py-4 msm:flex-col msm:gap-5">
         {/* Wrapper for image and h3 */}
         <div className="flex items-center gap-4 msm:w-full msm:justify-start msm:gap-4">
           <div className="flex-shrink-0  flex items-center absolute top-1/2  -translate-y-1/2 msm:relative msm:translate-y-0">

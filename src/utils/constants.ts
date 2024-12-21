@@ -1,3 +1,3 @@
 export const SCRIPT_DETAILS = {
-  link: "https://script.google.com/macros/s/AKfycby8lGqxlsEA9mPgpbwLkEgao4COkn3ZkgRlwE5YYpYrmRGxky3qyZMS6sUiPV01BmiK9Q/exec?name=Sheet1"
+  link: "https://script.google.com/macros/s/AKfycbzW0hE9476VQORlLqLl2Ht9_XZx3XIQnOCBVlTcMsuX5k_5hcTiiZnRbHdW9AlujyoarA/exec"
 }

@@ -46,15 +46,15 @@ export const skillsData: Skill[] = [
         benefit: "Risk Governance, Monitoring & Reporting",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "IT Risk Identification, Analysis & Evaluation",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Risk Response and Mitigation",
       },
       {
-        icon: "GrPowerCycle",
+        icon: "VscSync",
         benefit: "Post-implementation Review",
       },
       {
@@ -90,11 +90,11 @@ export const skillsData: Skill[] = [
         benefit: "Core ITSM Process Standardization",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Scalability and Flexibility",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Enhanced Service Quality",
       },
       {
@@ -133,11 +133,11 @@ export const skillsData: Skill[] = [
         benefit: "Raising Conscious Awareness",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Evidence-Based Frameworks",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Overcoming Resistance",
       },
       {
@@ -176,11 +176,11 @@ export const skillsData: Skill[] = [
         benefit: "Building Collaborative Partnerships",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Driving Organizational Value",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Aligning Business Needs with Service Delivery",
       },
       {
@@ -219,11 +219,11 @@ export const skillsData: Skill[] = [
         benefit: "Address change impacts on teams and organizations",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Minimize resistance and boost productivity",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Turn change into opportunities for growth",
       },
       {
@@ -262,11 +262,11 @@ export const skillsData: Skill[] = [
         benefit: "Developing Robust Frameworks and Plans",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Enhancing Digital Operational Resilience",
       },
       {
-        icon: "GrTask",
+        icon: "VscChecklist",
         benefit: "Stakeholder Management",
       },
       {
@@ -298,36 +298,44 @@ export const skillsData: Skill[] = [
     gains: [
       {
         icon: "GoOrganization",
-        benefit: "Regulatory Landscape and Compliance Understanding",
+        benefit: "ISMS Lead Implementer Course",
       },
       {
         icon: "AiOutlineFileSearch",
-        benefit: "Developing Robust Frameworks and Plans",
+        benefit: "ISMS Lead Auditor Course",
       },
       {
-        icon: "GrTask",
-        benefit: "Enhancing Digital Operational Resilience",
+        icon: "VscChecklist",
+        benefit: "EUnderstanding ISO/IEC 27001 Requirements, Risk Assessment and Treatment Methodologies",
       },
       {
-        icon: "GrTask",
-        benefit: "Stakeholder Management",
+        icon: "VscChecklist",
+        benefit: "Understanding ISO/IEC 27001 Requirements, Planning and Conducting ISMS Audits",
+      },
+      {
+        icon: "GoOrganization",
+        benefit: "Developing ISMS Policies, Procedures, & Implementing Security Controls",
+      },
+      {
+        icon: "AiOutlineFileSearch",
+        benefit: "Audit Techniques, Methods  Post-Audit Reporting and Follow-Up",
       },
       {
         icon: "GoShieldCheck",
-        benefit: "ICT Risk Management",
+        benefit: "Implementing Security Controls",
       },
       {
         icon: "VscTools",
-        benefit: "Tools and Methodologies Utilization",
+        benefit: "Nonconformity Management and Corrective Actions",
       },
     ],
     attendees: [
-      { icon: "GoPeople", benefit: "IT Risk Managers" },
-      { icon: "GoPeople", benefit: "Compliance Officers" },
-      { icon: "GoPeople", benefit: "ICT Security Specialists" },
-      { icon: "GoPeople", benefit: "Operational Resilience Managers" },
-      { icon: "GoPeople", benefit: "Third-Party Risk Managers" },
-      { icon: "GoPeople", benefit: "Financial Institution Professionals" },
+      { icon: "GoPeople", benefit: "IT Managers and Security Personnels" },
+      { icon: "GoPeople", benefit: "Auditors and Consultants specializing in information security" },
+      { icon: "GoPeople", benefit: "Risk Managers and Compliance Officers " },
+      { icon: "GoPeople", benefit: "Team Leaders managing ISMS implementation or audits" },
+      { icon: "GoPeople", benefit: "Data Operation Officers (DPOs)" },
+      { icon: "GoPeople", benefit: "Individuals aiming to advance their careers in information security" },
     ],
     expectation: "PECB"
   },
@@ -340,37 +348,45 @@ export const skillsData: Skill[] = [
     "Our ISO 22301 training program offers two essential paths: Lead Auditor and Lead Implementer. Whether you want to audit organizations for business continuity or implement and manage a business continuity management system, we’ve got you covered. * By the end of the training, you’ll gain a solid understanding of ISO 22301 and the confidence to take on advanced roles in business continuity. Whether you aspire to be a Lead Auditor ensuring compliance or a Lead Implementer driving resilience initiatives, we’re here to help you achieve your goals.",
     gains: [
       {
-        icon: "GoOrganization",
-        benefit: "Regulatory Landscape and Compliance Understanding",
+        icon: "VscNotebook",
+        benefit: "ISMS Lead Implementer Course",
       },
       {
         icon: "AiOutlineFileSearch",
-        benefit: "Developing Robust Frameworks and Plans",
+        benefit: "ISMS Lead Auditor Course",
       },
       {
-        icon: "GrTask",
-        benefit: "Enhancing Digital Operational Resilience",
+        icon: "VscChecklist",
+        benefit: "Establishing a Business Continuity Management System (BCMS)",
       },
       {
-        icon: "GrTask",
-        benefit: "Stakeholder Management",
-      },
-      {
-        icon: "GoShieldCheck",
-        benefit: "ICT Risk Management",
+        icon: "VscChecklist",
+        benefit: "Understanding BCMS Requirements",
       },
       {
         icon: "VscTools",
-        benefit: "Tools and Methodologies Utilization",
+        benefit: "Risk Assessment and Treatment Methodologies",
+      },
+      {
+        icon: "BsPersonWorkspace",
+        benefit: "Planning and Conducting BCMS Audits",
+      },
+      {
+        icon: "GoOrganization",
+        benefit: "Developing Continuity Plans & Implementing Security Controls",
+      },
+      {
+        icon: "AiOutlineFileSearch",
+        benefit: "Audit Techniques and Evidence Collection",
       },
     ],
     attendees: [
-      { icon: "GoPeople", benefit: "IT Risk Managers" },
-      { icon: "GoPeople", benefit: "Compliance Officers" },
-      { icon: "GoPeople", benefit: "ICT Security Specialists" },
-      { icon: "GoPeople", benefit: "Operational Resilience Managers" },
-      { icon: "GoPeople", benefit: "Third-Party Risk Managers" },
-      { icon: "GoPeople", benefit: "Financial Institution Professionals" },
+      { icon: "GoPeople", benefit: "Business Continuity Managers and Coordinators" },
+      { icon: "GoPeople", benefit: "Auditors and Consultants specializing in business continuity" },
+      { icon: "GoPeople", benefit: "Risk Managers and Compliance Officers" },
+      { icon: "GoPeople", benefit: "Disaster Recovery and Emergency Planning Professionals" },
+      { icon: "GoPeople", benefit: "Team Leaders overseeing BCMS implementation or audits" },
+      { icon: "GoPeople", benefit: "Individuals aiming to strengthen their expertise in business continuity management" },
     ],
     expectation: "PECB"
   },

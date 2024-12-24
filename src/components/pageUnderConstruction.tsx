@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, Button } from "../ui";
-import { Link } from "react-router-dom";
 import { FixMain } from "../assets";
 
 interface Props {

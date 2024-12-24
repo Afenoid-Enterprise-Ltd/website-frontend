@@ -1,12 +1,22 @@
+import React from "react";
 import { Text, Button } from "../ui";
-import { Link } from "react-router-dom";
-import { FixMain, } from "../assets";
+import { FixMain } from "../assets";
 
-const PageUnderConstruction = () => {
+interface Props {
+  openModal: () => void;
+}
+
+const PageUnderConstruction: React.FC<Props> = (props) => {
+  const { openModal } = props;
+
   return (
     <section className="w-screen h-screen flex justify-center items-center p-[5rem] gap-10 mmd:flex-col mxs:p-[2rem]">
       <div className="w-[40%] relative msm:w-[80%]">
-        <img src={FixMain} alt="Page under construction illustration"  className="h-auto w-full "/>
+        <img
+          src={FixMain}
+          alt="Page under construction illustration"
+          className="h-auto w-full "
+        />
       </div>
       <div className="w-[60%] flex flex-col gap-4 mmd:w-full">
         <Text
@@ -32,9 +42,13 @@ const PageUnderConstruction = () => {
           meantime, feel free to explore other sections of our website or get in
           touch with us for any assistance you need.
         </Text>
-        <Link to="/">
-          <Button label="Contact Support" variant="primary" />
-        </Link>
+        <div>
+          <Button
+            label="Contact Support"
+            variant="primary"
+            onClick={openModal}
+          />
+        </div>
       </div>
     </section>
   );

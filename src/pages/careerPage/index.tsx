@@ -1,7 +1,36 @@
 import { motion } from "framer-motion";
-import { PageUnderConstruction } from "../../components";
+import { useState } from "react";
+import {
+  PageUnderConstruction,
+  RequestConsultation,
+  ConsultationForm,
+} from "../../components";
 
 const CareerPage = () => {
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
+
+  const closeConsultationModal = () => {
+    setIsConsultationOpen(false);
+  };
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const redirectToContactForm = () => {
+    closeConsultationModal();
+    openContactModal();
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -9,7 +38,19 @@ const CareerPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <PageUnderConstruction />
+      <section className="overflow-x-hidden">
+        <PageUnderConstruction openModal={openConsultationModal} />
+      </section>
+      {isConsultationOpen && (
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm}
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
     </motion.section>
   );
 };

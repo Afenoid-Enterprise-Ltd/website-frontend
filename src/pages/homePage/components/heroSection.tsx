@@ -22,16 +22,16 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
 
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
-      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-[3rem]">
-        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem]">
-          <div className="w-[95%]">
+      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 border border-blue-700">
+        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] border border-green-700 msm:w-full">
+          <div className="w-[95%] msm:w-full">
             <Text
               variant="h2"
               color="af-dark-green"
               fontWeight="medium"
               align="left"
               fontFamily="gambetta"
-              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h5"
+              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4 border border-red-700"
             >
               Strengthening organizations,
               <br /> Equipping professionals.
@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               color="af-dark-green"
               fontWeight="light"
               align="left"
-              customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden"
+              customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden msm:text-h6"
             >
               We protect what matters most—your{" "}
               <span className="italic font-gambetta">people</span>, your<br />{" "}

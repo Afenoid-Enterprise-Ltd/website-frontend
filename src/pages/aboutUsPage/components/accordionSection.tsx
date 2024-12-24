@@ -44,7 +44,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </div>
       </div>
 
-      <div className="p-[5rem] msm:p-[3rem]" id="faqs">
+      <div className="p-[5rem] msm:p-[3rem] mxs:p-[2rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
             Established in 2011, Afenoid Enterprise Limited is a Business and

@@ -11,3 +11,4 @@ export * from "./accordion";
 export * from "./consultationForm";
 export * from "./scrollTop";
 export * from "./requestConsultation";
+export * from "./pageUnderConstruction";

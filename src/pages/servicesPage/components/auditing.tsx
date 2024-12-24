@@ -1,4 +1,4 @@
-import { DigitalTrustImg } from "../../../assets";
+import { ServicesImg2 } from "../../../assets";
 import { Text, Button } from "../../../ui";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
@@ -11,7 +11,7 @@ const Auditing = () => {
       description:
         "We help establish, operate, and improve management system standards such as ISO 27001 (ISMS), ISO 22301 (BCMS), ISO 9001 (QMS), ensuring clarity and efficiency in organizational processes.",
     },
-    image: DigitalTrustImg,
+    image: ServicesImg2,
   };
 
   return (

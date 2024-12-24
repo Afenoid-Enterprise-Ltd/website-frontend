@@ -25,8 +25,6 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 2000, // Time between slides (in ms)
     pauseOnHover: true, // Pause autoplay when the user hovers over the carousel
-
-    
   };
 
   return (

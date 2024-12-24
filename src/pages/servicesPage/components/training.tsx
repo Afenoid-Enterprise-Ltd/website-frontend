@@ -1,6 +1,5 @@
 import { Text, Button } from "../../../ui";
 import { LearnMoreDiv } from "./learnMoreDiv";
-import { DigitalSkillsDevImg } from "../../../assets";
 import { CallToAction, CaseStudyCard } from "../../../components";
 import {
   TrainingImg1,
@@ -12,6 +11,7 @@ import {
   SkillsDevImg1,
   SkillsDevImg2,
   SkillsDevImg3,
+  ServicesImg1
 } from "../../../assets";
 
 const Training = () => {
@@ -22,7 +22,7 @@ const Training = () => {
       description:
         "Our courses focus on developing skills and competencies in corporate governance of information and technology, service management, risk management, information security, cybersecurity, data privacy, and audit and assurance.",
     },
-    image: DigitalSkillsDevImg,
+    image: ServicesImg1,
   };
 
   const cardData = [

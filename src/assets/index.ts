@@ -68,7 +68,9 @@ import MotionGraduation from "./motion-graduation-icon.svg";
 import MotionGrowth from "./motion-growth-icon.svg";
 import MotionBrain from "./motion-brain-icon.svg";
 import HomeServicesIconBg from "./home-services-icons-img.png";
-import OfficeLocationImg from "./office-location.png"
+import OfficeLocationImg from "./office-location.png";
+import ErrorImg from "./error-image.png";
+import FixMain from "./fix-main.png";
 
 export {
   MainLogoSVG,
@@ -141,5 +143,7 @@ export {
   MotionGrowth,
   MotionBrain,
   HomeServicesIconBg,
-  OfficeLocationImg
+  OfficeLocationImg,
+  ErrorImg,
+  FixMain
 };

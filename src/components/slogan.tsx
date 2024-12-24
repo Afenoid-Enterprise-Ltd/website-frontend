@@ -8,7 +8,7 @@ type SloganProps = {
 const Slogan:React.FC<SloganProps> = ({children}) => {
   return ( 
     <div className="w-screen">
-        <img src={SkylineImg} alt="Skyline Pattern" />
+        <img src={SkylineImg} alt="Skyline Pattern" height={500}/>
         {children}
       </div>
   );

@@ -188,7 +188,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="bg-[#9bc73c28] p-4 rounded-full">
-        <img src={icon} alt="Icon Image" />
+        <img src={icon} alt="Icon Image" loading="lazy"/>
       </div>
       <div>
         <div className="my-[2rem]">

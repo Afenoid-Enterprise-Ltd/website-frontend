@@ -1,37 +1,37 @@
-
 import { Text, Button } from "../../../ui";
 import {
   ServicesImg1,
   ServicesImg2,
   ServicesImg3,
   HomePageServicesImg,
-  HomeServicesIconBg
+  HomeServicesIconBg,
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
 
 const ServicesSection = () => {
   const currentScreenWidth = window.innerWidth;
 
-  const caseStudyData = [{
-    title: "CONSULTING",
-    description:
-      "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
-    image: ServicesImg3,
-    route: "/services#consulting"
-  },
+  const caseStudyData = [
+    {
+      title: "CONSULTING",
+      description:
+        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
+      image: ServicesImg3,
+      route: "/services#consulting",
+    },
     {
       title: "AUDITING",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: ServicesImg2,
-      route: "/services#auditing"
+      route: "/services#auditing",
     },
     {
       title: "TRAINING",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: ServicesImg1,
-      route: "/services#training"
+      route: "/services#training",
     },
   ];
 
@@ -123,6 +123,7 @@ const ServicesSection = () => {
                 className="mr-4"
                 width={250}
                 height={500}
+                loading="lazy"
               />
             </div>
             <div className="">
@@ -132,26 +133,47 @@ const ServicesSection = () => {
                 className="mr-4"
                 width={200}
                 height={500}
+                loading="lazy"
               />
             </div>
           </div>
           <div className="w-full relative mlg:hidden">
-          <div className="absolute z-10 bottom-[8rem] -right-8 ">
+            <div className="absolute z-10 bottom-[8rem] -right-8 ">
               <img
                 src={HomeServicesIconBg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 270 : 370}
+                width={
+                  currentScreenWidth >= 1029 && currentScreenWidth <= 1329
+                    ? 270
+                    : 370
+                }
                 height={500}
+                loading="lazy"
               />
             </div>
-            <div className={`absolute bottom-0 ${currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? "-right-8" : "right-0"} `}>
+            <div
+              className={`absolute bottom-0 ${
+                currentScreenWidth >= 1029 && currentScreenWidth <= 1329
+                  ? "-right-8"
+                  : "right-0"
+              } `}
+            >
               <img
                 src={HomePageServicesImg}
                 alt="Image"
                 className="mr-4"
-                width={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 250 : 280}
-                height={currentScreenWidth >= 1029 && currentScreenWidth <= 1329 ? 300 : 500}
+                width={
+                  currentScreenWidth >= 1029 && currentScreenWidth <= 1329
+                    ? 250
+                    : 280
+                }
+                height={
+                  currentScreenWidth >= 1029 && currentScreenWidth <= 1329
+                    ? 300
+                    : 500
+                }
+                loading="lazy"
               />
             </div>
           </div>

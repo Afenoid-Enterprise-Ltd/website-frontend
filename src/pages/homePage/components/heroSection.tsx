@@ -58,7 +58,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           </div>
         </div>
         <div className="w-1/2 mmlg:w-full mmd:px-4">
-          <img src={HomeHeroImage} alt="Hero Image" />
+          <img src={HomeHeroImage} alt="Hero Image" loading="lazy"/>
         </div>
       </div>
 

@@ -80,6 +80,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           src={image}
           alt="An Image for the Hero Page"
           className="w-full h-full"
+          loading="lazy"
         />
       </motion.div>
       <motion.div

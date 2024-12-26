@@ -29,7 +29,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
       </Text>
 
       <div className="w-full h-[500px] msm:h-[234px]">
-        <img src={imgUrl} alt={title} className="w-full h-full object-cover" />
+        <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy"/>
       </div>
 
       <div className="w-full">

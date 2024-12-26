@@ -70,6 +70,7 @@ const MainSection: React.FC<MainProps> = (props) => {
           src={image}
           alt="Services Skills Image"
           className="h-full w-full"
+          loading="lazy"
         />
       </div>
 

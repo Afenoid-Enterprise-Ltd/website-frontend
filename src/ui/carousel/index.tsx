@@ -33,7 +33,6 @@ const Previous = (props: {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 }) => {
   const { onClick } = props;
-  
 
   return (
     <div
@@ -49,7 +48,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const isMidScreens = useMediaQuery("only screen and (max-width : 976px)");
 
   const numOfSlides = isMidScreens ? 1 : 3;
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -62,13 +61,22 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
   return (
     <div className="py-10 w-[60%] mxl:w-[70%]">
-      <div className="px-3"> {/* Add padding to container to prevent cut-off */}
+      <div className="px-3">
+        {" "}
+        {/* Add padding to container to prevent cut-off */}
         <Slider {...settings}>
           {items.map((item) => (
-            <div key={item.id} className="px-3"> {/* Add horizontal padding for spacing */}
+            <div key={item.id} className="px-3">
+              {" "}
+              {/* Add horizontal padding for spacing */}
               <div className="bg-white shadow-md flex flex-col justify-between h-full">
                 <div>
-                  <img src={item.image} alt={item.title} className="w-full" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="flex flex-col justify-between gap-[5rem] px-[1rem] py-[1rem]">
                   <h3 className="text-lg font-gambetta text-afenoid-dark-green text-left">

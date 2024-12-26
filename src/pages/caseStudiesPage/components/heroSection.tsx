@@ -27,7 +27,7 @@ const HeroSection = () => {
         </Text>
       </div>
       <div className="absolute bottom-0">
-        <img src={SkylineImg} alt="Skyline Pattern" />
+        <img src={SkylineImg} alt="Skyline Pattern" loading="lazy" />
       </div>
     </section>
   );

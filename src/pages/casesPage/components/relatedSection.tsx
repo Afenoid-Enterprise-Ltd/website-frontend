@@ -65,6 +65,7 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
                             src={relatedCase.imgUrl}
                             alt="Case Study 1"
                             className="h-full w-full mb-4"
+                            loading="lazy"
                           />
                         </div>
                         <div className="flex flex-col gap-[18px] items-center msm:items-start">
@@ -113,6 +114,7 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
                             src={relatedCase.imgUrl}
                             alt="Case Study 1"
                             className="h-full"
+                            loading="lazy"
                           />
                         </div>
                         <div className="flex flex-col gap-[18px] items-center msm:items-start">

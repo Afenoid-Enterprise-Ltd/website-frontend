@@ -107,6 +107,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
             src={OfficeLocationImg}
             alt="Office Location Image"
             className="object-cover h-full w-full "
+            loading="lazy"
           />
         </div>
         <div className="w-1/2 mmd:w-full">

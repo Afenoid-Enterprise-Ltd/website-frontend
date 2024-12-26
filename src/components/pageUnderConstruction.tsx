@@ -15,7 +15,8 @@ const PageUnderConstruction: React.FC<Props> = (props) => {
         <img
           src={FixMain}
           alt="Page under construction illustration"
-          className="h-auto w-full "
+          className="h-auto w-full"
+          loading="lazy"
         />
       </div>
       <div className="w-[60%] flex flex-col gap-4 mmd:w-full">

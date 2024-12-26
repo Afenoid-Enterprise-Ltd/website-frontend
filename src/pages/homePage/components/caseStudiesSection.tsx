@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Text, Button,  } from "../../../ui";
+import { Text, Button } from "../../../ui";
 import { CallToAction, ArticleCard } from "../../../components";
 import { HomePageCaseStudiesImg } from "../../../assets";
 
@@ -9,17 +9,17 @@ interface ConsultationProps {
 }
 
 const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
-  const {openConsultationModal} = props
+  const { openConsultationModal } = props;
 
   return (
     <section>
       <div className="bg-afenoid-light-grey px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
         <ArticleCard
           title="Security Success Stories"
-          description = "Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
+          description="Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
           image={HomePageCaseStudiesImg}
-          caseStudy = {true}
-          reverse = {true}
+          caseStudy={true}
+          reverse={true}
         />
       </div>
       <CallToAction
@@ -55,7 +55,7 @@ export const HomeCaseStudyCard: React.FC<HomeCaseStudyCardProps> = ({
   return (
     <div className="bg-white w-[30rem]">
       <div>
-        <img src={image} alt="" />
+        <img src={image} alt="Case Study Card" loading="lazy" />
       </div>
       <div className="flex flex-col justify-between gap-[5rem] px-[1rem] pt-[1.5rem] pb-[0.25rem]">
         <Text

@@ -6,8 +6,6 @@ import {
   PeopleIcon,
   BankIcon,
   GlobeIcon,
-  
-  
 } from "../../../assets";
 import { Text } from "../../../ui";
 import {
@@ -133,7 +131,6 @@ const NumbersSection = () => {
     <section className="w-screen bg-white">
       <div className="p-[5rem] mmd:px-[3rem]">
         <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0">
-          
           <Text
             variant="h2"
             align="center"
@@ -168,7 +165,7 @@ const NumbersSection = () => {
         </div>
       </div>
 
-      <img src={SkylineImg} alt="Skyline Pattern" />
+      <img src={SkylineImg} alt="Skyline Pattern" loading="lazy" />
       <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem] ">
         <Marquee pauseOnHover={false} speed={20} direction="left">
           {clients.map((client, index) => (
@@ -177,6 +174,7 @@ const NumbersSection = () => {
               alt="Logos of Clients"
               key={index}
               className="max-w-auto mr-24 object-cover mmd:max-w-12 mmd:mr-16"
+              loading="lazy"
             />
           ))}
         </Marquee>
@@ -197,7 +195,12 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="bg-[#9bc73c28] p-4 rounded-full mmd:w-12 mmd:h-12 mmd:p-3">
-        <img src={icon} alt="Icon Image" className="w-full h-full" />
+        <img
+          src={icon}
+          alt="Icon Image"
+          className="w-full h-full"
+          loading="lazy"
+        />
       </div>
       <div>
         <div className="my-[2rem]">

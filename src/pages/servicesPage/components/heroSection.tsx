@@ -79,6 +79,7 @@ const HSMobile: React.FC<HeroMobileProps> = (props) => {
             src={ResourcesPageHeroImg}
             alt="Services Page Image"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-[#214d1e98] mix-blend-multiply"></div>
         </div>

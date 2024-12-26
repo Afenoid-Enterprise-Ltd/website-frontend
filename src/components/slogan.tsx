@@ -2,16 +2,19 @@ import React from "react";
 import { SkylineImg } from "../assets";
 
 type SloganProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-const Slogan:React.FC<SloganProps> = ({children}) => {
-  return ( 
+const Slogan: React.FC<SloganProps> = ({ children }) => {
+  return (
     <div className="w-screen">
-        <img src={SkylineImg} alt="Skyline Pattern" height={500}/>
-        {children}
+      <div className="w-full">
+        <img src={SkylineImg} alt="Skyline Pattern" className="w-full h-auto"/>
       </div>
+
+      {children}
+    </div>
   );
-}
- 
+};
+
 export { Slogan };

@@ -86,7 +86,7 @@ export const Solution: React.FC<SolutionProps> = ({
   return (
     <div className="flex flex-col items-center gap-6 mt-[3rem] ">
       <div className="bg-[#9bc73c28] p-4 rounded-full">
-        <img src={icon} alt="Icon Image" />
+        <img src={icon} alt="Icon Image" loading="lazy" />
       </div>
       <div>
         <Text

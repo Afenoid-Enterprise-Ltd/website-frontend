@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HeroDivs = () => {
-
   const listItems = [
     "Digital Strategy",
     "Performance Improvement",
@@ -37,7 +36,7 @@ const HeroDivs = () => {
             Protect What Matters Most
           </Text>
           <div className="hidden mmd:block">
-            <img src={ProtectionImg} alt="Accompanying Image" />
+            <img src={ProtectionImg} alt="Accompanying Image" loading="lazy" />
           </div>
           <Text
             variant="h5"
@@ -49,10 +48,9 @@ const HeroDivs = () => {
             frameworks and industry standards. Our comprehensive approach
             addresses risks across your practices, people, and technology.
           </Text>
-          
         </div>
         <div className="w-1/2 mmd:hidden">
-          <img src={ProtectionImg} alt="Accompanying Image" />
+          <img src={ProtectionImg} alt="Accompanying Image" loading="lazy" />
         </div>
       </div>
       <div
@@ -74,7 +72,7 @@ const HeroDivs = () => {
             systems, services, and transactions.
           </Text>
           <div className="hidden mmd:block">
-            <img src={ReliabilityImg} alt="Accompanying Image" />
+            <img src={ReliabilityImg} alt="Accompanying Image" loading="lazy" />
           </div>
           <ul>
             {listItems.map((listItem, index) => (
@@ -93,7 +91,7 @@ const HeroDivs = () => {
           </ul>
         </div>
         <div className="w-1/2 mmd:hidden">
-          <img src={ReliabilityImg} alt="Accompanying IMage" />
+          <img src={ReliabilityImg} alt="Accompanying Image" loading="lazy" />
         </div>
       </div>
     </div>

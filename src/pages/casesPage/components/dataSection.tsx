@@ -28,6 +28,7 @@ const DataSection: React.FC<DataSectionProps> = ({
               src={ChallengeIcon}
               alt="Challenge Icon"
               className="max-w-[60px] msm:max-w-[21px] text-center"
+              loading="lazy"
             />
           </div>
           <Text
@@ -62,6 +63,7 @@ const DataSection: React.FC<DataSectionProps> = ({
               src={MethodologyIcon}
               alt="Methodology Icon"
               className="max-w-[60px] msm:max-w-[21px] text-center"
+              loading="lazy"
             />
           </div>
           <Text
@@ -96,6 +98,7 @@ const DataSection: React.FC<DataSectionProps> = ({
               src={OutcomeIcon}
               alt="Outcome Icon"
               className="max-w-[60px] msm:max-w-[21px] text-center"
+              loading="lazy"
             />
           </div>
           <Text
@@ -130,6 +133,7 @@ const DataSection: React.FC<DataSectionProps> = ({
               src={RecommendationIcon}
               alt="Recommendation Icon"
               className="max-w-[60px] msm:max-w-[21px] text-center"
+              loading="lazy"
             />
           </div>
           <Text

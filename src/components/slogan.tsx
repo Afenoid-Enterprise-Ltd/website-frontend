@@ -9,7 +9,7 @@ const Slogan: React.FC<SloganProps> = ({ children }) => {
   return (
     <div className="w-screen">
       <div className="w-full">
-        <img src={SkylineImg} alt="Skyline Pattern" className="w-full h-auto"/>
+        <img src={SkylineImg} alt="Skyline Pattern" className="w-full h-auto" loading="lazy"/>
       </div>
 
       {children}

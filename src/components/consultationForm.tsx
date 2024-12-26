@@ -113,6 +113,7 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
             src={FormCover}
             alt="Cover Image for Form"
             className="h-full w-full"
+            loading="lazy"
           />
         </div>
 

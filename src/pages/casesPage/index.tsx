@@ -85,7 +85,7 @@ const CasesPage = () => {
         <RelatedSection relatedCases={relateditems}/>
 
         <div className="w-full flex justify-center items-center mt-[8rem] msm:px-[3rem]">
-          <img src={HomeHeroImage} alt="Hero Image" className="w-[30%] mmd:w-[70%] mxs:w-[80%]" />
+          <img src={HomeHeroImage} alt="Hero Image" className="w-[30%] mmd:w-[70%] mxs:w-[80%]" loading="lazy"/>
         </div>
 
         <CallToAction

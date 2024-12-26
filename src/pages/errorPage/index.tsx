@@ -32,7 +32,7 @@ const ErrorPage = () => {
         whileInView="animate"
         viewport={{ once: false }}
       >
-        <img src={ErrorImg} alt="" className="h-auto w-full " />
+        <img src={ErrorImg} alt="" className="h-auto w-full" loading="lazy"/>
       </motion.div>
       <div className="w-[60%] flex flex-col gap-4 mmd:w-full">
         <Text

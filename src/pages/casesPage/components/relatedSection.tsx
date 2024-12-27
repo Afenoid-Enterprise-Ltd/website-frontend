@@ -55,79 +55,74 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
             </Text>
           </div>
 
-          <div className=" flex flex-col gap-[3rem] lg:flex-row ">
-            <>
-              {isSmallDevice ? (
-                <Slider {...settings}>
-                  {relatedCases?.map((relatedCase: RelatedCases) => {
-                    return (
-                      <div className="h-[504px] w-[400px] flex flex-col gap-[20px] msm:w-full msm:h-fit msm:mb-3">
-                        <div className="h-[180px] w-full">
-                          <img
-                            src={relatedCase.imgUrl}
-                            alt="Case Study 1"
-                            className="h-full w-full mb-4"
-                          />
-                        </div>
-                        <div className="flex flex-col gap-[18px] items-center msm:items-start">
-                          <Text
-                            variant="h5"
-                            align={isSmallDevice ? "left" : "center"}
-                            fontFamily="gambetta"
-                            color="af-green"
-                            customClassName="font-medium"
-                          >
-                            {relatedCase.title}
-                          </Text>
-
-                          <Text
-                            variant="h6"
-                            align={isSmallDevice ? "left" : "center"}
-                            fontFamily="proxima-nova"
-                            fontWeight="light"
-                            color="af-dark-green"
-                            customClassName="font-normal"
-                          >
-                            {relatedCase.description}
-                          </Text>
-
-                          <Link
-                            to={`/case-studies/${relatedCase.title
-                              .split(" ")
-                              .join("-")
-                              .toLowerCase()}`}
-                            className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
-                          >
-                            Learn More
-                          </Link>
-                        </div>
+        <div className="flex gap-[48px] msm:flex-col msm:w-full">
+          <>
+            {isSmallDevice ? (
+              <Slider {...settings}>
+              {relatedCases?.map((relatedCase: RelatedCases) => {
+                return (
+                  <div className="h-[504px] w-[370px] flex flex-col gap-[20px] msm:w-full msm:h-fit msm:mb-3">
+                    <div className="h-[180px] w-full">
+                      <img src={relatedCase.imgUrl} alt="Case Study 1" className="h-full" />
+                    </div>
+                    <div className="flex flex-col gap-[18px] items-center msm:items-start">
+                      <Text
+                        variant="h5"
+                        align={isSmallDevice ? "left" : "center"}
+                        fontFamily="gambetta"
+                        color="af-green"
+                        customClassName="font-medium"
+                      >
+                        {relatedCase.title}
+                      </Text>
+            
+                      <Text
+                        variant="h6"
+                        align={isSmallDevice ? "left" : "center"}
+                        fontFamily="proxima-nova"
+                        fontWeight="light"
+                        color="af-dark-green"
+                        customClassName="font-normal"
+                      >
+                        {relatedCase.description}
+                      </Text>
+            
+                      <Link
+                        to={`/case-studies/${relatedCase.title
+                          .split(" ")
+                          .join("-")
+                          .toLowerCase()}`}
+                        className="w-fit py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-center text-base h-auto font-proxima-nova font-regular bg-transparent border-[3px] border-afenoid-green text-afenoid-green hover:border-0 hover:bg-afenoid-lemon hover:text-afenoid-light-lemon hover:px-[2.6785rem] hover:py-[0.9875rem]"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+            ) : (
+              <>
+                {relatedCases?.map((relatedCase: RelatedCases) => {
+                  return (
+                    <div className="h-[504px] w-[370px] flex flex-col gap-[20px] msm:w-full">
+                      <div className="h-auto w-full">
+                        <img
+                          src={relatedCase.imgUrl}
+                          alt="Case Study 1"
+                          className="h-full"
+                        />
                       </div>
-                    );
-                  })}
-                </Slider>
-              ) : (
-                <>
-                  {relatedCases?.map((relatedCase: RelatedCases) => {
-                    return (
-                      <div className="flex flex-col gap-[20px] msm:w-full">
-                        <div className="h-auto w-full">
-                          <img
-                            src={relatedCase.imgUrl}
-                            alt="Case Study 1"
-                            className="h-full"
-                          />
-                        </div>
-                        <div className="flex flex-col gap-[18px] items-center msm:items-start">
-                          <Text
-                            variant="h5"
-                            // align={isSmallDevice ? "left" : "center"}
-                            align="center"
-                            fontFamily="gambetta"
-                            color="af-green"
-                            customClassName="font-medium"
-                          >
-                            {relatedCase.title}
-                          </Text>
+                      <div className="flex flex-col gap-[18px] items-center msm:items-start">
+                        <Text
+                          variant="h5"
+                          align={isSmallDevice ? "left" : "center"}
+                          fontFamily="gambetta"
+                          color="af-green"
+                          customClassName="font-medium"
+                        >
+                          {relatedCase.title}
+                        </Text>
 
                           <Text
                             variant="h6"

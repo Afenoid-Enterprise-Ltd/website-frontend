@@ -64,6 +64,7 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
           src={image}
           alt="Article Card Image"
           className="h-full w-full object-cover"
+          loading="lazy"
         />
       </div>
     </div>

@@ -27,11 +27,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className=" flex h-[15rem]">
+      <div className=" flex h-[15rem] mxs:h-[12.5rem]">
         <img
           src={image}
           alt="Case Study Image"
-          className="h-full w-full object-cover "
+          className="h-full w-full object-cover"
+          loading="lazy"
         />
       </div>
       <Text

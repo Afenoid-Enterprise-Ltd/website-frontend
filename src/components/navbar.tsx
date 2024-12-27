@@ -22,6 +22,8 @@ const Navbar: React.FC = () => {
 
   const [scrollDetected, setScrollDetected] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [mblNavOpen, setMblNavOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,8 +38,6 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -45,8 +45,6 @@ const Navbar: React.FC = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  const [mblNavOpen, setMblNavOpen] = useState<boolean>(false);
 
   const openMblNav = () => {
     setMblNavOpen((prev) => !prev);
@@ -56,11 +54,24 @@ const Navbar: React.FC = () => {
     setMblNavOpen(false);
   };
 
+  useEffect(() => {
+    if(mblNavOpen){
+      document.body.style.overflow = "hidden"
+    }else{
+      document.body.style.overflow = ""
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    }
+
+  }, [mblNavOpen])
+
   return (
     <nav
       className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] ${
         scrollDetected && offset !== 0 ? "shadow-lg" : ""
-      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4`} 
+      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4`}
     >
       <MainLogo />
 
@@ -172,25 +183,25 @@ export const MobileNavbar: React.FC<MobileNavProps> = ({
             <span className="absolute w-6 h-0.5 bg-afenoid-green transform -rotate-45"></span>
           </button>
         </div>
-        <div className="flex flex-col p-6 space-y-4 bg-white">
+        <div className="flex flex-col items-center p-6 space-y-4 bg-white">
           {navlinks.map((navlink, index) => (
             <Link
               to={navlink.link}
               key={index}
-              className="text-pastor-blue "
+              className="text-afenoid-dark-green "
               onClick={closeNav}
             >
               {navlink.text}
             </Link>
           ))}
-        </div>
-        <div className="px-6">
-          <Button
-            variant="primary"
-            label="Contact Us"
-            customClassName="font-light"
-            onClick={openModal}
-          />
+          <div className="">
+            <Button
+              variant="primary"
+              label="Contact Us"
+              customClassName="font-light"
+              onClick={openModal}
+            />
+          </div>
         </div>
       </div>
     </>

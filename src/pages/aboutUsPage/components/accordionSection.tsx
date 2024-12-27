@@ -44,7 +44,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </div>
       </div>
 
-      <div className="p-[5rem] msm:p-[3rem]" id="faqs">
+      <div className="p-[5rem] msm:p-[3rem] mxs:p-[2rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
             Established in 2011, Afenoid Enterprise Limited is a Business and
@@ -101,15 +101,9 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </Accordion>
       </div>
 
-      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 mmd:flex-col msm:px-[3rem] mxs:flex-col">
-        <div className="w-1/2 h-[25rem] mmd:w-full">
-          <img
-            src={OfficeLocationImg}
-            alt="Office Location Image"
-            className="object-cover h-full w-full "
-          />
-        </div>
-        <div className="w-1/2 mmd:w-full">
+      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
+        <div className="w-1/2 mxs:w-full"></div>
+        <div className="w-1/2 mxs:w-full">
           <Text
             variant="h2"
             fontFamily="gambetta"

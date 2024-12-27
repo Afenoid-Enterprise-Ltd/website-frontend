@@ -1,9 +1,11 @@
 import { Outlet } from "../../ui";
+import {MainSection} from "./components/mainSection";
+
 const PrivacyPolicyPage = () => {
   return (
     <>
     <Outlet>
-      <h1> Hello World</h1>
+      <MainSection />
     </Outlet>
     
     </>

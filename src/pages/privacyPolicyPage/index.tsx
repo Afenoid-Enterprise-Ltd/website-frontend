@@ -1,8 +1,13 @@
+import { Outlet } from "../../ui";
 const PrivacyPolicyPage = () => {
   return (
-    <section>
-      <h1>Privacy Policy Page</h1>
-    </section>
+    <>
+    <Outlet>
+      <h1> Hello World</h1>
+    </Outlet>
+    
+    </>
+
   );
 }
  

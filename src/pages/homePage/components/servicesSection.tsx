@@ -47,7 +47,7 @@ const ServicesSection = () => {
         >
           Our Services
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6 mxs:px-6 border border-red-700">
+        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6 mxs:px-6">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}

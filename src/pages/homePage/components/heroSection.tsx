@@ -22,8 +22,8 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
 
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
-      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 border border-blue-700">
-        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] border border-green-700 msm:w-full">
+      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2">
+        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
           <div className="w-[95%] msm:w-full">
             <Text
               variant="h2"
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               fontWeight="medium"
               align="left"
               fontFamily="gambetta"
-              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4 border border-red-700"
+              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4"
             >
               Strengthening organizations,
               <br /> Equipping professionals.
@@ -45,9 +45,9 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden msm:text-h6"
             >
               We protect what matters most—your{" "}
-              <span className="italic font-gambetta">people</span>, your<br />{" "}
-              <span className="italic font-gambetta">processes</span> and the{" "}
-              <span className="italic font-gambetta">technology</span> that drives them.
+              people, your<br />{" "}
+              processes and the{" "}
+              technology that drives them.
             </Text>
             <Button
               variant="primary"
@@ -64,17 +64,19 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
 
       <div>
         {isSmallDevice ? (
-          <div className="flex flex-col px-[5rem] msm:px-[3rem]">
+          <div className="flex flex-col px-[5rem] msm:px-6 gap-12">
             <Text
               variant="h4"
               fontFamily="proxima-nova"
               color="af-dark-green"
-              fontWeight="medium"
+              fontWeight="light"
               align="center"
-              customClassName="mt-6 "
+              customClassName="mt-10 w-full"
             >
-              Protect what matters. Safeguard your people, processes and your
-              technologies.
+              We protect what matters most—your
+              people, your
+              processes and the
+              technology that drives them.
             </Text>
             <div className="my-4">
               <Button

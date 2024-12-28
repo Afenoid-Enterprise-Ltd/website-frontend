@@ -13,7 +13,7 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
 
   return (
     <section>
-      <div className="bg-afenoid-light-grey px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
+      <div className="bg-white px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 msm:pt-28">
         <ArticleCard
           title="Security Success Stories"
           description="Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."

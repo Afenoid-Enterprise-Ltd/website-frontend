@@ -22,7 +22,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
 
   return (
     <div
-      className="flex flex-col justify-between gap-5"
+      className="flex flex-col justify-between gap-5 border border-green-600 msm:w-full"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"

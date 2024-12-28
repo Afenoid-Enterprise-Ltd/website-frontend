@@ -13,7 +13,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
   button,
 }) => {
   return (
-    <div className="w-full flex justify-center items-center my-[10rem] px-[3rem] mmd:px-[2.5rem] msm:px-[2rem]">
+    <div className="w-full flex justify-center items-center my-[10rem] px-[3rem] mmd:px-[2.5rem] msm:px-[2rem] msm:my-24">
       <div className="w-[60%] flex flex-col justify-center items-center gap-3 mmd:w-[70%] msm:w-[80%] mxs:w-full">
         <Text
           variant="h3"

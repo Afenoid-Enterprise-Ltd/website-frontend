@@ -26,6 +26,7 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
             color="af-dark-green"
             fontFamily="gambetta"
             fontWeight="medium"
+            customClassName="msm:text-h4"
           >
             {title}
           </Text>

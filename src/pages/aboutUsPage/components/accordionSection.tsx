@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
-import { OfficeLocationImg } from "../../../assets";
 
 interface AccordionProps {
   openConsultationModal: () => void;

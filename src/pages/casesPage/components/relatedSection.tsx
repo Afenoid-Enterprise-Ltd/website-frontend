@@ -12,7 +12,6 @@ interface RelatedCases {
   imgUrl: string;
 }
 
-
 const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
@@ -25,8 +24,6 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 2000, // Time between slides (in ms)
     pauseOnHover: true, // Pause autoplay when the user hovers over the carousel
-
-    
   };
 
   return (
@@ -122,7 +119,6 @@ const RelatedSection: React.FC<RelatedSectionProps> = ({ relatedCases }) => {
                         <div className="flex flex-col gap-[18px] items-center msm:items-start">
                           <Text
                             variant="h5"
-                            // align={isSmallDevice ? "left" : "center"}
                             align="center"
                             fontFamily="gambetta"
                             color="af-green"

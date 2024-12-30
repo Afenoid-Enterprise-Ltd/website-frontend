@@ -55,17 +55,16 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    if(mblNavOpen){
-      document.body.style.overflow = "hidden"
-    }else{
-      document.body.style.overflow = ""
+    if (mblNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
     }
 
     return () => {
       document.body.style.overflow = "";
-    }
-
-  }, [mblNavOpen])
+    };
+  }, [mblNavOpen]);
 
   return (
     <nav
@@ -73,7 +72,9 @@ const Navbar: React.FC = () => {
         scrollDetected && offset !== 0 ? "shadow-lg" : ""
       } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4`}
     >
-      <MainLogo />
+      <Link to="/">
+        <MainLogo />
+      </Link>
 
       {!isSmallDevice ? (
         <div className="flex items-center justify-evenly gap-6">

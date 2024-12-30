@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
-import { OfficeLocationImg } from "../../../assets";
 
 interface AccordionProps {
   openConsultationModal: () => void;
@@ -101,16 +100,9 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </Accordion>
       </div>
 
-      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 mmd:flex-col msm:px-[3rem] mxs:flex-col">
-        <div className="w-1/2 h-[25rem] mmd:w-full">
-          <img
-            src={OfficeLocationImg}
-            alt="Office Location Image"
-            className="object-cover h-full w-full "
-            loading="lazy"
-          />
-        </div>
-        <div className="w-1/2 mmd:w-full">
+      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
+        <div className="w-1/2 mxs:w-full"></div>
+        <div className="w-1/2 mxs:w-full">
           <Text
             variant="h2"
             fontFamily="gambetta"

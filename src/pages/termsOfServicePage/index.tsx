@@ -5,6 +5,7 @@ import {
   ConsultationForm,
 } from "../../components";
 import { motion } from "framer-motion";
+import { Outlet } from "../../ui";
 
 const TermsOfServicePage = () => {
 
@@ -39,19 +40,22 @@ const TermsOfServicePage = () => {
     exit={{ opacity: 0 }}
     transition={{ duration: 0.8 }}
   >
-    <section className="overflow-x-hidden">
-      <PageUnderConstruction openModal={openConsultationModal}/>
-    </section>
-    {isConsultationOpen && (
-      <RequestConsultation
-        isOpen={isConsultationOpen}
-        onClose={closeConsultationModal}
-        redirectToContactForm={redirectToContactForm}
-      />
-    )}
-    {isContactOpen && (
-      <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
-    )}
+    <Outlet> 
+      <section className="overflow-x-hidden">
+        <PageUnderConstruction openModal={openConsultationModal}/>
+      </section>
+      {isConsultationOpen && (
+        <RequestConsultation
+          isOpen={isConsultationOpen}
+          onClose={closeConsultationModal}
+          redirectToContactForm={redirectToContactForm}
+        />
+      )}
+      {isContactOpen && (
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+      )}
+
+    </Outlet>
   </motion.section>
   );
 }

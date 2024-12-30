@@ -42,7 +42,7 @@ const ChoiceAfenoid = () => {
         color="af-dark-green"
         fontWeight="medium"
         fontFamily="gambetta"
-        customClassName="mb-3"
+        customClassName="mb-3 msm:text-h4"
       >
         Why choose Afenoid?
       </Text>
@@ -84,7 +84,7 @@ export const Solution: React.FC<SolutionProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col items-center gap-6 mt-[3rem] ">
+    <div className="flex flex-col items-center gap-6 mt-[3rem] msm:gap-3">
       <div className="bg-[#9bc73c28] p-4 rounded-full">
         <img src={icon} alt="Icon Image" loading="lazy" />
       </div>

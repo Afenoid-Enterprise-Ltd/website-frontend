@@ -32,6 +32,7 @@ const HeroDivs = () => {
             fontFamily="gambetta"
             align="left"
             fontWeight="medium"
+            customClassName="msm:text-h4"
           >
             Protect What Matters Most
           </Text>
@@ -65,6 +66,7 @@ const HeroDivs = () => {
             fontFamily="gambetta"
             align="left"
             fontWeight="medium"
+            customClassName="msm:text-h4"
           >
             We prioritize the{" "}
             <span className="text-afenoid-lemon">security</span> and{" "}

@@ -129,15 +129,15 @@ const NumbersSection = () => {
 
   return (
     <section className="w-screen bg-white">
-      <div className="p-[5rem] mmd:px-[3rem]">
-        <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0">
+      <div className="p-[5rem] mmd:px-[3rem] msm:px-6">
+        <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0 msm:gap-[0.7rem] msm:w-full">
           <Text
             variant="h2"
             align="center"
             color="af-dark-green"
             fontWeight="medium"
             fontFamily="gambetta"
-            customClassName="mb-3"
+            customClassName="mb-3 msm:text-h4 msm:mb-0"
           >
             Optimize Your Security
           </Text>
@@ -148,9 +148,7 @@ const NumbersSection = () => {
             fontWeight="light"
             fontFamily="proxima-nova"
           >
-            We transform complex compliance requirements into clear, actionable
-            strategies. Our proven expertise helps you create robust IT systems
-            that set new standards for security and performance.
+            We transform complex compliance requirements into clear, actionable strategies. 
           </Text>
         </div>
         <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">

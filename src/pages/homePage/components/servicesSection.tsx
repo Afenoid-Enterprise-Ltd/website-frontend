@@ -41,13 +41,13 @@ const ServicesSection = () => {
         <Text
           variant="h3"
           fontFamily="gambetta"
-          fontWeight="semi-bold"
+          fontWeight="medium"
           align="center"
-          customClassName="my-[5rem]"
+          customClassName="my-[5rem] msm:text-h4 msm:mb-[3.3rem] msm:mt-[5rem]"
         >
           Our Services
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-[3.5rem] mxs:px-[2.5rem]">
+        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6 mxs:px-6">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}
@@ -73,15 +73,15 @@ const ServicesSection = () => {
             variant="h2"
             color="af-green"
             fontFamily="gambetta"
-            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
+            customClassName="text-[3rem] msm:text-h5 mxs:text-[1rem]"
             fontWeight="medium"
           >
             We strengthen organizations and equip professionals.
           </Text>
         </div>
       </Slogan>
-      <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4">
-        <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0">
+      <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-0 msm:pt-0 msm:px-0">
+        <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0 msm:w-full">
           <div className="w-full relative">
             <div className="w-[60%] flex flex-col gap-8 pb-[10rem] mlg:w-full">
               <Text

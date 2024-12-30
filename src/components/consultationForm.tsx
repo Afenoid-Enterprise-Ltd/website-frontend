@@ -22,38 +22,6 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
 
   const { handleSubmit, reset } = methods;
 
-  // const bookConsultation = async (
-  //   data: z.infer<typeof consultationFormSchema>
-  // ) => {
-  //   try {
-  //     const response = await fetch(SCRIPT_DETAILS.link, {
-  //       method: "POST",
-  //       mode: "cors",
-  //       cache: "no-cache",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data),
-  //     });
-
-  //     const responseData = await response.json();
-  //     if (response.ok && responseData.status === "success") {
-  //       console.log("Submitted Data:", data);
-  //       reset();
-  //       toast.success("You have successfully booked for a consultation");
-  //       onClose();
-  //     } else {
-  //       toast.error(
-  //         responseData.message || "Failed to submit consultation request"
-  //       );
-  //       console.log(data)
-  //     }
-  //   } catch (e: any) {
-  //     console.error("Submission error:", e);
-  //     toast.error("An unexpected error occurred");
-  //   }
-  // };
-
   const bookConsultation = async (
     data: z.infer<typeof consultationFormSchema>
   ) => {

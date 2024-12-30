@@ -20,7 +20,6 @@ const Consulting = () => {
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
-          btnText="Contact Us"
         />
       </div>
 

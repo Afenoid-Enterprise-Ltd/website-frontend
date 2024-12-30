@@ -20,7 +20,6 @@ const Auditing = () => {
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
-          btnText="Contact Us"
         />
       </div>
       <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] msm:px-[2rem]">

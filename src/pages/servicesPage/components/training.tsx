@@ -95,14 +95,14 @@ const Training = () => {
 
   return (
     <section>
-      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem]">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
         />
       </div>
 
-      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] mmd:my-[4rem]">
+      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] mmd:my-[4rem] ">
         <Text
           variant="h2"
           fontFamily="gambetta"
@@ -127,7 +127,7 @@ const Training = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-10 gap-y-20 px-[5rem] mxxl:grid-cols-2 msm:grid-cols-1 mmd:px-[3rem]">
+      <div className="grid grid-cols-3 gap-x-10 gap-y-20 px-[5rem] mxxl:grid-cols-2 msm:grid-cols-1 mmd:px-[3rem] mxs:px-4">
         {cardData.map((card, index) => (
           <CaseStudyCard
             title={card.title}

@@ -20,7 +20,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
 
   return (
     <section className="bg-white">
-      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] msm:w-full">
+      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] msm:w-full mxs:px-4">
         <Text
           variant="h2"
           fontFamily="gambetta"

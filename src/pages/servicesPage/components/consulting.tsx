@@ -16,14 +16,14 @@ const Consulting = () => {
 
   return (
     <section>
-      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem]">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
         />
       </div>
 
-      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] flex flex-col justify-center items-center">
+      <div className="w-[80%] mx-auto my-[8rem] px-[3rem] flex flex-col justify-center items-center mxs:px-4">
         <Text
           variant="h2"
           fontFamily="gambetta"
@@ -33,7 +33,7 @@ const Consulting = () => {
         >
           Future-Ready Security
         </Text>
-        <div className="w-[60%] flex justify-center items-center">
+        <div className="w-[60%] flex justify-center items-center mxs:w-full">
           <Text
             variant="h5"
             fontFamily="proxima-nova"
@@ -47,7 +47,7 @@ const Consulting = () => {
           </Text>
         </div>
       </div>
-      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem]">
+      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem] mxs:px-4">
         <Accordion>
           <AccordionItem
             value="1"

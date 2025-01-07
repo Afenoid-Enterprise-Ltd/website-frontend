@@ -16,7 +16,7 @@ const Auditing = () => {
 
   return (
     <section>
-      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem]">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
         <LearnMoreDiv
           heroTexts={dataItem.heroTexts}
           image={dataItem.image}
@@ -46,7 +46,7 @@ const Auditing = () => {
           </Text>
         </div>
       </div>
-      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem]">
+      <div className="px-[10rem] py-[5rem] mxl:px-[5rem] msm:p-[3rem] mxs:p-4">
         <Accordion>
           <AccordionItem
             value="1"

@@ -13,9 +13,9 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
   const { openConsultationModal } = props;
 
   return (
-    <div className="w-full mt-20">
+    <div className="w-full mt-20 mxs:px-4">
       <div className="w-full flex justify-center items-center">
-        <div className="w-[40%] mlg:w-[60%] msm:w-[70%] mxs:w-[80%]">
+        <div className="w-[40%] mlg:w-[60%] msm:w-[70%] mxs:w-[80%] mxxs:w-full">
           <Text
             variant="h2"
             fontWeight="regular"
@@ -44,7 +44,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </div>
       </div>
 
-      <div className="p-[5rem] msm:p-[3rem] mxs:p-[2rem]" id="faqs">
+      <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" id="faqs">
         <Accordion>
           <AccordionItem value="1" trigger="Who is Afenoid?">
             Established in 2011, Afenoid Enterprise Limited is a Business and

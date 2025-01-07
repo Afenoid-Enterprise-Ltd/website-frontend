@@ -6,8 +6,8 @@ import { TextProps, variantMapping } from "./index.types";
 const text = cva("", {
   variants: {
     variant: {
-      h1: "text-h1 mmd:text-h3",
-      h2: "text-h2 mmd:text-h4",
+      h1: "text-h1 mmd:text-h3 mxxs:text-[1.65rem]",
+      h2: "text-h2 mmd:text-h4 mxxs:text-[1.65rem]",
       h3: "text-h3 mmd:text-h5",
       h4: "text-h4 mmd:text-h6",
       h5: "text-h5 mmd:text-caption-reg",

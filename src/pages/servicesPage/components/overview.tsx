@@ -47,7 +47,7 @@ const Overview = () => {
   return (
     <section>
       <div
-        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full"
+        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxxs:px-[2rem]"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"
@@ -74,7 +74,7 @@ const Overview = () => {
         </Text>
       </div>
 
-      <div className="mb-[5rem] px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] mxs:px-[3rem]">
+      <div className="mb-[5rem] px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] mxs:px-[2rem] mxxs:px-4">
         {dataItems.map((dataItem, index) => (
           <LearnMoreDiv
             key={index}

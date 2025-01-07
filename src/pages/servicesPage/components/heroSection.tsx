@@ -23,7 +23,7 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
       className="w-screen h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
       style={{ backgroundImage: `url(${ResourcesPageHeroImg})` }}
     >
-      <div className="w-[70%] mlg:w-[90%]">
+      <div className="w-[70%] mlg:w-[90%] mxxs:w-full">
         <Text
           variant="h1"
           fontWeight="medium"
@@ -60,7 +60,7 @@ const HSMobile: React.FC<HeroMobileProps> = (props) => {
   const { modalProp } = props;
 
   return (
-    <section className="w-screen h-[82.5vh] px-[3rem]">
+    <section className="w-screen h-[82.5vh] px-[3rem] mxs:px-[2rem] mxxs:px-4">
       <div className="w-full">
         <Text
           variant="h2"

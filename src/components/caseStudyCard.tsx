@@ -56,7 +56,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           to={route}
           className={`mt-[1.5rem] w-[50%] ${
             optionalWidth ? "mmlg:w-full" : "mmlg:w-[60%]"
-          } block mmd:mt-4 mmd:w-[70%] msm:w-[65%] mxs:w-[65%] mxxs:w-full`}
+          } block mmd:mt-4 mmd:w-[70%] msm:w-[65%] mxs:w-[65%] `}
         >
           <Button
             variant="secondary"

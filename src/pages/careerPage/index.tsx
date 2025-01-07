@@ -5,6 +5,7 @@ import {
   RequestConsultation,
   ConsultationForm,
 } from "../../components";
+import { Outlet } from "../../ui";
 
 const CareerPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -38,9 +39,11 @@ const CareerPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <section className="overflow-x-hidden">
-        <PageUnderConstruction openModal={openConsultationModal} />
-      </section>
+      <Outlet>
+        <section className="overflow-x-hidden">
+          <PageUnderConstruction openModal={openConsultationModal} />
+        </section>
+      </Outlet>
       {isConsultationOpen && (
         <RequestConsultation
           isOpen={isConsultationOpen}

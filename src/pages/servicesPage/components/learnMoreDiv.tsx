@@ -76,11 +76,11 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           ) : null}
         </div>
       </div>
-      <div className="w-1/2 h-auto mlg:w-full">
+      <div className="w-1/2 h-[15rem] mlg:w-full mxs:h-[12.5rem]">
         <img
           src={image}
           alt="An Image for the Hero Page"
-          className="w-auto h-full bg-cover"
+          className="w-full h-full object-cover"
         />
       </div>
       <div className="hidden self-start mlg:block">

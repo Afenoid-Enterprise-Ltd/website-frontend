@@ -106,7 +106,7 @@ const MinorSection = () => {
           Our Courses
         </Text>
 
-        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem] mxxl:grid mxxl:grid-cols-2 mlg:grid-cols-1 mxs:px-[3rem]">
+        <div className="flex justify-between items-start gap-10 px-[5rem] mb-[10rem] mxxl:grid mxxl:grid-cols-2 mlg:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

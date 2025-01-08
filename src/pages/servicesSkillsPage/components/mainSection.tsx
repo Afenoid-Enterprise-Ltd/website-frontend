@@ -111,7 +111,7 @@ const MainSection: React.FC<MainProps> = (props) => {
           {expectations.map((expectationItem, index) => (
             <div key={index} className="p-4 flex items-center">
               <span className="text-2xl mr-6">{expectationItem.icon}</span>
-              <span className="text-h5 text-afenoid-dark-green font-proxima-nova font-normal">
+              <span className="text-h5 text-afenoid-dark-green font-proxima-nova font-normal mxs:text-body-reg">
                 {expectationItem.text}
               </span>
             </div>

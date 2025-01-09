@@ -145,5 +145,5 @@ export {
   HomeServicesIconBg,
   OfficeLocationImg,
   ErrorImg,
-  FixMain
+  FixMain,
 };

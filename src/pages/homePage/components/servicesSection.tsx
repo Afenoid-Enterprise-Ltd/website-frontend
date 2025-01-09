@@ -4,7 +4,7 @@ import {
   ServicesImg2,
   ServicesImg3,
   HomePageServicesImg,
-  HomeServicesIconBg,
+  HomeServicesIconBg
 } from "../../../assets";
 import { CaseStudyCard, Slogan } from "../../../components";
 
@@ -16,7 +16,7 @@ const ServicesSection = () => {
       title: "CONSULTING",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
-      image: ServicesImg3,
+      image: ServicesImg1,
       route: "/services#consulting",
     },
     {
@@ -30,7 +30,7 @@ const ServicesSection = () => {
       title: "TRAINING",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
-      image: ServicesImg1,
+      image: ServicesImg3,
       route: "/services#training",
     },
   ];

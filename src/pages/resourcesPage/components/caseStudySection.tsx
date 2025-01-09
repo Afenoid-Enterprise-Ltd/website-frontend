@@ -31,12 +31,12 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
           Managing Change to Drive Organizational Transformation
         </Text>
         <Text
-          variant="h4"
+          variant="h5"
           fontFamily="proxima-nova"
           align="center"
           color="af-dark-green"
           fontWeight="light"
-          customClassName="text-[1.5rem] mt-[2rem]"
+          customClassName="text-[24px] mt-[2rem]"
         >
           At Afenoid, we enhance organizational security and operational
           resilience through robust standards implementation. Our case studies

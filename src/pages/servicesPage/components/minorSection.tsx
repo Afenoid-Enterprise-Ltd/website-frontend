@@ -75,7 +75,7 @@ const MinorSection = () => {
           <div className="flex justify-center items-center gap-6 my-[3rem] mxs:my-[1.5rem]">
             {partners.map((partner, index) => (
               <Link to={partner.route} target="_blank" className="block transition ease-in-out delay-150 duration-300 hover:-translate-y-4">
-                <img src={partner.logo} alt="Our Partners" key={index} loading="lazy" className="mxs:min-w-[35px] object-cover"/>
+                <img src={partner.logo} alt="Our Partners" key={index} loading="lazy" className="mxs:min-w-[55px] object-cover"/>
               </Link>
             ))}
           </div>

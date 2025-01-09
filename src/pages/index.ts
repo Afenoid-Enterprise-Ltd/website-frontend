@@ -10,3 +10,4 @@ export * from "./casesPage";
 export * from "./privacyPolicyPage";
 export * from "./termsOfServicePage";
 export * from "./careerPage";
+export * from "./constructionPage";

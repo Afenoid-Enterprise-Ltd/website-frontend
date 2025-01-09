@@ -42,6 +42,9 @@ const TermsOfServicePage = lazy(() =>
 const PrivacyPolicyPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.PrivacyPolicyPage }))
 );
+const ConstructionPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.ConstructionPage }))
+);
 
 function App() {
   const location = useLocation();
@@ -62,6 +65,7 @@ function App() {
             <Route path="/careers" element={<CareerPage />} />
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/under-construction" element={<ConstructionPage />} />
             <Route path="components" element={<ComponentsPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

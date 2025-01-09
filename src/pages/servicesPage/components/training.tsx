@@ -11,7 +11,7 @@ import {
   SkillsDevImg1,
   SkillsDevImg2,
   SkillsDevImg3,
-  ServicesImg1
+  ServicesImg3
 } from "../../../assets";
 
 const Training = () => {
@@ -22,7 +22,7 @@ const Training = () => {
       description:
         "Our courses focus on developing skills and competencies in corporate governance of information and technology, service management, risk management, information security, cybersecurity, data privacy, and audit and assurance.",
     },
-    image: ServicesImg1,
+    image: ServicesImg3,
   };
 
   const cardData = [

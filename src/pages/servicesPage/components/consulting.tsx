@@ -1,5 +1,5 @@
 import { LearnMoreDiv } from "./learnMoreDiv";
-import { ServicesImg3 } from "../../../assets";
+import { ServicesImg1 } from "../../../assets";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
@@ -11,7 +11,7 @@ const Consulting = () => {
       description:
         "Our digital transformation consulting services help to leverage digital technologies, tools, and platforms needful to transform your business operations and processes, improve performance and drive growth.",
     },
-    image: ServicesImg3,
+    image: ServicesImg1,
   };
 
   return (

@@ -9,7 +9,10 @@
   padding: 0;
   box-sizing: 0;
 }
-
+html, body{
+  zoom: 100%;
+  width: 100%;
+}
 @font-face {
   font-family: "Gambetta";
   src: url("/fonts/Gambetta-Light.otf");

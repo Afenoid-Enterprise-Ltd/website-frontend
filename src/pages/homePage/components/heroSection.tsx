@@ -22,7 +22,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
 
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
-      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2">
+      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 mxxl:px-[3rem]">
         <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
           <div className="w-[95%] msm:w-full">
             <Text
@@ -42,10 +42,10 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               color="af-dark-green"
               fontWeight="light"
               align="left"
-              customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden msm:text-h6"
+              customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden msm:text-h6 mxxl:w-[98%]"
             >
               We protect what matters most—your{" "}
-              people, your<br />{" "}
+              people, your{" "}
               processes and the{" "}
               technology that drives them.
             </Text>

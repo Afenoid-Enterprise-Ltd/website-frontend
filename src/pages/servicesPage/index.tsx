@@ -2,11 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import { HeroSection, MainSection } from "./components";
-import { ConsultationForm, RequestConsultation } from "../../components";
+import { ConsultationForm } from "../../components";
 
 const ServicesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -14,19 +13,6 @@ const ServicesPage = () => {
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
-  };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -43,14 +29,10 @@ const ServicesPage = () => {
         </section>
       </Outlet>
       {isConsultationOpen && (
-        <RequestConsultation
+        <ConsultationForm
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm} 
         />
-      )}
-      {isContactOpen && (
-        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </motion.section>
   );

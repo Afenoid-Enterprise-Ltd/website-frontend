@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Text } from "../../../ui";
 import { CallToAction, CaseStudyCard } from "../../../components";
 import {
@@ -12,7 +13,13 @@ import {
 } from "../../../assets";
 import { Link } from "react-router-dom";
 
-const MinorSection = () => {
+interface MinorSectionProps {
+  openModal: () => void
+}
+
+const MinorSection: React.FC<MinorSectionProps> = (props) => {
+  const {openModal} = props;
+
   const trainingData = [
     {
       title: "Information Security Management System (ISO 27001)",
@@ -127,6 +134,7 @@ const MinorSection = () => {
             variant="secondary"
             label="Contact Us"
             customClassName="mt-[2rem]"
+            onClick={openModal}
           />
         }
       />

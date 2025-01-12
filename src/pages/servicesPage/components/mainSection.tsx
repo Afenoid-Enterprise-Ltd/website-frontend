@@ -1,12 +1,24 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Overview } from "./overview";
 import { Auditing } from "./auditing";
 import { Consulting } from "./consulting";
 import { Training } from "./training";
+import { ConsultationForm } from "../../../components";
 
 const MainSection = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
 
   // Extract the current service from the hash
   const currentService = (() => {
@@ -18,11 +30,11 @@ const MainSection = () => {
   const renderContent = () => {
     switch (currentService) {
       case "consulting":
-        return <Consulting />;
+        return <Consulting openModal={openContactModal} />;
       case "auditing":
-        return <Auditing />;
+        return <Auditing openModal={openContactModal}/>;
       case "training":
-        return <Training />;
+        return <Training openModal={openContactModal} />;
       default:
         return <Overview />;
     }
@@ -35,7 +47,7 @@ const MainSection = () => {
 
   return (
     <section className="w-screen">
-      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mt-[2rem] mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
+      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
         <button
           onClick={() => handleNavigation("overview")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
@@ -78,6 +90,12 @@ const MainSection = () => {
         </button>
       </div>
       <section>{renderContent()}</section>
+      {isContactOpen && (
+        <ConsultationForm
+          isOpen={isContactOpen}
+          onClose={closeContactModal}
+        />
+      )}
     </section>
   );
 };

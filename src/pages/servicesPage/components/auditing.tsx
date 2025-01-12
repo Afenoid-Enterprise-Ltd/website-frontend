@@ -1,15 +1,22 @@
+import React from "react";
 import { ServicesImg2 } from "../../../assets";
 import { Text, Button } from "../../../ui";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
 
-const Auditing = () => {
+interface AuditingProps {
+  openModal: () => void
+}
+
+const Auditing: React.FC<AuditingProps> = (props) => {
+  const {openModal} = props;
+
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Management System Standards",
+      title: "Auditing",
       description:
-        "We help establish, operate, and improve management system standards such as ISO 27001 (ISMS), ISO 22301 (BCMS), ISO 9001 (QMS), ensuring clarity and efficiency in organizational processes.",
+        "Lack of auditing undermines digital trust, reducing tech adoption, productivity, business opportunities, & exposing value leakages. This ensures compliance, mitigate risks, & foster trust.",
     },
     image: ServicesImg2,
   };
@@ -158,9 +165,10 @@ const Auditing = () => {
           explanation="Schedule a meeting with a consultant right away"
           button={
             <Button
-              variant="primary"
-              label="Book a Consultation"
+              variant="secondary"
+              label="Contact Us"
               customClassName="mt-[2rem]"
+              onClick={openModal}
             />
           }
         />

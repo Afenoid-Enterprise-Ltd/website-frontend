@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { ALLCASES } from "./allCases";
 import { PCIDSS } from "./pcidss";
@@ -6,8 +7,15 @@ import { ISO27001 } from "./iso27001";
 import { ISO22301 } from "./iso22301";
 
 const MainSection = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const [activeTabId, setActiveTabId] = useState(isSmallDevice ? 2 : 1);
+
+  const currentCaseStudy = (() => {
+    const hash = location.hash.replace("#", "");
+    return hash || "overview";
+  })();
 
   useEffect(() => {
     if (isSmallDevice) {
@@ -32,27 +40,44 @@ const MainSection = () => {
   };
 
   const renderContent = () => {
-    switch (activeTabId) {
-      case 1:
-        return <ALLCASES />;
-      case 2:
+    switch (currentCaseStudy) {
+      case "pcidss":
         return <PCIDSS />;
-      case 3:
+      case "iso27001":
         return <ISO27001 />;
-      case 4:
+      case "iso22301":
         return <ISO22301 />;
       default:
         return <ALLCASES />;
     }
   };
 
+  // const renderContent = () => {
+  //   switch (activeTabId) {
+  //     case 1:
+  //       return <ALLCASES />;
+  //     case 2:
+  //       return <PCIDSS />;
+  //     case 3:
+  //       return <ISO27001 />;
+  //     case 4:
+  //       return <ISO22301 />;
+  //     default:
+  //       return <ALLCASES />;
+  //   }
+  // };
+  // Button click handlers to update the URL with hash
+  const handleNavigation = (tab: string) => {
+    navigate(`/case-studies#${tab}`);
+  };
+
   return (
     <section className="w-screen">
       <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto msm:justify-start no-scrollbar mxl:justify-center">
         <button
-          onClick={setToOne}
+          onClick={() => handleNavigation("overview")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white msm:hidden ${
-            activeTabId === 1
+            currentCaseStudy === "overview"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -60,9 +85,9 @@ const MainSection = () => {
           ALL
         </button>
         <button
-          onClick={setToTwo}
+          onClick={() => handleNavigation("pcidss")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 2
+            currentCaseStudy === "pcidss"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -70,9 +95,9 @@ const MainSection = () => {
           PCI DSS
         </button>
         <button
-          onClick={setToThree}
+          onClick={() => handleNavigation("iso27001")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 3
+            currentCaseStudy === "iso27001"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}
@@ -80,9 +105,9 @@ const MainSection = () => {
           ISO 27001
         </button>
         <button
-          onClick={setToFour}
+          onClick={() => handleNavigation("iso22301")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
-            activeTabId === 4
+            currentCaseStudy === "iso22301"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}

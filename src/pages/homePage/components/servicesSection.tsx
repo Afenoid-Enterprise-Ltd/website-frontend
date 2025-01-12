@@ -22,7 +22,7 @@ const ServicesSection = () => {
     {
       title: "AUDITING",
       description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+        "Lack of auditing undermines digital trust, reducing tech adoption, productivity, business opportunities, & exposing value leakages. This ensures compliance, mitigate risks, & foster trust.",
       image: ServicesImg2,
       route: "/services#auditing",
     },

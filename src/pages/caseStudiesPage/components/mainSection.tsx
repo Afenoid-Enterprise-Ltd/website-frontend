@@ -10,7 +10,7 @@ const MainSection = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
-  const [activeTabId, setActiveTabId] = useState(isSmallDevice ? 2 : 1);
+  // const [activeTabId, setActiveTabId] = useState(isSmallDevice ? 2 : 1);
 
   const currentCaseStudy = (() => {
     const hash = location.hash.replace("#", "");
@@ -19,25 +19,25 @@ const MainSection = () => {
 
   useEffect(() => {
     if (isSmallDevice) {
-      setActiveTabId(2);
+      handleNavigation("pcidss");
     }
   }, [isSmallDevice]);
 
-  const setToOne = () => {
-    setActiveTabId(1);
-  };
+  // const setToOne = () => {
+  //   setActiveTabId(1);
+  // };
 
-  const setToTwo = () => {
-    setActiveTabId(2);
-  };
+  // const setToTwo = () => {
+  //   setActiveTabId(2);
+  // };
 
-  const setToThree = () => {
-    setActiveTabId(3);
-  };
+  // const setToThree = () => {
+  //   setActiveTabId(3);
+  // };
 
-  const setToFour = () => {
-    setActiveTabId(4);
-  };
+  // const setToFour = () => {
+  //   setActiveTabId(4);
+  // };
 
   const renderContent = () => {
     switch (currentCaseStudy) {

@@ -1,17 +1,16 @@
 import React from "react";
 import { Modal, Text, Button } from "../ui";
 import { FormCover } from "../assets";
+import { Link } from "react-router-dom";
 
 interface ConsultationProps {
   isOpen: boolean;
   onClose: () => void;
-  redirectToContactForm: () => void;
 }
 
 const RequestConsultation: React.FC<ConsultationProps> = ({
   isOpen,
   onClose,
-  redirectToContactForm,
 }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -50,13 +49,14 @@ const RequestConsultation: React.FC<ConsultationProps> = ({
         </div>
 
         <div>
-          <Button
-            label="Continue"
-            variant="primary"
-            customClassName="mb-8"
-            type="button"
-            onClick={redirectToContactForm}
-          />
+          <Link to = "https://outlook.office365.com/owa/calendar/AfenoidEnterpriseLimited1@afenoid.com/bookings/" target="_blank">
+            <Button
+              label="Continue"
+              variant="primary"
+              customClassName="mb-8"
+              type="button"
+            />
+          </Link>
         </div>
       </section>
     </Modal>

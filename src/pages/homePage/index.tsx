@@ -8,11 +8,10 @@ import {
   ServicesSection,
   CaseStudiesSection,
 } from "./components";
-import { ConsultationForm, RequestConsultation } from "../../components";
+import { RequestConsultation } from "../../components";
 
 const HomePage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -21,20 +20,6 @@ const HomePage = () => {
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
   };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
-  };
-
 
   return (
     <motion.section
@@ -56,11 +41,8 @@ const HomePage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm} 
+          
         />
-      )}
-      {isContactOpen && (
-        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </motion.section>
   );

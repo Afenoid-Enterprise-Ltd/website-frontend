@@ -4,11 +4,10 @@ import { Button, Outlet } from "../../ui";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
-import { RequestConsultation, ConsultationForm } from "../../components";
+import { RequestConsultation } from "../../components";
 
 const CaseStudiesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -16,19 +15,6 @@ const CaseStudiesPage = () => {
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
-  };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -58,11 +44,7 @@ const CaseStudiesPage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm} 
         />
-      )}
-      {isContactOpen && (
-        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </motion.section>
   );

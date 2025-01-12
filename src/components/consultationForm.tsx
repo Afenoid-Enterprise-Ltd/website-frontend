@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,7 +15,7 @@ interface FormProps {
 }
 
 const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
 
   const methods = useForm<z.infer<typeof consultationFormSchema>>({
     resolver: zodResolver(consultationFormSchema),
@@ -28,30 +28,34 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
     data: z.infer<typeof consultationFormSchema>
   ) => {
     try {
+      setLoading(true);
       const formData = new URLSearchParams();
       Object.entries(data).forEach(([key, value]) => {
         formData.append(key, String(value));
       });
-  
+
       const url = `${SCRIPT_DETAILS.link}?${formData.toString()}`;
-      
+
       await fetch(url, {
-        method: 'GET',
-        mode: 'no-cors',
+        method: "GET",
+        mode: "no-cors",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       });
-      setLoading(true)
+
       // Handle success case
       reset();
-      toast.success("Thank you! Your consultation request has been submitted successfully.");
+      toast.success(
+        "Thank you! Your consultation request has been submitted successfully."
+      );
       onClose();
-  
     } catch (e: any) {
       // Handle error case
       console.error("Error submitting form:", e);
       toast.error("Unable to submit your request. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -161,7 +165,7 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
               variant="primary"
               customClassName="mb-8"
               type="submit"
-              disabled = {loading}
+              disabled={loading}
             />
           </form>
         </FormProvider>

@@ -2,14 +2,12 @@ import { useState } from "react";
 import {
   PageUnderConstruction,
   RequestConsultation,
-  ConsultationForm,
 } from "../../components";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 
 const PrivacyPolicyPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -17,19 +15,6 @@ const PrivacyPolicyPage = () => {
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
-  };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -47,13 +32,8 @@ const PrivacyPolicyPage = () => {
           <RequestConsultation
             isOpen={isConsultationOpen}
             onClose={closeConsultationModal}
-            redirectToContactForm={redirectToContactForm}
           />
         )}
-        {isContactOpen && (
-          <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
-        )}
-
       </Outlet>
     </motion.section>
   );

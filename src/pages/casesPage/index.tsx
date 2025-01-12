@@ -42,10 +42,7 @@ const CasesPage = () => {
     setIsContactOpen(false);
   };
 
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
-  };
+  
 
   return (
     <motion.section
@@ -105,7 +102,6 @@ const CasesPage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm} 
         />
       )}
       {isContactOpen && (

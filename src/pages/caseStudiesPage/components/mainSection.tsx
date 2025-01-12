@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { ALLCASES } from "./allCases";
@@ -10,7 +10,6 @@ const MainSection = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
-  // const [activeTabId, setActiveTabId] = useState(isSmallDevice ? 2 : 1);
 
   const currentCaseStudy = (() => {
     const hash = location.hash.replace("#", "");
@@ -22,22 +21,6 @@ const MainSection = () => {
       handleNavigation("pcidss");
     }
   }, [isSmallDevice]);
-
-  // const setToOne = () => {
-  //   setActiveTabId(1);
-  // };
-
-  // const setToTwo = () => {
-  //   setActiveTabId(2);
-  // };
-
-  // const setToThree = () => {
-  //   setActiveTabId(3);
-  // };
-
-  // const setToFour = () => {
-  //   setActiveTabId(4);
-  // };
 
   const renderContent = () => {
     switch (currentCaseStudy) {
@@ -52,20 +35,6 @@ const MainSection = () => {
     }
   };
 
-  // const renderContent = () => {
-  //   switch (activeTabId) {
-  //     case 1:
-  //       return <ALLCASES />;
-  //     case 2:
-  //       return <PCIDSS />;
-  //     case 3:
-  //       return <ISO27001 />;
-  //     case 4:
-  //       return <ISO22301 />;
-  //     default:
-  //       return <ALLCASES />;
-  //   }
-  // };
   // Button click handlers to update the URL with hash
   const handleNavigation = (tab: string) => {
     navigate(`/case-studies#${tab}`);

@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, Button } from "../../../ui";
 import { LearnMoreDiv } from "./learnMoreDiv";
 import { CallToAction, CaseStudyCard } from "../../../components";
@@ -11,10 +12,16 @@ import {
   SkillsDevImg1,
   SkillsDevImg2,
   SkillsDevImg3,
-  ServicesImg3
+  ServicesImg3,
 } from "../../../assets";
 
-const Training = () => {
+interface TrainingProps {
+  openModal: () => void
+}
+
+const Training: React.FC<TrainingProps> = (props) => {
+  const {openModal} = props;
+  
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -31,75 +38,70 @@ const Training = () => {
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: TrainingImg3,
-      route: "/services/crisc"
+      route: "/services/crisc",
     },
     {
       title: "DORA Lead Manager",
       description:
         "The PECB Certified DORA Lead Manager course equips you to lead digital resilience strategies, ensuring compliance with the EU’s Digital Operational Resilience Act (DORA).",
       image: SkillsDevImg2,
-      route: "/services/dora-lead-manager"
+      route: "/services/dora-lead-manager",
     },
     {
-      title:
-        "Federated IT Service Management (FitSM) Foundation Certification",
+      title: "Federated IT Service Management (FitSM) Foundation Certification",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: CaseStudyImg2,
-      route: "/services/federated-IT-service-management"
+      route: "/services/federated-IT-service-management",
     },
     {
       title: "Neuroscience for Change",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: SkillsDevImg1,
-      route: "/services/neuroscience-for-change"
+      route: "/services/neuroscience-for-change",
     },
     {
       title: "Business Relationship Management Professional (BRMP)",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: CaseStudyImg1,
-      route: "/services/business-relationship-management-professional"
+      route: "/services/business-relationship-management-professional",
     },
     {
       title: "APMG Change Management",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
       image: CaseStudyImg3,
-      route: "/services/apmg-change-management"
+      route: "/services/apmg-change-management",
     },
     {
       title: "Business Continuity Management System (ISO 22301)",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
       image: TrainingImg2,
-      route: "/services/business-continuity-management-system"
+      route: "/services/business-continuity-management-system",
     },
     {
       title: "Information Security Management System (ISO 27001)",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: TrainingImg1,
-      route: "/services/information-security-management-system"
+      route: "/services/information-security-management-system",
     },
     {
       title: "Service Management System (ISO 20000)",
       description:
         "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
       image: SkillsDevImg3,
-      route: "/services/service-management-system"
+      route: "/services/service-management-system",
     },
-    
   ];
 
   return (
     <section>
       <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
-        <LearnMoreDiv
-          heroTexts={dataItem.heroTexts}
-          image={dataItem.image}
-        />
+        <LearnMoreDiv heroTexts={dataItem.heroTexts} image={dataItem.image} />
       </div>
 
       <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] mmd:my-[4rem] ">
@@ -134,7 +136,7 @@ const Training = () => {
             description={card.description}
             image={card.image}
             key={index}
-            optionalWidth = {true}
+            optionalWidth={true}
             route={card.route}
           />
         ))}
@@ -145,9 +147,10 @@ const Training = () => {
         explanation="Contact a service support representative right away."
         button={
           <Button
-            variant="primary"
-            label="Book a Consultation"
+            variant="secondary"
+            label="Contact Us"
             customClassName="mt-[2rem]"
+            onClick={openModal}
           />
         }
       />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,6 +15,8 @@ interface FormProps {
 }
 
 const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
+  const [loading, setLoading] = useState<boolean>(false)
+
   const methods = useForm<z.infer<typeof consultationFormSchema>>({
     resolver: zodResolver(consultationFormSchema),
     mode: "onChange",
@@ -40,7 +42,7 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
           'Content-Type': 'application/json',
         },
       });
-  
+      setLoading(true)
       // Handle success case
       reset();
       toast.success("Thank you! Your consultation request has been submitted successfully.");
@@ -155,10 +157,11 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
             />
 
             <Button
-              label="Submit"
+              label={loading ? "Submitting" : "Submit"}
               variant="primary"
               customClassName="mb-8"
               type="submit"
+              disabled = {loading}
             />
           </form>
         </FormProvider>

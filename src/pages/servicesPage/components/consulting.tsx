@@ -1,9 +1,16 @@
+import React from "react";
 import { LearnMoreDiv } from "./learnMoreDiv";
 import { ServicesImg1 } from "../../../assets";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
 
-const Consulting = () => {
+interface ConsultingProps {
+  openModal: () => void
+}
+
+const Consulting: React.FC<ConsultingProps> = (props) => {
+  const {openModal} = props;
+
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -245,6 +252,7 @@ const Consulting = () => {
             variant="secondary"
             label="Contact Us"
             customClassName="mt-[2rem]"
+            onClick={openModal}
           />
         }
       />

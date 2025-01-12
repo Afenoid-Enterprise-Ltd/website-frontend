@@ -41,7 +41,6 @@ const HomePage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          
         />
       )}
     </motion.section>

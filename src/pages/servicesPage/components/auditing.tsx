@@ -1,9 +1,16 @@
+import React from "react";
 import { ServicesImg2 } from "../../../assets";
 import { Text, Button } from "../../../ui";
 import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
 
-const Auditing = () => {
+interface AuditingProps {
+  openModal: () => void
+}
+
+const Auditing: React.FC<AuditingProps> = (props) => {
+  const {openModal} = props;
+
   const dataItem = {
     heroTexts: {
       caption: "",
@@ -158,9 +165,10 @@ const Auditing = () => {
           explanation="Schedule a meeting with a consultant right away"
           button={
             <Button
-              variant="primary"
-              label="Book a Consultation"
+              variant="secondary"
+              label="Contact Us"
               customClassName="mt-[2rem]"
+              onClick={openModal}
             />
           }
         />

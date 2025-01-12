@@ -1,14 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Slogan } from "../../../components";
 import { OverviewImg1, OverviewImg2, OverviewImg3 } from "../../../assets";
 import { Text } from "../../../ui";
 import { LearnMoreDiv } from "./learnMoreDiv";
 import { MinorSection } from "./minorSection";
-
+import { ConsultationForm } from "../../../components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Overview = () => {
+  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
+
+  const openContactModal = () => {
+    setIsContactOpen(true);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -109,7 +119,13 @@ const Overview = () => {
         </div>
       </Slogan>
 
-      <MinorSection />
+      <MinorSection openModal={openContactModal} />
+      {isContactOpen && (
+        <ConsultationForm
+          isOpen={isContactOpen}
+          onClose={closeContactModal}
+        />
+      )}
     </section>
   );
 };

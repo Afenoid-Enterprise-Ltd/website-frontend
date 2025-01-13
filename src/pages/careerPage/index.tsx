@@ -3,13 +3,11 @@ import { useState } from "react";
 import {
   PageUnderConstruction,
   RequestConsultation,
-  ConsultationForm,
 } from "../../components";
 import { Outlet } from "../../ui";
 
 const CareerPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -17,19 +15,6 @@ const CareerPage = () => {
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
-  };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -48,11 +33,7 @@ const CareerPage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm}
         />
-      )}
-      {isContactOpen && (
-        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </motion.section>
   );

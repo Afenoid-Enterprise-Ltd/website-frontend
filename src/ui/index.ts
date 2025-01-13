@@ -7,3 +7,4 @@ export * from "./outlet";
 export * from "./carousel";
 export * from "./input";
 export * from "./dropdown";
+export * from "./buttonLoader";

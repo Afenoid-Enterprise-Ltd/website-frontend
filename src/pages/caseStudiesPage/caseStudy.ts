@@ -37,7 +37,7 @@ export const caseStudy = [
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
-        duration: "!2 weeks",
+        duration: "12 weeks",
         challenge: "A fintech company providing accessible payment gateway services across sectors like: agriculture, crop services, food and retail, energy, logistics, asset finance, and insurance.",
         methodology: "The PDCA (plan, do check, act) approach was adopted as follows:Plan stage: Scope definition, assessment plan, setting of objectives Do stage: gap assessment (documentation review, process owners' interviews, evidence validation, walkthroughs and handholding of process owners across people, process and technology for the mandatory 12 requirements) Check stage:gap remediation effort (across people, processes and technology) Act stage: Continual monitoring, continual improvement effort, certification readiness",
         outcome: "The fintech company got compliant with PCIDSS version 4.0.1 and was able to meet up with regulatory requirements thus building trust, earning competitive advantage and became more resilient to card data cyber related attacks.",

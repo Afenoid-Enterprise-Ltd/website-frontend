@@ -5,13 +5,13 @@ export const caseStudy = [
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077875/Afenoid%20Project%20Images/fintech3x_gz7yro.png",
       segment: "ISO 27001",
       data: {
-        title: "Fintech Payment Processing Platform",
+        title: "Financial Organization",
         industry: "Fintech",
-        duration: "12 weeks",
-        challenge: "A fintech company providing peer-to-peer payment services faced growing concerns over data breaches and regulatory compliance in multiple markets.",
-        methodology: "ISO 27001 was implemented to establish a comprehensive Information Security Management System (ISMS) focusing on encryption, access control, and threat monitoring. Security training for employees and a risk assessment for third-party vendors were conducted.",
-        outcome: "The fintech gained ISO 27001 certification, significantly reduced security vulnerabilities, and improved its compliance with regional data protection laws.",
-        recommendation: "Ongoing risk assessments and regular updates to data encryption methods are critical to maintaining certification."
+        duration: "12 - 20 weeks",
+        challenge: "A regional bank managing retail and corporate clients faced increased phishing attacks. These incidents highlighted vulnerabilities in their information security practices, leading to growing concerns about regulatory compliance and reputational damage.",
+        methodology: "The bank implemented ISO 27001 to build a comprehensive Information Security Management System (ISMS). The approach included: conducting a risk assessment to identify key vulnerabilities in customer data and online banking platforms, implementing multi-layered access controls and advanced email filtering systems to prevent phishing attacks, encrypting sensitive client information in storage and transit and conducting security training for employees on cybersecurity best practices.",
+        outcome: "The bank achieved ISO 27001 certification, significantly reducing phishing incidents and improving client trust. The new ISMS ensured compliance with regional regulatory requirements",
+        recommendation: "Regular phishing simulations and ongoing security awareness training should be conducted to enhance vigilance among employees and customers."
       }
     },
     {
@@ -80,13 +80,13 @@ export const caseStudy = [
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/crossBorder3x_dkpmzh.png",
       segment: "ISO 27001",
       data: {
-        title: "Top Tier Bank in Nigeria",
+        title: "Fintech Organization",
         industry: "Banking",
-        duration: "12 weeks",
-        challenge: "A cross-border payment switch provider handling high-volume international transactions was vulnerable to security breaches and data theft.",
-        methodology: "ISO 27001 was implemented to create a robust ISMS focused on securing cross-border transactions, ensuring regulatory compliance, and training employees in cybersecurity best practices.",
-        outcome: "The provider achieved ISO 27001 certification, reducing the risk of data breaches and ensuring compliance with cross-border regulations.",
-        recommendation: "Continuous monitoring and risk assessments should be performed to safeguard transactions as new markets are added."
+        duration: "12 - 20 weeks",
+        challenge: "A fintech company faced increasing cyber threats targeting sensitive customer and transaction data.",
+        methodology: "ISO 27001 implementation focused on: Establishing an ISMS to protect customer data and transactional information, securing APIs used for integrations with third-party services through encryption and access controls and implementing multi-layered access controls.",
+        outcome: "The fintech organization achieved ISO 27001 certification with increased protection of customer’s data. Customer confidence grew, and the company successfully met regulatory requirements.",
+        recommendation: "Periodic risk assessments and updates to the ISMS should be conducted to address new threats as the organization grows."
       }
     },
     {
@@ -125,13 +125,13 @@ export const caseStudy = [
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077879/Afenoid%20Project%20Images/trustMobile3x_ayicrd.png",
       segment: "ISO 27001",
       data: {
-        title: "Fintech Payment Processing Platform",
+        title: "Co-location Center",
         industry: "Fintech",
-        duration: "9 weeks",
-        challenge: "A regional retail bank was facing frequent phishing attacks targeting its customers, leading to significant reputational damage.",
-        methodology: "ISO 27001 was implemented to create a robust ISMS that included advanced fraud detection, email filtering systems, and customer education on cybersecurity. Continuous monitoring for suspicious activity was introduced.",
-        outcome: "The bank improved its security infrastructure, reduced phishing incidents, and achieved ISO 27001 certification, restoring customer trust.",
-        recommendation: "Regular phishing simulations should be conducted to ensure ongoing employee and customer vigilance."
+        duration: "12 - 20 weeks",
+        challenge: "A co-location center handling critical data for multiple clients needed to strengthen its security posture to prevent unauthorized access and comply with industry standards.",
+        methodology: "The company adopted ISO 27001 by: Securing physical and virtual access to the data center, with enhanced access controls, surveillance, and regular security audits and introducing multi-factor authentication for internal systems and customer portals.",
+        outcome: "The co-location center achieved ISO 27001 certification, ensuring the secure management of client data and enabling partnerships with clients in regulated industries. Cyber threats were minimized, and operational security improved significantly.",
+        recommendation: "Frequent security audits and updates to physical security protocols should be conducted to mitigate emerging threats."
       }
     }
   ]

@@ -38,10 +38,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "!2 weeks",
-        challenge: "A fintech offering a popular digital wallet service needed to comply with PCI DSS to secure payment card data and ensure customer trust.",
-        methodology: "The company implemented PCI DSS by introducing end-to-end encryption, performing vulnerability scans, and applying multi-factor authentication for customer access to accounts. Annual security audits were initiated to ensure ongoing compliance.",
-        outcome: "The company achieved PCI DSS compliance, boosting customer trust and allowing them to expand their services to new regions.",
-        recommendation: "Annual audits should focus on detecting vulnerabilities related to mobile app integration and potential third-party data sharing risks."
+        challenge: "A fintech company providing accessible payment gateway services across sectors like: agriculture, crop services, food and retail, energy, logistics, asset finance, and insurance.",
+        methodology: "The PDCA (plan, do check, act) approach was adopted as follows:Plan stage: Scope definition, assessment plan, setting of objectives Do stage: gap assessment (documentation review, process owners' interviews, evidence validation, walkthroughs and handholding of process owners across people, process and technology for the mandatory 12 requirements) Check stage:gap remediation effort (across people, processes and technology) Act stage: Continual monitoring, continual improvement effort, certification readiness",
+        outcome: "The fintech company got compliant with PCIDSS version 4.0.1 and was able to meet up with regulatory requirements thus building trust, earning competitive advantage and became more resilient to card data cyber related attacks.",
+        recommendation: "PCIDSS compliance should not be seen as a check-all-boxes activity but rather seen as a culture across people, processes and technology."
       }
     },
     {
@@ -68,10 +68,10 @@ export const caseStudy = [
         title: "Fintech Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "A global bank needed to ensure that its card processing systems complied with PCI DSS to avoid fines and maintain client trust.",
-        methodology: "The bank underwent a PCI DSS assessment, implemented encryption and tokenization of card data, and conducted penetration testing to identify vulnerabilities in its online banking platform.",
-        outcome: "PCI DSS compliance was achieved, allowing the bank to securely process card payments and retain its customer base without data breaches.",
-        recommendation: "Future focus should be on securing evolving mobile payment technologies and ongoing penetration tests."
+        challenge: "Level 1 commercial banks in Nigeria providing accessible payment portals, platforms, for different levels of merchants across manufacturing, educational, technological, energy, logistics, asset management, and insurance.",
+        methodology: "The PDCA (plan, do check, act) approach was adopted as follows: Plan stage: Scope definition, assessment plan, setting of objectives Do stage: gap assessment (documentation review, process owners' interviews, evidence validation, walkthroughs and handholding of process owners across people, process and technology for the mandatory 12 requirements) Check stage:gap remediation effort (across people, processes and technology) Act stage: Continual monitoring, continual improvement effort, certification readiness.",
+        outcome: "The level 1 banks got compliant with PCIDSS version 4.0.1 and were able to meet up with regulatory requirements thus building trust, earning competitive advantage and became more resilient to card data cyber related attacks.",
+        recommendation: "PCIDSS compliance should not be seen as a check-all-boxes activity but rather seen as a culture across people, processes and technology."
       }
     },
     {

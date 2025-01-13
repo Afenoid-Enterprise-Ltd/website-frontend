@@ -35,7 +35,6 @@ const MainSection = () => {
     }
   };
 
-  // Button click handlers to update the URL with hash
   const handleNavigation = (tab: string) => {
     navigate(`/case-studies#${tab}`);
   };

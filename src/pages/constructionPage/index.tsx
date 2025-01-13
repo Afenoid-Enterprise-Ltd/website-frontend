@@ -4,12 +4,10 @@ import { Outlet } from "../../ui";
 import {
   PageUnderConstruction,
   RequestConsultation,
-  ConsultationForm,
 } from "../../components";
 
 const ConstructionPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
-  const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {
     setIsConsultationOpen(true);
@@ -17,19 +15,6 @@ const ConstructionPage = () => {
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
-  };
-
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -47,13 +32,8 @@ const ConstructionPage = () => {
           <RequestConsultation
             isOpen={isConsultationOpen}
             onClose={closeConsultationModal}
-            redirectToContactForm={redirectToContactForm}
           />
         )}
-        {isContactOpen && (
-          <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
-        )}
-
       </Outlet>
     </motion.section>
   );

@@ -21,6 +21,8 @@ const MainLogo = () => {
         alt="Logo"
         width={screenWidth <= 425 ? 90 : 120}
         loading="lazy"
+        className="object-cover"
+        style={{imageRendering: 'auto'  }}
       />
     </div>
   );

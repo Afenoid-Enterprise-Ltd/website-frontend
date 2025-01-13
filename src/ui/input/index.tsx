@@ -15,9 +15,14 @@ const Input: FC<InputProps> = (props) => {
   const {
     register,
     formState: { errors },
+    clearErrors
   } = useFormContext();
 
   const errMessage = errors[name]?.message;
+
+  const handleBlur = () => {
+    clearErrors(name)
+  }
 
   return (
     <div className="flex flex-col mb-4">
@@ -33,13 +38,15 @@ const Input: FC<InputProps> = (props) => {
         type={type}
         {...register(name, {
           required: true,
-          setValueAs: (value) => (type === "number" ? (value === "" ? undefined : Number(value)) : value), // Custom type conversion logic
+          setValueAs: (value) => (type === "number" ? (value === "" ? undefined : Number(value)) : value), 
+          onBlur: handleBlur
         })}
         {...rest}
         className={clsx(
-          `block w-full border-2 border-afenoid-light-grey p-4 bg-transparent focus:outline-afenoid-dark-grey mxs:p-2`
+          `block w-full border-2 p-4 bg-transparent focus:outline-afenoid-dark-grey focus:bg-afenoid-light-lemon placeholder:text-afenoid-dark-green mxs:p-2`, errMessage ? "border-red-500" : "border-afenoid-light-grey"
         )}
         placeholder={placeholder}
+       
       />
       {errMessage && typeof errMessage === "string" && (
         <div className="text-red-500 text-xs">{errMessage}</div>

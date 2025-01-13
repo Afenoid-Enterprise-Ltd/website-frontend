@@ -36,63 +36,63 @@ const Training: React.FC<TrainingProps> = (props) => {
     {
       title: "Certified in Risk and Information Systems Control (CRISC)",
       description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+        "This course provides the skills to identify, assess, and manage IT and enterprise risks while designing effective information systems controls to achieve business objectives.",
       image: TrainingImg3,
       route: "/services/crisc",
     },
     {
       title: "DORA Lead Manager",
       description:
-        "The PECB Certified DORA Lead Manager course equips you to lead digital resilience strategies, ensuring compliance with the EU’s Digital Operational Resilience Act (DORA).",
+        "The PECB Certified DORA Lead Manager course equips you to lead digital resilience strategies, ensuring compliance with the EU's Digital Operational Resilience Act (DORA).",
       image: SkillsDevImg2,
       route: "/services/dora-lead-manager",
     },
     {
       title: "Federated IT Service Management (FitSM) Foundation Certification",
       description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+        "Struggling with complex IT service management frameworks? The PECB Certified FitSM course simplifies processes, helping you streamline workflows, enhance service quality, and align IT services with business goals.",
       image: CaseStudyImg2,
       route: "/services/federated-IT-service-management",
     },
     {
       title: "Neuroscience for Change",
       description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+        "The APMG Certified Neuroscience for Change course delves into how the brain works and reacts to change, offering practical insights and tools to help you lead and sustain meaningful transformations in individuals and organizations.",
       image: SkillsDevImg1,
       route: "/services/neuroscience-for-change",
     },
     {
       title: "Business Relationship Management Professional (BRMP)",
       description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
+        "Imagine being the key link between business strategy and execution. The BRMP course equips you with the skills to build strong relationships, drive collaboration, and ensure business goals align with organizational success.",
       image: CaseStudyImg1,
       route: "/services/business-relationship-management-professional",
     },
     {
       title: "APMG Change Management",
       description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
+        "Change can bring uncertainty and resistance within an organization. This course provides the strategies to help your team navigate transitions, address resistance, and drive successful, lasting change.",
       image: CaseStudyImg3,
       route: "/services/apmg-change-management",
     },
     {
       title: "Business Continuity Management System (ISO 22301)",
       description:
-        "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations.",
+        "Disruptions can happen at any time. With ISO 22301, you'll develop a Business Continuity Management System (BCMS) that keeps your operations running smoothly, even in the face of unexpected challenges, ensuring resilience and protecting your business's future.",
       image: TrainingImg2,
       route: "/services/business-continuity-management-system",
     },
     {
       title: "Information Security Management System (ISO 27001)",
       description:
-        "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
+        "When sensitive data is at risk, organizations need a plan. This course guides you in creating an Information Security Management System (ISMS) that helps safeguard your data, manage risks, and build trust with customers—ensuring you stay compliant and secure in a digital world.",
       image: TrainingImg1,
       route: "/services/information-security-management-system",
     },
     {
       title: "Service Management System (ISO 20000)",
       description:
-        "The lack of digital trust can lead to a lack of adoption of digital technology, decreased productivity, lost business opportunities and value leakages.",
+        "IT services must be reliable and efficient. ISO 20000 helps you build an IT Service Management System (SMS) that improves operations, enhances service delivery, and ensures customer satisfaction, creating a foundation for consistent, high-quality IT support.",
       image: SkillsDevImg3,
       route: "/services/service-management-system",
     },

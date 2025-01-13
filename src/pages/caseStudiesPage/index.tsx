@@ -18,17 +18,8 @@ const CaseStudiesPage = () => {
     setIsConsultationOpen(false);
   };
 
-  const openContactModal = () => {
-    setIsContactOpen(true);
-  };
-
   const closeContactModal = () => {
     setIsContactOpen(false);
-  };
-
-  const redirectToContactForm = () => {
-    closeConsultationModal();
-    openContactModal();
   };
 
   return (
@@ -58,7 +49,6 @@ const CaseStudiesPage = () => {
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
-          redirectToContactForm={redirectToContactForm} 
         />
       )}
       {isContactOpen && (

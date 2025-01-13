@@ -15,7 +15,7 @@ export const caseStudy = [
       }
     },
     {
-      title: "Ensuring Resilience in Cryptocurrency Exchanges",
+      title: "Implementation for one of Nigeria's fastest growing Commercial Banks",
       description: "A cryptocurrency exchange adopted ISO 22301 to safeguard operations during cyberattacks and market volatility, achieving uninterrupted service and improved crisis management.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077879/Afenoid%20Project%20Images/resillience3x_hninvp.png",
       segment: "ISO 22301",
@@ -23,10 +23,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "A regional retail bank with a growing branch network wanted to ensure operational resilience in the face of natural disasters and power outages.",
-        methodology: "ISO 22301 was implemented to identify critical banking services, such as ATMs and online banking, and develop disaster recovery and business continuity plans. Backup power systems were installed at key locations.",
-        outcome: "The bank reduced downtime during natural disasters and power outages, achieving ISO 22301 certification and enhancing customer confidence.",
-        recommendation: "Regular testing of backup systems and continuous improvement of business continuity plans should be performed to adapt to changing risks."
+        challenge: "The Bank faced gaps in business continuity planning, risking prolonged service disruptions during unforeseen events. Also, regulatory concerns over non-compliance.",
+        methodology: "A systematic approach was adopted, aligning operations with ISO 22301:2019 requirements, including impact analysis, strategy development, and a tailored continuity framework.",
+        outcome: "The Bank achieved a robust business continuity management system, ensuring minimized disruptions, enhanced operational resilience and regulatory compliance.",
+        recommendation: "Regularly test and update continuity plans, invest in staff training, and maintain clear communication protocols for ongoing resilience."
       }
     },
     {
@@ -45,7 +45,7 @@ export const caseStudy = [
       }
     },
     {
-      title: "Enhancing Resilience for Retail Banking Operations",
+      title: " Operational Resilience for a technology Solutions provider",
       description: "A retail bank implemented ISO 22301, ensuring operational continuity during disasters and power outages, reducing downtime and enhancing customer confidence.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/retailBanking3x_ovlmwp.png",
       segment: "ISO 22301",
@@ -53,10 +53,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "A fintech managing a large cryptocurrency exchange needed to ensure business continuity in case of cyberattacks, market volatility, or regulatory shutdowns.",
-        methodology: "ISO 22301 implementation involved developing a Business Continuity Management System (BCMS) focused on IT infrastructure resilience, alternative processing locations, and employee training for disaster recovery scenarios.",
-        outcome: "The company achieved ISO 22301 certification, ensuring uninterrupted services and improved crisis response times.",
-        recommendation: "Regular testing of the disaster recovery plan, with a focus on market volatility response, should be prioritized for future audits."
+        challenge: "The firm needed to ensure service continuity for its cloud-based operations amidst potential disruptions and a planned premise relocation.",
+        methodology: "Conducted a Business Impact Analysis (BIA), developed tailored business continuity strategies, and implemented a relocation test leveraging remote work capabilities.",
+        outcome: "Achieved enhanced service resilience, seamless relocation readiness, and strengthened stakeholder confidence in the firm's continuity capabilities.",
+        recommendation: "Perform regular scenario-based tests, refine remote work protocols, and ensure ongoing alignment with ISO 22301:2019 requirements."
       }
     },
     {
@@ -105,7 +105,7 @@ export const caseStudy = [
       }
     },
     {
-      title: "Strengthening Continuity for Payment Processing",
+      title: "Strengthening Business Continuity Through IT Standards and Frameworks",
       description: "A payment switch provider utilized ISO 22301 to maintain uninterrupted transactions during system failures, earning certification and customer trust in their resilience.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/continuity3x_acmvva.png",
       segment: "ISO 22301",
@@ -113,10 +113,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "A regional payment switch provider wanted to ensure uninterrupted service in case of system failures or cyberattacks.",
-        methodology: "ISO 22301 was implemented to develop a business continuity plan, perform regular system backup tests, and simulate potential disasters such as power outages or cyberattacks.",
-        outcome: "The provider ensured uninterrupted transaction processing during incidents, gaining ISO 22301 certification and customer confidence in their resilience.",
-        recommendation: "Business continuity simulations should be updated frequently to account for emerging cyber threats."
+        challenge: "The organization faced challenges in aligning IT operations with regulatory standards to ensure uninterrupted service delivery and compliance.",
+        methodology: "Developed an executive overview of IT standards, conducted gap analysis, and proposed tailored strategies for implementing robust frameworks such as ISO 22301:2019.",
+        outcome: "Enhanced compliance posture, improved IT resilience, and alignment of operations with industry best practices.",
+        recommendation: "Establish regular audits, integrate IT standards into governance processes, and foster a culture of proactive risk management."
       }
     },
     {

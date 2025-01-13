@@ -95,7 +95,7 @@ const AccordionItem = ({ children, value, trigger, mainFontType, minorFontType, 
         className="overflow-y-hidden transition-all"
         style={{ height: open ? height : 0 }}
       >
-        <div className={`pt-2 p-4 font-${minorFontType}`} ref={ref}>
+        <div className={`pt-2 p-4 mxs:text-xs font-${minorFontType}`} ref={ref}>
           {children}
         </div>
       </div>

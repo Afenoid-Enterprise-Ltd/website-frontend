@@ -1,4 +1,5 @@
 import { Text, Button } from "../../../ui";
+import { Link } from "react-router-dom";
 import {
   ServicesImg1,
   ServicesImg2,
@@ -105,13 +106,13 @@ const ServicesSection = () => {
                 service management, risk management, cybersecurity, data
                 privacy, and audit.
               </Text>
-              <div>
+              <Link to = "/services#training">
                 <Button
                   variant="secondary"
                   label=" Learn More"
                   customClassName="font-light border-white text-white"
                 />
-              </div>
+              </Link>
             </div>
           </div>
 

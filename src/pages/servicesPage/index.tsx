@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import { HeroSection, MainSection } from "./components";
-import { ConsultationForm } from "../../components";
+import { RequestConsultation } from "../../components";
 
 const ServicesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -29,7 +29,7 @@ const ServicesPage = () => {
         </section>
       </Outlet>
       {isConsultationOpen && (
-        <ConsultationForm
+        <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
         />

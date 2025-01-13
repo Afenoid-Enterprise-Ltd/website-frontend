@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Text, Button, Dropdown, Modal, Input } from "../ui";
+import { Text, Button, Dropdown, Modal, Input, ButtonLoader} from "../ui";
 import { FormCover } from "../assets";
 import { consultationFormSchema } from "../schema";
 import { useCountries } from "use-react-countries";
@@ -55,7 +55,9 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
       console.error("Error submitting form:", e);
       toast.error("Unable to submit your request. Please try again later.");
     } finally {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
     }
   };
 
@@ -161,7 +163,7 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
             />
 
             <Button
-              label={loading ? "Submitting" : "Submit"}
+              label={loading ? <ButtonLoader/> : "Submit"}
               variant="primary"
               customClassName="mb-8"
               type="submit"

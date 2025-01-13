@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
     <nav
       className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] py-6 ${
         scrollDetected && offset !== 0 ? "shadow-lg" : ""
-      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-6`}
+      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-10`}
     >
       <Link to="/">
         <MainLogo />

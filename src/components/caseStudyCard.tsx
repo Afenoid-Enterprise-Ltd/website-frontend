@@ -27,7 +27,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className=" flex h-[15rem] w-[30rem] mxs:h-[12.5rem]">
+      <div className=" flex h-[15rem] w-[30rem] mxs:h-[12.5rem] mxxl:w-full">
         <img
           src={image}
           alt="Case Study Image"

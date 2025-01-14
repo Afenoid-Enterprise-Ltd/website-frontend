@@ -129,7 +129,7 @@ const Training: React.FC<TrainingProps> = (props) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-10 gap-y-20 px-[5rem] mxxl:grid-cols-3 msm:grid-cols-1 mmd:px-[3rem] mxs:px-4 mlg:grid-cols-2 mxxl:px-[3rem]">
+      <div className="grid grid-cols-3 gap-x-10 gap-y-20 px-[5rem] mxxl:grid-cols-3 mxxl:gap-x-8 msm:grid-cols-1 mmd:px-[3rem] mxs:px-4 mlg:grid-cols-2 mxxl:px-[3rem]">
         {cardData.map((card, index) => (
           <CaseStudyCard
             title={card.title}

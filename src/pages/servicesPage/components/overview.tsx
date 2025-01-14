@@ -30,7 +30,7 @@ const Overview = () => {
         caption: "",
         title: "Management System Standard",
         description:
-          "We help establish, operate, and improve management system standards such as ISO 27001 (ISMS), ISO 22301 (BCMS), ISO 9001 (QMS), ensuring clarity and efficiency in organizational processes.",
+          "We help establish, operate, and improve management system standards such as ISO 27001 (ISMS), ISO 22301 (BCMS), ISO 9001 (QMS), ISO 20000 (IT Service Management), ensuring clarity, efficiency, and compliance in organizational processes.",
       },
       image: OverviewImg1,
     },

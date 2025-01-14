@@ -53,7 +53,7 @@ const CasesPage = () => {
     >
       <Outlet>
         <HeaderSection
-          title={item?.data.title}
+          title={item?.title}
           industry={item?.data.industry}
           duration={item?.data.duration}
           segment={item?.segment}

@@ -1,13 +1,6 @@
 import { caseStudy } from "../caseStudy";
 import { CaseStudyCard } from "../../../components";
 
-// interface Case {
-//   title: string;
-//   description: string;
-//   imgUrl: string;
-//   segment: string;
-// }
-
 const ALLCASES = () => {
   return (
     <section className="grid grid-cols-3 gap-x-10 gap-y-20 px-[5rem] mxxl:grid-cols-3 msm:grid-cols-1 mmd:px-[3rem] mlg:grid-cols-2 mxxl:px-[3rem]">

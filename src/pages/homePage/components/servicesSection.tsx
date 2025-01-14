@@ -23,7 +23,7 @@ const ServicesSection = () => {
     {
       title: "AUDITING",
       description:
-        "Lack of auditing undermines digital trust, reducing tech adoption, productivity, business opportunities, & exposing value leakages. This ensures compliance, mitigate risks, & foster trust.",
+        "Lack of auditing erodes digital trust, hindering tech adoption, productivity, and business opportunities. It ensures compliance, mitigates risks, and builds trust.",
       image: ServicesImg2,
       route: "/services#auditing",
     },
@@ -48,7 +48,7 @@ const ServicesSection = () => {
         >
           Our Services
         </Text>
-        <div className="flex justify-between items-start gap-10 px-[3rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6 mxs:px-6">
+        <div className="flex justify-evenly items-start gap-10 px-[5rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}

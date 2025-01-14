@@ -15,11 +15,11 @@ const RequestConsultation: React.FC<ConsultationProps> = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <section>
-        <div className="h-[13rem] w-full">
+        <div className="h-[13rem] w-full msm:h-[234px]">
           <img
             src={FormCover}
             alt="Cover Image for Form"
-            className="h-full w-full"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>

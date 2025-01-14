@@ -15,7 +15,7 @@ export const caseStudy = [
       }
     },
     {
-      title: "Implementation for one of Nigeria's fastest growing Commercial Banks",
+      title: "Ensuring Resilience in Cryptocurrency Exchanges",
       description: "A cryptocurrency exchange adopted ISO 22301 to safeguard operations during cyberattacks and market volatility, achieving uninterrupted service and improved crisis management.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077879/Afenoid%20Project%20Images/resillience3x_hninvp.png",
       segment: "ISO 22301",
@@ -23,10 +23,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "The Bank faced gaps in business continuity planning, risking prolonged service disruptions during unforeseen events. Also, regulatory concerns over non-compliance.",
-        methodology: "A systematic approach was adopted, aligning operations with ISO 22301:2019 requirements, including impact analysis, strategy development, and a tailored continuity framework.",
-        outcome: "The Bank achieved a robust business continuity management system, ensuring minimized disruptions, enhanced operational resilience and regulatory compliance.",
-        recommendation: "Regularly test and update continuity plans, invest in staff training, and maintain clear communication protocols for ongoing resilience."
+        challenge: "A regional retail bank with a growing branch network wanted to ensure operational resilience in the face of natural disasters and power outages.",
+        methodology: "ISO 22301 was implemented to identify critical banking services, such as ATMs and online banking, and develop disaster recovery and business continuity plans. Backup power systems were installed at key locations.",
+        outcome: "The bank reduced downtime during natural disasters and power outages, achieving ISO 22301 certification and enhancing customer confidence.",
+        recommendation: "Regular testing of backup systems and continuous improvement of business continuity plans should be performed to adapt to changing risks."
       }
     },
     {
@@ -37,15 +37,15 @@ export const caseStudy = [
       data: {
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
-        duration: "8 weeks",
-        challenge: "A fintech company providing accessible payment gateway services across sectors like: agriculture, crop services, food and retail, energy, logistics, asset finance, and insurance.",
-        methodology: "In addressing the challenge, we followed the PDCA (Plan-Do-Check-Act) methodology. In the Plan stage, we defined the scope, developed an assessment plan, and set clear objectives. The Do stage involved performing gap assessments, reviewing documentation, conducting interviews, validating evidence, and guiding process owners through the 12 mandatory requirements across people, processes, and technology. During the Check stage, we implemented structured remediation to address identified gaps. Finally, in the Act stage, we established continuous monitoring, improvement efforts, and ensured readiness for certification.",
-        outcome: "The fintech company got compliant with PCIDSS version 4.0.1 and was able to meet up with regulatory requirements thus building trust, earning competitive advantage and became more resilient to card data cyber related attacks.",
-        recommendation: "PCIDSS compliance should not be seen as a check-all-boxes activity but rather seen as a culture across people, processes and technology."
+        duration: "!2 weeks",
+        challenge: "A fintech offering a popular digital wallet service needed to comply with PCI DSS to secure payment card data and ensure customer trust.",
+        methodology: "The company implemented PCI DSS by introducing end-to-end encryption, performing vulnerability scans, and applying multi-factor authentication for customer access to accounts. Annual security audits were initiated to ensure ongoing compliance.",
+        outcome: "The company achieved PCI DSS compliance, boosting customer trust and allowing them to expand their services to new regions.",
+        recommendation: "Annual audits should focus on detecting vulnerabilities related to mobile app integration and potential third-party data sharing risks."
       }
     },
     {
-      title: " Operational Resilience for a technology Solutions provider",
+      title: "Enhancing Resilience for Retail Banking Operations",
       description: "A retail bank implemented ISO 22301, ensuring operational continuity during disasters and power outages, reducing downtime and enhancing customer confidence.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/retailBanking3x_ovlmwp.png",
       segment: "ISO 22301",
@@ -53,10 +53,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "The firm needed to ensure service continuity for its cloud-based operations amidst potential disruptions and a planned premise relocation.",
-        methodology: "Conducted a Business Impact Analysis (BIA), developed tailored business continuity strategies, and implemented a relocation test leveraging remote work capabilities.",
-        outcome: "Achieved enhanced service resilience, seamless relocation readiness, and strengthened stakeholder confidence in the firm's continuity capabilities.",
-        recommendation: "Perform regular scenario-based tests, refine remote work protocols, and ensure ongoing alignment with ISO 22301:2019 requirements."
+        challenge: "A fintech managing a large cryptocurrency exchange needed to ensure business continuity in case of cyberattacks, market volatility, or regulatory shutdowns.",
+        methodology: "ISO 22301 implementation involved developing a Business Continuity Management System (BCMS) focused on IT infrastructure resilience, alternative processing locations, and employee training for disaster recovery scenarios.",
+        outcome: "The company achieved ISO 22301 certification, ensuring uninterrupted services and improved crisis response times.",
+        recommendation: "Regular testing of the disaster recovery plan, with a focus on market volatility response, should be prioritized for future audits."
       }
     },
     {
@@ -68,10 +68,10 @@ export const caseStudy = [
         title: "Fintech Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "Level 1 commercial banks in Nigeria providing accessible payment portals, platforms, for different levels of merchants across manufacturing, educational, technological, energy, logistics, asset management, and insurance.",
-        methodology: "We followed the PDCA methodology to solve the challenge. In the Plan stage, we defined the scope, developed an assessment plan, and set clear objectives. The Do stage involved conducting a gap assessment, reviewing documentation, interviewing process owners, validating evidence, and supporting the mandatory requirements across people, processes, and technology. During the Check stage, we focused on remediation efforts to address gaps. Finally, in the Act stage, we implemented continual monitoring, improvement initiatives, and prepared for certification readiness.",
-        outcome: "The level 1 banks got compliant with PCIDSS version 4.0.1 and were able to meet up with regulatory requirements thus building trust, earning competitive advantage and became more resilient to card data cyber related attacks.",
-        recommendation: "PCIDSS compliance should not be seen as a check-all-boxes activity but rather seen as a culture across people, processes and technology."
+        challenge: "A global bank needed to ensure that its card processing systems complied with PCI DSS to avoid fines and maintain client trust.",
+        methodology: "The bank underwent a PCI DSS assessment, implemented encryption and tokenization of card data, and conducted penetration testing to identify vulnerabilities in its online banking platform.",
+        outcome: "PCI DSS compliance was achieved, allowing the bank to securely process card payments and retain its customer base without data breaches.",
+        recommendation: "Future focus should be on securing evolving mobile payment technologies and ongoing penetration tests."
       }
     },
     {
@@ -84,8 +84,8 @@ export const caseStudy = [
         industry: "Banking",
         duration: "16 weeks",
         challenge: "A fintech company faced increasing cyber threats targeting sensitive customer and transaction data.",
-        methodology: "ISO 27001 implementation focused on: Establishing an ISMS to protect customer data and transactional information, securing APIs used for integrations with third-party services through encryption and access controls and implementing multi-layered access controls.",
-        outcome: "The fintech organization achieved ISO 27001 certification with increased protection of customer's data. Customer confidence grew, and the company successfully met regulatory requirements.",
+        methodology: "ISO 27001 implementation focused on: Establishing an ISMS to protect customer data and transactional information., ecuring APIs used for integrations with third-party services through encryption and access controls. Implementing  multi-layered access controls.",
+        outcome: "The fintech organization achieved ISO 27001 certification with increased protection of customer’s data. Customer confidence grew, and the company successfully met regulatory requirements.",
         recommendation: "Periodic risk assessments and updates to the ISMS should be conducted to address new threats as the organization grows."
       }
     },
@@ -105,7 +105,7 @@ export const caseStudy = [
       }
     },
     {
-      title: "Strengthening Business Continuity Through IT Standards and Frameworks",
+      title: "Strengthening Continuity for Payment Processing",
       description: "A payment switch provider utilized ISO 22301 to maintain uninterrupted transactions during system failures, earning certification and customer trust in their resilience.",
       imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/continuity3x_acmvva.png",
       segment: "ISO 22301",
@@ -113,10 +113,10 @@ export const caseStudy = [
         title: "Fintech Payment Processing Platform",
         industry: "Fintech",
         duration: "12 weeks",
-        challenge: "The organization faced challenges in aligning IT operations with regulatory standards to ensure uninterrupted service delivery and compliance.",
-        methodology: "Developed an executive overview of IT standards, conducted gap analysis, and proposed tailored strategies for implementing robust frameworks such as ISO 22301:2019.",
-        outcome: "Enhanced compliance posture, improved IT resilience, and alignment of operations with industry best practices.",
-        recommendation: "Establish regular audits, integrate IT standards into governance processes, and foster a culture of proactive risk management."
+        challenge: "A regional payment switch provider wanted to ensure uninterrupted service in case of system failures or cyberattacks.",
+        methodology: "ISO 22301 was implemented to develop a business continuity plan, perform regular system backup tests, and simulate potential disasters such as power outages or cyberattacks.",
+        outcome: "The provider ensured uninterrupted transaction processing during incidents, gaining ISO 22301 certification and customer confidence in their resilience.",
+        recommendation: "Business continuity simulations should be updated frequently to account for emerging cyber threats."
       }
     },
     {
@@ -129,7 +129,7 @@ export const caseStudy = [
         industry: "Fintech",
         duration: "20 weeks",
         challenge: "A co-location center handling critical data for multiple clients needed to strengthen its security posture to prevent unauthorized access and comply with industry standards.",
-        methodology: "The company adopted ISO 27001 by: Securing physical and virtual access to the data center, with enhanced access controls, surveillance, and regular security audits and introducing multi-factor authentication for internal systems and customer portals.",
+        methodology: "The company adopted ISO 27001 by: Securing physical and virtual access to the data center, with enhanced access controls, surveillance, and regular security audits. Introducing multi-factor authentication for internal systems and customer portals.",
         outcome: "The co-location center achieved ISO 27001 certification, ensuring the secure management of client data and enabling partnerships with clients in regulated industries. Cyber threats were minimized, and operational security improved significantly.",
         recommendation: "Frequent security audits and updates to physical security protocols should be conducted to mitigate emerging threats."
       }

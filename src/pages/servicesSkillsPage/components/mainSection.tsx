@@ -22,7 +22,7 @@ const MainSection: React.FC<MainProps> = (props) => {
   const expectations = [
     {
       icon: <FaLocationDot size={32} color="#0F261A" />,
-      text: "Visual/Physical Learning",
+      text: "Virtual/Physical Learning",
     },
     { icon: <LuCalendarCheck2 size={32} color="#0F261A" />, text: "5 Days" },
     { icon: <RxSpeakerLoud size={32} color="#0F261A" />, text: "English" },
@@ -69,7 +69,7 @@ const MainSection: React.FC<MainProps> = (props) => {
         <img
           src={image}
           alt="Services Skills Image"
-          className="h-full w-full"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
       </div>

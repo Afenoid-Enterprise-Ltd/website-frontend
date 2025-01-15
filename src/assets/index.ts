@@ -71,6 +71,8 @@ import HomeServicesIconBg from "./home-services-icons-img.webp";
 import OfficeLocationImg from "./office-location.webp";
 import ErrorImg from "./error-image.webp";
 import FixMain from "./fix-main.webp";
+import SkylineWhite from "./skyline-white.webp";
+import NeuroscienceImg from "./neuroscience.webp";
 
 export {
   MainLogoSVG,
@@ -146,4 +148,6 @@ export {
   OfficeLocationImg,
   ErrorImg,
   FixMain,
+  SkylineWhite,
+  NeuroscienceImg
 };

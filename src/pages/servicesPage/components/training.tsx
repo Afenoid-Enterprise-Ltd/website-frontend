@@ -9,10 +9,10 @@ import {
   CaseStudyImg1,
   CaseStudyImg2,
   CaseStudyImg3,
-  SkillsDevImg1,
   SkillsDevImg2,
   SkillsDevImg3,
   ServicesImg3,
+  NeuroscienceImg
 } from "../../../assets";
 
 interface TrainingProps {
@@ -58,7 +58,7 @@ const Training: React.FC<TrainingProps> = (props) => {
       title: "Neuroscience for Change",
       description:
         "The APMG Certified Neuroscience for Change course delves into how the brain works and reacts to change, offering practical insights and tools to help you lead and sustain meaningful transformations in individuals and organizations.",
-      image: SkillsDevImg1,
+      image: NeuroscienceImg,
       route: "/services/neuroscience-for-change",
     },
     {

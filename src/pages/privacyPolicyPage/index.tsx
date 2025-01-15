@@ -1,10 +1,11 @@
 import { useState } from "react";
 import {
-  PageUnderConstruction,
   RequestConsultation,
+  CallToAction,
 } from "../../components";
+import { HeroSection, PolicySection } from "./components"
 import { motion } from "framer-motion";
-import { Outlet } from "../../ui";
+import { Outlet, Button } from "../../ui";
 
 const PrivacyPolicyPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -26,7 +27,20 @@ const PrivacyPolicyPage = () => {
     >
       <Outlet>
         <section className="overflow-x-hidden">
-          <PageUnderConstruction openModal={openConsultationModal}/>
+          <HeroSection/>
+          <PolicySection/>
+          <CallToAction
+            title="Ready to have a conversation with us?"
+            explanation="Schedule a meeting with a consultant right away"
+            button={
+              <Button
+                variant="primary"
+                label="Book a Consultation"
+                customClassName="mt-[2rem]"
+                onClick={openConsultationModal}
+              />
+            }
+          />
         </section>
         {isConsultationOpen && (
           <RequestConsultation

@@ -5,11 +5,11 @@ import { Accordion, AccordionItem, CallToAction } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
 
 interface AuditingProps {
-  openModal: () => void
+  openModal: () => void;
 }
 
 const Auditing: React.FC<AuditingProps> = (props) => {
-  const {openModal} = props;
+  const { openModal } = props;
 
   const dataItem = {
     heroTexts: {
@@ -24,10 +24,7 @@ const Auditing: React.FC<AuditingProps> = (props) => {
   return (
     <section>
       <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
-        <LearnMoreDiv
-          heroTexts={dataItem.heroTexts}
-          image={dataItem.image}
-        />
+        <LearnMoreDiv heroTexts={dataItem.heroTexts} image={dataItem.image} />
       </div>
       <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] msm:px-[2rem]">
         <Text
@@ -82,7 +79,7 @@ const Auditing: React.FC<AuditingProps> = (props) => {
             experience. The Payment Card Industry Data Security Standard (PCI
             DSS) is applicable to all organizations that accept credit and debit
             card payments. It helps protect sensitive financial information and
-            prevent credit card fraud. 
+            prevent credit card fraud.
           </AccordionItem>
           <AccordionItem
             value="3"
@@ -90,10 +87,58 @@ const Auditing: React.FC<AuditingProps> = (props) => {
             mainFontType="gambetta "
             minorFontType="proxima-nova"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            We also help to establish, operate, and improve management system
+            standards, MSS. When an organization systemizes how it does things,
+            this is known as a management system. This makes sure that nothing
+            is left out and that everyone is clear about who needs to do what,
+            when, and how. A management system requires several essential
+            components for it to function. These are:
+            <br />
+            <ul className="list-disc">
+              <li className="ml-6">Objectives</li>
+              <li className="ml-6">Processes</li>
+              <li className="ml-6">Organizational structure and resources</li>
+              <li className="ml-6">Performance feedback</li>
+            </ul>
+            We work with Registered Certification Bodies to determine the
+            conformity of our clients after gap remediation and corrective
+            action have been completed.
+            <br />
+            <ul className="list-disc">
+              <li className="ml-6">
+                {" "}
+                <span>
+                  Information Security Management System, ISO/IEC 27001:2022:{" "}
+                </span>
+                This international management system standard provides a
+                framework that helps organizations to manage sensitive
+                information, protect against threats, and ensure business
+                continuity.
+              </li>
+              <li className="ml-6">
+                <span>ISO/IEC 22301:</span>What you do before a crisis
+                determines how well you do in a crisis. The ability of your
+                organization to recover from a disaster is directly related to
+                the degree of business continuity planning that has taken place
+                BEFORE the disaster.
+              </li>
+              <li className="ml-6">
+                <span>ISO 22301 standard</span> specifies requirements to plan,
+                establish, implement, operate, monitor, review, maintain and
+                continually improve a documented management system to prepare
+                for, respond to and recover from disruptive events when they
+                arise. We help to adopt and conform.
+              </li>
+              <li className="ml-6">
+                ISO 20000-1: IT Service Management (now called Service
+                Management System, SMS) was formally accepted as an ISO standard
+                in the year 2005. The standard reflects an industry-wide
+                recognition of the need to establish a system to manage IT
+                service delivery and support. Service Management System, SMS,
+                requires that organizations establish a formal Plan-Do-check-Act cycle in order to demonstrate their continual improvement in
+                service delivery.
+              </li>
+            </ul>
           </AccordionItem>
           <AccordionItem
             value="4"
@@ -120,10 +165,11 @@ const Auditing: React.FC<AuditingProps> = (props) => {
             mainFontType="gambetta "
             minorFontType="proxima-nova"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            SOC 2 is a set of standards for service providers to report on their
+            controls related to security, availability, processing integrity,
+            confidentiality, and privacy. SOC 2 reports help organizations
+            assess and address the risks associated with outsourcing their IT
+            systems and data.
           </AccordionItem>
           <AccordionItem
             value="6"
@@ -131,10 +177,10 @@ const Auditing: React.FC<AuditingProps> = (props) => {
             mainFontType="gambetta "
             minorFontType="proxima-nova"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            asperiores corporis perferendis voluptatibus delectus iste eos
-            eveniet consequatur et! Voluptates ex minima magni dolorem inventore
-            voluptas iste laboriosam odit quia?
+            The NIST Cybersecurity Framework (NCSF) is a voluntary framework for
+            improving cybersecurity risk management. It provides a common
+            language for expressing, assessing, and managing cybersecurity risk,
+            and can be used by organizations of any size or type.
           </AccordionItem>
           <AccordionItem
             value="7"

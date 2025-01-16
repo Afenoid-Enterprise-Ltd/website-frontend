@@ -76,7 +76,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           ) : null}
         </div>
       </div>
-      <div className="w-1/2 h-[15rem] mlg:w-full mxs:h-[12.5rem]">
+      <div className="w-1/2 h-[25rem] mlg:w-full mxs:h-[12.5rem]">
         <img
           src={image}
           alt="An Image for the Hero Page"

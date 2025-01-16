@@ -19,23 +19,15 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
     AOS.refresh();
   }, []);
 
-
   return (
     <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
       <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 mxxl:px-[3rem]">
         <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
           <div className="w-[95%] msm:w-full">
-            <Text
-              variant="h2"
-              color="af-dark-green"
-              fontWeight="medium"
-              align="left"
-              fontFamily="gambetta"
-              customClassName="mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4"
-            >
+            <h1 className="text-4xl font-gambetta text-af-dark-green font-medium mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4">
               Strengthening organizations,
               <br /> Equipping professionals.
-            </Text>
+            </h1>
             <Text
               variant="h4"
               fontFamily="gambetta"
@@ -44,9 +36,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               align="left"
               customClassName="font-regular mb-6 text-[1.75rem] mmlg:hidden msm:text-h6 mxxl:w-[98%]"
             >
-              We protect what matters most—your{" "}
-              people, your{" "}
-              processes and the{" "}
+              We protect what matters most—your people, your processes and the{" "}
               technology that drives them.
             </Text>
             <Button
@@ -58,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
           </div>
         </div>
         <div className="w-1/2 mmlg:w-full mmd:px-4">
-          <img src={HomeHeroImage} alt="Hero Image" loading="lazy"/>
+          <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
         </div>
       </div>
 
@@ -73,9 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               align="center"
               customClassName="mt-10 w-full"
             >
-              We protect what matters most—your
-              people, your
-              processes and the
+              We protect what matters most—your people, your processes and the
               technology that drives them.
             </Text>
             <div className="my-4">

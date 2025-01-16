@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const phoneNumberRegExp =
-  /^\+?[0-9]{1,4}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/
+  /^\+?([0-9]{1,3})?[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,9})$/
 
 const serviceOptions = [
   "Auditing",
@@ -70,6 +70,7 @@ const countryOptions = [
   "Estonia",
   "Eswatini",
   "Ethiopia",
+  "Faroe Islands",
   "Fiji",
   "Finland",
   "France",

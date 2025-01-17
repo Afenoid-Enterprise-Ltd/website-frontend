@@ -127,8 +127,8 @@ const Footer: React.FC = () => {
                   {footerLink.title}
                 </Text>
                 <div>
-                  {footerLink.array.map((link) => (
-                    <Link to={link.route}>
+                  {footerLink.array.map((link, index) => (
+                    <Link to={link.route} key={index}>
                       <Text
                         variant="body-reg"
                         color="floral-white"

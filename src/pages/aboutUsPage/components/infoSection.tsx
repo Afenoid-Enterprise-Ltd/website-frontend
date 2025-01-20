@@ -74,6 +74,7 @@ const InfoSection = () => {
         title: "Our Story",
         description:
           "Afenoid's story is one of innovation and commitment to digital resilience. From our early days, we have collaborated with organizations in both the public and private sectors, helping them secure their digital environments, maintain compliance, and drive sustainable growth. Our comprehensive approach extends beyond technology, but in empowering business professionals with the skills and competencies they need to succeed in a fast-evolving digital space.",
+          identifier: "story",
       },
       image: StoryImg,
     },
@@ -83,6 +84,7 @@ const InfoSection = () => {
         title: "Our Team",
         description:
           "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISMS and BCMS experts, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our French-speaking auditors and implementers ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
+          identifier: "team",
       },
       image: TeamImg,
     },
@@ -91,17 +93,17 @@ const InfoSection = () => {
   const numberData = [
     {
       icon: CreditCardIcon,
-      title: 200,
+      title: 120,
       description: "PCI DSS assessments carried out over the past 10 years.",
     },
     {
       icon: PeopleIcon,
-      title: 300,
+      title: 200,
       description: "Training sessions in the last 5years",
     },
     {
       icon: BankIcon,
-      title: 150,
+      title: 40,
       description: "Implementation conducted in the last 10 years",
     },
     {
@@ -169,7 +171,7 @@ const InfoSection = () => {
         ))}
       </section>
 
-      <div>
+      <div id="values">
         <ChoiceAfenoid />
       </div>
     </section>

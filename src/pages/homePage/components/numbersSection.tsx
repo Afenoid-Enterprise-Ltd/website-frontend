@@ -87,17 +87,17 @@ const NumbersSection = () => {
   const numberData = [
     {
       icon: CreditCardIcon,
-      title: 200,
+      title: 120,
       description: "PCI DSS assessments carried out over the past 10 years.",
     },
     {
       icon: PeopleIcon,
-      title: 300,
+      title: 200,
       description: "Training sessions in the last 5years",
     },
     {
       icon: BankIcon,
-      title: 150,
+      title: 40,
       description: "Implementation conducted in the last 10 years",
     },
     {

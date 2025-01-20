@@ -24,7 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
       <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 mxxl:px-[3rem]">
         <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
           <div className="w-[95%] msm:w-full">
-            <h1 className="text-4xl font-gambetta text-af-dark-green font-medium mb-6 mmlg:text-h4 mmlg:text-center msm:text-h4">
+            <h1 className="text-5xl font-gambetta text-af-dark-green font-medium mb-6 mmlg:text-h4 mmlg:text-center msm:text-[1.5rem]">
               Strengthening organizations,
               <br /> Equipping professionals.
             </h1>

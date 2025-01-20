@@ -11,3 +11,4 @@ export * from "./privacyPolicyPage";
 export * from "./termsOfServicePage";
 export * from "./careerPage";
 export * from "./constructionPage";
+export * from "./siteMapPage";

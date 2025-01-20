@@ -6,6 +6,7 @@ type HeroText = {
   caption: string;
   title: string;
   description: string;
+  identifier: string;
 };
 
 type HeroDivProps = {
@@ -23,6 +24,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
       className={`flex justify-between items-center gap-32 ${
         reverse ? "flex-row-reverse" : ""
       } mlg:flex-col mlg:items-start mlg:gap-12 msm:gap-6`}
+      id={heroTexts.identifier}
     >
       <div className="w-1/2 flex flex-col gap-3 mlg:w-full">
         <motion.div

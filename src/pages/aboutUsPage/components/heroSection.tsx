@@ -11,6 +11,7 @@ const HeroSection = () => {
         title: "To become a global brand of African origin,",
         description:
           'That is more trusted, respected, and preferred than any of the "Big 4" consulting firms in every market we serve in the 2020s',
+          identifier: "mission",
       },
       image: MissionImg,
     },
@@ -20,6 +21,7 @@ const HeroSection = () => {
         title: "To help digital-age organisations become more resilient",
         description:
           "We achieve this by improving an organization’s digital strategy, performance, compliance assurance, and staff competence levels.",
+          identifier: "purpose",
       },
       image: PurposeImg,
     },

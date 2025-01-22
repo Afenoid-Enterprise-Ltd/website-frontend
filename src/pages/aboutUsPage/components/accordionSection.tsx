@@ -40,7 +40,7 @@ const AccordionSection = () => {
 
       <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" id="faqs">
         <Accordion>
-          <AccordionItem value="1" trigger="Wha is Afenoid About?">
+          <AccordionItem value="1" trigger="What is Afenoid About?">
             Established in 2011, Afenoid Enterprise Limited is a Business and
             Technology service firm, that enables credible solutions to
             organizations and individuals for cyber resilience, digital trust,

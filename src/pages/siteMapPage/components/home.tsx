@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const data = [
-    { title: "Book a Consultation", description: "", link: "" },
-    { title: "Achievements", description: "", link: "" },
-    { title: "Clients", description: "", link: "" },
-    { title: "Values", description: "SWIFT Cybersecurity Framework", link: "" },
+    { title: "Book a Consultation", description: "", link: "/" },
+    { title: "Achievements", description: "", link: "/" },
+    { title: "Clients", description: "", link: "/" },
+    { title: "Values", description: "SWIFT Cybersecurity Framework", link: "/" },
     {
       title: "Our Services",
       description: "APMG, ISACA, PCI SSC, SWIFT",
-      link: "",
+      link: "/",
     },
-    { title: "Our Services", description: "Consulting", link: "" },
-    { title: "Our Services", description: "Auditing", link: "" },
-    { title: "Our Services", description: "Training", link: "" },
-    { title: "Case Studies", description: "", link: "" },
-    { title: "Book a Consultation", description: "", link: "" },
+    { title: "Our Services", description: "Consulting", link: "/" },
+    { title: "Our Services", description: "Auditing", link: "/" },
+    { title: "Our Services", description: "Training", link: "/" },
+    { title: "Case Studies", description: "", link: "/" },
+    { title: "Book a Consultation", description: "", link: "/" },
   ];
 
   return (

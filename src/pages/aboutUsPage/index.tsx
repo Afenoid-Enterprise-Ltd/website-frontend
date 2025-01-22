@@ -2,10 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import { HeroSection, InfoSection, AccordionSection } from "./components";
-import {  RequestConsultation } from "../../components";
+import { RequestConsultation } from "../../components";
 
 const AboutUsPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
@@ -22,7 +26,7 @@ const AboutUsPage = () => {
         <section className="overflow-x-hidden">
           <HeroSection />
           <InfoSection />
-          <AccordionSection />
+          <AccordionSection openConsultationModal={openConsultationModal} />
         </section>
       </Outlet>
       {isConsultationOpen && (

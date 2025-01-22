@@ -15,10 +15,11 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
     <section>
       <div className="bg-white px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 msm:pt-28">
         <ArticleCard
-          title="Security Success Stories"
-          description="Discover how organisations have transformed their security posture and achieved excellence with Afenoid's guidance."
+          title="Let’s Be Part of Your Journey Towards Resilience"
+          description="Discover our service offerings and our approach in addressing risks across people, processes, and technology."
           image={HomePageCaseStudiesImg}
-          caseStudy={true}
+          caseStudy={false}
+          profile={true}
           reverse={true}
         />
       </div>

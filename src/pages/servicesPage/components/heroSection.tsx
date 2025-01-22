@@ -20,7 +20,7 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
 
   return (
     <section
-      className="w-screen h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
+      className="w-screen 2xl:w-full h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
       style={{ backgroundImage: `url(${ResourcesPageHeroImg})` }}
     >
       <div className="w-[70%] mlg:w-[90%] mxxs:w-full">

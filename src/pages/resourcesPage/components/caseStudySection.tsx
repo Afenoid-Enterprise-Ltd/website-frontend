@@ -52,6 +52,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
           image={HomePageCaseStudiesImg}
           caseStudy={true}
           reverse={true}
+          profile={false}
         />
       </div>
 
@@ -60,6 +61,8 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
           title={articleData.title}
           image={articleData.image}
           description={articleData.description}
+          profile={false}
+          caseStudy={false}
         />
         <CallToAction
           title="Ready to have a conversation with us?"

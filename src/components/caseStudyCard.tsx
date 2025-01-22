@@ -47,12 +47,21 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         fontFamily="gambetta"
         fontWeight="medium"
       >
-        {title}
+        {title?.split("*").map((part, index) => (
+          <React.Fragment key={index}>
+            {part}
+            {index < title.split("*").length - 1 && (
+              <>
+                <br />
+              </>
+            )}
+          </React.Fragment>
+        ))}
       </Text>
       <Text
-        variant="h5"
+        variant="body-reg"
         color="af-dark-green"
-        fontFamily="proxima-nova"
+        fontFamily="gambetta"
         fontWeight="light"
       >
         {description?.split("*").map((part, index) => (

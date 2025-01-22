@@ -8,10 +8,18 @@ interface ArticleCardProps {
   description: string;
   caseStudy?: boolean;
   reverse?: boolean;
+  profile: boolean;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = (props) => {
-  const { image, title, description, caseStudy = false, reverse } = props;
+  const {
+    image,
+    title,
+    description,
+    caseStudy = false,
+    reverse,
+    profile,
+  } = props;
 
   return (
     <div
@@ -42,20 +50,30 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
           </Text>
         </div>
         <div>
-          {!caseStudy ? (
-            <Link
-              to="/under-construction"
-              className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
-            >
-              Read Our Articles
-            </Link>
+          {profile ? (
+            <a href="/Company Brochure.pdf" download="Company Brochure.pdf">
+              <button className="bg-transparent border-afenoid-dark-green border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-afenoid-dark-green text-center text-base h-auto w-auto font-proxima-nova font-regular mt-8 hover:bg-afenoid-lemon hover:text-afenoid-white hover:border-afenoid-lemon ">
+                Download Company Profile
+              </button>
+            </a>
           ) : (
-            <Link
-              to="/case-studies"
-              className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
-            >
-              Read Our Case Studies
-            </Link>
+            <>
+              {!caseStudy ? (
+                <Link
+                  to="/under-construction"
+                  className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
+                >
+                  Read Our Articles
+                </Link>
+              ) : (
+                <Link
+                  to="/case-studies"
+                  className="text-[1.5rem] text-afenoid-green font-proxima-nova font-semibold underline underline-offset-4 hover:text-afenoid-lemon"
+                >
+                  Read Our Case Studies
+                </Link>
+              )}
+            </>
           )}
         </div>
       </div>

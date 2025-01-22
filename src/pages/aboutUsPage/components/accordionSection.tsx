@@ -1,10 +1,18 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
-import { Text } from "../../../ui";
+import { Text, Button } from "../../../ui";
 import { OfficeLocationImg } from "../../../assets";
 
-const AccordionSection = () => {
+interface AccordionProps {
+  openConsultationModal: () => void;
+}
+
+const AccordionSection: React.FC<AccordionProps>  = (props) => {
+
+  const { openConsultationModal } = props;
+
 
   return (
     <div className="w-full mt-20 mxs:px-4">
@@ -145,11 +153,13 @@ const AccordionSection = () => {
         title="Ready to have a conversation with us?"
         explanation="Schedule a meeting with a consultant right away"
         button={
-          <a href="/Company Brochure.pdf" download="Company Brochure.pdf">
-            <button className="bg-transparent border-afenoid-dark-green border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-afenoid-dark-green text-center text-base h-auto w-auto font-proxima-nova font-regular mt-8 hover:bg-afenoid-lemon ">
-              Company Profile
-            </button>
-          </a>
+          <Button
+            variant="primary"
+            label="Book a Consultation"
+            customClassName="mt-[2rem]"
+            onClick={openConsultationModal}
+          />
+
         }
       />
     </div>

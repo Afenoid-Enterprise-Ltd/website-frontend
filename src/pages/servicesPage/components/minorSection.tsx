@@ -22,21 +22,21 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
 
   const trainingData = [
     {
-      title: "Information Security Management System (ISO 27001)",
+      title: "Information Security Management System * (ISO 27001)",
       description:
         "When sensitive data is at risk, organizations need a plan. This course guides you in creating an Information Security Management System (ISMS) that helps safeguard your data, manage risks, and build trust with customers—ensuring you stay compliant and secure in a digital world.",
       image: TrainingImg1,
       route: "/services/information-security-management-system"
     },
     {
-      title: "Business Continuity Management System (ISO 22301)",
+      title: "Business Continuity Management System * (ISO 22301)",
       description:
         "Disruptions can happen at any time. With ISO 22301, you'll develop a Business Continuity Management System (BCMS) that keeps your operations running smoothly, even in the face of unexpected challenges, ensuring resilience and protecting your business's future.",
       image: TrainingImg2,
       route: "/services/business-continuity-management-system"
     },
     {
-      title: "Certified in Risk and Information Systems Control (CRISC)",
+      title: "Certified in Risk and Information Systems Control * (CRISC)",
       description:
         "This course provides the skills to identify, assess, and manage IT and enterprise risks while designing effective information systems controls to achieve business objectives.",
       image: TrainingImg3,
@@ -113,7 +113,7 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
           Our Courses
         </Text>
 
-        <div className="w-fuul flex justify-between items-start gap-10 px-[5rem] mb-[10rem] 2xl:w-full 2xl:px-0 mxxl:grid mxxl:grid-cols-3 mxxl:px-[3rem] mlg:grid-cols-2 msm:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
+        <div className="w-full flex justify-between items-start gap-10 px-[5rem] mb-[10rem] 2xl:w-full mxxl:grid mxxl:grid-cols-3 mxxl:px-[3rem] mlg:grid-cols-2 msm:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

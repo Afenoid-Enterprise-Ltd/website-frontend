@@ -20,11 +20,11 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
   }, []);
 
   return (
-    <section className="w-screen h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
-      <div className="flex justify-between items-center px-[5rem] mmlg:flex-col msm:px-2 mxxl:px-[3rem]">
-        <div className="w-1/2 mmlg:w-full mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
+    <section className="w-screen 2xl:w-full h-[87.5vh] relative flex items-center overflow-x-hidden mmlg:flex-col">
+      <div className="flex justify-between items-center px-[5rem] 2xl:w-full mmlg:flex-col msm:px-2 mxxl:px-[3rem]">
+        <div className="w-1/2 2xl:w-[50%] mmlg:w-full  mmd:pt-[3.5rem] msm:pt-[2.5rem] msm:w-full">
           <div className="w-[95%] msm:w-full">
-            <h1 className="text-5xl font-gambetta text-af-dark-green font-medium mb-6 mmlg:text-h4 mmlg:text-center msm:text-[1.5rem]">
+            <h1 className="text-[2.85rem] font-gambetta text-af-dark-green font-medium mb-6 mmlg:text-h4 mmlg:text-center msm:text-[1.5rem]">
               Strengthening organizations,
               <br /> Equipping professionals.
             </h1>
@@ -47,7 +47,7 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             />
           </div>
         </div>
-        <div className="w-1/2 mmlg:w-full mmd:px-4">
+        <div className="w-1/2 2xl:w-[50%] mmlg:w-full mmd:px-4">
           <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
         </div>
       </div>

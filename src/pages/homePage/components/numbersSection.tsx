@@ -98,12 +98,12 @@ const NumbersSection = () => {
     {
       icon: BankIcon,
       title: 40,
-      description: "Implementation conducted in the last 10 years",
+      description: "ISO implementation conducted in the last 10years",
     },
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Providing services to clients in nearly 50 countries.",
+      description: "Countries reached in the last decade",
     },
   ];
 
@@ -128,7 +128,7 @@ const NumbersSection = () => {
   ];
 
   return (
-    <section className="w-screen bg-white">
+    <section className="w-screen 2xl:w-full bg-white">
       <div className="p-[5rem] mmd:px-[3rem] msm:px-6">
         <div className="flex flex-col items-center gap-4 px-[15rem] mlg:px-[8rem]  mmd:px-[4rem] msm:px-0 msm:gap-[0.7rem] msm:w-full">
           <Text

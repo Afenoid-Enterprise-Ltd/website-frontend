@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="w-screen bg-white max-w-[2000px] mx-auto">
+    <footer className="w-screen bg-white max-w-[1750px] mx-auto">
       <img src={SkylineImg} alt="Skyline Pattern" loading="lazy" />
       <div className="w-full h-auto bg-afenoid-green flex justify-between items-center p-[5rem] mmlg:p-[3rem] mmd:flex-col-reverse mmd:items-stretch  mxs:p-4">
         <div className="flex flex-col gap-8">

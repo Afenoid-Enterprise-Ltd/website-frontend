@@ -46,7 +46,7 @@ const MainSection = () => {
   };
 
   return (
-    <section className="w-screen">
+    <section className="w-screen 2xl:w-full">
       <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
         <button
           onClick={() => handleNavigation("overview")}

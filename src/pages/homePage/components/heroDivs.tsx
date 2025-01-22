@@ -47,7 +47,7 @@ const HeroDivs = () => {
           >
             We strengthen your organization by implementing proven security
             frameworks and industry standards. Our comprehensive approach
-            addresses risks across your practices, people, and technology.
+            addresses risks across your people, processes, and technology.
           </Text>
         </div>
         <div className="w-1/2 mmd:hidden">

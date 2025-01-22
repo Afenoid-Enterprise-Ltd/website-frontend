@@ -79,6 +79,7 @@ const Footer: React.FC = () => {
       array: [
         { name: "FAQs", route: "/about-us/#faqs" },
         { name: "Contact Us", route: "/contact-us" },
+        { name: "Site Map", route: "/sitemap" }
       ],
     },
   ];

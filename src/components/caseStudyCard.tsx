@@ -13,7 +13,13 @@ type CaseStudyCardProps = {
 };
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
-  const { image, title, description, optionalWidth = false, route = ""} = props;
+  const {
+    image,
+    title,
+    description,
+    optionalWidth = false,
+    route = "",
+  } = props;
 
   useEffect(() => {
     AOS.init();
@@ -49,7 +55,17 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         fontFamily="proxima-nova"
         fontWeight="light"
       >
-        {description}
+        {description?.split("*").map((part, index) => (
+          <React.Fragment key={index}>
+            {part}
+            {index < description.split("*").length - 1 && (
+              <>
+                <br />
+                <br />
+              </>
+            )}
+          </React.Fragment>
+        ))}
       </Text>
       <div>
         <Link

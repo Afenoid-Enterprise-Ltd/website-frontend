@@ -1,16 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
 import { CallToAction } from "../../../components";
-import { Text, Button } from "../../../ui";
+import { Text } from "../../../ui";
 import { OfficeLocationImg } from "../../../assets";
 
-interface AccordionProps {
-  openConsultationModal: () => void;
-}
-
-const AccordionSection: React.FC<AccordionProps> = (props) => {
-  const { openConsultationModal } = props;
+const AccordionSection = () => {
 
   return (
     <div className="w-full mt-20 mxs:px-4">
@@ -46,7 +40,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
 
       <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" id="faqs">
         <Accordion>
-          <AccordionItem value="1" trigger="Who is Afenoid?">
+          <AccordionItem value="1" trigger="Wha is Afenoid About?">
             Established in 2011, Afenoid Enterprise Limited is a Business and
             Technology service firm, that enables credible solutions to
             organizations and individuals for cyber resilience, digital trust,
@@ -74,7 +68,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
           </AccordionItem>
           <AccordionItem
             value="3"
-            trigger="What management systems and frameworks does Afenoid provide?"
+            trigger="What management system, standards, and frameworks does Afenoid provide"
           >
             <ul className="list-disc pl-[1rem]">
               <li>
@@ -103,9 +97,13 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
 
       <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
         <div className="w-1/2 h-[25rem] mxs:w-full">
-          <img src={OfficeLocationImg}  alt="Office Location Image" className="object-cover h-full w-full" />
+          <img
+            src={OfficeLocationImg}
+            alt="Office Location Image"
+            className="object-cover h-full w-full"
+          />
         </div>
-        <div className="w-1/2 mxs:w-full">
+        <div className="w-1/2 flex flex-col justify-center items-start mxs:w-full">
           <Text
             variant="h2"
             fontFamily="gambetta"
@@ -114,7 +112,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
             fontWeight="medium"
             customClassName="msm:text-[1.5rem] mlg:text-[2.25rem] "
           >
-            Come and say Hi!
+            Visit us at
           </Text>
           <Text
             variant="h6"
@@ -124,8 +122,8 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
             fontWeight="light"
             customClassName="mb-8 msm:text-[0.75rem] mlg:text-[0.875rem]"
           >
-            Interested in visiting one of our offices? We’d be more than happy
-            to show you around!
+            Interested in visiting our offices? We would be more than happy to
+            welcome you
           </Text>
           <Link to="https://maps.app.goo.gl/C8w9ZvwS6Ei9npLz5" target="_blank">
             <Text
@@ -134,7 +132,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
               align="left"
               color="af-dark-green"
               fontWeight="light"
-              customClassName="msm:text-[0.875rem] mlg:text-[1rem] hover:underline underline-offset-1"
+              customClassName="msm:text-[0.875rem] mlg:text-[1rem] hover:underline underline-offset-4"
             >
               Block B, Ground Floor AUJ Complex, 564/565 Independence Ave,
               Central Business District, 900211, Abuja.
@@ -147,12 +145,11 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         title="Ready to have a conversation with us?"
         explanation="Schedule a meeting with a consultant right away"
         button={
-          <Button
-            variant="primary"
-            label="Book a Consultation"
-            customClassName="mt-[2rem]"
-            onClick={openConsultationModal}
-          />
+          <a href="/Company Brochure.pdf" download="Company Brochure.pdf">
+            <button className="bg-transparent border-afenoid-dark-green border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-afenoid-dark-green text-center text-base h-auto w-auto font-proxima-nova font-regular mt-8 hover:bg-afenoid-lemon ">
+              Company Profile
+            </button>
+          </a>
         }
       />
     </div>

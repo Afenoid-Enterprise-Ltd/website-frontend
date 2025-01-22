@@ -20,7 +20,7 @@ const HeroSection = () => {
         caption: "Our Purpose",
         title: "To help digital-age organisations become more resilient",
         description:
-          "We achieve this by improving an organization’s digital strategy, performance, compliance assurance, and staff competence levels.",
+          "and equip their professionals everywhere to become more competent.",
           identifier: "purpose",
       },
       image: PurposeImg,

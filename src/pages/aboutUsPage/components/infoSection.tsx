@@ -83,7 +83,7 @@ const InfoSection = () => {
         caption: "",
         title: "Our Team",
         description:
-          "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISMS and BCMS experts, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our French-speaking auditors and implementers ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
+          "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISO consultants, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our English and French-speaking consultants ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
           identifier: "team",
       },
       image: TeamImg,
@@ -104,12 +104,12 @@ const InfoSection = () => {
     {
       icon: BankIcon,
       title: 40,
-      description: "Implementation conducted in the last 10 years",
+      description: "ISO implementation conducted in the last 10year",
     },
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Providing services to clients in nearly 50 countries.",
+      description: "Countries reached in the last decade.",
     },
   ];
 
@@ -141,13 +141,6 @@ const InfoSection = () => {
             accessible and achievable.
           </Text>
         </div>
-        {/* <div>
-          <Button
-            variant="primary"
-            label="Book a Consultation"
-            customClassName=""
-          />
-        </div> */}
       </div>
       <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
         {numberData.map((number, index) => (

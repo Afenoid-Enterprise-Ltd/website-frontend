@@ -7,7 +7,7 @@ interface OutletProps {
 
 const Outlet:React.FC<OutletProps> = ({children}) => {
   return (
-    <section className="max-w-[2000px] mx-auto">
+    <section className="max-w-[1750px] mx-auto">
       <Navbar />
       {children}
       <Footer />

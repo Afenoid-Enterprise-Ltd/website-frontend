@@ -73,6 +73,7 @@ import ErrorImg from "./error-image.webp";
 import FixMain from "./fix-main.webp";
 import SkylineWhite from "./skyline-white.webp";
 import NeuroscienceImg from "./neuroscience.webp";
+import CompanyProfileImg from "./company-profile.webp"
 
 export {
   MainLogoSVG,
@@ -149,5 +150,6 @@ export {
   ErrorImg,
   FixMain,
   SkylineWhite,
-  NeuroscienceImg
+  NeuroscienceImg,
+  CompanyProfileImg
 };

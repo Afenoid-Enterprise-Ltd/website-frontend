@@ -14,7 +14,7 @@ const Consulting: React.FC<ConsultingProps> = (props) => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Consulting",
+      title: "Transformation Consulting",
       description:
         "Our digital transformation consulting services help to leverage digital technologies, tools, and platforms needful to transform your business operations and processes, improve performance and drive growth.",
     },

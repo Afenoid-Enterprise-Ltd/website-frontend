@@ -4,9 +4,9 @@ const phoneNumberRegExp =
   /^\+?([0-9]{1,3})?[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,9})$/
 
 const serviceOptions = [
-  "Auditing",
-  "Consulting",
-  "Training",
+  "Trust Services",
+  "Transformation Consulting",
+  "Skills Development",
 ];
 
 const countryOptions = [

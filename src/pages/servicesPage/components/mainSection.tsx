@@ -66,7 +66,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Consulting
+          Transformation Consulting
         </button>
         <button
           onClick={() => handleNavigation("auditing")}
@@ -76,7 +76,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Auditing
+          Trust Services
         </button>
         <button
           onClick={() => handleNavigation("training")}
@@ -86,7 +86,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Training
+          Skills Development
         </button>
       </div>
       <section>{renderContent()}</section>

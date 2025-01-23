@@ -14,7 +14,7 @@ const Auditing: React.FC<AuditingProps> = (props) => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Auditing",
+      title: "Trust Services",
       description:
         "Lack of auditing undermines digital trust, reducing tech adoption, productivity, business opportunities, & exposing value leakages. This ensures compliance, mitigate risks, & foster trust.",
     },

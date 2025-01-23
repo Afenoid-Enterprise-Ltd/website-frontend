@@ -62,14 +62,14 @@ const ConsultationForm: React.FC<FormProps> = ({ isOpen, onClose }) => {
   };
 
   const servicesData = [
-    { label: "Auditing", value: "Auditing" },
+    { label: "Trust Services", value: "Trust Services" },
     {
-      label: "Consulting",
-      value: "Consulting",
+      label: "Transformation Consulting",
+      value: "Transformation Consulting",
     },
     {
-      label: "Training",
-      value: "Training",
+      label: "Skills Development",
+      value: "Skills Development",
     },
   ];
 

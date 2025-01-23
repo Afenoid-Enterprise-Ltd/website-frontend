@@ -93,12 +93,12 @@ const NumbersSection = () => {
     {
       icon: PeopleIcon,
       title: 200,
-      description: "Training sessions in the last 5years",
+      description: "Training sessions in the last 5 years",
     },
     {
       icon: BankIcon,
       title: 40,
-      description: "ISO implementation conducted in the last 10years",
+      description: "ISO implementation conducted in the last 10 years",
     },
     {
       icon: GlobeIcon,

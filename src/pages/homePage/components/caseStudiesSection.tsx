@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Text, Button } from "../../../ui";
 import { CallToAction, ArticleCard } from "../../../components";
-import { HomePageCaseStudiesImg } from "../../../assets";
+import { OfficeLocationImg } from "../../../assets";
 
 interface ConsultationProps {
   openConsultationModal: () => void;
@@ -17,7 +17,7 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
         <ArticleCard
           title="Let’s Be Part of Your Journey Towards Resilience"
           description="Discover our service offerings and our approach in addressing risks across people, processes, and technology."
-          image={HomePageCaseStudiesImg}
+          image={OfficeLocationImg}
           caseStudy={false}
           profile={true}
           reverse={true}

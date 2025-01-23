@@ -78,7 +78,7 @@ const ArticleCard: React.FC<ArticleCardProps> = (props) => {
         </div>
       </div>
 
-      <div className="w-[45%] mmlg:w-full">
+      <div className="w-[45%] h-[25rem] mmlg:w-full">
         <img
           src={image}
           alt="Article Card Image"

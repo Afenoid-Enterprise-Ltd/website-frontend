@@ -12,7 +12,7 @@ const Home = () => {
       description: "APMG, ISACA, PCI SSC, SWIFT",
       link: "/",
     },
-    { title: "Our Services", description: "Consulting", link: "/" },
+    { title: "Our Services", description: "Transformation Consulting", link: "/" },
     { title: "Our Services", description: "Auditing", link: "/" },
     { title: "Our Services", description: "Training", link: "/" },
     { title: "Case Studies", description: "", link: "/" },

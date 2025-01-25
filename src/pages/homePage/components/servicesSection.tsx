@@ -37,7 +37,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section>
+    <section className="w-screen px-[5rem] msm:px-6">
       <div>
         <Text
           variant="h3"
@@ -48,7 +48,7 @@ const ServicesSection = () => {
         >
           Our Services
         </Text>
-        <div className="flex justify-evenly items-start gap-10 px-[5rem] mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 msm:px-6">
+        <div className="flex justify-between items-start gap-10 mb-[10rem] mmlg:grid mmlg:grid-cols-2 msm:grid-cols-1 ">
           {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard
               title={caseStudy.title}

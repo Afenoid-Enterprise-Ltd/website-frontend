@@ -28,12 +28,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
 
   return (
     <div
-      className="flex flex-col justify-between gap-5 msm:w-full"
+      className="flex flex-col justify-evenly gap-5 msm:w-full"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className=" flex h-[15rem] w-[30rem] mxs:h-[12.5rem] mxxl:w-full">
+      <div className=" flex h-[15rem] w-[25rem] mxs:h-[12.5rem] mxxl:w-full">
         <img
           src={image}
           alt="Case Study Image"

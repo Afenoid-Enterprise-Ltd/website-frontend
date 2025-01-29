@@ -12,16 +12,17 @@ const MainLogo = () => {
 
     // Clean up the event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
+    console.log(screenWidth)
   }, []);
 
   return (
-    <div>
+    <div className="flex justify-center items-center w-[120px] h-[60px]">
       <img
         src={MainLogoSVG}
         alt="Logo"
-        width={screenWidth <= 425 ? 90 : 120}
+        // width={screenWidth <= 425 ? 90 : 120}
         loading="lazy"
-        className="object-cover"
+        className="object-cover w-full h-full"
         style={{imageRendering: 'auto'  }}
       />
     </div>

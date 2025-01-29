@@ -27,6 +27,7 @@ import {
   EtranzactLogo,
   ShellLogo,
   SkylineImg,
+  HomeHeroImage,
 } from "../../../assets";
 
 interface CountUpProps {
@@ -76,7 +77,7 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   return (
     <span
       ref={ref}
-      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green mmd:text-[2rem]"
+      className="text-[4rem] font-medium font-raleway text-afenoid-dark-green mmd:text-[2rem]"
     >
       0
     </span>
@@ -87,23 +88,23 @@ const NumbersSection = () => {
   const numberData = [
     {
       icon: CreditCardIcon,
-      title: 120,
-      description: "PCI DSS assessments carried out over the past 10 years.",
+      title: 200,
+      description: "IT GRC services carried out in 2024",
     },
     {
       icon: PeopleIcon,
-      title: 200,
-      description: "Training sessions in the last 5 years",
+      title: 1000,
+      description: "professionals trained in 2024",
     },
     {
       icon: BankIcon,
-      title: 40,
-      description: "ISO implementation conducted in the last 10 years",
+      title: 13,
+      description: "years of continuous IT GRC service delivery",
     },
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Countries reached in the last decade",
+      description: "Providing services to clients in nearly 50 countries.",
     },
   ];
 
@@ -148,24 +149,43 @@ const NumbersSection = () => {
             fontWeight="light"
             fontFamily="proxima-nova"
           >
-            We transform complex compliance requirements into clear, actionable strategies. 
+            We transform complex compliance requirements into clear, actionable
+            strategies. Our proven expertise helps you create robust IT systems
+            that set new standards for security and performance.
           </Text>
         </div>
-        <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
-          {numberData.map((number, index) => (
-            <Number
-              icon={number.icon}
-              title={number.title}
-              description={number.description}
-              key={index}
-            />
-          ))}
+
+        <div className="w-[70%] my-[3rem] mx-auto">
+          <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
+        </div>
+
+        <div className="my-20">
+          <Text
+            variant="h5"
+            align="center"
+            color="af-dark-green"
+            fontWeight="medium"
+            fontFamily="raleway"
+            customClassName="text-[36px]"
+          >
+            Our Experience on a global scale
+          </Text>
+          <div className="flex justify-between gap-12 my-[4rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
+            {numberData.map((number, index) => (
+              <Number
+                icon={number.icon}
+                title={number.title}
+                description={number.description}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       <img src={SkylineImg} alt="Skyline Pattern" loading="lazy" />
       <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem] ">
-        <Marquee pauseOnHover={false} speed={20} direction="left">
+        <Marquee pauseOnHover={false} speed={200} direction="left">
           {clients.map((client, index) => (
             <img
               src={client}
@@ -173,7 +193,7 @@ const NumbersSection = () => {
               key={index}
               className="max-w-auto mr-24 object-contain mmd:max-w-12 mmd:mr-16"
               loading="lazy"
-              style={{imageRendering: "crisp-edges"}}
+              style={{ imageRendering: "crisp-edges" }}
             />
           ))}
         </Marquee>
@@ -210,7 +230,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
       <div>
         <Text
           variant="h6"
-          fontFamily="proxima-nova"
+          fontFamily="raleway"
           fontWeight="light"
           align="center"
           customClassName=""

@@ -21,7 +21,9 @@ export default {
         gambetta: ["Gambetta", "serif"],
         "proxima-nova": ["Proxima Nova", "sans-serif"],
         "playfair-display": ["Playfair Display", "serif"],
-        montserrat: ["Montserrat", "sans-serif"]
+        montserrat: ["Montserrat", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       screens: {
         xs: "320px",

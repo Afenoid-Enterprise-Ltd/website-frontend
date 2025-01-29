@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Text } from "../../../ui";
+import { Button, Text } from "../../../ui";
 import { ProtectionImg, ReliabilityImg } from "../../../assets";
 import { IoCheckmarkOutline } from "react-icons/io5";
 import AOS from "aos";
@@ -29,10 +29,10 @@ const HeroDivs = () => {
         <div className="w-1/2 flex flex-col gap-4 mmd:w-full">
           <Text
             variant="h3"
-            fontFamily="gambetta"
+            fontFamily="raleway"
             align="left"
             fontWeight="medium"
-            customClassName="msm:text-h4"
+            customClassName="msm:text-h4 text-[32px]"
           >
             Protect What Matters Most
           </Text>
@@ -44,6 +44,7 @@ const HeroDivs = () => {
             fontFamily="proxima-nova"
             fontWeight="light"
             align="left"
+            customClassName="text-[20px] font-regular"
           >
             We strengthen your organization by implementing proven security
             frameworks and industry standards. Our comprehensive approach
@@ -63,10 +64,10 @@ const HeroDivs = () => {
         <div className="w-1/2 flex flex-col gap-4 mmd:w-full">
           <Text
             variant="h3"
-            fontFamily="gambetta"
+            fontFamily="raleway"
             align="left"
             fontWeight="medium"
-            customClassName="msm:text-h4"
+            customClassName="msm:text-h4 text-[32px]"
           >
             We prioritize the{" "}
             <span className="text-afenoid-lemon">security</span> and{" "}
@@ -82,15 +83,19 @@ const HeroDivs = () => {
                 <IoCheckmarkOutline color="#76A62E" size={25} />
                 <Text
                   variant="h5"
-                  fontFamily="gambetta"
-                  fontWeight="semi-bold"
+                  fontFamily="proxima-nova"
+                  fontWeight="light"
                   align="left"
+                  customClassName="uppercase my-[1px] text-[20px] font-regular"
                 >
                   {listItem}
                 </Text>
               </li>
             ))}
           </ul>
+          <div>
+            <Button label="Schedule a Meeting" variant="primary"/>
+          </div>
         </div>
         <div className="w-1/2 mmd:hidden">
           <img src={ReliabilityImg} alt="Accompanying Image" loading="lazy" />

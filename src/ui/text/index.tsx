@@ -22,6 +22,7 @@ const text = cva("", {
       "playfair-display": "font-playfair-display",
       montserrat: "font-montserrat",
       raleway: "font-raleway",
+      poppins: "font-poppins",
     },
     color: {
       "af-green": "text-afenoid-green",

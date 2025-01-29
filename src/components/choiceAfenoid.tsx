@@ -41,7 +41,7 @@ const ChoiceAfenoid = () => {
         align="center"
         color="af-dark-green"
         fontWeight="medium"
-        fontFamily="raleway"
+        fontFamily="poppins"
         customClassName="mb-3 msm:text-h4"
       >
         Our Values
@@ -56,7 +56,7 @@ const ChoiceAfenoid = () => {
         Here's how we CARE for your security solutions
       </Text>
 
-      <div className="flex gap-12 my-12 mlg:grid mlg:grid-cols-2 mmd:flex mmd:flex-col ">
+      <div className="flex justify-between items-center gap-12 my-12 mlg:grid mlg:grid-cols-2 mmd:flex mmd:flex-col ">
         {solutionData.map((solution, index) => (
           <Solution
             icon={solution.icon}
@@ -92,10 +92,10 @@ export const Solution: React.FC<SolutionProps> = ({
         <Text
           variant="h5"
           color="af-green"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           fontWeight="bold"
           align="center"
-          customClassName="uppercase"
+          customClassName="uppercase text-[20px]"
         >
           {title}
         </Text>
@@ -106,7 +106,7 @@ export const Solution: React.FC<SolutionProps> = ({
           fontFamily="proxima-nova"
           fontWeight="light"
           align="center"
-          customClassName=""
+          customClassName="text-[20px]"
         >
           {description}
         </Text>

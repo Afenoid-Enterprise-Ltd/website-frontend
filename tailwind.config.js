@@ -23,6 +23,7 @@ export default {
         "playfair-display": ["Playfair Display", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       screens: {
         xs: "320px",

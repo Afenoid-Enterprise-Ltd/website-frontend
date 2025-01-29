@@ -20,7 +20,8 @@ const text = cva("", {
       "proxima-nova": "font-proxima-nova",
       gambetta: "font-gambetta",
       "playfair-display": "font-playfair-display",
-      montserrat: "font-montserrat"
+      montserrat: "font-montserrat",
+      raleway: "font-raleway",
     },
     color: {
       "af-green": "text-afenoid-green",

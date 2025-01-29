@@ -41,10 +41,10 @@ const ChoiceAfenoid = () => {
         align="center"
         color="af-dark-green"
         fontWeight="medium"
-        fontFamily="gambetta"
+        fontFamily="raleway"
         customClassName="mb-3 msm:text-h4"
       >
-        Why choose Afenoid?
+        Our Values
       </Text>
       <Text
         variant="h5"
@@ -53,7 +53,7 @@ const ChoiceAfenoid = () => {
         fontWeight="light"
         fontFamily="proxima-nova"
       >
-        Here's why we are the best provider for your security solutions
+        Here's how we CARE for your security solutions
       </Text>
 
       <div className="flex gap-12 my-12 mlg:grid mlg:grid-cols-2 mmd:flex mmd:flex-col ">

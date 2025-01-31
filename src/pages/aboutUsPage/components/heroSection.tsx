@@ -1,5 +1,5 @@
 import { HeroDiv } from "./heroDiv";
-import { MissionImg, PurposeImg } from "../../../assets";
+import { AboutUsMissionImg, AboutUsPurposeImg, AboutUsHeroImg } from "../../../assets";
 import { Slogan } from "../../../components";
 import { Text } from "../../../ui";
 
@@ -8,28 +8,51 @@ const HeroSection = () => {
     {
       heroTexts: {
         caption: "Our Mission",
-        title: "To become a global brand of African origin,",
         description:
-          'That is more trusted, respected, and preferred than any of the "Big 4" consulting firms in every market we serve in the 2020s',
-          identifier: "mission",
+          'To become a global brand of African origin, that is trusted, respected, and preferred in every market we serve in the 2020s.',
+        identifier: "mission",
       },
-      image: MissionImg,
+      image: AboutUsMissionImg,
     },
     {
       heroTexts: {
         caption: "Our Purpose",
-        title: "To help digital-age organisations become more resilient",
         description:
-          "and equip their professionals everywhere to become more competent.",
-          identifier: "purpose",
+          "To help digital-age organisations become more resilient and equip their professionals everywhere to become more competent.",
+        identifier: "purpose",
       },
-      image: PurposeImg,
+      image: AboutUsPurposeImg,
     },
   ];
 
   return (
     <section className=" bg-white">
-      <section className="px-[5rem] flex flex-col gap-28 py-4 mb-[5rem] mlg:gap-14 msm:px-[3rem] mxs:px-[2rem]">
+      <section
+        className="w-screen 2xl:w-full h-[90vh] bg-cover bg-center flex flex-col justify-center items-center "
+        style={{ backgroundImage: `url(${AboutUsHeroImg})` }}
+      >
+        <Text
+          variant="h5"
+          fontWeight="medium"
+          fontFamily="raleway"
+          align="center"
+          color="floral-white"
+          customClassName="text-[42px]"
+        >
+          About Afenoid
+        </Text>
+        <Text
+          variant="h5"
+          fontWeight="regular"
+          fontFamily="proxima-nova"
+          align="center"
+          color="floral-white"
+          customClassName="text-[24px]"
+        >
+          Let's explore opportunities that meet your organizational needs
+        </Text>
+      </section>
+      <section className="px-[5rem] flex flex-col gap-28 py-4 my-[5rem] mlg:gap-14 msm:px-[3rem] mxs:px-[2rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}

@@ -95,7 +95,7 @@ export const Solution: React.FC<SolutionProps> = ({
           fontFamily="raleway"
           fontWeight="bold"
           align="center"
-          customClassName="uppercase text-[20px]"
+          customClassName="uppercase text-[24px]"
         >
           {title}
         </Text>
@@ -104,7 +104,7 @@ export const Solution: React.FC<SolutionProps> = ({
         <Text
           variant="h5"
           fontFamily="proxima-nova"
-          fontWeight="light"
+          fontWeight="regular"
           align="center"
           customClassName="text-[20px]"
         >

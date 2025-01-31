@@ -39,7 +39,7 @@ const text = cva("", {
       thin: "font-thin",
       "extra-light": "font-extra-light",
       light: "font-light",
-      regular: "font-regular",
+      regular: "font-normal",
       medium: "font-medium",
       "semi-bold": "font-semi-bold",
       bold: "font-bold",

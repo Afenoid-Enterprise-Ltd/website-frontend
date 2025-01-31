@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Text, Button } from "../../../ui";
-import { CallToAction, ArticleCard } from "../../../components";
-import { OfficeLocationImg } from "../../../assets";
+import { HandShakeImg } from "../../../assets";
 
 interface ConsultationProps {
   openConsultationModal: () => void;
@@ -12,30 +11,45 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
   const { openConsultationModal } = props;
 
   return (
-    <section>
-      <div className="bg-white px-[10rem] py-[5rem] mlg:px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 msm:pt-28">
-        <ArticleCard
-          title="Let’s Be Part of Your Journey Towards Resilience"
-          description="Discover our service offerings and our approach in addressing risks across people, processes, and technology."
-          image={OfficeLocationImg}
-          caseStudy={false}
-          profile={true}
-          reverse={true}
-        />
+    <section className="p-[5rem] my-[5rem]">
+      <div
+        className=" w-full min-h-[500px] bg-cover bg-no-repeat bg-center flex justify-start items-center"
+        style={{ backgroundImage: `url(${HandShakeImg})` }}
+      >
+        <div className="w-full px-[4rem]">
+          <div className="flex flex-col w-[50%]">
+            <Text
+              variant="h2"
+              align="left"
+              color="af-white"
+              fontFamily="raleway"
+              fontWeight="bold"
+              customClassName="text-[40px]"
+            >
+              How can we help you?
+            </Text>
+            <Text
+              variant="h6"
+              align="left"
+              color="af-white"
+              fontFamily="proxima-nova"
+              fontWeight="regular"
+              customClassName="text-[24px] my-4"
+            >
+              Need to make an inquiry? Reach out to us today and let’s discuss
+              how we can support your organization.
+            </Text>
+            <div>
+              <Button
+                variant="secondary"
+                label="Contact Us"
+                onClick={openConsultationModal}
+                customClassName="border-white text-white"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <CallToAction
-        title="Our journey with you starts here"
-        explanation="Looking to implement digital trust solutions, assess your
-          organization's resilience, or enhance your professional expertise?"
-        button={
-          <Button
-            variant="secondary"
-            label="Book a Consultation"
-            customClassName="mt-[2rem]"
-            onClick={openConsultationModal}
-          />
-        }
-      />
     </section>
   );
 };

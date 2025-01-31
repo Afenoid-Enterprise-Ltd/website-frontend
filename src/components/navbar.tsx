@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
               <Link
                 to={navlink.link}
                 key={index}
-                className={`font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
+                className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
                   isActive
                     ? "font-bold hover:scale-100"
                     : "hover:scale-[1.05] hover:text-afenoid-lemon"

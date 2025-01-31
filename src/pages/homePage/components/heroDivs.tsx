@@ -7,10 +7,10 @@ import "aos/dist/aos.css";
 
 const HeroDivs = () => {
   const listItems = [
-    "Digital Strategy",
-    "Performance Improvement",
-    "Compliance Assurance",
-    "Competence Development",
+    {first: "D", second: "igital", third: " S", fourth: "trategy"},
+    {first: "P", second: "erformance", third: "I", fourth: "mprovement"},
+    {first: "C", second: "ompliance", third: "A", fourth: "ssurance"},
+    {first: "C", second: "ompetence", third: "D", fourth: "evelopment"}
   ];
 
   useEffect(() => {
@@ -50,6 +50,9 @@ const HeroDivs = () => {
             frameworks and industry standards. Our comprehensive approach
             addresses risks across your people, processes, and technology.
           </Text>
+          <div>
+            <Button label="Learn More" variant="primary"/>
+          </div>
         </div>
         <div className="w-1/2 mmd:hidden">
           <img src={ProtectionImg} alt="Accompanying Image" loading="lazy" />
@@ -86,15 +89,15 @@ const HeroDivs = () => {
                   fontFamily="proxima-nova"
                   fontWeight="light"
                   align="left"
-                  customClassName="uppercase my-[1px] text-[20px] font-regular"
+                  customClassName="uppercase my-[1px] text-[20px] font-normal"
                 >
-                  {listItem}
+                  {listItem.first}<span className="text-[16px] font-normal">{listItem.second}</span> {listItem.third}<span className="text-[16px] font-normal">{listItem.fourth}</span>
                 </Text>
               </li>
             ))}
           </ul>
           <div>
-            <Button label="Schedule a Meeting" variant="primary"/>
+            <Button label="Schedule a Meeting" variant="primary" />
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">

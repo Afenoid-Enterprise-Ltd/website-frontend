@@ -1,34 +1,30 @@
-import { Text, Button } from "../../../ui";
-import { Link } from "react-router-dom";
+import { Text, } from "../../../ui";
 import {
   ServicesImg1,
   ServicesImg2,
   ServicesImg3,
-  HomePageServicesImg,
-  HomeServicesIconBg
 } from "../../../assets";
-import { CaseStudyCard, Slogan } from "../../../components";
+import { CaseStudyCard, } from "../../../components";
 
 const ServicesSection = () => {
-  const currentScreenWidth = window.innerWidth;
 
   const caseStudyData = [
     {
-      title: "TRANSFORMATION CONSULTING",
+      title: "CONSULTATION",
       description:
         "Our consultation services help organizations leverage effective digital capabilities to stabilize, optimize, and improve business operations. ",
       image: ServicesImg1,
       route: "/services#consulting",
     },
     {
-      title: "TRUST SERVICES",
+      title: "AUDITING",
       description:
         "Lack of auditing erodes digital trust, hindering tech adoption, productivity, and business opportunities. It ensures compliance, mitigates risks, and builds trust.",
       image: ServicesImg2,
       route: "/services#auditing",
     },
     {
-      title: "SKILLS DEVELOPMENT",
+      title: "TRAINING",
       description:
         "We support skill development in IT governance, service management, risk management, information security, cybersecurity, data privacy, and auditing.",
       image: ServicesImg3,
@@ -41,10 +37,10 @@ const ServicesSection = () => {
       <div>
         <Text
           variant="h3"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           fontWeight="medium"
           align="center"
-          customClassName="my-[5rem] msm:text-h4 msm:mb-[3.3rem] msm:mt-[5rem]"
+          customClassName="text-[32px] my-[5rem] msm:text-h4 msm:mb-[3.3rem] msm:mt-[5rem]"
         >
           Our Services
         </Text>
@@ -60,7 +56,7 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-      <Slogan>
+      {/* <Slogan>
         <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
           <Text
             variant="body-reg"
@@ -80,8 +76,8 @@ const ServicesSection = () => {
             We strengthen organizations and equip professionals.
           </Text>
         </div>
-      </Slogan>
-      <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-0 msm:pt-0 msm:px-0">
+      </Slogan> */}
+      {/* <div className=" bg-white px-[5rem] py-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-0 msm:pt-0 msm:px-0">
         <div className="p-[5rem] pb-0 bg-afenoid-green w-full flex flex-col justify-between items-stretch relative msm:p-[3rem] msm:pb-0 mxs:p-[1.5rem] mxs:pb-0 msm:w-full">
           <div className="w-full relative">
             <div className="w-[60%] flex flex-col gap-8 pb-[10rem] mlg:w-full">
@@ -179,7 +175,7 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

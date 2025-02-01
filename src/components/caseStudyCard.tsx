@@ -33,7 +33,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className=" flex h-[15rem] w-[25rem] mxs:h-[12.5rem] mxxl:w-full">
+      <div className=" flex h-[15rem] w-full mxs:h-[12.5rem] mxxl:w-full">
         <img
           src={image}
           alt="Case Study Image"
@@ -44,8 +44,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       <Text
         variant="h5"
         color="af-dark-green"
-        fontFamily="gambetta"
-        fontWeight="medium"
+        fontFamily="raleway"
+        fontWeight="bold"
+        customClassName="text-[16px]"
       >
         {title?.split("*").map((part, index) => (
           <React.Fragment key={index}>
@@ -61,8 +62,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
       <Text
         variant="body-reg"
         color="af-dark-green"
-        fontFamily="gambetta"
-        fontWeight="light"
+        fontFamily="proxima-nova"
+        fontWeight="regular"
+        customClassName="text-[20px]"
       >
         {description?.split("*").map((part, index) => (
           <React.Fragment key={index}>

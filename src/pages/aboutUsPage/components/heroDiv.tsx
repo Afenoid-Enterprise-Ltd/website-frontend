@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 type HeroText = {
   caption: string;
-  title: string;
   description: string;
   identifier: string;
 };
@@ -35,25 +34,11 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           <Text
             variant="h6"
             color="af-green"
-            fontFamily="montserrat"
-            customClassName="uppercase"
+            fontFamily="proxima-nova"
+            fontWeight="regular"
+            customClassName="uppercase !text-[32px]"
           >
             {heroTexts.caption}
-          </Text>
-        </motion.div>
-
-        <motion.div
-          initial={{ x: initialX * 2.5, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        >
-          <Text
-            variant="h2"
-            color="af-dark-green"
-            fontFamily="gambetta"
-            fontWeight="medium"
-          >
-            {heroTexts.title}
           </Text>
         </motion.div>
         <motion.div
@@ -67,6 +52,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
             fontFamily="proxima-nova"
             fontWeight="light"
             align="left"
+            customClassName="!text-[24px]"
           >
             {heroTexts.description}
           </Text>
@@ -96,6 +82,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           fontFamily="proxima-nova"
           fontWeight="light"
           align="left"
+          customClassName="!text-[24px]"
         >
           {heroTexts.description}
         </Text>

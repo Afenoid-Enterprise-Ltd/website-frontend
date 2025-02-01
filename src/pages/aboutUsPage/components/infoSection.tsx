@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { animate } from "framer-motion";
-import { Text, } from "../../../ui";
+import { Text, Button } from "../../../ui";
 import { HeroDiv } from "./heroDiv";
 import {
   StoryImg,
-  TeamImg,
+  AboutUsTeamImg,
+  AboutUsDownloadProfile,
   CreditCardIcon,
   PeopleIcon,
   BankIcon,
   GlobeIcon,
 } from "../../../assets";
-import { ChoiceAfenoid } from "../../../components";
+import { ChoiceAfenoid, Slogan } from "../../../components";
 
 interface CountUpProps {
   start?: number;
@@ -59,7 +60,7 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   return (
     <span
       ref={ref}
-      className="text-[3.5rem] font-semibold font-gambetta text-afenoid-dark-green mmd:text-[2rem]"
+      className="text-[4rem] font-medium font-raleway text-afenoid-dark-green mmd:text-[2rem]"
     >
       0
     </span>
@@ -70,79 +71,50 @@ const InfoSection = () => {
   const heroStaticData = [
     {
       heroTexts: {
-        caption: "",
-        title: "Our Story",
+        caption: "Our Story",
         description:
           "Afenoid's story is one of innovation and commitment to digital resilience. From our early days, we have collaborated with organizations in both the public and private sectors, helping them secure their digital environments, maintain compliance, and drive sustainable growth. Our comprehensive approach extends beyond technology, but in empowering business professionals with the skills and competencies they need to succeed in a fast-evolving digital space.",
-          identifier: "story",
+        identifier: "story",
       },
       image: StoryImg,
     },
     {
       heroTexts: {
-        caption: "",
-        title: "Our Team",
+        caption: "Our Team",
         description:
           "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISO consultants, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our English and French-speaking consultants ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
-          identifier: "team",
+        identifier: "team",
       },
-      image: TeamImg,
+      image: AboutUsTeamImg,
     },
   ];
 
   const numberData = [
     {
       icon: CreditCardIcon,
-      title: 120,
-      description: "PCI DSS assessments carried out over the past 10 years.",
+      title: 200,
+      description: "IT GRC services carried out in 2024",
     },
     {
       icon: PeopleIcon,
-      title: 200,
-      description: "Training sessions in the last 5 years",
+      title: 1000,
+      description: "professionals trained in 2024",
     },
     {
       icon: BankIcon,
-      title: 40,
-      description: "ISO implementation conducted in the last 10year",
+      title: 13,
+      description: "years of continuous IT GRC service delivery",
     },
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Countries reached in the last decade.",
+      description: "Providing services to clients in nearly 50 countries.",
     },
   ];
 
   return (
-    <section className="p-[5rem] bg-white msm:p-[3rem] mxs:px-4">
-      <div className="flex flex-col items-center gap-4 px-[15rem] mxl:px-[10rem] mmlg:px-[5rem] msm:px-[3rem] mxs:px-0">
-        <div className="">
-          <Text
-            variant="h2"
-            align="center"
-            color="af-dark-green"
-            fontWeight="medium"
-            fontFamily="gambetta"
-            customClassName="mb-3"
-          >
-            Enterprise Security Within Your Reach
-          </Text>
-        </div>
-        <div>
-          <Text
-            variant="h5"
-            align="center"
-            color="af-dark-green"
-            fontWeight="light"
-            fontFamily="proxima-nova"
-          >
-            Transform your organization's security posture with Afenoid's
-            comprehensive suite of GRC services, making world-class standards
-            accessible and achievable.
-          </Text>
-        </div>
-      </div>
-      <div className="flex gap-12 mx-[5rem] my-[8rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
+    <section className="px-[5rem] bg-white msm:p-[3rem] mxs:px-4">
+      <div className="flex justify-between  gap-12 my-[4rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
         {numberData.map((number, index) => (
           <Number
             icon={number.icon}
@@ -153,7 +125,63 @@ const InfoSection = () => {
         ))}
       </div>
 
-      <section className="flex flex-col gap-28 my-[7rem] px-[10 rem]">
+      <div>
+        <Slogan>
+          <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
+            <Text
+              variant="body-reg"
+              color="af-green"
+              fontWeight="regular"
+              fontFamily="proxima-nova"
+              customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
+            >
+              At Afenoid
+            </Text>
+            <Text
+              variant="h2"
+              color="af-green"
+              fontFamily="raleway"
+              customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
+              fontWeight="regular"
+            >
+              We strengthen organizations and professionals.
+            </Text>
+          </div>
+        </Slogan>
+
+        <div className="w-[60%] mx-auto">
+          <Text
+            variant="h5"
+            fontFamily="raleway"
+            fontWeight="medium"
+            color="af-dark-green"
+            align="center"
+            customClassName="!text-[40px] mt-[3rem] mb-[1rem]"
+          >
+            Enterprise Security Within Your Reach
+          </Text>
+          <Text
+            variant="h5"
+            fontFamily="proxima-nova"
+            fontWeight="light"
+            color="af-dark-green"
+            align="center"
+            customClassName="!text-[28px]"
+          >
+            Transform your organization's security posture with Afenoid's
+            comprehensive suite of GRC services, making world-class standards
+            accessible and achievable.
+          </Text>
+
+          <Button
+            variant="primary"
+            label="Schedule a Meeting"
+            customClassName="mx-auto my-8"
+          />
+        </div>
+      </div>
+
+      <section className="flex flex-col gap-28 my-[10rem] px-[10 rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}
@@ -166,6 +194,44 @@ const InfoSection = () => {
 
       <div id="values">
         <ChoiceAfenoid />
+      </div>
+
+      <div
+        className="w-full h-[700px] bg-cover bg-no-repeat bg-center flex justify-start items-center my-[10rem]"
+        style={{ backgroundImage: `url(${AboutUsDownloadProfile})` }}
+      >
+        <div className="w-full px-[4rem]">
+          <div className="flex flex-col w-[50%]">
+            <Text
+              variant="h2"
+              align="left"
+              color="af-white"
+              fontFamily="raleway"
+              fontWeight="bold"
+              customClassName="!text-[40px]"
+            >
+              Let’s Be Part of Your Journey Towards Resilience
+            </Text>
+            <Text
+              variant="h6"
+              align="left"
+              color="af-white"
+              fontFamily="proxima-nova"
+              fontWeight="regular"
+              customClassName="!text-[24px] my-4"
+            >
+              Discover our service offerings and our approach in addressing
+              risks across people, processes, and technology.
+            </Text>
+            <div className="flex justify-start items-center">
+              <a href="">
+                <button className="bg-transparent border-white border-[3px] text-white text-center py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-base h-auto w-auto font-proxima-nova font-normal mt-8 transition ease-in-out delay-150 duration-300 hover:bg-afenoid-lemon hover:border-afenoid-lemon">
+                  Download Profile
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -181,9 +247,9 @@ type NumberProps = {
 
 export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-[20rem]">
       <div className="bg-[#9bc73c28] p-4 rounded-full">
-        <img src={icon} alt="Icon Image" loading="lazy"/>
+        <img src={icon} alt="Icon Image" loading="lazy" />
       </div>
       <div>
         <div className="my-[2rem]">
@@ -194,10 +260,10 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
       <div>
         <Text
           variant="h6"
-          fontFamily="proxima-nova"
-          fontWeight="light"
+          fontFamily="raleway"
+          fontWeight="regular"
           align="center"
-          customClassName=""
+          customClassName="!text-[20px]"
         >
           {description}
         </Text>

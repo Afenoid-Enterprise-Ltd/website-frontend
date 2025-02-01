@@ -73,7 +73,17 @@ import ErrorImg from "./error-image.webp";
 import FixMain from "./fix-main.webp";
 import SkylineWhite from "./skyline-white.webp";
 import NeuroscienceImg from "./neuroscience.webp";
-import CompanyProfileImg from "./company-profile.webp"
+import CompanyProfileImg from "./company-profile.webp";
+
+import HomeHeroImg from "./home-hero-image.webp";
+import ForwardImg from "./forward-img.webp";
+import HandShakeImg from "./handshake-img.webp";
+import AboutUsHeroImg from "./about-us-hero.webp";
+import AboutUsMissionImg from "./mission-img.webp";
+import AboutUsPurposeImg from "./purpose-img.webp";
+import AboutUsTeamImg from "./team-img.webp";
+import AboutUsDownloadProfile from "./download-profile.webp";
+import AboutUsLinkBg from "./about-us-link-img.webp";
 
 export {
   MainLogoSVG,
@@ -151,5 +161,14 @@ export {
   FixMain,
   SkylineWhite,
   NeuroscienceImg,
-  CompanyProfileImg
+  CompanyProfileImg,
+  HomeHeroImg,
+  ForwardImg,
+  HandShakeImg,
+  AboutUsHeroImg,
+  AboutUsMissionImg,
+  AboutUsPurposeImg,
+  AboutUsTeamImg,
+  AboutUsDownloadProfile,
+  AboutUsLinkBg
 };

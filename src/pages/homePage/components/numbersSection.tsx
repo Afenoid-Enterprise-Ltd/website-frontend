@@ -137,8 +137,8 @@ const NumbersSection = () => {
             align="center"
             color="af-dark-green"
             fontWeight="medium"
-            fontFamily="gambetta"
-            customClassName="mb-3 msm:text-h4 msm:mb-0"
+            fontFamily="raleway"
+            customClassName="mb-3 msm:text-h4 msm:mb-0 "
           >
             Optimize Your Security
           </Text>
@@ -155,7 +155,7 @@ const NumbersSection = () => {
           </Text>
         </div>
 
-        <div className="w-[70%] my-[3rem] mx-auto">
+        <div className="w-[60%] my-[3rem] mx-auto">
           <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
         </div>
 
@@ -166,7 +166,7 @@ const NumbersSection = () => {
             color="af-dark-green"
             fontWeight="medium"
             fontFamily="raleway"
-            customClassName="text-[36px]"
+            customClassName="!text-[36px]"
           >
             Our Experience on a global scale
           </Text>
@@ -185,7 +185,7 @@ const NumbersSection = () => {
 
       <img src={SkylineImg} alt="Skyline Pattern" loading="lazy" />
       <div className="w-full bg-afenoid-light-grey flex justify-between items-center py-[1.5rem] px-[5rem] mb-[5rem] msm:px-[3rem] ">
-        <Marquee pauseOnHover={false} speed={200} direction="left">
+        <Marquee pauseOnHover={false} speed={250} direction="left">
           {clients.map((client, index) => (
             <img
               src={client}
@@ -212,7 +212,7 @@ type NumberProps = {
 
 export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-[20rem]">
       <div className="bg-[#9bc73c28] p-4 rounded-full mmd:w-12 mmd:h-12 mmd:p-3">
         <img
           src={icon}
@@ -231,9 +231,9 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
         <Text
           variant="h6"
           fontFamily="raleway"
-          fontWeight="light"
+          fontWeight="regular"
           align="center"
-          customClassName=""
+          customClassName="!text-[20px]"
         >
           {description}
         </Text>

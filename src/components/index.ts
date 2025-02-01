@@ -12,3 +12,6 @@ export * from "./consultationForm";
 export * from "./scrollTop";
 export * from "./requestConsultation";
 export * from "./pageUnderConstruction";
+export * from "./contactUs";
+export * from "./aboutUs";
+export * from "./successStories";

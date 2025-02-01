@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Button, Text } from "../../../ui";
-import { ChoiceAfenoid } from "../../../components";
+import { Text } from "../../../ui";
+import { ChoiceAfenoid, AboutUs, SuccessStories } from "../../../components";
 import { HeroDivs } from "./heroDivs";
-import { ForwardImg } from "../../../assets";
+
 import {
   IsacaLogo,
   PecbLogo,
@@ -37,21 +37,11 @@ const ChoiceSection = () => {
   return (
     <section className="my-[3.5rem] px-[5rem] msm:px-6">
       <HeroDivs />
-      <div className="px-[3rem] flex flex-col mmlg:px-0">
+      <div className=" flex flex-col mmlg:px-0">
         <ChoiceAfenoid />
-        <div className="flex justify-center">
-          <Link to="/about-us">
-            <Button variant="secondary" label="About Us" />
-          </Link>
-        </div>
-        <div className="w-full h-auto my-[8rem]">
-          <img
-            src={ForwardImg}
-            alt="Image"
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
+        <AboutUs />
+        <SuccessStories />
+
         <div>
           <Text
             align="center"

@@ -44,12 +44,6 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               technology that drives them.
             </Text>
             <div className="flex justify-start items-center gap-7">
-              {/* <Button
-                variant="primary"
-                label="Schedule a Meeting"
-                customClassName="mb-6 mmlg:hidden"
-                onClick={openModal}
-              /> */}
               <button
                 className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:hidden"
                 onClick={openModal}

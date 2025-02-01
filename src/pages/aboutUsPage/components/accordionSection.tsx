@@ -1,18 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem } from "../../../components/accordion";
-import { CallToAction } from "../../../components";
 import { Text, Button } from "../../../ui";
-import { OfficeLocationImg } from "../../../assets";
+import { HandShakeImg } from "../../../assets";
 
 interface AccordionProps {
   openConsultationModal: () => void;
 }
 
-const AccordionSection: React.FC<AccordionProps>  = (props) => {
-
+const AccordionSection: React.FC<AccordionProps> = (props) => {
   const { openConsultationModal } = props;
-
 
   return (
     <div className="w-full mt-20 mxs:px-4">
@@ -20,25 +17,25 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
         <div className="w-[40%] mlg:w-[60%] msm:w-[70%] mxs:w-[80%] mxxs:w-full">
           <Text
             variant="h2"
-            fontWeight="regular"
-            fontFamily="gambetta"
+            fontWeight="medium"
+            fontFamily="raleway"
             align="center"
-            customClassName="uppercase"
+            customClassName="uppercase !text-[32px]"
           >
             Frequently Asked Questions
           </Text>
-          <p></p>
           <Text
             variant="h5"
-            fontWeight="medium"
+            fontWeight="light"
             fontFamily="proxima-nova"
             align="center"
+            customClassName="!text-[20px]"
           >
             Can't find the answer you're looking for? Reach out to our service
             support team with{" "}
             <Link
               to="mailto:serveme@afenoid.com"
-              className="font-semibold text-afenoid-lemon underline underline-offset-2"
+              className="font-medium text-afenoid-lemon underline underline-offset-2"
             >
               serveme@afenoid.com
             </Link>
@@ -48,14 +45,24 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
 
       <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" id="faqs">
         <Accordion>
-          <AccordionItem value="1" trigger="What is Afenoid About?">
+          <AccordionItem
+            value="1"
+            trigger="What is Afenoid About?"
+            mainFontType="raleway"
+            minorFontType="proxima-nova"
+          >
             Established in 2011, Afenoid Enterprise Limited is a Business and
             Technology service firm, that enables credible solutions to
             organizations and individuals for cyber resilience, digital trust,
             competence development, and managed services. Our top clients are
             dominant players in sub-Saharan Africa and the Middle East.
           </AccordionItem>
-          <AccordionItem value="2" trigger="What services does Afenoid offer?">
+          <AccordionItem
+            value="2"
+            trigger="What services does Afenoid offer?"
+            mainFontType="raleway"
+            minorFontType="proxima-nova"
+          >
             Digital Strategy: We orchestrate and catalyse your digital
             transformation investments from conceptualization to value
             realization.
@@ -77,6 +84,8 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
           <AccordionItem
             value="3"
             trigger="What management system, standards, and frameworks does Afenoid provide"
+            mainFontType="raleway"
+            minorFontType="proxima-nova"
           >
             <ul className="list-disc pl-[1rem]">
               <li>
@@ -90,7 +99,12 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
               <li>NIST</li>
             </ul>
           </AccordionItem>
-          <AccordionItem value="4" trigger="Who does Afenoid serve?">
+          <AccordionItem
+            value="4"
+            trigger="Who does Afenoid serve?"
+            mainFontType="raleway"
+            minorFontType="proxima-nova"
+          >
             <ul className="list-disc pl-[1rem]">
               <li>Financial Institutions</li>
               <li>Government Agencies</li>
@@ -103,7 +117,7 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
         </Accordion>
       </div>
 
-      <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
+      {/* <div className="bg-afenoid-light-lemon px-[5rem] py-10 flex gap-8 msm:px-[3rem] mxs:flex-col">
         <div className="w-1/2 h-[25rem] mxs:w-full">
           <img
             src={OfficeLocationImg}
@@ -147,9 +161,9 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
             </Text>
           </Link>
         </div>
-      </div>
+      </div> */}
 
-      <CallToAction
+      {/* <CallToAction
         title="Ready to have a conversation with us?"
         explanation="Schedule a meeting with a consultant right away"
         button={
@@ -159,9 +173,48 @@ const AccordionSection: React.FC<AccordionProps>  = (props) => {
             customClassName="mt-[2rem]"
             onClick={openConsultationModal}
           />
-
         }
-      />
+      /> */}
+      <div className="my-[10rem] px-[5rem]">
+        <div
+          className=" w-full h-[500px] bg-cover bg-no-repeat bg-center flex justify-start items-center"
+          style={{ backgroundImage: `url(${HandShakeImg})` }}
+        >
+          <div className="w-full px-[4rem]">
+            <div className="flex flex-col w-[50%]">
+              <Text
+                variant="h2"
+                align="left"
+                color="af-white"
+                fontFamily="raleway"
+                fontWeight="bold"
+                customClassName="!text-[40px]"
+              >
+                How can we help you?
+              </Text>
+              <Text
+                variant="h6"
+                align="left"
+                color="af-white"
+                fontFamily="proxima-nova"
+                fontWeight="regular"
+                customClassName="!text-[24px] my-4"
+              >
+                Need to make an inquiry? Reach out to us today and let’s discuss
+                how we can support your organization.
+              </Text>
+              <div>
+                <Button
+                  variant="secondary"
+                  label="Contact Us"
+                  onClick={openConsultationModal}
+                  customClassName="border-white text-white"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

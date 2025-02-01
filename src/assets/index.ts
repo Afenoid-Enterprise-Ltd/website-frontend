@@ -80,7 +80,9 @@ import ForwardImg from "./forward-img.webp";
 import HandShakeImg from "./handshake-img.webp";
 import AboutUsHeroImg from "./about-us-hero.webp";
 import AboutUsMissionImg from "./mission-img.webp";
-import AboutUsPurposeImg from "./purpose-img.webp"
+import AboutUsPurposeImg from "./purpose-img.webp";
+import AboutUsTeamImg from "./team-img.webp";
+import AboutUsDownloadProfile from "./download-profile.webp"
 
 export {
   MainLogoSVG,
@@ -164,5 +166,7 @@ export {
   HandShakeImg,
   AboutUsHeroImg,
   AboutUsMissionImg,
-  AboutUsPurposeImg
+  AboutUsPurposeImg,
+  AboutUsTeamImg,
+  AboutUsDownloadProfile
 };

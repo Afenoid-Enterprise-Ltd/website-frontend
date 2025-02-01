@@ -212,7 +212,7 @@ type NumberProps = {
 
 export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-[20rem]">
       <div className="bg-[#9bc73c28] p-4 rounded-full mmd:w-12 mmd:h-12 mmd:p-3">
         <img
           src={icon}
@@ -231,7 +231,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
         <Text
           variant="h6"
           fontFamily="raleway"
-          fontWeight="light"
+          fontWeight="regular"
           align="center"
           customClassName="!text-[20px]"
         >

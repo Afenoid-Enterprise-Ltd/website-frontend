@@ -36,7 +36,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
             color="af-green"
             fontFamily="proxima-nova"
             fontWeight="regular"
-            customClassName="uppercase text-[18px]"
+            customClassName="uppercase !text-[32px]"
           >
             {heroTexts.caption}
           </Text>
@@ -49,10 +49,10 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
         >
           <Text
             variant="h5"
-            fontFamily="raleway"
-            fontWeight="regular"
+            fontFamily="proxima-nova"
+            fontWeight="light"
             align="left"
-            customClassName="text-[28px]"
+            customClassName="!text-[24px]"
           >
             {heroTexts.description}
           </Text>
@@ -82,6 +82,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           fontFamily="proxima-nova"
           fontWeight="light"
           align="left"
+          customClassName="!text-[24px]"
         >
           {heroTexts.description}
         </Text>

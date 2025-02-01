@@ -28,7 +28,7 @@ const HeroSection = () => {
         </Text>
         <div className="flex justify-center items-center">
           <a href="/Afenoid Brochure.pdf" download="Company Brochure.pdf">
-            <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal mt-8 hover:bg-afenoid-lemon/75">
+            <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal mt-8 transition ease-in-out delay-150 duration-300 hover:bg-afenoid-lemon/75">
               Download Brochure
             </button>
           </a>

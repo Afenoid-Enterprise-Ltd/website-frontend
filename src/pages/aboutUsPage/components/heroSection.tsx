@@ -1,6 +1,10 @@
 import { HeroDiv } from "./heroDiv";
-import { AboutUsMissionImg, AboutUsPurposeImg, AboutUsHeroImg } from "../../../assets";
-import { Slogan } from "../../../components";
+import {
+  AboutUsMissionImg,
+  AboutUsPurposeImg,
+  AboutUsHeroImg,
+  HomeHeroImage,
+} from "../../../assets";
 import { Text } from "../../../ui";
 
 const HeroSection = () => {
@@ -9,7 +13,7 @@ const HeroSection = () => {
       heroTexts: {
         caption: "Our Mission",
         description:
-          'To become a global brand of African origin, that is trusted, respected, and preferred in every market we serve in the 2020s.',
+          "To become a global brand of African origin, that is trusted, respected, and preferred in every market we serve in the 2020s.",
         identifier: "mission",
       },
       image: AboutUsMissionImg,
@@ -62,27 +66,34 @@ const HeroSection = () => {
           />
         ))}
       </section>
-      <Slogan>
-        <div className="w-full h-auto bg-afenoid-light-grey p-[2rem] mxs:p-[1rem]">
-          <Text
-            variant="body-reg"
-            color="af-green"
-            fontFamily="proxima-nova"
-            customClassName="uppercase msm:text-[.8rem] mxs:text-[.5rem]"
-          >
-            At Afenoid
-          </Text>
-          <Text
-            variant="h2"
-            color="af-green"
-            fontFamily="gambetta"
-            customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
-            fontWeight="medium"
-          >
-            We strengthen organizations and professionals.
-          </Text>
+      <div className="w-full">
+        <Text
+          variant="h3"
+          fontFamily="raleway"
+          fontWeight="medium"
+          color="af-dark-green"
+          align="center"
+          customClassName="!text-[36px] mb-["
+        >
+          Strengthening Organizations
+        </Text>
+        <Text
+          variant="h5"
+          fontFamily="proxima-nova"
+          fontWeight="light"
+          color="af-dark-green"
+          align="center"
+          customClassName="!text-[24px]"
+        >
+          At Afenoid, we enhance organizational security and operational
+          resilience through robust standards implementation
+        </Text>
+
+        <div className="w-[60%] my-[3rem] mx-auto">
+          <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
         </div>
-      </Slogan>
+      </div>
+      
     </section>
   );
 };

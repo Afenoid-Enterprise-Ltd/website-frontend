@@ -84,6 +84,8 @@ import AboutUsPurposeImg from "./purpose-img.webp";
 import AboutUsTeamImg from "./team-img.webp";
 import AboutUsDownloadProfile from "./download-profile.webp";
 import AboutUsLinkBg from "./about-us-link-img.webp";
+import ResourcesHero from "./resourcesHero.webp";
+import ProfileCardBg from "./profileCardBg.webp"
 
 export {
   MainLogoSVG,
@@ -170,5 +172,7 @@ export {
   AboutUsPurposeImg,
   AboutUsTeamImg,
   AboutUsDownloadProfile,
-  AboutUsLinkBg
+  AboutUsLinkBg,
+  ResourcesHero,
+  ProfileCardBg
 };

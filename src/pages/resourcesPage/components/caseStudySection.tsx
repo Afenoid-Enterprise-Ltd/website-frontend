@@ -1,6 +1,5 @@
 import React from "react";
-import { Text, Button } from "../../../ui";
-import { ArticleImg1, HomePageCaseStudiesImg } from "../../../assets";
+import { Text } from "../../../ui";
 import { ResourcesGrid } from "./resourcesGrid.tsx";
 import { ProfileCard } from "./profileCard.tsx";
 import { CaseStudiesGrid } from "./caseStudiesGrid.tsx";
@@ -9,8 +8,7 @@ interface CaseStudyProps {
   openConsultationModal: () => void;
 }
 
-const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
-  const { openConsultationModal } = props;
+const CaseStudySection: React.FC<CaseStudyProps> = () => {
 
   return (
     <section className="bg-white">

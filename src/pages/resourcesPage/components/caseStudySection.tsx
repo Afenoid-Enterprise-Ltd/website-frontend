@@ -1,8 +1,6 @@
 import React from "react";
 import { Text, Button } from "../../../ui";
-import { ArticleCard } from "../../../components";
 import { ArticleImg1, HomePageCaseStudiesImg } from "../../../assets";
-import { CallToAction } from "../../../components";
 import { ResourcesGrid } from "./resourcesGrid.tsx";
 import { ProfileCard } from "./profileCard.tsx";
 import { CaseStudiesGrid } from "./caseStudiesGrid.tsx";
@@ -13,13 +11,6 @@ interface CaseStudyProps {
 
 const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
   const { openConsultationModal } = props;
-
-  const articleData = {
-    title: "Dive Deeper into Digital Trust",
-    description:
-      "Explore insightful articles on the latest trends and best practices in digital trust, cybersecurity, and compliance. Our content is designed to inform and inspire, helping you navigate the digital landscape.",
-    image: ArticleImg1,
-  };
 
   return (
     <section className="bg-white">
@@ -58,6 +49,10 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
         </div>
         <div className="my-[4rem]">
           <CaseStudiesGrid />
+        </div>
+
+        <div>
+
         </div>
 
       </div>

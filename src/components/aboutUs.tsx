@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="w-full">
       <div
-        className=" w-full h-[400px] bg-cover bg-no-repeat bg-center flex justify-between items-center px-[4rem]"
+        className=" w-full h-[300px] bg-cover bg-no-repeat bg-center flex justify-between items-center px-[4rem]"
         style={{ backgroundImage: `url(${AboutUsLinkBg})` }}
       >
         <div className="w-[50%]">

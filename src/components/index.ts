@@ -15,3 +15,4 @@ export * from "./pageUnderConstruction";
 export * from "./contactUs";
 export * from "./aboutUs";
 export * from "./successStories";
+export * from "./newsLetter";

@@ -51,7 +51,7 @@ const HeroDivs = () => {
             addresses risks across your people, processes, and technology.
           </Text>
           <div>
-            <Button label="Learn More" variant="primary"/>
+            <Button label="Learn More" variant="secondary"/>
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">
@@ -97,7 +97,7 @@ const HeroDivs = () => {
             ))}
           </ul>
           <div>
-            <Button label="Schedule a Meeting" variant="primary" />
+            <Button label="Schedule a Meeting" variant="secondary" />
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">

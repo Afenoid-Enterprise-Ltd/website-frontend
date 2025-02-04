@@ -113,8 +113,8 @@ const InfoSection = () => {
   ];
 
   return (
-    <section className="px-[5rem] bg-white msm:p-[3rem] mxs:px-4">
-      <div className="flex justify-between  gap-12 my-[4rem] mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
+    <section className=" bg-white ">
+      <div className="flex justify-between gap-12 my-[4rem] px-[5rem] msm:p-[3rem] mxs:px-4 mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
         {numberData.map((number, index) => (
           <Number
             icon={number.icon}
@@ -181,7 +181,7 @@ const InfoSection = () => {
         </div>
       </div>
 
-      <section className="flex flex-col gap-28 my-[10rem] px-[10 rem]">
+      <section className="flex flex-col gap-28 my-[10rem] px-[10rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}
@@ -192,43 +192,45 @@ const InfoSection = () => {
         ))}
       </section>
 
-      <div id="values">
+      <div id="values" className="px-[5rem] msm:p-[3rem] mxs:px-4">
         <ChoiceAfenoid />
       </div>
 
-      <div
-        className="w-full h-[700px] bg-cover bg-no-repeat bg-center flex justify-start items-center my-[10rem]"
-        style={{ backgroundImage: `url(${AboutUsDownloadProfile})` }}
-      >
-        <div className="w-full px-[4rem]">
-          <div className="flex flex-col w-[50%]">
-            <Text
-              variant="h2"
-              align="left"
-              color="af-white"
-              fontFamily="raleway"
-              fontWeight="bold"
-              customClassName="!text-[40px]"
-            >
-              Let’s Be Part of Your Journey Towards Resilience
-            </Text>
-            <Text
-              variant="h6"
-              align="left"
-              color="af-white"
-              fontFamily="proxima-nova"
-              fontWeight="regular"
-              customClassName="!text-[24px] my-4"
-            >
-              Discover our service offerings and our approach in addressing
-              risks across people, processes, and technology.
-            </Text>
-            <div className="flex justify-start items-center">
-              <a href="">
-                <button className="bg-transparent border-white border-[3px] text-white text-center py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-base h-auto w-auto font-proxima-nova font-normal mt-8 transition ease-in-out delay-150 duration-300 hover:bg-afenoid-lemon hover:border-afenoid-lemon">
-                  Download Profile
-                </button>
-              </a>
+      <div className="px-[5rem] msm:p-[3rem] mxs:px-4">
+        <div
+          className="w-full h-[600px] bg-cover bg-no-repeat bg-center flex justify-start items-center my-[10rem] "
+          style={{ backgroundImage: `url(${AboutUsDownloadProfile})` }}
+        >
+          <div className="w-full px-[4rem]">
+            <div className="flex flex-col w-[50%]">
+              <Text
+                variant="h2"
+                align="left"
+                color="af-white"
+                fontFamily="raleway"
+                fontWeight="bold"
+                customClassName="!text-[40px]"
+              >
+                Let’s Be Part of Your Journey Towards Resilience
+              </Text>
+              <Text
+                variant="h6"
+                align="left"
+                color="af-white"
+                fontFamily="proxima-nova"
+                fontWeight="regular"
+                customClassName="!text-[24px] my-4"
+              >
+                Discover our service offerings and our approach in addressing
+                risks across people, processes, and technology.
+              </Text>
+              <div className="flex justify-start items-center">
+                <a href="">
+                  <button className="bg-transparent border-white border-[3px] text-white text-center py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-base h-auto w-auto font-proxima-nova font-normal mt-8 transition ease-in-out delay-150 duration-300 hover:bg-afenoid-lemon hover:border-afenoid-lemon">
+                    Download Profile
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

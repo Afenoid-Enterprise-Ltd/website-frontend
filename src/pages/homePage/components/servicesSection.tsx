@@ -33,7 +33,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="w-screen 2xl:w-full px-[5rem] msm:px-6">
+    <section className="w-screen 2xl:w-full px-[5rem] msm:px-8">
       <div>
         <Text
           variant="h3"

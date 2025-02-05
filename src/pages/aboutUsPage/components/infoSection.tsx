@@ -114,7 +114,7 @@ const InfoSection = () => {
 
   return (
     <section className=" bg-white ">
-      <div className="flex justify-between gap-12 my-[4rem] px-[5rem] msm:p-[3rem] mxs:px-4 mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[6rem] msm:mx-0">
+      <div className="grid grid-cols-4 gap-12 my-[4rem] px-4 mlg:grid mlg:grid-cols-2 mmd:mx-[3rem] mmd:my-[4rem] msm:mx-0">
         {numberData.map((number, index) => (
           <Number
             icon={number.icon}
@@ -149,24 +149,23 @@ const InfoSection = () => {
           </div>
         </Slogan>
 
-        <div className="w-[60%] mx-auto">
+        <div className="w-[60%] mx-auto mmd:w-[80%]">
           <Text
-            variant="h5"
+            // variant="h5"
             fontFamily="raleway"
             fontWeight="medium"
             color="af-dark-green"
             align="center"
-            customClassName="!text-[40px] mt-[3rem] mb-[1rem]"
+            customClassName="!text-[40px] mt-[3rem] mb-[1rem] leading-[1.4]"
           >
-            Enterprise Security Within Your Reach
+            Enterprise Management Within Your Reach
           </Text>
           <Text
-            variant="h5"
             fontFamily="proxima-nova"
             fontWeight="light"
             color="af-dark-green"
             align="center"
-            customClassName="!text-[28px]"
+            customClassName="!text-[28px] leading-[1.4]"
           >
             Transform your organization's security posture with Afenoid's
             comprehensive suite of GRC services, making world-class standards
@@ -181,7 +180,7 @@ const InfoSection = () => {
         </div>
       </div>
 
-      <section className="flex flex-col gap-28 my-[10rem] px-[10rem]">
+      <section className="flex flex-col gap-28 my-[10rem] px-[10rem] mmd:px-[3rem] mxs:px-[2rem]">
         {heroStaticData.map((data, index) => (
           <HeroDiv
             heroTexts={data.heroTexts}
@@ -249,14 +248,14 @@ type NumberProps = {
 
 export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-col items-center w-[20rem]">
-      <div className="bg-[#9bc73c28] p-4 rounded-full">
+    <div className="flex flex-col items-center w-auto">
+      <div className="bg-[#9bc73c28] p-4 rounded-full mmd:w-14 mmd:h-14 mmd:p-2">
         <img src={icon} alt="Icon Image" loading="lazy" />
       </div>
       <div>
         <div className="my-[2rem]">
           <CountUp end={title} />
-          <span className="text-[1.5rem]">+</span>
+          <span className="text-[4rem] mxl:text-[3rem] mlg:text-[2.5rem] msm:text-[1.5rem] mxs:text-[1rem]">+</span>
         </div>
       </div>
       <div>
@@ -265,7 +264,7 @@ export const Number: React.FC<NumberProps> = ({ icon, title, description }) => {
           fontFamily="raleway"
           fontWeight="regular"
           align="center"
-          customClassName="!text-[20px]"
+          customClassName="text-[20px] mxs:!text-[16px]"
         >
           {description}
         </Text>

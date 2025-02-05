@@ -1,3 +1,4 @@
+// Text/index.types.ts
 export const variantMapping = {
   h1: "h1",
   h2: "h2",
@@ -20,7 +21,13 @@ export type TextAlign =
   | "start"
   | "justify";
 
-export type TextFamily = "gambetta" | "proxima-nova" | "playfair-display" | "montserrat" | "raleway" | "poppins";
+export type TextFamily =
+  | "gambetta"
+  | "proxima-nova"
+  | "playfair-display"
+  | "montserrat"
+  | "raleway"
+  | "poppins";
 
 export type TextWeight =
   | "thin"
@@ -44,6 +51,10 @@ export type TextColor =
   | "af-light-grey"
   | "af-dark-grey";
 
+type ResponsiveStyles = {
+  [key: string]: string | { [key: string]: string };
+};
+
 export interface TextProps extends React.HTMLAttributes<HTMLOrSVGElement> {
   tag?: keyof JSX.IntrinsicElements;
   variant?: TextVariant;
@@ -52,5 +63,6 @@ export interface TextProps extends React.HTMLAttributes<HTMLOrSVGElement> {
   fontWeight?: TextWeight;
   color?: TextColor;
   customClassName?: string;
+  responsiveStyles?: ResponsiveStyles;
   children?: React.ReactNode;
 }

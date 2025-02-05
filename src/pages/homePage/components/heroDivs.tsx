@@ -44,14 +44,14 @@ const HeroDivs = () => {
             fontFamily="proxima-nova"
             fontWeight="light"
             align="left"
-            customClassName="text-[20px] font-regular"
+            customClassName="text-[20px] msm:!text-[16px] font-regular"
           >
             We strengthen your organization by implementing proven security
             frameworks and industry standards. Our comprehensive approach
             addresses risks across your people, processes, and technology.
           </Text>
           <div>
-            <Button label="Learn More" variant="secondary"/>
+            <Button label="Learn More" variant="primary"/>
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">
@@ -89,7 +89,7 @@ const HeroDivs = () => {
                   fontFamily="proxima-nova"
                   fontWeight="light"
                   align="left"
-                  customClassName="first-letter:uppercase my-[1px] text-[20px] font-normal"
+                  customClassName="first-letter:uppercase my-[1px] text-[20px] msm:!text-[16px] font-normal"
                 >
                   {listItem}
                 </Text>
@@ -97,7 +97,7 @@ const HeroDivs = () => {
             ))}
           </ul>
           <div>
-            <Button label="Schedule a Meeting" variant="secondary" />
+            <Button label="Schedule a Meeting" variant="primary" />
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">

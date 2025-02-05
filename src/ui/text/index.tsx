@@ -6,15 +6,16 @@ import { TextProps, variantMapping } from "./index.types";
 const text = cva("", {
   variants: {
     variant: {
-      h1: "text-h1 mmd:text-h3 mxxs:text-[1.65rem]",
-      h2: "text-h2 mmd:text-h4 mxxs:text-[1.65rem]",
-      h3: "text-h3 mmd:text-h5",
-      h4: "text-h4 mmd:text-h6",
-      h5: "text-h5 mmd:text-caption-reg mxs:text-[1rem]",
-      h6: "text-h6 mmd:text-caption-reg mxs:text-[0.9rem]",
-      "body-reg": "text-body-reg mxs:text-[0.75rem]",
-      "caption-mid": "text-caption-mid",
-      "caption-reg": "text-caption-reg",
+      // Remove specific sizes from variant definitions
+      h1: "",
+      h2: "",
+      h3: "",
+      h4: "",
+      h5: "",
+      h6: "",
+      "body-reg": "",
+      "caption-mid": "",
+      "caption-reg": "",
     },
     fontFamily: {
       "proxima-nova": "font-proxima-nova",
@@ -57,6 +58,19 @@ const text = cva("", {
   },
 });
 
+// Default sizes for variants - these will be used if no responsive styles are provided
+const defaultSizes = {
+  h1: "text-4xl",
+  h2: "text-[2.5rem]",
+  h3: "text-3xl",
+  h4: "text-2xl",
+  h5: "text-xl",
+  h6: "text-lg",
+  "body-reg": "text-base",
+  "caption-mid": "text-sm",
+  "caption-reg": "text-xs",
+};
+
 const Text: React.FC<TextProps> = (props) => {
   const {
     variant = "body-reg",
@@ -66,16 +80,29 @@ const Text: React.FC<TextProps> = (props) => {
     fontWeight = "regular",
     align = "left",
     customClassName = "",
+    responsiveStyles = {},
     children,
     ...rest
   } = props;
 
-  //Resolved Tag
   const Tag = (tag ||
     variantMapping[variant] ||
     "p") as keyof JSX.IntrinsicElements;
 
+  // Convert responsive styles object to Tailwind classes
+  const responsiveClasses = Object.entries(responsiveStyles)
+    .map(([breakpoint, styles]) => {
+      if (typeof styles === 'string') {
+        return `${breakpoint}:${styles}`;
+      }
+      return Object.entries(styles)
+        .map(([property, value]) => `${breakpoint}:${property}-[${value}]`)
+        .join(' ');
+    })
+    .join(' ');
+
   const classStyles = clsx(
+    // Base styles from variants (excluding size)
     text({
       variant,
       fontFamily,
@@ -83,6 +110,10 @@ const Text: React.FC<TextProps> = (props) => {
       align,
       color,
     }),
+    // Add default size only if no responsive styles are provided
+    Object.keys(responsiveStyles).length === 0 ? defaultSizes[variant] : '',
+    // Add responsive styles with !important to override defaults
+    responsiveClasses,
     customClassName
   );
 

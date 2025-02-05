@@ -36,7 +36,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
             color="af-green"
             fontFamily="proxima-nova"
             fontWeight="regular"
-            customClassName="uppercase !text-[32px]"
+            customClassName="uppercase text-[18px] msm:!text-[12px]"
           >
             {heroTexts.caption}
           </Text>
@@ -45,14 +45,13 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           initial={{ x: initialX * 2.5, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          className="block mlg:hidden"
+          className="block"
         >
           <Text
-            variant="h5"
             fontFamily="proxima-nova"
             fontWeight="light"
             align="left"
-            customClassName="!text-[24px]"
+            customClassName="text-[28px] leading-[1.4] msm:!text-[20px]"
           >
             {heroTexts.description}
           </Text>
@@ -70,22 +69,6 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
           className="w-full h-full"
           loading="lazy"
         />
-      </motion.div>
-      <motion.div
-        initial={{ x: initialX * 2.5, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-        className="hidden mlg:block"
-      >
-        <Text
-          variant="h5"
-          fontFamily="proxima-nova"
-          fontWeight="light"
-          align="left"
-          customClassName="!text-[24px]"
-        >
-          {heroTexts.description}
-        </Text>
       </motion.div>
     </div>
   );

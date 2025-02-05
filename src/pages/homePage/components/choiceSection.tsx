@@ -48,7 +48,7 @@ const ChoiceSection = () => {
             variant="h2"
             fontFamily="montserrat"
             color="af-dark-green"
-            customClassName="text-[32px] my-[4rem]"
+            customClassName="text-[32px] mxs:!text-[20px] my-4"
           >
             Partnering for Excellence
           </Text>
@@ -72,14 +72,14 @@ const ChoiceSection = () => {
             </div>
           </div>
           <div className="w-full flex justify-center items-center">
-            <div className="w-[70%]">
+            <div className="w-[70%] mxs:w-[90%]">
               <Text
                 align="center"
                 color="af-dark-green"
                 fontFamily="proxima-nova"
                 fontWeight="regular"
                 variant="h5"
-                customClassName="text-[20px]"
+                customClassName="text-[20px] mxs:!text-[16px]"
               >
                 We collaborate with industry-leading technology providers and
                 certification bodies to deliver comprehensive services. Our

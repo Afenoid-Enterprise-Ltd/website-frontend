@@ -1,6 +1,7 @@
 import React from "react";
-import { HandShakeImg } from "../assets";
+import { HandShakeImg, HandShakeImgMbl } from "../assets";
 import { Text, Button } from "../ui";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 interface CompProps {
   openConsultationModal: () => void;
@@ -9,48 +10,103 @@ interface CompProps {
 const ContactUs: React.FC<CompProps> = (props) => {
   const { openConsultationModal } = props;
 
+  const isSmallDevice = useMediaQuery("only screen and (max-width: 800px)");
+
   return (
-    <div className="w-full my-[10rem] px-[5rem]">
-      <div
-        className=" w-full h-[500px] bg-cover bg-no-repeat bg-center flex justify-start items-center"
-        style={{ backgroundImage: `url(${HandShakeImg})` }}
-      >
-        <div className="w-full px-[4rem]">
-          <div className="flex flex-col w-[50%]">
-            <Text
-              variant="h2"
-              align="left"
-              color="af-white"
-              fontFamily="raleway"
-              fontWeight="bold"
-              customClassName="!text-[40px]"
-            >
-              How can we help you?
-            </Text>
-            <Text
-              variant="h6"
-              align="left"
-              color="af-white"
-              fontFamily="proxima-nova"
-              fontWeight="regular"
-              customClassName="!text-[24px] my-4"
-            >
-              Need to make an inquiry? Reach out to us today and let’s discuss
-              how we can support your organization.
-            </Text>
-            <div>
-              <Button
-                variant="secondary"
-                label="Contact Us"
-                onClick={openConsultationModal}
-                customClassName="border-white text-white"
-              />
+    <div>
+      {!isSmallDevice ? (
+        <div className="w-full my-[10rem] px-[5rem]">
+          <div
+            className=" w-full h-[500px] bg-cover bg-no-repeat bg-center flex justify-start items-center"
+            style={{ backgroundImage: `url(${HandShakeImg})` }}
+          >
+            <div className="w-full px-[4rem]">
+              <div className="flex flex-col w-[50%]">
+                <Text
+                  variant="h2"
+                  align="left"
+                  color="af-white"
+                  fontFamily="raleway"
+                  fontWeight="bold"
+                  customClassName="!text-[40px]"
+                >
+                  How can we help you?
+                </Text>
+                <Text
+                  variant="h6"
+                  align="left"
+                  color="af-white"
+                  fontFamily="proxima-nova"
+                  fontWeight="regular"
+                  customClassName="!text-[24px] my-4"
+                >
+                  Need to make an inquiry? Reach out to us today and let’s
+                  discuss how we can support your organization.
+                </Text>
+                <div>
+                  <Button
+                    variant="secondary"
+                    label="Contact Us"
+                    onClick={openConsultationModal}
+                    customClassName="border-white text-white"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <MobileContactUs openConsultationModal={openConsultationModal} />
+      )}
     </div>
   );
 };
 
 export { ContactUs };
+
+interface MobileContactUsProps {
+  openConsultationModal: () => void;
+}
+
+export const MobileContactUs: React.FC<MobileContactUsProps> = (props) => {
+  const { openConsultationModal } = props;
+
+  return (
+    <div className="w-full my-[8rem] px-[2rem] mxs:px-8 ">
+      <div className="bg-afenoid-green p-[4rem] mxs:p-8">
+        <Text
+          variant="h2"
+          align="left"
+          color="af-white"
+          fontFamily="raleway"
+          fontWeight="semi-bold"
+          customClassName="!text-[30px]"
+        >
+          How can we help you?
+        </Text>
+        <Text
+          variant="h6"
+          align="left"
+          color="af-white"
+          fontFamily="proxima-nova"
+          fontWeight="regular"
+          customClassName="!text-[16px] mxxss:text-[14px] my-4"
+        >
+          Need to make an inquiry? Reach out to us today and let’s discuss how
+          we can support your organization.
+        </Text>
+        <div>
+          <Button
+            variant="secondary"
+            label="Contact Us"
+            onClick={openConsultationModal}
+            customClassName="border-white text-white"
+          />
+        </div>
+      </div>
+      <div className="max-h-[300px] w-full overflow-hidden">
+        <img src={HandShakeImgMbl} alt="Contact Us Image" />
+      </div>
+    </div>
+  );
+};

@@ -190,7 +190,7 @@ export const MobileNavbar: React.FC<MobileNavProps> = ({
             <Link
               to={navlink.link}
               key={index}
-              className="text-afenoid-dark-green "
+              className="text-afenoid-dark-green font-proxima-nova"
               onClick={closeNav}
             >
               {navlink.text}

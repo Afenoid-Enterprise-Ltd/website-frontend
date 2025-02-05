@@ -41,7 +41,7 @@ const HeroSection = () => {
           fontFamily="raleway"
           align="center"
           color="floral-white"
-          customClassName="!text-[48px]"
+          customClassName="text-[48px] mb-8"
         >
           About Afenoid
         </Text>
@@ -51,7 +51,7 @@ const HeroSection = () => {
           fontFamily="proxima-nova"
           align="center"
           color="floral-white"
-          customClassName="!text-[24px]"
+          customClassName="text-[24px]"
         >
           Let's explore opportunities that meet your organizational needs
         </Text>
@@ -73,7 +73,7 @@ const HeroSection = () => {
           fontWeight="medium"
           color="af-dark-green"
           align="center"
-          customClassName="!text-[36px] mb-["
+          customClassName="text-[36px] msm:!text-[24px] mb-5"
         >
           Strengthening Organizations
         </Text>
@@ -83,7 +83,7 @@ const HeroSection = () => {
           fontWeight="light"
           color="af-dark-green"
           align="center"
-          customClassName="!text-[24px]"
+          customClassName="text-[24px] msm:!text-[16px]"
         >
           At Afenoid, we enhance organizational security and operational
           resilience through robust standards implementation

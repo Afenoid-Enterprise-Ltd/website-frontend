@@ -85,8 +85,11 @@ import AboutUsTeamImg from "./team-img.webp";
 import AboutUsDownloadProfile from "./download-profile.webp";
 import AboutUsLinkBg from "./about-us-link-img.webp";
 import ResourcesHero from "./resourcesHero.webp";
-import ProfileCardBg from "./profileCardBg.webp"
-import CaseStudiesBg from "./caseStudiesBg.webp"
+import ProfileCardBg from "./profileCardBg.webp";
+import CaseStudiesBg from "./caseStudiesBg.webp";
+import ForwardImgMbl from "./forward-img-mobile.webp";
+import AboutUsLinkBgMbl from "./about-us-link-mbl.webp";
+import HandShakeImgMbl from "./handshake-mbl-img.webp";
 
 export {
   MainLogoSVG,
@@ -176,5 +179,8 @@ export {
   AboutUsLinkBg,
   ResourcesHero,
   ProfileCardBg,
-  CaseStudiesBg
+  CaseStudiesBg,
+  ForwardImgMbl,
+  AboutUsLinkBgMbl,
+  HandShakeImgMbl
 };

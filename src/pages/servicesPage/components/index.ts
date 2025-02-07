@@ -6,3 +6,4 @@ export * from "./auditing.tsx";
 export * from "./consulting.tsx";
 export * from "./training.tsx";
 export * from "./learnMoreDiv.tsx";
+export * from "./overviewCard.tsx";

@@ -41,7 +41,7 @@ const HeroSection = () => {
           fontFamily="raleway"
           align="center"
           color="floral-white"
-          customClassName="text-[48px] mb-8"
+          customClassName="!text-[48px] mxs:!text-[36px] mb-8"
         >
           About Afenoid
         </Text>
@@ -51,7 +51,7 @@ const HeroSection = () => {
           fontFamily="proxima-nova"
           align="center"
           color="floral-white"
-          customClassName="text-[24px]"
+          customClassName="!text-[24px]  mxs:!text-[16px]"
         >
           Let's explore opportunities that meet your organizational needs
         </Text>

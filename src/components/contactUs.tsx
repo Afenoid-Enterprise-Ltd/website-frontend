@@ -10,25 +10,25 @@ interface CompProps {
 const ContactUs: React.FC<CompProps> = (props) => {
   const { openConsultationModal } = props;
 
-  const isSmallDevice = useMediaQuery("only screen and (max-width: 800px)");
+  const isSmallDevice = useMediaQuery("only screen and (max-width: 639px)");
 
   return (
     <div>
       {!isSmallDevice ? (
-        <div className="w-full my-[10rem] px-[5rem]">
+        <div className="w-full my-[8rem] px-[5rem] mmlg:px-[3rem] mmd:px-0 ">
           <div
             className=" w-full h-[500px] bg-cover bg-no-repeat bg-center flex justify-start items-center"
             style={{ backgroundImage: `url(${HandShakeImg})` }}
           >
             <div className="w-full px-[4rem]">
-              <div className="flex flex-col w-[50%]">
+              <div className="flex flex-col w-[50%] mmlg:w-[60%] mmd:w-[70%]">
                 <Text
                   variant="h2"
                   align="left"
                   color="af-white"
                   fontFamily="raleway"
                   fontWeight="bold"
-                  customClassName="!text-[40px]"
+                  customClassName="text-[40px] mlg:!text-[32px] mmd:!text-[28px]"
                 >
                   How can we help you?
                 </Text>
@@ -38,7 +38,7 @@ const ContactUs: React.FC<CompProps> = (props) => {
                   color="af-white"
                   fontFamily="proxima-nova"
                   fontWeight="regular"
-                  customClassName="!text-[24px] my-4"
+                  customClassName="!text-[24px] mlg:!text-[20px] mmd:!text-[14px] my-4"
                 >
                   Need to make an inquiry? Reach out to us today and let’s
                   discuss how we can support your organization.
@@ -72,7 +72,7 @@ export const MobileContactUs: React.FC<MobileContactUsProps> = (props) => {
   const { openConsultationModal } = props;
 
   return (
-    <div className="w-full my-[8rem] px-[2rem] mxs:px-8 ">
+    <div className="w-full">
       <div className="bg-afenoid-green p-[4rem] mxs:p-8">
         <Text
           variant="h2"

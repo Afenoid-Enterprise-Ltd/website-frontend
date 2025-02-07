@@ -1,5 +1,5 @@
 import { AboutUsLinkBg, AboutUsLinkBgMbl } from "../assets";
-import { Text, Button } from "../ui";
+import { Text } from "../ui";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
@@ -35,17 +35,15 @@ const AboutUs = () => {
             fontWeight="regular"
             customClassName="text-[24px] !mxs:text-[16px]"
           >
-            Here's why we are the best provider for your IT governance, risk,
-            and compliance solutions.
+            Here's why we are the best provider for your IT governance,
+            <br /> risk, and compliance solutions.
           </Text>
         </div>
         <div className="w-[30%] flex justify-center items-center mmlg:w-[40%] mmd:w-full mmd:justify-start">
           <Link to="/about-us">
-            <Button
-              variant="secondary"
-              label="About Us"
-              customClassName="border-white text-white"
-            />
+            <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%]">
+              About Us
+            </button>
           </Link>
         </div>
       </div>

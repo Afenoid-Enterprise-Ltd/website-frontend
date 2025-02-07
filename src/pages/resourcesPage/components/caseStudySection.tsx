@@ -3,13 +3,15 @@ import { Text } from "../../../ui";
 import { ResourcesGrid } from "./resourcesGrid.tsx";
 import { ProfileCard } from "./profileCard.tsx";
 import { CaseStudiesGrid } from "./caseStudiesGrid.tsx";
+import { Newsletter, ContactUs } from "../../../components/";
 
 interface CaseStudyProps {
   openConsultationModal: () => void;
 }
 
-const CaseStudySection: React.FC<CaseStudyProps> = () => {
-
+const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
+  const { openConsultationModal } = props;
+  
   return (
     <section className="bg-white">
       <div>
@@ -51,10 +53,10 @@ const CaseStudySection: React.FC<CaseStudyProps> = () => {
           <CaseStudiesGrid />
         </div>
 
-        <div>
-
+        <div className="mt-[13rem]">
+        <Newsletter />
+        <ContactUs openConsultationModal={openConsultationModal} />
         </div>
-
       </div>
     </section>
   );

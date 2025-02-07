@@ -15,7 +15,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
   return (
     <section className="bg-white">
       <div>
-        <div className="w-[60%] mx-auto my-[8rem] px-[3rem] msm:w-full mxs:px-4">
+        <div className="w-[60%] mx-auto my-[8rem] px-[3rem] msm:w-full mxs:px-4 msm:my-20">
           <Text
             variant="h2"
             fontFamily="raleway"
@@ -35,7 +35,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
       <DownloadProfile />
 
       <div>
-        <div className="w-[60%]  mx-auto px-[3rem] msm:w-full mxs:px-4">
+        <div className="w-[60%] mx-auto px-[3rem] msm:w-full mxs:px-4 border">
             <Text
               variant="h2"
               fontFamily="raleway"
@@ -51,7 +51,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
           <CaseStudiesGrid />
         </div>
 
-        <div className="mt-[13rem]">
+        <div className="mt-[13rem] msm:mt-20">
         <Newsletter />
         <ContactUs openConsultationModal={openConsultationModal} />
         </div>

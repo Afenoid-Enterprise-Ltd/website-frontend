@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, Button } from "../../../ui";
+import { Text } from "../../../ui";
 import { LearnMoreDiv } from "./learnMoreDiv";
-import { CallToAction, CaseStudyCard } from "../../../components";
+import { ScheduleMeeting, CaseStudyCard } from "../../../components";
 import {
   TrainingImg1,
   TrainingImg2,
@@ -12,20 +12,20 @@ import {
   SkillsDevImg2,
   SkillsDevImg3,
   ServicesImg3,
-  NeuroscienceImg
+  NeuroscienceImg,
 } from "../../../assets";
 
 interface TrainingProps {
-  openModal: () => void
+  openModal: () => void;
 }
 
 const Training: React.FC<TrainingProps> = (props) => {
-  const {openModal} = props;
-  
+  const { openModal } = props;
+
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Training",
+      title: "Digital Skills Development",
       description:
         "Our courses focus on developing skills and competencies in corporate governance of information and technology, service management, risk management, information security, cybersecurity, data privacy, and audit and assurance.",
     },
@@ -107,10 +107,11 @@ const Training: React.FC<TrainingProps> = (props) => {
       <div className="w-[80%] mx-auto my-[8rem] px-[3rem] mlg:w-[90%] mmd:my-[4rem] ">
         <Text
           variant="h2"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           align="center"
           color="af-dark-green"
           fontWeight="medium"
+          customClassName="!text-[2.25rem]"
         >
           Build Your Team's Security Excellence
         </Text>
@@ -121,7 +122,7 @@ const Training: React.FC<TrainingProps> = (props) => {
             align="center"
             color="af-dark-green"
             fontWeight="light"
-            customClassName="text-[1.5rem]"
+            customClassName="!text-[1.5rem]"
           >
             Empower your workforce with industry-recognized certifications and
             practical training programs designed for real-world application.
@@ -142,18 +143,11 @@ const Training: React.FC<TrainingProps> = (props) => {
         ))}
       </div>
 
-      <CallToAction
-        title="Ready to have a conversation with us?"
-        explanation="Contact a service support representative right away."
-        button={
-          <Button
-            variant="secondary"
-            label="Contact Us"
-            customClassName="mt-[2rem]"
-            onClick={openModal}
-          />
-        }
-      />
+      <div className="px-[5rem] msm:px-6">
+        <div className="my-24 mb-48">
+          <ScheduleMeeting openModal={openModal} />
+        </div>
+      </div>
     </section>
   );
 };

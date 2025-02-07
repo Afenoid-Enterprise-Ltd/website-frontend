@@ -16,3 +16,5 @@ export * from "./contactUs";
 export * from "./aboutUs";
 export * from "./successStories";
 export * from "./newsLetter";
+export * from "./downloadProfile";
+export * from "./scheduleMeeting";

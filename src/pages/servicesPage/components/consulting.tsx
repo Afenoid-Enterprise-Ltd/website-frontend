@@ -1,8 +1,8 @@
 import React from "react";
 import { LearnMoreDiv } from "./learnMoreDiv";
 import { ServicesImg1 } from "../../../assets";
-import { Accordion, AccordionItem, CallToAction } from "../../../components";
-import { Text, Button } from "../../../ui";
+import { Accordion, AccordionItem, ScheduleMeeting, } from "../../../components";
+import { Text, } from "../../../ui";
 
 interface ConsultingProps {
   openModal: () => void
@@ -14,7 +14,7 @@ const Consulting: React.FC<ConsultingProps> = (props) => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Transformation Consulting",
+      title: "Digital Transformation Consulting",
       description:
         "Our digital transformation consulting services help to leverage digital technologies, tools, and platforms needful to transform your business operations and processes, improve performance and drive growth.",
     },
@@ -244,18 +244,12 @@ const Consulting: React.FC<ConsultingProps> = (props) => {
           </AccordionItem>
         </Accordion>
       </div>
-      <CallToAction
-        title="Ready to have a conversation with us?"
-        explanation="Schedule a meeting with a consultant right away"
-        button={
-          <Button
-            variant="secondary"
-            label="Contact Us"
-            customClassName="mt-[2rem]"
-            onClick={openModal}
-          />
-        }
-      />
+      
+      <div className="px-[5rem] msm:px-6">
+        <div className="my-24 mb-48">
+          <ScheduleMeeting openModal={openModal}/>
+        </div>
+      </div>
     </section>
   );
 };

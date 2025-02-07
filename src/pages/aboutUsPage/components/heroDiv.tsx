@@ -36,7 +36,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
             color="af-green"
             fontFamily="proxima-nova"
             fontWeight="regular"
-            customClassName="uppercase text-[18px] msm:!text-[12px]"
+            customClassName="uppercase !text-[18px] msm:!text-[12px]"
           >
             {heroTexts.caption}
           </Text>
@@ -51,7 +51,7 @@ const HeroDiv: React.FC<HeroDivProps> = ({ heroTexts, image, reverse }) => {
             fontFamily="proxima-nova"
             fontWeight="light"
             align="left"
-            customClassName="text-[28px] leading-[1.4] msm:!text-[20px]"
+            customClassName="!text-[28px] leading-[1.4] msm:!text-[20px]"
           >
             {heroTexts.description}
           </Text>

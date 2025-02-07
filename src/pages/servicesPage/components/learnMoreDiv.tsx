@@ -53,8 +53,9 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           <Text
             variant="h3"
             color="af-dark-green"
-            fontFamily="gambetta"
+            fontFamily="raleway"
             fontWeight="medium"
+            customClassName="!text-[2.5rem]"
           >
             {heroTexts.title}
           </Text>
@@ -66,7 +67,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
         </div>
         <div>
           {btnText ? (
-            <Link to="/" className="w-[45%] block mxs:w-[60%] mxxss:w-full">
+            <Link to="/" className="w-[45%] mt-6 block mxs:w-[60%] mxxss:w-full">
               <Button
                 variant="secondary"
                 label={btnText}
@@ -76,7 +77,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
           ) : null}
         </div>
       </div>
-      <div className="w-1/2 h-[25rem] mlg:w-full mxs:h-[12.5rem]">
+      <div className="w-[60%] h-[25rem] mlg:w-full mxs:h-[12.5rem]">
         <img
           src={image}
           alt="An Image for the Hero Page"
@@ -87,7 +88,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
         <Text
           variant="h3"
           color="af-dark-green"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           fontWeight="medium"
           align="left"
         >

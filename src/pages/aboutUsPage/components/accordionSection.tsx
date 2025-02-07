@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem, ContactUs } from "../../../components";
-import { Text, } from "../../../ui";
+import { Text } from "../../../ui";
 
 interface AccordionProps {
   openConsultationModal: () => void;
@@ -82,7 +82,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
           </AccordionItem>
           <AccordionItem
             value="3"
-            trigger="What management system, standards, and frameworks does Afenoid provide"
+            trigger="What management system, standards, and frameworks does Afenoid provide?"
             mainFontType="raleway"
             minorFontType="proxima-nova"
           >
@@ -116,8 +116,9 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
         </Accordion>
       </div>
 
-      <ContactUs openConsultationModal={openConsultationModal}/>
-      
+      <section className="mmd:px-[3rem] mmd:my-[4rem] mxs:px-[1rem]">
+        <ContactUs openConsultationModal={openConsultationModal} />
+      </section>
     </div>
   );
 };

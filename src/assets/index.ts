@@ -111,6 +111,7 @@ import DropdownImg9 from "./dropdown-9.webp";
 import DropdownImg10 from "./dropdown-10.webp";
 import DropdownImg11 from "./dropdown-11.webp";
 
+import ProfileCardBgMbl from "./profileCardBgMbl.webp";
 
 export {
   MainLogoSVG,
@@ -224,4 +225,5 @@ export {
   DropdownImg9,
   DropdownImg10,
   DropdownImg11,
+  ProfileCardBgMbl
 };

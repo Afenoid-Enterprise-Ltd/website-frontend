@@ -16,10 +16,11 @@ const CaseStudySection: React.FC<CaseStudyProps> = () => {
         <div className="w-[60%] mx-auto my-[8rem] px-[3rem] msm:w-full mxs:px-4">
           <Text
             variant="h2"
-            fontFamily="gambetta"
+            fontFamily="raleway"
             align="center"
             color="af-dark-green"
             fontWeight="medium"
+            customClassName="msm:text-[24px]"
           >
             Managing Change to Drive Organizational Transformation
           </Text>
@@ -37,10 +38,11 @@ const CaseStudySection: React.FC<CaseStudyProps> = () => {
         <div className="w-[60%]  mx-auto px-[3rem] msm:w-full mxs:px-4">
             <Text
               variant="h2"
-              fontFamily="gambetta"
+              fontFamily="raleway"
               align="center"
               color="af-dark-green"
               fontWeight="medium"
+              customClassName="msm:text-[24px]"
             >
               Case Studies
             </Text>

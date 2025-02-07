@@ -90,6 +90,7 @@ import CaseStudiesBg from "./caseStudiesBg.webp";
 import ForwardImgMbl from "./forward-img-mobile.webp";
 import AboutUsLinkBgMbl from "./about-us-link-mbl.webp";
 import HandShakeImgMbl from "./handshake-mbl-img.webp";
+import ProfileCardBgMbl from "./profileCardBgMbl.webp";
 
 export {
   MainLogoSVG,
@@ -182,5 +183,6 @@ export {
   CaseStudiesBg,
   ForwardImgMbl,
   AboutUsLinkBgMbl,
-  HandShakeImgMbl
+  HandShakeImgMbl,
+  ProfileCardBgMbl
 };

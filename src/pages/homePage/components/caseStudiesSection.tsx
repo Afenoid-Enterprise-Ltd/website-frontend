@@ -13,7 +13,9 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
   return (
     <section>
       <Newsletter />
-      <ContactUs openConsultationModal={openConsultationModal} />
+      <div className="px-[5rem] mmd:px-[2rem] msm:my-[4rem]">
+        <ContactUs openConsultationModal={openConsultationModal} />
+      </div>
     </section>
   );
 };

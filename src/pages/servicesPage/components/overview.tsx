@@ -148,6 +148,7 @@ const Overview = () => {
             title={card.title}
             description={card.description}
             reverse={index % 2 === 0}
+            key={index}
           />
         ))}
       </div>

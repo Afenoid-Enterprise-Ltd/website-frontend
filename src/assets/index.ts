@@ -90,6 +90,15 @@ import CaseStudiesBg from "./caseStudiesBg.webp";
 import ForwardImgMbl from "./forward-img-mobile.webp";
 import AboutUsLinkBgMbl from "./about-us-link-mbl.webp";
 import HandShakeImgMbl from "./handshake-mbl-img.webp";
+import AboutUsDownloadProfileMbl from "./download-profile-mbl.webp";
+import CardMoney from "./card-money.svg";
+import CardAcceleration from "./card-acceleration.svg";
+import CardChart from "./card-chart.svg";
+import CardRoute from "./card-route.svg";
+import CardHouse from "./card-house.svg";
+import CardFace from "./card-face.svg";
+import ScheduleMeetingImg from "./schedule-meeting.webp";
+import ServicesHeroImg from "./services-hero.webp";
 import ProfileCardBgMbl from "./profileCardBgMbl.webp";
 
 export {
@@ -183,6 +192,5 @@ export {
   CaseStudiesBg,
   ForwardImgMbl,
   AboutUsLinkBgMbl,
-  HandShakeImgMbl,
-  ProfileCardBgMbl
+  HandShakeImgMbl
 };

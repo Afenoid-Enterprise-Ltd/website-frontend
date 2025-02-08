@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Text } from "../../../ui";
-import { CallToAction, CaseStudyCard } from "../../../components";
+import { Text } from "../../../ui";
+import { ScheduleMeeting, CaseStudyCard, AboutUs } from "../../../components";
 import {
   TrainingImg1,
   TrainingImg2,
@@ -14,11 +14,11 @@ import {
 import { Link } from "react-router-dom";
 
 interface MinorSectionProps {
-  openModal: () => void
+  openModal: () => void;
 }
 
 const MinorSection: React.FC<MinorSectionProps> = (props) => {
-  const {openModal} = props;
+  const { openModal } = props;
 
   const trainingData = [
     {
@@ -26,21 +26,21 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
       description:
         "When sensitive data is at risk, organizations need a plan. This course guides you in creating an Information Security Management System (ISMS) that helps safeguard your data, manage risks, and build trust with customers—ensuring you stay compliant and secure in a digital world.",
       image: TrainingImg1,
-      route: "/services/information-security-management-system"
+      route: "/services/information-security-management-system",
     },
     {
       title: "Business Continuity Management System * (ISO 22301)",
       description:
         "Disruptions can happen at any time. With ISO 22301, you'll develop a Business Continuity Management System (BCMS) that keeps your operations running smoothly, even in the face of unexpected challenges, ensuring resilience and protecting your business's future.",
       image: TrainingImg2,
-      route: "/services/business-continuity-management-system"
+      route: "/services/business-continuity-management-system",
     },
     {
       title: "Certified in Risk and Information Systems Control * (CRISC)",
       description:
         "This course provides the skills to identify, assess, and manage IT and enterprise risks while designing effective information systems controls to achieve business objectives.",
       image: TrainingImg3,
-      route: "/services/crisc"
+      route: "/services/crisc",
     },
   ];
 
@@ -81,8 +81,18 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
         <div className="flex justify-center items-center gap-6 my-[3rem] mlg:px-[5rem] mxs:my-[1rem] ">
           <div className="flex justify-center items-center gap-6 my-[3rem] mxs:my-[1.5rem]">
             {partners.map((partner, index) => (
-              <Link to={partner.route} target="_blank" className="block transition ease-in-out delay-150 duration-300 hover:-translate-y-4" key={index}>
-                <img src={partner.logo} alt="Our Partners" loading="lazy" className="mxs:min-w-[50px] object-cover"/>
+              <Link
+                to={partner.route}
+                target="_blank"
+                className="block transition ease-in-out delay-150 duration-300 hover:-translate-y-4"
+                key={index}
+              >
+                <img
+                  src={partner.logo}
+                  alt="Our Partners"
+                  loading="lazy"
+                  className="mxs:min-w-[50px] object-cover"
+                />
               </Link>
             ))}
           </div>
@@ -105,12 +115,12 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
       <div>
         <Text
           variant="h3"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           fontWeight="semi-bold"
           align="center"
-          customClassName="my-[5rem]"
+          customClassName="my-[5rem] !text-[2rem]"
         >
-          Our Courses
+          Competency Development
         </Text>
 
         <div className="w-full flex justify-between items-start gap-10 px-[5rem] mb-[10rem] 2xl:w-full mxxl:grid mxxl:grid-cols-3 mxxl:px-[3rem] mlg:grid-cols-2 msm:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
@@ -126,18 +136,12 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
         </div>
       </div>
 
-      <CallToAction
-        title="Our journey with you starts here"
-        explanation="Looking to implement digital solutions, assess your organization's resilience, or enhance your professional expertise?"
-        button={
-          <Button
-            variant="secondary"
-            label="Contact Us"
-            customClassName="mt-[2rem]"
-            onClick={openModal}
-          />
-        }
-      />
+      <div className="px-[5rem] msm:px-6">
+        <AboutUs />
+        <div className="my-24 mb-48">
+          <ScheduleMeeting openModal={openModal}/>
+        </div>
+      </div>
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { ServicesImg2 } from "../../../assets";
-import { Text, Button } from "../../../ui";
-import { Accordion, AccordionItem, CallToAction } from "../../../components";
+import { Text } from "../../../ui";
+import { Accordion, AccordionItem, ScheduleMeeting } from "../../../components";
 import { LearnMoreDiv } from "./learnMoreDiv";
 
 interface AuditingProps {
@@ -14,7 +14,7 @@ const Auditing: React.FC<AuditingProps> = (props) => {
   const dataItem = {
     heroTexts: {
       caption: "",
-      title: "Trust Services",
+      title: "Digital Trust Services",
       description:
         "Lack of auditing undermines digital trust, reducing tech adoption, productivity, business opportunities, & exposing value leakages. This ensures compliance, mitigate risks, & foster trust.",
     },
@@ -135,7 +135,8 @@ const Auditing: React.FC<AuditingProps> = (props) => {
                 in the year 2005. The standard reflects an industry-wide
                 recognition of the need to establish a system to manage IT
                 service delivery and support. Service Management System, SMS,
-                requires that organizations establish a formal Plan-Do-check-Act cycle in order to demonstrate their continual improvement in
+                requires that organizations establish a formal Plan-Do-check-Act
+                cycle in order to demonstrate their continual improvement in
                 service delivery.
               </li>
             </ul>
@@ -206,18 +207,11 @@ const Auditing: React.FC<AuditingProps> = (props) => {
           </AccordionItem>
         </Accordion>
 
-        <CallToAction
-          title="Ready to have a conversation with us?"
-          explanation="Schedule a meeting with a consultant right away"
-          button={
-            <Button
-              variant="secondary"
-              label="Contact Us"
-              customClassName="mt-[2rem]"
-              onClick={openModal}
-            />
-          }
-        />
+        <div className="px-[5rem] msm:px-6">
+          <div className="my-24 mb-48">
+            <ScheduleMeeting openModal={openModal} />
+          </div>
+        </div>
       </div>
     </section>
   );

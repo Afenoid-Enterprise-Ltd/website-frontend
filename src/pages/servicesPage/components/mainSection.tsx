@@ -32,7 +32,7 @@ const MainSection = () => {
       case "consulting":
         return <Consulting openModal={openContactModal} />;
       case "auditing":
-        return <Auditing openModal={openContactModal}/>;
+        return <Auditing openModal={openContactModal} />;
       case "training":
         return <Training openModal={openContactModal} />;
       default:
@@ -66,7 +66,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Transformation Consulting
+          Digital Transformation Consulting
         </button>
         <button
           onClick={() => handleNavigation("auditing")}
@@ -76,7 +76,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Trust Services
+          Digital Trust Services
         </button>
         <button
           onClick={() => handleNavigation("training")}
@@ -86,15 +86,12 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          Skills Development
+          Digital Skills Development
         </button>
       </div>
       <section>{renderContent()}</section>
       {isContactOpen && (
-        <ConsultationForm
-          isOpen={isContactOpen}
-          onClose={closeContactModal}
-        />
+        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </section>
   );

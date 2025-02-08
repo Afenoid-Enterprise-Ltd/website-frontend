@@ -1,7 +1,7 @@
 import React from "react";
+import { DownloadProfile } from "../../../components/downloadProfile.tsx";
 import { Text } from "../../../ui";
 import { ResourcesGrid } from "./resourcesGrid.tsx";
-import { ProfileCard } from "./profileCard.tsx";
 import { CaseStudiesGrid } from "./caseStudiesGrid.tsx";
 import { Newsletter, ContactUs } from "../../../components/";
 
@@ -32,9 +32,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
         </div>
       </div>
 
-      <div className="px-[5rem] py-[5rem] msm:px-[3rem] mxs:px-[2rem]">
-        <ProfileCard />
-      </div>
+      <DownloadProfile />
 
       <div>
         <div className="w-[60%] mx-auto px-[3rem] msm:w-full mxs:px-4 border">

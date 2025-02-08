@@ -45,8 +45,8 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         variant="h5"
         color="af-dark-green"
         fontFamily="raleway"
-        fontWeight="bold"
-        customClassName="text-[16px]"
+        fontWeight="medium"
+        customClassName="!text-[1.25rem]"
       >
         {title?.split("*").map((part, index) => (
           <React.Fragment key={index}>
@@ -63,8 +63,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         variant="body-reg"
         color="af-dark-green"
         fontFamily="proxima-nova"
-        fontWeight="regular"
-        customClassName="text-[20px]"
+        fontWeight="light"
+        customClassName="!text-[1.15rem]"
+        align="justify"
       >
         {description?.split("*").map((part, index) => (
           <React.Fragment key={index}>

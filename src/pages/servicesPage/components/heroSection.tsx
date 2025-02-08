@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Button } from "../../../ui";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import { ResourcesPageHeroImg } from "../../../assets";
+import { ServicesHeroImg } from "../../../assets";
 
 interface HeroSectionProps {
   openModal: () => void;
@@ -21,19 +21,20 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
   return (
     <section
       className="w-screen 2xl:w-full h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
-      style={{ backgroundImage: `url(${ResourcesPageHeroImg})` }}
+      style={{ backgroundImage: `url(${ServicesHeroImg })` }}
     >
       <div className="w-[70%] mlg:w-[90%] mxxs:w-full">
         <Text
           variant="h1"
           fontWeight="medium"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           align="left"
           color="floral-white"
+          customClassName="!text-[3rem] leading-[140%]"
         >
-          Prioritizing the <span className="text-afenoid-yellow">security</span>{" "}
-          and <span className="text-afenoid-yellow">reliability</span> of
-          digital systems, services, and transactions.
+          Prioritizing the <span className="font-bold">security</span> and{" "}
+          <span className="font-bold">reliability</span> of digital systems,
+          services, and transactions.
         </Text>
         <Text
           variant="h5"
@@ -41,16 +42,25 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
           fontFamily="proxima-nova"
           align="left"
           color="floral-white"
+          customClassName="my-4"
         >
           We specialize in providing managed services in IT governance, risk
           management, and compliance.
         </Text>
-        <Button
-          variant="secondary"
-          label="Book a Consultation"
-          customClassName="border-white text-white mt-8"
-          onClick={modalProp}
-        />
+        <div className="flex justify-start items-center gap-7">
+          <button
+            className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%]"
+            onClick={modalProp}
+          >
+            Schedule a Meeting
+          </button>
+          <Button
+            variant="secondary"
+            label="Contact Us"
+            customClassName="border-white text-white"
+            // onClick={modalProp}
+          />
+        </div>
       </div>
     </section>
   );
@@ -76,7 +86,7 @@ const HSMobile: React.FC<HeroMobileProps> = (props) => {
         </Text>
         <div className="w-full relative h-auto">
           <img
-            src={ResourcesPageHeroImg}
+            src={ServicesHeroImg}
             alt="Services Page Image"
             className="w-full h-full object-cover"
             loading="lazy"

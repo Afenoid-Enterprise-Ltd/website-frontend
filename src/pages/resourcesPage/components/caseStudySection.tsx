@@ -11,7 +11,7 @@ interface CaseStudyProps {
 
 const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
   const { openConsultationModal } = props;
-  
+
   return (
     <section className="bg-white">
       <div>
@@ -32,28 +32,31 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
         </div>
       </div>
 
-      <DownloadProfile />
+      <div className=" py-[5rem]">
+        <DownloadProfile />
+      </div>
 
       <div>
-        <div className="w-[60%] mx-auto px-[3rem] msm:w-full mxs:px-4 border">
-            <Text
-              variant="h2"
-              fontFamily="raleway"
-              align="center"
-              color="af-dark-green"
-              fontWeight="medium"
-              customClassName="msm:text-[24px]"
-            >
-              Case Studies
-            </Text>
+        <div className="w-[60%] mx-auto px-[3rem] msm:w-full mxs:px-4">
+          <Text
+            variant="h2"
+            fontFamily="raleway"
+            align="center"
+            color="af-dark-green"
+            fontWeight="medium"
+            customClassName="msm:text-[24px]"
+          >
+            Case Studies
+          </Text>
         </div>
+
         <div className="my-[4rem]">
           <CaseStudiesGrid />
         </div>
 
         <div className="mt-[13rem] msm:mt-20">
-        <Newsletter />
-        <ContactUs openConsultationModal={openConsultationModal} />
+          <Newsletter />
+          <ContactUs openConsultationModal={openConsultationModal} />
         </div>
       </div>
     </section>

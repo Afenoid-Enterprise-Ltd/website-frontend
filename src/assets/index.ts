@@ -213,7 +213,6 @@ export {
   CardHouse,
   CardFace,
   ScheduleMeetingImg,
-  ServicesHeroImg,
   DropdownImg1,
   DropdownImg2,
   DropdownImg3,

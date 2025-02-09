@@ -225,6 +225,6 @@ export {
   DropdownImg9,
   DropdownImg10,
   DropdownImg11,
-  ProfileCardBgMbl
+  ProfileCardBgMbl,
   ServicesHeroImg
 };

@@ -99,6 +99,19 @@ import CardHouse from "./card-house.svg";
 import CardFace from "./card-face.svg";
 import ScheduleMeetingImg from "./schedule-meeting.webp";
 import ServicesHeroImg from "./services-hero.webp";
+import DropdownImg1 from "./dropdown-1.webp";
+import DropdownImg2 from "./dropdown-2.webp";
+import DropdownImg3 from "./dropdown-3.webp";
+import DropdownImg4 from "./dropdown-4.webp";
+import DropdownImg5 from "./dropdown-5.webp";
+import DropdownImg6 from "./dropdown-6.webp";
+import DropdownImg7 from "./dropdown-7.webp";
+import DropdownImg8 from "./dropdown-8.webp";
+import DropdownImg9 from "./dropdown-9.webp";
+import DropdownImg10 from "./dropdown-10.webp";
+import DropdownImg11 from "./dropdown-11.webp";
+
+import ProfileCardBgMbl from "./profileCardBgMbl.webp";
 
 export {
   MainLogoSVG,
@@ -200,6 +213,17 @@ export {
   CardHouse,
   CardFace,
   ScheduleMeetingImg,
+  DropdownImg1,
+  DropdownImg2,
+  DropdownImg3,
+  DropdownImg4,
+  DropdownImg5,
+  DropdownImg6,
+  DropdownImg7,
+  DropdownImg8,
+  DropdownImg9,
+  DropdownImg10,
+  DropdownImg11,
+  ProfileCardBgMbl,
   ServicesHeroImg
 };
-

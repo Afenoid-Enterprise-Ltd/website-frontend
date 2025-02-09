@@ -41,24 +41,27 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           loading="lazy"
         />
       </div>
-      <Text
-        variant="h5"
-        color="af-dark-green"
-        fontFamily="raleway"
-        fontWeight="medium"
-        customClassName="!text-[1.25rem]"
-      >
-        {title?.split("*").map((part, index) => (
-          <React.Fragment key={index}>
-            {part}
-            {index < title.split("*").length - 1 && (
-              <>
-                <br />
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </Text>
+      <div className="h-[5rem] border-red-500 border-2">
+        <Text
+          variant="h5"
+          color="af-dark-green"
+          fontFamily="raleway"
+          fontWeight="medium"
+          customClassName="!text-[1.25rem]"
+        >
+          {title?.split("*").map((part, index) => (
+            <React.Fragment key={index}>
+              {part}
+              {index < title.split("*").length - 1 && (
+                <>
+                  <br />
+                </>
+              )}
+            </React.Fragment>
+          ))}
+        </Text>
+      </div>
+
       <Text
         variant="body-reg"
         color="af-dark-green"

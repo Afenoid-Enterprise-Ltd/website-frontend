@@ -1,5 +1,4 @@
 import { Text } from "../../../ui";
-// import { ResourcesPageHeroImg } from "../../../assets";
 import { ResourcesHero } from "../../../assets";
 
 const HeroSection = () => {
@@ -12,7 +11,7 @@ const HeroSection = () => {
         <Text
           variant="h1"
           fontWeight="medium"
-          fontFamily="gambetta"
+          fontFamily="raleway"
           align="center"
           color="floral-white"
         >
@@ -25,7 +24,7 @@ const HeroSection = () => {
           align="center"
           color="floral-white"
         >
-          Let’s explore opportunities that meet your organizational needs.
+          Let's explore opportunities that meet your organizational needs.
         </Text>
         <div className="flex justify-center items-center">
           <a href="/Afenoid Brochure.pdf" download="Company Brochure.pdf">

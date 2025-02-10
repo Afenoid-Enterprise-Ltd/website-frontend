@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button, Outlet } from "../../ui";
-import { CallToAction } from "../../components/callToAction.tsx";
+import { Outlet } from "../../ui";
+// import { CallToAction } from "../../components/callToAction.tsx";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
-import { RequestConsultation, ScheduleMeeting } from "../../components";
+import { ScheduleMeeting } from "../../components";
 
 interface CaseStudiesPageProps {
   openModal: () => void;

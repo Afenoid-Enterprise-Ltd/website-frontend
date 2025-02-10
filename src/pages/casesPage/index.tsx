@@ -33,9 +33,9 @@ const CasesPage: React.FC<CasesPageProps> = (props) => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
-  const openConsultationModal = () => {
-    setIsConsultationOpen(true);
-  };
+  // const openConsultationModal = () => {
+  //   setIsConsultationOpen(true);
+  // };
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);

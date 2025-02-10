@@ -4,18 +4,24 @@ import { Button, Outlet } from "../../ui";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
-import { RequestConsultation } from "../../components";
+import { RequestConsultation, ScheduleMeeting } from "../../components";
 
-const CaseStudiesPage = () => {
-  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+interface CaseStudiesPageProps {
+  openModal: () => void;
+}
 
-  const openConsultationModal = () => {
-    setIsConsultationOpen(true);
-  };
+const CaseStudiesPage: React.FC<CaseStudiesPageProps> = (props) => {
+  const { openModal } = props;
 
-  const closeConsultationModal = () => {
-    setIsConsultationOpen(false);
-  };
+  // const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+
+  // const openConsultationModal = () => {
+  //   setIsConsultationOpen(true);
+  // };
+
+  // const closeConsultationModal = () => {
+  //   setIsConsultationOpen(false);
+  // };
 
   return (
     <motion.section
@@ -27,7 +33,7 @@ const CaseStudiesPage = () => {
       <Outlet>
         <HeroSection />
         <MainSection />
-        <CallToAction
+        {/* <CallToAction
           title="Ready to have a conversation with us?"
           explanation="Schedule a meeting with a consultant right away"
           button={
@@ -38,14 +44,18 @@ const CaseStudiesPage = () => {
               onClick={openConsultationModal}
             />
           }
-        />
+        /> */}
+
+        <div className="px-[5rem] msm:px-6 my-40">
+          <ScheduleMeeting openModal={openModal}/>
+        </div>
       </Outlet>
-      {isConsultationOpen && (
+      {/* {isConsultationOpen && (
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
         />
-      )}
+      )} */}
     </motion.section>
   );
 };

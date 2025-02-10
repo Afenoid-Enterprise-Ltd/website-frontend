@@ -45,7 +45,7 @@ export const caseStudy = [
     }
   },
   {
-    title: " Operational Resilience for a technology Solutions provider",
+    title: " Operational Resilience for a Technology Solutions provider",
     description: "A retail bank implemented ISO 22301, ensuring operational continuity during disasters and power outages, reducing downtime and enhancing customer confidence.",
     imgUrl: "https://res.cloudinary.com/prosper99/image/upload/v1734077876/Afenoid%20Project%20Images/retailBanking3x_ovlmwp.png",
     segment: "ISO 22301",

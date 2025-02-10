@@ -7,10 +7,17 @@ import { HeaderSection } from "./components/headerSection.tsx";
 import { DataSection } from "./components/dataSection.tsx";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { RelatedSection } from "./components/relatedSection.tsx";
+import { ScheduleMeeting } from "../../components";
 import { HomeHeroImage } from "../../assets";
 import { ConsultationForm, RequestConsultation } from "../../components";
 
-const CasesPage = () => {
+interface CasesPageProps {
+  openModal: () => void;
+}
+
+const CasesPage: React.FC<CasesPageProps> = (props) => {
+  const { openModal } = props;
+
   const { title } = useParams();
 
   const item = caseStudy.find((study) => {
@@ -66,7 +73,7 @@ const CasesPage = () => {
           recommendation={item?.data.recommendation}
         />
 
-        <CallToAction
+        {/* <CallToAction
           title="Ready to have a conversation with us?"
           explanation="Schedule a meeting with a consultant right away"
           button={
@@ -77,7 +84,11 @@ const CasesPage = () => {
               onClick={openConsultationModal}
             />
           }
-        />
+        /> */}
+
+        <div className="px-[5rem] msm:px-6 my-40">
+          <ScheduleMeeting openModal={openModal}/>
+        </div>
 
         <RelatedSection relatedCases={relateditems}/>
 

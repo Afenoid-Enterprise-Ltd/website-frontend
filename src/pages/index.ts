@@ -2,6 +2,7 @@ export * from "./homePage";
 export * from "./errorPage";
 export * from "./componentsPage";
 export * from  "./aboutUsPage";
+export * from  "./contactUsPage";
 export * from "./resourcesPage";
 export * from "./servicesPage";
 export * from "./servicesSkillsPage";

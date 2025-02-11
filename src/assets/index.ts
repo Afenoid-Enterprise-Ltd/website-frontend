@@ -110,8 +110,16 @@ import DropdownImg8 from "./dropdown-8.webp";
 import DropdownImg9 from "./dropdown-9.webp";
 import DropdownImg10 from "./dropdown-10.webp";
 import DropdownImg11 from "./dropdown-11.webp";
-
 import ProfileCardBgMbl from "./profileCardBgMbl.webp";
+import OverviewDDImg1 from "./overview-dd-1.webp";
+import OverviewDDImg2 from "./overview-dd-2.webp";
+import OverviewDDImg3 from "./overview-dd-3.webp";
+import OverviewDDImg4 from "./overview-dd-4.webp";
+import OverviewDDImg5 from "./overview-dd-5.webp";
+import OverviewDDImg6 from "./overview-dd-6.webp";
+import OverviewDDImg7 from "./overview-dd-7.webp";
+import OverviewDDImg8 from "./overview-dd-8.webp";
+import OverviewISMS from "./overview-isms-img.webp";
 
 export {
   MainLogoSVG,
@@ -225,5 +233,14 @@ export {
   DropdownImg10,
   DropdownImg11,
   ProfileCardBgMbl,
+  OverviewDDImg1,
+  OverviewDDImg2,
+  OverviewDDImg3,
+  OverviewDDImg4,
+  OverviewDDImg5,
+  OverviewDDImg6,
+  OverviewDDImg7,
+  OverviewDDImg8,
+  OverviewISMS,
   ServicesHeroImg
 };

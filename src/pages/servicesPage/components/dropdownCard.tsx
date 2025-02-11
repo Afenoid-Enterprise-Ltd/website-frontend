@@ -106,9 +106,9 @@ const DropdownCard: React.FC<DropdownCardProps> = (props) => {
             variant="h5"
             color="af-white"
             fontFamily="raleway"
-            fontWeight="bold"
+            fontWeight="semi-bold"
             align="left"
-            customClassName="!text-[1rem]"
+            customClassName="!text-[1.2rem]"
           >
             {title}
           </Text>

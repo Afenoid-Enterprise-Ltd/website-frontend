@@ -41,7 +41,7 @@ const HeroSection = () => {
           fontFamily="raleway"
           align="center"
           color="floral-white"
-          customClassName="!text-[48px] mxs:!text-[36px] mb-8"
+          customClassName="!text-[48px] mxs:!text-[36px] mb-4"
         >
           About Afenoid
         </Text>

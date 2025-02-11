@@ -28,12 +28,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
 
   return (
     <div
-      className="flex flex-col justify-evenly gap-5 msm:w-full"
+      className="flex flex-col justify-start gap-5 msm:w-full"
       data-aos="fade-up"
       data-aos-delay="50"
       data-aos-duration="1000"
     >
-      <div className=" flex h-[15rem] w-full mxs:h-[12.5rem] mxxl:w-full">
+      <div className="flex h-[15rem] w-auto mxs:h-[12.5rem] mxxl:w-full">
         <img
           src={image}
           alt="Case Study Image"
@@ -62,26 +62,29 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         </Text>
       </div>
 
-      <Text
-        variant="body-reg"
-        color="af-dark-green"
-        fontFamily="proxima-nova"
-        fontWeight="light"
-        customClassName="!text-[1.15rem]"
-        align="justify"
-      >
-        {description?.split("*").map((part, index) => (
-          <React.Fragment key={index}>
-            {part}
-            {index < description.split("*").length - 1 && (
-              <>
-                <br />
-                <br />
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </Text>
+      <div className="h-[10rem]">
+        <Text
+          variant="body-reg"
+          color="af-dark-green"
+          fontFamily="proxima-nova"
+          fontWeight="light"
+          customClassName="!text-[1.15rem]"
+          align="justify"
+        >
+          {description?.split("*").map((part, index) => (
+            <React.Fragment key={index}>
+              {part}
+              {index < description.split("*").length - 1 && (
+                <>
+                  <br />
+                  <br />
+                </>
+              )}
+            </React.Fragment>
+          ))}
+        </Text>
+      </div>
+
       <div>
         <Link
           to={route}

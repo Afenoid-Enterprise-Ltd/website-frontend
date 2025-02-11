@@ -9,26 +9,26 @@ import { CallToAction } from "../../components/callToAction.tsx";
 import { RelatedSection } from "./components/relatedSection.tsx";
 import { ScheduleMeeting } from "../../components";
 import { HomeHeroImage } from "../../assets";
-import { ConsultationForm, RequestConsultation } from "../../components";
+import {
+  ConsultationForm,
+  RequestConsultation,
+  ScheduleMeeting,
+} from "../../components";
 
-interface CasesPageProps {
-  openModal: () => void;
-}
-
-const CasesPage: React.FC<CasesPageProps> = (props) => {
-  const { openModal } = props;
-
+const CasesPage = () => {
   const { title } = useParams();
 
   const item = caseStudy.find((study) => {
     return study.title.toLowerCase().split(" ").join("-") === title;
   });
 
-  const relateditems = caseStudy.filter(study =>{
-    return study.segment === item?.segment
-  }).filter(study => {
-    return study.title !== item?.title
-  })
+  const relateditems = caseStudy
+    .filter((study) => {
+      return study.segment === item?.segment;
+    })
+    .filter((study) => {
+      return study.title !== item?.title;
+    });
 
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
@@ -48,8 +48,6 @@ const CasesPage: React.FC<CasesPageProps> = (props) => {
   const closeContactModal = () => {
     setIsContactOpen(false);
   };
-
-  
 
   return (
     <motion.section
@@ -73,24 +71,13 @@ const CasesPage: React.FC<CasesPageProps> = (props) => {
           recommendation={item?.data.recommendation}
         />
 
-        {/* <CallToAction
-          title="Ready to have a conversation with us?"
-          explanation="Schedule a meeting with a consultant right away"
-          button={
-            <Button
-              variant="primary"
-              label="Book a Consultation"
-              customClassName="mt-[2rem]"
-              onClick={openConsultationModal}
-            />
-          }
-        /> */}
+        <section className="px-[5rem] msm:px-6">
+          <div className="my-24 mb-48">
+            <ScheduleMeeting openModal={openConsultationModal} />
+          </div>
+        </section>
 
-        <div className="px-[5rem] msm:px-6 my-40">
-          <ScheduleMeeting openModal={openModal}/>
-        </div>
-
-        <RelatedSection relatedCases={relateditems}/>
+        <RelatedSection relatedCases={relateditems} />
 
         <div className="max-w-[530px] mx-auto mt-[150px] msm:mx-6">
           <img src={HomeHeroImage} alt="" />

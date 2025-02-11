@@ -14,6 +14,7 @@ const HeroSection = () => {
           fontFamily="raleway"
           align="center"
           color="floral-white"
+          customClassName="!text-[48px] mxs:!text-[36px] mb-4"
         >
           Want to know more about our services?
         </Text>

@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button, Outlet } from "../../ui";
-import { CallToAction } from "../../components/callToAction.tsx";
+import { Outlet } from "../../ui";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
-import { RequestConsultation } from "../../components";
+import { RequestConsultation, ScheduleMeeting } from "../../components";
 
 const CaseStudiesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -27,18 +26,11 @@ const CaseStudiesPage = () => {
       <Outlet>
         <HeroSection />
         <MainSection />
-        <CallToAction
-          title="Ready to have a conversation with us?"
-          explanation="Schedule a meeting with a consultant right away"
-          button={
-            <Button
-              variant="primary"
-              label="Book a Consultation"
-              customClassName="mt-[2rem] mb-[150px]"
-              onClick={openConsultationModal}
-            />
-          }
-        />
+        <section className="px-[5rem] msm:px-6">
+          <div className="my-24 mb-48">
+            <ScheduleMeeting openModal={openConsultationModal} />
+          </div>
+        </section>
       </Outlet>
       {isConsultationOpen && (
         <RequestConsultation

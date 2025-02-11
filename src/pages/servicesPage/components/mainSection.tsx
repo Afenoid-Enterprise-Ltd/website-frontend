@@ -47,43 +47,43 @@ const MainSection = () => {
 
   return (
     <section className="w-screen 2xl:w-full">
-      <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
+      <div className=" py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
         <button
           onClick={() => handleNavigation("overview")}
-          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform tracking-[9%] hover:bg-afenoid-lemon hover:text-floral-white ${
             currentService === "overview"
               ? "bg-afenoid-green text-floral-white"
-              : "bg-white text-black"
+              : "bg-afenoid-light-grey text-afenoid-dark-green"
           }`}
         >
           Overview
         </button>
         <button
           onClick={() => handleNavigation("consulting")}
-          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform tracking-[9%] hover:bg-afenoid-lemon hover:text-floral-white ${
             currentService === "consulting"
               ? "bg-afenoid-green text-floral-white"
-              : "bg-white text-black"
+              : "bg-afenoid-light-grey text-afenoid-dark-green"
           }`}
         >
           Digital Transformation Consulting
         </button>
         <button
           onClick={() => handleNavigation("auditing")}
-          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform tracking-[9%] hover:bg-afenoid-lemon hover:text-floral-white ${
             currentService === "auditing"
               ? "bg-afenoid-green text-floral-white"
-              : "bg-white text-black"
+              : "bg-afenoid-light-grey text-afenoid-dark-green"
           }`}
         >
           Digital Trust Services
         </button>
         <button
           onClick={() => handleNavigation("training")}
-          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white ${
+          className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform tracking-[9%] hover:bg-afenoid-lemon hover:text-floral-white ${
             currentService === "training"
               ? "bg-afenoid-green text-floral-white"
-              : "bg-white text-black"
+              : "bg-afenoid-light-grey text-afenoid-dark-green"
           }`}
         >
           Digital Skills Development

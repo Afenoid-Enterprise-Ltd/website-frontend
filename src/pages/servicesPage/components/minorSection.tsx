@@ -2,7 +2,6 @@ import React from "react";
 import { Text } from "../../../ui";
 import { ScheduleMeeting, CaseStudyCard, AboutUs } from "../../../components";
 import {
-  TrainingImg1,
   TrainingImg2,
   TrainingImg3,
   IsacaLogo,
@@ -10,6 +9,7 @@ import {
   SwiftLogo,
   PciLogo,
   ApmgLogo,
+  OverviewISMS
 } from "../../../assets";
 import { Link } from "react-router-dom";
 
@@ -25,7 +25,7 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
       title: "Information Security Management System * (ISO 27001)",
       description:
         "When sensitive data is at risk, organizations need a plan. This course guides you in creating an Information Security Management System (ISMS) that helps safeguard your data, manage risks, and build trust with customers—ensuring you stay compliant and secure in a digital world.",
-      image: TrainingImg1,
+      image: OverviewISMS,
       route: "/services/information-security-management-system",
     },
     {
@@ -123,7 +123,7 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
           Competency Development
         </Text>
 
-        <div className="w-full flex justify-between items-start gap-10 px-[5rem] mb-[10rem] 2xl:w-full mxxl:grid mxxl:grid-cols-3 mxxl:px-[3rem] mlg:grid-cols-2 msm:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
+        <div className="w-full grid grid-cols-3 gap-10 px-[5rem] mb-[10rem] 2xl:w-full mxxl:grid mxxl:grid-cols-3 mxxl:px-[3rem] mlg:grid-cols-2 msm:grid-cols-1 mxs:px-[2rem] mxxs:px-4">
           {trainingData.map((training, index) => (
             <CaseStudyCard
               title={training.title}

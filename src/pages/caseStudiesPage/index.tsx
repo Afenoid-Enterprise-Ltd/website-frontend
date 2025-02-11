@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button, Outlet } from "../../ui";
-import { CallToAction } from "../../components/callToAction.tsx";
+import { Outlet } from "../../ui";
 import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
 import { RequestConsultation, ScheduleMeeting } from "../../components";

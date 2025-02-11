@@ -241,5 +241,6 @@ export {
   OverviewDDImg6,
   OverviewDDImg7,
   OverviewDDImg8,
-  OverviewISMS
+  OverviewISMS,
+  ServicesHeroImg
 };

@@ -27,7 +27,7 @@ const OverviewCard: React.FC<CardProps> = (props) => {
           fontFamily="raleway"
           fontWeight="semi-bold"
           align="left"
-          customClassName="!text-[2.25rem] mt-6 my-4"
+          customClassName="!text-[2.25rem] mt-6 my-4 leading-[1.2]"
         >
           {title}
         </Text>

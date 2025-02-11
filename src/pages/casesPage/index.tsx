@@ -8,7 +8,11 @@ import { DataSection } from "./components/dataSection.tsx";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { RelatedSection } from "./components/relatedSection.tsx";
 import { HomeHeroImage } from "../../assets";
-import { ConsultationForm, RequestConsultation } from "../../components";
+import {
+  ConsultationForm,
+  RequestConsultation,
+  ScheduleMeeting,
+} from "../../components";
 
 const CasesPage = () => {
   const { title } = useParams();
@@ -17,11 +21,13 @@ const CasesPage = () => {
     return study.title.toLowerCase().split(" ").join("-") === title;
   });
 
-  const relateditems = caseStudy.filter(study =>{
-    return study.segment === item?.segment
-  }).filter(study => {
-    return study.title !== item?.title
-  })
+  const relateditems = caseStudy
+    .filter((study) => {
+      return study.segment === item?.segment;
+    })
+    .filter((study) => {
+      return study.title !== item?.title;
+    });
 
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
@@ -41,8 +47,6 @@ const CasesPage = () => {
   const closeContactModal = () => {
     setIsContactOpen(false);
   };
-
-  
 
   return (
     <motion.section
@@ -66,20 +70,13 @@ const CasesPage = () => {
           recommendation={item?.data.recommendation}
         />
 
-        <CallToAction
-          title="Ready to have a conversation with us?"
-          explanation="Schedule a meeting with a consultant right away"
-          button={
-            <Button
-              variant="primary"
-              label="Book a Consultation"
-              customClassName="mt-[2rem]"
-              onClick={openConsultationModal}
-            />
-          }
-        />
+        <section className="px-[5rem] msm:px-6">
+          <div className="my-24 mb-48">
+            <ScheduleMeeting openModal={openConsultationModal} />
+          </div>
+        </section>
 
-        <RelatedSection relatedCases={relateditems}/>
+        <RelatedSection relatedCases={relateditems} />
 
         <div className="max-w-[530px] mx-auto mt-[150px] msm:mx-6">
           <img src={HomeHeroImage} alt="" />

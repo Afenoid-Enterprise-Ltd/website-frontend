@@ -70,7 +70,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          ISO 27001
+          ISO 27001 (ISMS)
         </button>
         <button
           onClick={() => handleNavigation("iso22301")}
@@ -80,7 +80,7 @@ const MainSection = () => {
               : "bg-white text-black"
           }`}
         >
-          ISO 22301
+          ISO 22301 (BCMS)
         </button>
       </div>
       <section>{renderContent()}</section>

@@ -5,12 +5,9 @@ import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
 import { RequestConsultation, ScheduleMeeting } from "../../components";
 
-interface CaseStudiesPageProps {
-  openModal: () => void;
-}
 
-const CaseStudiesPage: React.FC<CaseStudiesPageProps> = (props) => {
-  const { openModal } = props;
+
+const CaseStudiesPage = () => {
 
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 

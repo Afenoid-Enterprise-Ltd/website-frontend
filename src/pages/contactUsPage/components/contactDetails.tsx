@@ -153,13 +153,3 @@ const ContactDetails = () => {
 
 export { ContactDetails };
 
-{
-  /* <Text
-  fontFamily="proxima-nova"
-  fontWeight="light"
-  align="left"
-  customClassName="!text-[28px] leading-[1.4] msm:!text-[20px]"
->
-  {heroTexts.description}
-</Text>; */
-}

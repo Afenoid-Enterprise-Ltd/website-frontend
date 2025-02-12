@@ -35,8 +35,8 @@ const ContactUsPage = () => {
             </div>
           </div>
 
-          <div>
-          <ScheduleMeeting openModal={openConsultationModal} />
+          <div className="mt-36">
+            <ScheduleMeeting openModal={openConsultationModal} />
           </div>
         </section>
       </Outlet>

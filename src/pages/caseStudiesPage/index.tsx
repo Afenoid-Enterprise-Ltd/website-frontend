@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet } from "../../ui";
 import { HeroSection } from "./components/heroSection.tsx";
@@ -12,15 +12,15 @@ interface CaseStudiesPageProps {
 const CaseStudiesPage: React.FC<CaseStudiesPageProps> = (props) => {
   const { openModal } = props;
 
-  // const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 
-  // const openConsultationModal = () => {
-  //   setIsConsultationOpen(true);
-  // };
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
 
-  // const closeConsultationModal = () => {
-  //   setIsConsultationOpen(false);
-  // };
+  const closeConsultationModal = () => {
+    setIsConsultationOpen(false);
+  };
 
   return (
     <motion.section
@@ -38,12 +38,12 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = (props) => {
           </div>
         </section>
       </Outlet>
-      {/* {isConsultationOpen && (
+      {isConsultationOpen && (
         <RequestConsultation
           isOpen={isConsultationOpen}
           onClose={closeConsultationModal}
         />
-      )} */}
+      )}
     </motion.section>
   );
 };

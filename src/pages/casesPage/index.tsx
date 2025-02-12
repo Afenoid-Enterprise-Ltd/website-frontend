@@ -7,7 +7,6 @@ import { HeaderSection } from "./components/headerSection.tsx";
 import { DataSection } from "./components/dataSection.tsx";
 import { CallToAction } from "../../components/callToAction.tsx";
 import { RelatedSection } from "./components/relatedSection.tsx";
-import { ScheduleMeeting } from "../../components";
 import { HomeHeroImage } from "../../assets";
 import {
   ConsultationForm,
@@ -33,9 +32,9 @@ const CasesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
   const [isContactOpen, setIsContactOpen] = useState<boolean>(false);
 
-  // const openConsultationModal = () => {
-  //   setIsConsultationOpen(true);
-  // };
+  const openConsultationModal = () => {
+    setIsConsultationOpen(true);
+  };
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);

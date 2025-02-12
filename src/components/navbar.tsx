@@ -97,12 +97,13 @@ const Navbar: React.FC = () => {
               </Link>
             );
           })}
-          <Button
-            variant="primary"
-            label="Contact Us"
-            customClassName="font-light"
-            onClick={openModal}
-          />
+          <Link to='/contact-us'>
+            <Button
+              variant="primary"
+              label="Contact Us"
+              customClassName="font-light"
+            />
+          </Link>
         </div>
       ) : (
         <>

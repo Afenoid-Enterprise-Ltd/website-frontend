@@ -18,6 +18,9 @@ const ComponentsPage = lazy(() =>
 const AboutUsPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.AboutUsPage }))
 );
+const ContactUsPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.ContactUsPage }))
+);
 const ServicesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.ServicesPage }))
 );
@@ -60,6 +63,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/:skills" element={<ServicesSkillsPage />} />

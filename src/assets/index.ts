@@ -120,6 +120,8 @@ import OverviewDDImg6 from "./overview-dd-6.webp";
 import OverviewDDImg7 from "./overview-dd-7.webp";
 import OverviewDDImg8 from "./overview-dd-8.webp";
 import OverviewISMS from "./overview-isms-img.webp";
+import EnvelopeIcon from "./envelope.svg"
+import TelephoneIcon from "./telephone.svg"
 
 export {
   MainLogoSVG,
@@ -242,5 +244,7 @@ export {
   OverviewDDImg7,
   OverviewDDImg8,
   OverviewISMS,
-  ServicesHeroImg
+  ServicesHeroImg,
+  TelephoneIcon,
+  EnvelopeIcon
 };

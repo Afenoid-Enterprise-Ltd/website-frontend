@@ -5,7 +5,10 @@ import { HeroSection } from "./components/heroSection.tsx";
 import { MainSection } from "./components/mainSection.tsx";
 import { RequestConsultation, ScheduleMeeting } from "../../components";
 
+
+
 const CaseStudiesPage = () => {
+
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 
   const openConsultationModal = () => {

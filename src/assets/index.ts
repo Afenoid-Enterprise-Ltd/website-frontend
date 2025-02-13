@@ -120,8 +120,12 @@ import OverviewDDImg6 from "./overview-dd-6.webp";
 import OverviewDDImg7 from "./overview-dd-7.webp";
 import OverviewDDImg8 from "./overview-dd-8.webp";
 import OverviewISMS from "./overview-isms-img.webp";
-import EnvelopeIcon from "./envelope.svg"
-import TelephoneIcon from "./telephone.svg"
+import EnvelopeIcon from "./envelope.svg";
+import TelephoneIcon from "./telephone.svg";
+import LinkedinGreen from "./linkedin-green.svg";
+import InstagramGreen from "./instagram-green.svg";
+import TwitterGreen from "./twitter-green.svg";
+import FacebookGreen from "./facebook-green.svg"
 
 export {
   MainLogoSVG,
@@ -246,5 +250,9 @@ export {
   OverviewISMS,
   ServicesHeroImg,
   TelephoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  TwitterGreen,
+  LinkedinGreen,
+  FacebookGreen,
+  InstagramGreen
 };

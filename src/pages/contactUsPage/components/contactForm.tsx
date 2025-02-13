@@ -1,4 +1,4 @@
-import { Text } from "../../../ui";
+import { Button, Text } from "../../../ui";
 
 const ContactForm = () => {
   return (
@@ -17,7 +17,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="firstName"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             FIRST NAME <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -32,7 +32,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="lastName"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             LAST NAME <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -47,7 +47,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="email"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             EMAIL <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -63,7 +63,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="service"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             SERVICE <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -87,7 +87,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="country"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             COUNTRY <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -105,7 +105,7 @@ const ContactForm = () => {
         <div className="flex flex-col gap-3">
           <label
             htmlFor="message"
-            className="text-xl text-afenoid-dark-green font-bold"
+            className="text-xl text-afenoid-dark-green font-bold font-raleway"
           >
             MESSAGE <span className="text-[#F12222] ml-1">*</span>
           </label>
@@ -115,6 +115,9 @@ const ContactForm = () => {
             placeholder="Hello"
             className="border border-[#9D9595] py-4 px-3 bg-[#F8FAF4] text-lg font-proxima-nova font-light h-[17rem] focus:outline-none"
           ></textarea>
+        </div>
+        <div>
+            <Button variant="primary" label="Submit"/>
         </div>
       </form>
     </div>

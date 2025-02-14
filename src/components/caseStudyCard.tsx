@@ -41,7 +41,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           loading="lazy"
         />
       </div>
-      <div className="h-[5rem]">
+      <div className="h-[3.5rem]">
         <Text
           variant="h5"
           color="af-dark-green"
@@ -62,7 +62,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         </Text>
       </div>
 
-      <div className="h-[10rem]">
+      <div className="h-[8rem]">
         <Text
           variant="body-reg"
           color="af-dark-green"

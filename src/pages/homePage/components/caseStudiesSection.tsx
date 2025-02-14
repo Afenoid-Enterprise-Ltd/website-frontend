@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Text } from "../../../ui";
-import { ContactUs, Newsletter } from "../../../components";
+import { ContactUs } from "../../../components";
 
 interface ConsultationProps {
   openConsultationModal: () => void;
@@ -12,8 +12,7 @@ const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
 
   return (
     <section>
-      <Newsletter />
-      <div className="px-[5rem] mmd:px-[2rem] msm:my-[4rem]">
+      <div className=" mmd:px-[2rem] msm:my-[1rem]">
         <ContactUs openConsultationModal={openConsultationModal} />
       </div>
     </section>

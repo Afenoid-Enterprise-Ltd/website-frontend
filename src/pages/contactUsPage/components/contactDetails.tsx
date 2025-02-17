@@ -18,6 +18,7 @@ const ContactDetails = () => {
           color="af-dark-green"
           variant="h3"
           fontWeight="medium"
+          customClassName="msm:text-h4"
         >
           Office Address (Nigeria)
         </Text>
@@ -27,6 +28,7 @@ const ContactDetails = () => {
           fontWeight="light"
           variant="h5"
           color="af-dark-green"
+          customClassName="msm:text-h5"
         >
           Block B, Ground Floor AUJ Complex, <br /> 564/565 Independence Ave,{" "}
           <br />
@@ -43,6 +45,7 @@ const ContactDetails = () => {
               color="af-dark-green"
               variant="h3"
               fontWeight="medium"
+              customClassName="msm:text-h4"
             >
               Email Address
             </Text>
@@ -67,6 +70,7 @@ const ContactDetails = () => {
               color="af-dark-green"
               variant="h3"
               fontWeight="medium"
+              customClassName="msm:text-h4"
             >
               Office Line
             </Text>
@@ -90,6 +94,7 @@ const ContactDetails = () => {
           color="af-dark-green"
           variant="h3"
           fontWeight="medium"
+          customClassName="msm:text-h4 msm:border-t-[#9FA39B]"
         >
           Office Address (England)
         </Text>
@@ -115,6 +120,7 @@ const ContactDetails = () => {
               color="af-dark-green"
               variant="h3"
               fontWeight="medium"
+              customClassName="msm:text-h4"
             >
               Email Address
             </Text>
@@ -139,6 +145,7 @@ const ContactDetails = () => {
               color="af-dark-green"
               variant="h3"
               fontWeight="medium"
+              customClassName="msm:text-h4"
             >
               Office Lines
             </Text>
@@ -155,18 +162,18 @@ const ContactDetails = () => {
           </Text>
         </div>
 
-        <div className="flex gap-4 items-center mt-14">
-          <Link to="/">
-            <img src={TwitterGreen} alt="" />
+        <div className="flex gap-4 items-center justify-center mt-14 msm:gap-8">
+          <Link to="https://x.com/Afenoid">
+            <img src={TwitterGreen} alt="" className="msm:w-[2rem]"/>
+          </Link>
+          <Link to="https://www.instagram.com/afenoidenterprise">
+            <img src={InstagramGreen} alt="" className="msm:w-[2rem]"/>
+          </Link>
+          <Link to="https://www.linkedin.com/company/afenoid-enterprise">
+            <img src={LinkedinGreen} alt="" className="msm:w-[2rem]"/>
           </Link>
           <Link to="/">
-            <img src={InstagramGreen} alt="" />
-          </Link>
-          <Link to="/">
-            <img src={LinkedinGreen} alt="" />
-          </Link>
-          <Link to="/">
-            <img src={FacebookGreen} alt="" />
+            <img src={FacebookGreen} alt="" className="msm:w-[2rem]"/>
           </Link>
         </div>
       </div>

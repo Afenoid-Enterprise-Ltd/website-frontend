@@ -13,7 +13,7 @@ const OverviewCard: React.FC<CardProps> = (props) => {
 
   return (
     <div
-      className={`w-[25rem] min-w-[25rem] min-h-[27rem] px-8 pt-16 ${
+      className={`w-[25rem] min-w-[25rem] min-h-[27rem] px-8 pt-16 msm:min-h-[23rem] ${
         reverse ? "bg-[#224C1F]" : "bg-[#0A2B14]"
       }`}
     >

@@ -103,7 +103,7 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
             fontFamily="proxima-nova"
             fontWeight="medium"
             align="center"
-            customClassName="mxxss:text-xs"
+            customClassName="mxxss:text-sm"
           >
             We collaborate with industry-leading technology providers and
             certification bodies to deliver comprehensive services. Our
@@ -136,7 +136,7 @@ const MinorSection: React.FC<MinorSectionProps> = (props) => {
         </div>
       </div>
 
-      <div className="px-[5rem] msm:px-6">
+      <div className="px-[5rem] mmlg:px-[3rem] msm:px-6">
         <AboutUs />
         <div className="my-24 mb-48">
           <ScheduleMeeting openModal={openModal}/>

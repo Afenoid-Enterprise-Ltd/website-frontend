@@ -37,7 +37,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
           </button>
         </div>
         {/* Scrollable content */}
-        <div className="px-[3rem] py-4 overflow-y-auto max-h-[calc(85vh-5rem)]">
+        <div className="px-[3rem] py-4 overflow-y-auto max-h-[calc(85vh-5rem)] msm:px-8 mxs:px-6">
           {children}
         </div>
       </div>

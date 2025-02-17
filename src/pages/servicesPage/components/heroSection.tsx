@@ -21,7 +21,7 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
   return (
     <section
       className="w-screen 2xl:w-full h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-start items-center px-[5rem] "
-      style={{ backgroundImage: `url(${ServicesHeroImg })` }}
+      style={{ backgroundImage: `url(${ServicesHeroImg})` }}
     >
       <div className="w-[70%] mlg:w-[90%] mxxs:w-full">
         <Text
@@ -47,19 +47,16 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
           We specialize in providing managed services in IT governance, risk
           management, and compliance.
         </Text>
-        <div className="flex justify-start items-center gap-7">
+        <div className="flex justify-start items-center gap-7 mmlg:flex-col mmlg:items-start mmlg:w-[45%] mmd:w-[65%] mxs:w-[75%]">
           <button
-            className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%]"
+            className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[85%] mxs:w-[90%] mxs:text-[14px]"
             onClick={modalProp}
           >
             Schedule a Meeting
           </button>
-          <Button
-            variant="secondary"
-            label="Contact Us"
-            customClassName="border-white text-white"
-            // onClick={modalProp}
-          />
+          <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[85%] mxs:w-[90%]">
+            Contact Us
+          </button>
         </div>
       </div>
     </section>
@@ -70,46 +67,47 @@ const HSMobile: React.FC<HeroMobileProps> = (props) => {
   const { modalProp } = props;
 
   return (
-    <section className="w-screen h-[82.5vh] px-[3rem] mxs:px-[2rem] mxxs:px-4">
-      <div className="w-full">
+    <section
+      className="w-screenbg-[#214d1e98] bg-blend-overlay bg-cover bg-center h-[82.5vh] flex justify-center items-center px-[3rem] mxs:px-[2rem] mxxs:px-4"
+      style={{ backgroundImage: `url(${ServicesHeroImg})` }}
+    >
+      <div className="w-full flex flex-col justify-center items-start gap-4">
         <Text
-          variant="h2"
-          fontWeight="regular"
-          fontFamily="gambetta"
+          variant="h3"
+          fontWeight="semi-bold"
+          fontFamily="raleway"
           align="left"
-          color="af-green"
-          customClassName="my-6"
+          color="af-white"
+          customClassName="!text-[32px] leading-[116%]"
         >
-          Prioritizing the <span className="text-afenoid-yellow">security</span>{" "}
-          and <span className="text-afenoid-yellow">reliability</span> of
-          digital systems, services, and transactions.
+          Prioritizing the security and reliability of digital systems,
+          services, and transactions.
         </Text>
-        <div className="w-full relative h-auto">
-          <img
-            src={ServicesHeroImg}
-            alt="Services Page Image"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-[#214d1e98] mix-blend-multiply"></div>
-        </div>
         <Text
           variant="h5"
           fontWeight="thin"
           fontFamily="proxima-nova"
           align="left"
-          color="af-green"
-          customClassName="my-6"
+          color="af-white"
+          customClassName="!text-base leading-[140%]"
         >
           We specialize in providing managed services in IT governance, risk
           management, and compliance.
         </Text>
-        <Button
-          variant="secondary"
-          label="Book a Consultation"
-          customClassName="mt-8"
-          onClick={modalProp}
-        />
+        <div className="flex flex-col gap-4">
+          <Button
+            variant="secondary"
+            label="Schedule a Meeting"
+            customClassName="w-full !bg-afenoid-green/80 text-white border-white "
+            onClick={modalProp}
+          />
+          <Button
+            variant="secondary"
+            label="Contact Us"
+            customClassName="border-white text-white"
+            // onClick={modalProp}
+          />
+        </div>
       </div>
     </section>
   );

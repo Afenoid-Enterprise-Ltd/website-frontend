@@ -46,8 +46,8 @@ const MainSection = () => {
   };
 
   return (
-    <section className="w-screen 2xl:w-full">
-      <div className=" py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start no-scrollbar ">
+    <section className="w-screen 2xl:w-full ">
+      <div className=" py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto mlg:justify-start mxs:mb-[4rem] no-scrollbar mmlg:hidden">
         <button
           onClick={() => handleNavigation("overview")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform tracking-[9%] hover:bg-afenoid-lemon hover:text-floral-white ${

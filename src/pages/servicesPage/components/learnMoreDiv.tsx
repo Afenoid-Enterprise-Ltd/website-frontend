@@ -43,7 +43,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
             variant="h6"
             color="af-green"
             fontFamily="montserrat"
-            customClassName="uppercase"
+            customClassName="uppercase "
           >
             {heroTexts.caption}
           </Text>
@@ -55,7 +55,7 @@ const LearnMoreDiv: React.FC<HeroDivProps> = ({
             color="af-dark-green"
             fontFamily="raleway"
             fontWeight="medium"
-            customClassName="!text-[2.5rem]"
+            customClassName="!text-[2.5rem] leading-[1.4]"
           >
             {heroTexts.title}
           </Text>

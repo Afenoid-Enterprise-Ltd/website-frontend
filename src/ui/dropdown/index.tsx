@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import styles from "./index.module.scss";
-import { SlArrowDown, SlMagnifier } from "react-icons/sl";
+import { SlArrowDown } from "react-icons/sl";
 
 interface Options {
   value: string;
@@ -78,9 +78,9 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   };
 
   // Handle search input change
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  };
+  // const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setSearchTerm(e.target.value);
+  // };
 
   // Removes the dropdown if it is active, when you click elsewhere on the page
   useEffect(() => {
@@ -93,7 +93,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   return (
     <div className="flex flex-col mb-4">
       <label
-        className="w-fit cursor-pointer text-black text-base font-[600] mb-2 uppercase"
+        className="w-fit cursor-pointer mb-2 uppercase text-lg text-afenoid-dark-green font-bold font-raleway"
         htmlFor=""
       >
         {label}
@@ -135,7 +135,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             ref={dropdownRef}
           >
             {/* Search input */}
-            {options.length > 3 ? (
+            {/* {options.length > 3 ? (
               <div className="flex items-center bg-white border-b p-[6px] mt-2">
                 <SlMagnifier className="text-gray-400 mr-2" />
                 <input
@@ -147,7 +147,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
                   onChange={handleSearchChange}
                 />
               </div>
-            ) : null}
+            ) : null} */}
 
             {/* Options list */}
             <div className="max-h-60 overflow-y-auto">

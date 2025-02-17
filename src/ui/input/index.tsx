@@ -28,10 +28,10 @@ const Input: FC<InputProps> = (props) => {
     <div className="flex flex-col mb-4">
       <label
         htmlFor={name}
-        className="text-black text-base font-[600] uppercase mb-2"
+        className=" cursor-pointer uppercase mb-2 text-lg text-afenoid-dark-green font-bold font-raleway"
       >
         {label}
-        <span className="text-red-400">*</span>
+        <span className="text-red-400"> *</span>
       </label>
       <input
         id={name}
@@ -43,7 +43,7 @@ const Input: FC<InputProps> = (props) => {
         })}
         {...rest}
         className={clsx(
-          `block w-full border-2 p-4 bg-transparent focus:outline-afenoid-dark-grey focus:bg-afenoid-light-lemon placeholder:text-afenoid-dark-green mxs:p-2`, errMessage ? "border-red-500" : "border-afenoid-light-grey"
+          `block w-full border-2 p-4 bg-[#F8FAF4] focus:outline-afenoid-dark-grey focus:bg-afenoid-light-lemon :placeholder:font-raleway placeholder:text-afenoid-dark-grey mxs:p-2`, errMessage ? "border-red-500" : "border-afenoid-light-grey"
         )}
         placeholder={placeholder}
        

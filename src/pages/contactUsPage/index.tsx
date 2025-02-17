@@ -31,7 +31,7 @@ const ContactUsPage = () => {
               <ContactDetails />
             </div>
             <div className="w-1/2">
-              <ContactForm />
+              <ContactForm onClose={closeConsultationModal} isOpen={true} />
             </div>
           </div>
 

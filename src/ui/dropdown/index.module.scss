@@ -1,6 +1,6 @@
 .dropdown{
   width: 100%;
-  background: transparent;
+  background: #F8FAF4;
   position: relative;
   user-select: none;
 }
@@ -29,6 +29,7 @@
   cursor: pointer;
   background: var(--af-light-lemon);
   color: var(--af-green);
+  font-family: "Raleway";
   transition: all .2s;
 }
 

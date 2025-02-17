@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { LearnMoreDiv } from "./learnMoreDiv";
 import {
   ServicesImg1,
@@ -13,6 +13,7 @@ import {
 } from "../../../assets";
 import { ScheduleMeeting } from "../../../components";
 import { DropdownCard } from "./dropdownCard";
+import Slider from "react-slick";
 
 interface ConsultingProps {
   openModal: () => void;
@@ -82,24 +83,59 @@ const Consulting: React.FC<ConsultingProps> = (props) => {
     },
   ];
 
+  const [expandedCardId, setExpandedCardId] = useState<number | null>(null);
+  const handleCardToggle = (cardId: number) => {
+    setExpandedCardId(expandedCardId === cardId ? null : cardId);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    classname: "center",
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    arrows: true,
+  };
+
   return (
     <section>
-      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] mmd:my-[4rem] msm:px-[3rem] mxs:px-4">
         <LearnMoreDiv heroTexts={dataItem.heroTexts} image={dataItem.image} />
       </div>
 
-      <div className="w-full mx-auto my-[8rem] px-[5rem] grid grid-cols-3 gap-16">
+      <div className="w-full mx-auto my-[8rem] px-[5rem] grid grid-cols-3 gap-16 mxl:gap-6 mmlg:grid-cols-2 mmd:hidden msm:px-[3rem] msm:grid-cols-1 mxs:px-[1rem]">
         {dropdownData.map((dropdown, index) => (
           <DropdownCard
+            key={index}
             image={dropdown.image}
             title={dropdown.title}
             description={dropdown.description}
             reverse={index % 2 === 0}
+            isExpanded={expandedCardId === index}
+            onToggle={() => handleCardToggle(index)}
           />
         ))}
       </div>
 
-      <div className="px-[5rem] msm:px-6">
+      <div className="hidden mmd:block mmd:px-[5rem] msm:px-[3rem] mxs:px-4">
+        <Slider {...settings}>
+          {dropdownData.map((dropdown, index) => (
+            <DropdownCard
+              key={index}
+              image={dropdown.image}
+              title={dropdown.title}
+              description={dropdown.description}
+              reverse={index % 2 === 0}
+              isExpanded={expandedCardId === index}
+              onToggle={() => handleCardToggle(index)}
+            />
+          ))}
+        </Slider>
+      </div>
+
+      <div className="px-[5rem] msm:px-[3rem] mxs:px-4">
         <div className="my-24 mb-48">
           <ScheduleMeeting openModal={openModal} />
         </div>

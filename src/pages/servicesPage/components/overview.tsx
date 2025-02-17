@@ -112,7 +112,7 @@ const Overview = () => {
   return (
     <section>
       <div
-        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxxs:px-[2rem]"
+        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxs:my-[4rem] mxs:px-[2rem]"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"
@@ -123,18 +123,18 @@ const Overview = () => {
           align="center"
           color="af-dark-green"
           fontWeight="medium"
-          customClassName="!text-[2.25rem]"
+          customClassName="!text-[2.25rem] mxs:!text-[1.5rem]"
         >
           How We Serve Our Clients
         </Text>
-        <div className="w-[75%] mx-auto">
+        <div className="w-[75%] mx-auto mxs:w-full">
           <Text
             variant="h2"
             fontFamily="proxima-nova"
             align="center"
             color="af-dark-green"
             fontWeight="light"
-            customClassName="!text-[1.5rem]"
+            customClassName="!text-[1.5rem] mxs:!text-[1rem]"
           >
             Implement sustainable security practices that protect your
             organization today while preparing for tomorrow's challenges.
@@ -154,7 +154,7 @@ const Overview = () => {
       </div>
 
       <div
-        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxxs:px-[2rem]"
+        className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxs:my-[4rem] mxxs:px-[2rem]"
         data-aos="fade-up"
         data-aos-delay="50"
         data-aos-duration="1000"
@@ -165,7 +165,7 @@ const Overview = () => {
           align="center"
           color="af-dark-green"
           fontWeight="medium"
-          customClassName="text-[2.25rem]"
+          customClassName="!text-[2.25rem]"  
         >
           How We Serve Our Clients
         </Text>
@@ -178,7 +178,6 @@ const Overview = () => {
             heroTexts={dataItem.heroTexts}
             image={dataItem.image}
             reverse={index % 2 === 0}
-            // btnText="Learn More"
           />
         ))}
       </div>

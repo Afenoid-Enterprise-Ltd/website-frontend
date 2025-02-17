@@ -100,7 +100,7 @@ const Training: React.FC<TrainingProps> = (props) => {
 
   return (
     <section>
-      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] msm:px-[3rem] mxs:px-4">
+      <div className="px-[15rem] mxxl:px-[10rem] mxl:px-[5rem] mmd:my-[4rem] msm:px-[3rem] mxs:px-4">
         <LearnMoreDiv heroTexts={dataItem.heroTexts} image={dataItem.image} />
       </div>
 

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { MainLogo } from "./mainLogo";
 import { Button, Text } from "../ui";
@@ -70,10 +71,10 @@ const Navbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const handleHoverIn = (section: string) => {
-    if(section !== "Services" && section !== "Case Studies"){
-      setActiveDropdown(null)
-    }else{
+    if (section === "Services" || section === "Case Studies") {
       setActiveDropdown(section);
+    } else {
+      setActiveDropdown(null);
     }
   };
 
@@ -99,19 +100,22 @@ const Navbar: React.FC = () => {
               const isActive = name === linkText;
 
               return (
-                <Link
-                  to={navlink.link}
+                <div
+                  className="relative"
                   key={index}
-                  className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
-                    isActive
-                      ? "font-bold hover:scale-100"
-                      : "hover:scale-[1.05] hover:text-afenoid-lemon"
-                  }`}
                   onMouseEnter={() => handleHoverIn(navlink.text)}
-                  // onMouseLeave={handleHoverOut}
                 >
-                  {navlink.text}
-                </Link>
+                  <Link
+                    to={navlink.link}
+                    className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
+                      isActive
+                        ? "font-bold hover:scale-100"
+                        : "hover:scale-[1.05] hover:text-afenoid-lemon"
+                    }`}
+                  >
+                    {navlink.text}
+                  </Link>
+                </div>
               );
             })}
             <Button
@@ -150,6 +154,9 @@ const Navbar: React.FC = () => {
           mouseEnter={() => handleHoverIn(activeDropdown)}
           mouseLeave={handleHoverOut}
         />
+      )}
+      {isSmallDevice && (name === "services" || name === "case-studies") && (
+        <MobileNavbarDropdown pageLocation={name} />
       )}
     </nav>
   );
@@ -236,13 +243,33 @@ export const MobileNavbar: React.FC<MobileNavProps> = ({
 };
 
 interface NavdropdownProps {
-  mouseEnter: (e: React.MouseEvent<HTMLDivElement>) => void;
-  mouseLeave: (e: React.MouseEvent<HTMLDivElement>) => void;
+  mouseEnter: () => void;
+  mouseLeave: () => void;
   section: string;
 }
 
 export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
   const { mouseEnter, mouseLeave, section } = props;
+  const [isExiting, setIsExiting] = useState(false);
+  const [shouldRender, setShouldRender] = useState(true);
+
+  useEffect(() => {
+    // When mouseLeave is triggered, start exit animation
+    const handleExit = () => {
+      setIsExiting(true);
+      // Wait for animation to complete before removing from DOM
+      setTimeout(() => {
+        setShouldRender(false);
+      }, 300); // Match this with your animation duration
+    };
+
+    if (!section) {
+      handleExit();
+    } else {
+      setIsExiting(false);
+      setShouldRender(true);
+    }
+  }, [section]);
 
   const servicesLinks = [
     { text: "Overview", route: "/services" },
@@ -268,8 +295,10 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
     switch (section) {
       case "Services":
         return (
-          <div className="w-full flex justify-start gap-[25rem]
-          ">
+          <div
+            className="w-full flex justify-start gap-[25rem]
+          "
+          >
             <div className="w-[25%] flex flex-col gap-8">
               <Text
                 variant="h3"
@@ -291,14 +320,21 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
             </div>
             <div className="flex flex-col gap-8 w-[30%]">
               {servicesLinks.map((link, index) => (
-                <Link
+                <div
                   key={index}
-                  to={link.route}
-                  className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 ${link.text === "Overview" ? "font-bold" : "font-normal"}`}
+                  className={`opacity-0 translate-y-4 animate-fadeSlideIn`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {link.text}
-                  <GoArrowRight size={25} />
-                </Link>
+                  <Link
+                    to={link.route}
+                    className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 ${
+                      link.text === "Overview" ? "font-bold" : "font-normal"
+                    }`}
+                  >
+                    {link.text}
+                    <GoArrowRight size={25} />
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -327,14 +363,21 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
             </div>
             <div className="flex flex-col gap-4 w-[30%]">
               {caseStudiesLinks.map((link, index) => (
-                <Link
+                <div
                   key={index}
-                  to={link.route}
-                  className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 ${link.text === "All" ? "font-bold" : "font-normal"}`}
+                  className={`opacity-0 translate-y-4 animate-fadeSlideIn`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {link.text}
-                  <GoArrowRight size={25} />
-                </Link>
+                  <Link
+                    to={link.route}
+                    className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 ${
+                      link.text === "All" ? "font-bold" : "font-normal"
+                    }`}
+                  >
+                    {link.text}
+                    <GoArrowRight size={25} />
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
@@ -344,13 +387,95 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
     }
   };
 
+  if (!shouldRender) return null;
+
   return (
-    <nav
-      className="absolute bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center border-t-2 border-gray-500"
+    <motion.nav
+      className={`absolute z-[999] bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center border-t-2 border-gray-500 overflow-hidden transition-all duration-300 ease-out origin-top
+      ${
+        isExiting
+          ? "animate-dropdownSlideUp opacity-0 translate-y-4"
+          : "animate-dropdownSlideDown opacity-100"
+      }`}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
       {renderContent()}
+    </motion.nav>
+  );
+};
+
+interface MobileNavbarDropdownProps {
+  pageLocation: string;
+}
+
+export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
+  props
+) => {
+  const { pageLocation } = props;
+
+  const { hash } = useLocation();
+  let name = hash.split("#")[1];
+
+  const servicesTab = [
+    { text: "Overview", route: "/services" },
+    {
+      text: "Digital Transformation Consulting",
+      route: "/services#consulting",
+    },
+    { text: "Digital Trust Services", route: "/services#auditing" },
+    { text: "Digital Skills Development", route: "/services#training" },
+  ];
+
+  const caseStudiesTab = [
+    {
+      text: "Payment card industry data security standard (pci dss)",
+      route: "/case-studies#pcidss",
+    },
+    { text: "isms (iso 27001)", route: "/case-studies#iso27001" },
+    { text: "bcms (iso 22301)", route: "/case-studies#iso22301" },
+  ];
+
+  const [subMenuArr, setSubMenuArr] = useState<typeof servicesTab | null>(null);
+
+  useEffect(() => {
+    if (pageLocation === "services") {
+      setSubMenuArr(servicesTab);
+    } else if (pageLocation === "case-studies") {
+      setSubMenuArr(caseStudiesTab);
+    } else {
+      setSubMenuArr(null);
+    }
+  }, [pageLocation]);
+
+  return (
+    <nav className="w-screen 2xl:w-full py-4 mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem]">
+      <div className="w-full flex justify-start items-center gap-8 overflow-x-auto no-scrollbar">
+        {subMenuArr?.map((item, index) => {
+          const routeText = item.route.split("#")[1];
+          const isActive = name === routeText;
+
+          return (
+            <div
+              className={`${
+                isActive ? "border-b-4 border-afenoid-green p-1 transform" : "border-none"
+              }`}
+            >
+              <Link
+                key={index}
+                to={item.route}
+                className={`block text-nowrap font-proxima-nova text-[10px] uppercase transition-all duration-300 ease ${
+                  isActive
+                    ? "font-bold scale-102 text-afenoid-green"
+                    : "font-normal text-afenoid-dark-green"
+                }`}
+              >
+                {item.text}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </nav>
   );
 };

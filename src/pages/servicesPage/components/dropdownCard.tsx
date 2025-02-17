@@ -79,23 +79,25 @@ interface DropdownCardProps {
   title: string;
   description: string;
   reverse: boolean;
+  isExpanded: boolean;
+  onToggle: () => void;
 }
 
 const DropdownCard: React.FC<DropdownCardProps> = (props) => {
-  const { image, title, description, reverse } = props;
+  const { image, title, description, reverse, isExpanded, onToggle,} = props;
 
-  const [expanded, setExpanded] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState("100px");
 
   useEffect(() => {
     if (contentRef.current) {
-      setMaxHeight(expanded ? `${contentRef.current.scrollHeight}px` : "100px");
+      setMaxHeight(isExpanded ? `${contentRef.current.scrollHeight}px` : "100px");
     }
-  }, [expanded]);
+  }, [isExpanded]);
 
   return (
-    <div className="w-[460px]">
+    <div className="w-auto ">
       <div>
         <img src={image} alt={`${title} image`} />
       </div>
@@ -108,7 +110,7 @@ const DropdownCard: React.FC<DropdownCardProps> = (props) => {
             fontFamily="raleway"
             fontWeight="semi-bold"
             align="left"
-            customClassName="!text-[1.2rem]"
+            customClassName="!text-[1.2rem] mlg:!text-[1rem] msm:!text-[1.2rem]"
           >
             {title}
           </Text>
@@ -126,7 +128,7 @@ const DropdownCard: React.FC<DropdownCardProps> = (props) => {
             fontFamily="proxima-nova"
             fontWeight="regular"
             align="justify"
-            customClassName="!text-[1rem]"
+            customClassName="!text-[1rem] mlg:!text-[0.8rem] msm:!text-[1rem]"
           >
             {description}
           </Text>
@@ -136,9 +138,9 @@ const DropdownCard: React.FC<DropdownCardProps> = (props) => {
         <div className="w-full">
           <button
             className="w-full text-white font-proxima-nova font-bold text-base flex justify-start items-center py-4 transition-all duration-300 ease-in-out pb-0 hover:scale-105 hover:ml-2"
-            onClick={() => setExpanded(!expanded)}
+            onClick={onToggle}
           >
-            {expanded ? "Show Less -" : "Show More +"}
+            {isExpanded ? "Show Less -" : "Show More +"}
           </button>
         </div>
       </div>

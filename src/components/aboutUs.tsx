@@ -41,7 +41,7 @@ const AboutUs = () => {
         </div>
         <div className="w-[30%] flex justify-center items-center mmlg:w-[40%] mmd:w-full mmd:justify-start">
           <Link to="/about-us">
-            <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] msm:w-[100%]">
+            <button className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[100%]">
               About Us
             </button>
           </Link>

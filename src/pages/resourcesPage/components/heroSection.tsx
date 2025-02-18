@@ -24,6 +24,7 @@ const HeroSection = () => {
           fontFamily="proxima-nova"
           align="center"
           color="floral-white"
+          customClassName="text-[24px] msm:!text-[16px]"
         >
           Let's explore opportunities that meet your organizational needs.
         </Text>

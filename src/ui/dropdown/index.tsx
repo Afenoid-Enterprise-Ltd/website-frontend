@@ -93,7 +93,7 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   return (
     <div className="flex flex-col mb-4">
       <label
-        className="w-fit cursor-pointer mb-2 uppercase text-lg text-afenoid-dark-green font-bold font-raleway"
+        className="w-fit cursor-pointer mb-2 uppercase text-lg text-afenoid-dark-green font-bold font-raleway msm:text-sm"
         htmlFor=""
       >
         {label}

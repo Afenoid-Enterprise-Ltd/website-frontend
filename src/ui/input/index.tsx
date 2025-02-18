@@ -28,7 +28,7 @@ const Input: FC<InputProps> = (props) => {
     <div className="flex flex-col mb-4">
       <label
         htmlFor={name}
-        className=" cursor-pointer uppercase mb-2 text-lg text-afenoid-dark-green font-bold font-raleway"
+        className=" cursor-pointer uppercase mb-2 text-lg text-afenoid-dark-green font-bold font-raleway msm:text-sm"
       >
         {label}
         <span className="text-red-400"> *</span>

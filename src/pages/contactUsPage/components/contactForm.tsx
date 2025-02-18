@@ -88,13 +88,13 @@ const ContactForm:React.FC<FormProps> = ({ onClose }) => {
         color="af-dark-green"
         fontFamily="raleway"
         fontWeight="light"
-        customClassName=""
+        customClassName="msm:text-xl msm:font-medium"
       >
         Kindly fill this form
       </Text>
 
       <FormProvider {...methods}>
-        <form className="flex flex-col gap-12 mt-9" onSubmit={handleSubmit(bookConsultation)}>
+        <form className="flex flex-col gap-12 mt-9 msm:gap-7" onSubmit={handleSubmit(bookConsultation)}>
           <div className="flex flex-col gap-3">
             <Input
               label="First Name"
@@ -143,7 +143,7 @@ const ContactForm:React.FC<FormProps> = ({ onClose }) => {
           <div className="flex flex-col gap-3">
             <label
               htmlFor="message"
-              className="text-xl text-afenoid-dark-green font-bold font-raleway"
+              className="text-lg text-afenoid-dark-green font-bold font-raleway msm:text-sm"
             >
               MESSAGE <span className="text-[#F12222] ml-1">*</span>
             </label>

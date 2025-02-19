@@ -110,7 +110,7 @@ const Overview = () => {
   ];
 
   return (
-    <section>
+    <section >
       <div
         className="w-[80%] mx-auto my-[8rem] px-[3rem] mxs:w-full mxs:my-[4rem] mxs:px-[2rem]"
         data-aos="fade-up"

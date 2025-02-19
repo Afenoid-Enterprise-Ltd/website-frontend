@@ -19,7 +19,7 @@ const HeroSection = () => {
           align="center"
           fontWeight="light"
           fontFamily="proxima-nova"
-          customClassName="text-center w-[75%] mt-2 px-4 mxxl:w-[75%] mxxl:mx-auto msm:w-[90%] msm:px-2 place-self-center"
+          customClassName="text-center w-[75%] mt-2 px-4 text-[24px]  mxxl:w-[75%] mxxl:mx-auto msm:w-[90%] msm:px-2 msm:!text-[16px] place-self-center"
           color="af-white"
         >
           Discover how organisations have transformed their security posture and

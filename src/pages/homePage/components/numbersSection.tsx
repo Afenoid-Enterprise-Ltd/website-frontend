@@ -155,7 +155,7 @@ const NumbersSection = () => {
           </Text>
         </div>
 
-        <div className="w-[60%] my-[3rem] mx-auto">
+        <div className="w-[60%] my-[3rem] mx-auto mxs:w-[80%]">
           <img src={HomeHeroImage} alt="Hero Image" loading="lazy" />
         </div>
 

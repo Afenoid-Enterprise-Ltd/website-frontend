@@ -83,71 +83,69 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative">
-      <nav
-        className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] py-6 ${
-          scrollDetected && offset !== 0 ? "shadow-md py-10 mxxl:py-8" : ""
-        } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-10`}
-      >
-        <Link to="/">
-          <MainLogo />
-        </Link>
+    <nav
+      className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] py-6 ${
+        scrollDetected && offset !== 0 ? "shadow-md py-10 mxxl:py-8" : ""
+      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-10`}
+    >
+      <Link to="/">
+        <MainLogo />
+      </Link>
 
-        {!isSmallDevice ? (
-          <div className="flex items-center justify-evenly gap-6">
-            {navlinks.map((navlink, index) => {
-              const linkText = navlink.link.split("/")[1];
-              const isActive = name === linkText;
+      {!isSmallDevice ? (
+        <div className="flex items-center justify-evenly gap-6">
+          {navlinks.map((navlink, index) => {
+            const linkText = navlink.link.split("/")[1];
+            const isActive = name === linkText;
 
-              return (
-                <div
-                  className="relative"
-                  key={index}
-                  onMouseEnter={() => handleHoverIn(navlink.text)}
+            return (
+              <div
+                className="relative"
+                key={index}
+                onMouseEnter={() => handleHoverIn(navlink.text)}
+              >
+                <Link
+                  to={navlink.link}
+                  className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
+                    isActive
+                      ? "font-bold hover:scale-100"
+                      : "hover:scale-[1.05] hover:text-afenoid-lemon"
+                  }`}
                 >
-                  <Link
-                    to={navlink.link}
-                    className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
-                      isActive
-                        ? "font-bold hover:scale-100"
-                        : "hover:scale-[1.05] hover:text-afenoid-lemon"
-                    }`}
-                  >
-                    {navlink.text}
-                  </Link>
-                </div>
-              );
-            })}
-            <Button
-              variant="primary"
-              label="Contact Us"
-              customClassName="font-light"
-              onClick={openModal}
-            />
-          </div>
-        ) : (
-          <>
-            <button
-              onClick={openMblNav}
-              className="flex flex-col gap-2 border-none bg-transparent"
-            >
-              <span className="w-10 h-0.5 bg-afenoid-green"></span>
-              <span className="w-10 h-0.5 bg-afenoid-green"></span>
-              <span className="w-10 h-0.5 bg-afenoid-green"></span>
-            </button>
-            <MobileNavbar
-              isOpen={mblNavOpen}
-              navlinks={navlinks}
-              closeNav={closeMblNav}
-              openModal={openModal}
-            />
-          </>
-        )}
+                  {navlink.text}
+                </Link>
+              </div>
+            );
+          })}
+          <Button
+            variant="primary"
+            label="Contact Us"
+            customClassName="font-light"
+            onClick={openModal}
+          />
+        </div>
+      ) : (
+        <>
+          <button
+            onClick={openMblNav}
+            className="flex flex-col gap-2 border-none bg-transparent"
+          >
+            <span className="w-10 h-0.5 bg-afenoid-green"></span>
+            <span className="w-10 h-0.5 bg-afenoid-green"></span>
+            <span className="w-10 h-0.5 bg-afenoid-green"></span>
+          </button>
+          <MobileNavbar
+            isOpen={mblNavOpen}
+            navlinks={navlinks}
+            closeNav={closeMblNav}
+            openModal={openModal}
+          />
+        </>
+      )}
 
-        {isModalOpen && (
-          <ConsultationForm isOpen={isModalOpen} onClose={closeModal} />
-        )}
-      </nav>
+      {isModalOpen && (
+        <ConsultationForm isOpen={isModalOpen} onClose={closeModal} />
+      )}
       {activeDropdown && (
         <NavDropdown
           section={activeDropdown}
@@ -391,7 +389,7 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
 
   return (
     <motion.nav
-      className={`absolute z-[999] bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center border-t-2 border-gray-500 overflow-hidden transition-all duration-300 ease-out origin-top
+      className={`absolute left-0 top-[10vh] z-[998] bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center border-t-2 border-gray-500 overflow-hidden transition-all duration-300 ease-out origin-top
       ${
         isExiting
           ? "animate-dropdownSlideUp opacity-0 translate-y-4"
@@ -429,11 +427,11 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
 
   const caseStudiesTab = [
     {
-      text: "Payment card industry data security standard (pci dss)",
+      text: "pci dss",
       route: "/case-studies#pcidss",
     },
-    { text: "isms (iso 27001)", route: "/case-studies#iso27001" },
-    { text: "bcms (iso 22301)", route: "/case-studies#iso22301" },
+    { text: "iso 27001", route: "/case-studies#iso27001" },
+    { text: "iso 22301", route: "/case-studies#iso22301" },
   ];
 
   const [subMenuArr, setSubMenuArr] = useState<typeof servicesTab | null>(null);
@@ -458,7 +456,9 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
           return (
             <div
               className={`${
-                isActive ? "border-b-4 border-afenoid-green p-1 transform" : "border-none"
+                isActive
+                  ? "border-b-4 border-afenoid-green p-1 transform"
+                  : "border-none"
               }`}
             >
               <Link

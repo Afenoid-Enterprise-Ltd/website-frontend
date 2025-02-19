@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import styles from "./index.module.scss";
-import { SlArrowDown } from "react-icons/sl";
+import { SlArrowDown, SlMagnifier } from "react-icons/sl";
 
 interface Options {
   value: string;
@@ -22,10 +22,13 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
     register,
     setValue,
     clearErrors,
+    watch,
     formState: { errors },
   } = useFormContext();
 
   const errMessage = errors[name]?.message;
+
+  const fieldValue = watch(name);
 
   const optionRefs = useRef<Array<HTMLDivElement | null>>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -78,9 +81,9 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   };
 
   // Handle search input change
-  // const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSearchTerm(e.target.value);
-  // };
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
 
   // Removes the dropdown if it is active, when you click elsewhere on the page
   useEffect(() => {
@@ -90,17 +93,24 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!fieldValue) {
+      setSelected(placeholder);
+      setSearchTerm("");
+    }
+  }, [fieldValue, placeholder]);
+
   return (
     <div className="flex flex-col mb-4">
       <label
         className="w-fit cursor-pointer mb-2 uppercase text-lg text-afenoid-dark-green font-bold font-raleway msm:text-sm"
-        htmlFor=""
+        htmlFor={name}
       >
         {label}
         <span className="text-red-400">*</span>
       </label>
       <div
-        className={`cursor-pointer border-2 p-4 mxs:p-2 ${styles.dropdown} ${
+        className={`cursor-pointer border-2 p-4 font-proxima-nova mxs:p-2 ${styles.dropdown} ${
           errMessage ? " border-red-400" : "border-afenoid-light-grey"
         } ${
           isActive ? "border-afenoid-dark-grey" : "border-afenoid-light-grey"
@@ -135,26 +145,26 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
             ref={dropdownRef}
           >
             {/* Search input */}
-            {/* {options.length > 3 ? (
+            {options.length > 3 ? (
               <div className="flex items-center bg-white border-b p-[6px] mt-2">
                 <SlMagnifier className="text-gray-400 mr-2" />
                 <input
                   ref={searchInputRef}
                   type="text"
                   placeholder="Search options..."
-                  className="w-full outline-none"
+                  className="w-full outline-none "
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
               </div>
-            ) : null} */}
+            ) : null}
 
             {/* Options list */}
             <div className="max-h-60 overflow-y-auto">
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((option, index) => (
                   <div
-                    className={`${styles["dropdown-item"]} ${
+                    className={`font-proxima-nova ${styles["dropdown-item"]} ${
                       selected === option.label ? styles.selected : ""
                     }`}
                     key={index}

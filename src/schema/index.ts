@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const phoneNumberRegExp =
-  /^\+?([0-9]{1,3})?[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,9})$/
+  /^\+?([0-9]{1,3})?[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,4})[-. ]?([0-9]{1,9})$/;
 
 const serviceOptions = [
   "Trust Services",
@@ -237,5 +237,10 @@ export const consultationFormSchema = z.object({
     .refine((value) => countryOptions.includes(value), {
       message: "Please select your country",
     }),
-  Company: z.string().min(1, { message: "Please enter your company's name" }),
+  // Company: z.string().min(1, { message: "Please enter your company's name" }),
+  Message: z
+    .string()
+    .min(1, { message: "Please enter a message" })
+    .min(10, { message: "Message should be at least 10 characters long" })
+    .max(500, { message: "Message should not exceed 500 characters" }),
 });

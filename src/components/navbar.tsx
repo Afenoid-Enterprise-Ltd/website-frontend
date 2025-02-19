@@ -4,7 +4,6 @@ import { MainLogo } from "./mainLogo";
 import { Button, Text } from "../ui";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import { ConsultationForm } from "./consultationForm";
 import { GoArrowRight } from "react-icons/go";
 
 const Navbar: React.FC = () => {
@@ -24,7 +23,6 @@ const Navbar: React.FC = () => {
 
   const [scrollDetected, setScrollDetected] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [mblNavOpen, setMblNavOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -39,14 +37,6 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   const openMblNav = () => {
     setMblNavOpen((prev) => !prev);
@@ -117,12 +107,13 @@ const Navbar: React.FC = () => {
               </div>
             );
           })}
-          <Button
-            variant="primary"
-            label="Contact Us"
-            customClassName="font-light"
-            onClick={openModal}
-          />
+          <Link className="block" to="/contact-us">
+            <Button
+              variant="primary"
+              label="Contact Us"
+              customClassName="font-light"
+            />
+          </Link>
         </div>
       ) : (
         <>
@@ -138,14 +129,12 @@ const Navbar: React.FC = () => {
             isOpen={mblNavOpen}
             navlinks={navlinks}
             closeNav={closeMblNav}
-            openModal={openModal}
+            
           />
         </>
       )}
 
-      {isModalOpen && (
-        <ConsultationForm isOpen={isModalOpen} onClose={closeModal} />
-      )}
+      
       {activeDropdown && (
         <NavDropdown
           section={activeDropdown}
@@ -166,14 +155,12 @@ interface MobileNavProps {
   isOpen: boolean;
   navlinks: { text: string; link: string }[];
   closeNav: () => void;
-  openModal: () => void;
 }
 
 export const MobileNavbar: React.FC<MobileNavProps> = ({
   isOpen,
   navlinks,
   closeNav,
-  openModal,
 }) => {
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -226,14 +213,13 @@ export const MobileNavbar: React.FC<MobileNavProps> = ({
               {navlink.text}
             </Link>
           ))}
-          <div className="">
+          <Link className="block" to="/contact-us">
             <Button
               variant="primary"
               label="Contact Us"
               customClassName="font-light"
-              onClick={openModal}
             />
-          </div>
+          </Link>
         </div>
       </div>
     </>
@@ -389,7 +375,7 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
 
   return (
     <motion.nav
-      className={`absolute left-0 top-[10vh] z-[998] bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center border-t-2 border-gray-500 overflow-hidden transition-all duration-300 ease-out origin-top
+      className={`absolute left-0 top-[10vh] z-[998] bg-white w-full px-[5rem] mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] py-20 flex justify-start items-center shadow-lg border-t-2 border-gray-500 overflow-hidden transition-all duration-300 ease-out origin-top
       ${
         isExiting
           ? "animate-dropdownSlideUp opacity-0 translate-y-4"

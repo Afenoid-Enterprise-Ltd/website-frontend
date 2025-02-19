@@ -25,7 +25,7 @@ const AboutUsPage = () => {
       <Outlet>
         <section className="overflow-x-hidden">
           <HeroSection />
-          <InfoSection />
+          <InfoSection openModal={openConsultationModal} />
           <AccordionSection openConsultationModal={openConsultationModal} />
         </section>
       </Outlet>

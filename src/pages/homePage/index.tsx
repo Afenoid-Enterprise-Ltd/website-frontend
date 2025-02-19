@@ -32,7 +32,7 @@ const HomePage = () => {
         <section className="overflow-x-hidden">
           <HeroSection openModal={openConsultationModal} />
           <NumbersSection />
-          <ChoiceSection/>
+          <ChoiceSection openModal={openConsultationModal}/>
           <ServicesSection />
           <CaseStudiesSection openConsultationModal={openConsultationModal} />
         </section>

@@ -15,9 +15,10 @@ import { ChoiceAfenoid, Slogan, DownloadProfile } from "../../../components";
 interface CountUpProps {
   start?: number;
   end: number;
+  
 }
 
-const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
+const CountUp: React.FC<CountUpProps> = ({ start = 0, end,  }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLSpanElement | null>(null);
 
@@ -66,7 +67,11 @@ const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   );
 };
 
-const InfoSection = () => {
+interface InfoSectionProps {
+  openModal: () => void;
+}
+
+const InfoSection:React.FC<InfoSectionProps> = ({openModal}) => {
   const heroStaticData = [
     {
       heroTexts: {
@@ -174,6 +179,7 @@ const InfoSection = () => {
             variant="primary"
             label="Schedule a Meeting"
             customClassName="mx-auto my-8"
+            onClick={openModal}
           />
         </div>
       </div>

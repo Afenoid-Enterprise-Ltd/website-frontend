@@ -34,7 +34,7 @@ const HomePage = () => {
           <NumbersSection />
           <ChoiceSection openModal={openConsultationModal}/>
           <ServicesSection />
-          <CaseStudiesSection openConsultationModal={openConsultationModal} />
+          <CaseStudiesSection />
         </section>
       </Outlet>
       {isConsultationOpen && (

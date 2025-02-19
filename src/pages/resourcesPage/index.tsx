@@ -7,9 +7,9 @@ import { RequestConsultation } from "../../components";
 const ResourcesPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 
-  const openConsultationModal = () => {
-    setIsConsultationOpen(true);
-  };
+  // const openConsultationModal = () => {
+  //   setIsConsultationOpen(true);
+  // };
 
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
@@ -25,7 +25,7 @@ const ResourcesPage = () => {
       <Outlet>
         <section className="overflow-x-hidden">
           <HeroSection />
-          <CaseStudySection openConsultationModal={openConsultationModal} />
+          <CaseStudySection />
         </section>
       </Outlet>
       {isConsultationOpen && (

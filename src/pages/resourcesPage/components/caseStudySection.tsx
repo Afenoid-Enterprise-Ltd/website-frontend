@@ -1,16 +1,10 @@
-import React from "react";
 import { DownloadProfile } from "../../../components/downloadProfile.tsx";
 import { Text } from "../../../ui";
 import { ResourcesGrid } from "./resourcesGrid.tsx";
 import { CaseStudiesGrid } from "./caseStudiesGrid.tsx";
 import { Newsletter, ContactUs } from "../../../components/";
 
-interface CaseStudyProps {
-  openConsultationModal: () => void;
-}
-
-const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
-  const { openConsultationModal } = props;
+const CaseStudySection = () => {
 
   return (
     <section className="bg-white">
@@ -56,7 +50,7 @@ const CaseStudySection: React.FC<CaseStudyProps> = (props) => {
 
         <div className="mt-[13rem] msm:mt-20">
           <Newsletter />
-          <ContactUs openConsultationModal={openConsultationModal} />
+          <ContactUs />
         </div>
       </div>
     </section>

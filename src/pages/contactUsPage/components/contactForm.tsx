@@ -30,7 +30,6 @@ const ContactForm = () => {
   ) => {
     try {
       setLoading(true);
-      console.log(data);
       const formData = new URLSearchParams();
       Object.entries(data).forEach(([key, value]) => {
         formData.append(key, String(value));

@@ -35,7 +35,7 @@ const ContactUsPage = () => {
             <div className="hidden msm:block">
                 <HeroSection />
               </div>
-              <ContactForm onClose={closeConsultationModal} isOpen={true} />
+              <ContactForm />
             </div>
           </div>
 

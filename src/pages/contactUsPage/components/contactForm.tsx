@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import { Button, Text, Dropdown, Input, ButtonLoader } from "../../../ui";
+import { useState } from "react";
+import {
+  Button,
+  Text,
+  Dropdown,
+  Input,
+  ButtonLoader,
+  Textarea,
+} from "../../../ui";
 import { consultationFormSchema } from "../../../schema";
 import { useCountries } from "use-react-countries";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
-import { SCRIPT_DETAILS } from "../../../utils/constants"; 
+import { SCRIPT_DETAILS } from "../../../utils/constants";
 
-interface FormProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const ContactForm:React.FC<FormProps> = ({ onClose }) => {
+const ContactForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const methods = useForm<z.infer<typeof consultationFormSchema>>({
@@ -48,7 +50,6 @@ const ContactForm:React.FC<FormProps> = ({ onClose }) => {
       toast.success(
         "Thank you! Your consultation request has been submitted successfully."
       );
-      onClose();
     } catch (e: any) {
       // Handle error case
       console.error("Error submitting form:", e);
@@ -80,7 +81,6 @@ const ContactForm:React.FC<FormProps> = ({ onClose }) => {
     }))
     .sort((a, b) => a.value.localeCompare(b.value));
 
-
   return (
     <div className="w-full">
       <Text
@@ -94,69 +94,57 @@ const ContactForm:React.FC<FormProps> = ({ onClose }) => {
       </Text>
 
       <FormProvider {...methods}>
-        <form className="flex flex-col gap-12 mt-9 msm:gap-7" onSubmit={handleSubmit(bookConsultation)}>
-          <div className="flex flex-col gap-3">
-            <Input
-              label="First Name"
-              type="text"
-              name="Firstname"
-              placeholder="Enter your first name"
-            />
-          </div>
+        <form
+          className="flex flex-col gap-12 mt-9 msm:gap-7"
+          onSubmit={handleSubmit(bookConsultation)}
+        >
+          <Input
+            label="First Name"
+            type="text"
+            name="Firstname"
+            placeholder="Enter your first name"
+          />
 
-          <div className="flex flex-col gap-3">
-            <Input
-              label="Last Name"
-              type="text"
-              name="Lastname"
-              placeholder="Enter your last name"
-            />
-          </div>
+          <Input
+            label="Last Name"
+            type="text"
+            name="Lastname"
+            placeholder="Enter your last name"
+          />
 
-          <div className="flex flex-col gap-3">
-            <Input
-              label="Email"
-              type="email"
-              name="Email"
-              placeholder="Enter your email address"
-            />
-          </div>
+          <Input
+            label="Email"
+            type="email"
+            name="Email"
+            placeholder="Enter your email address"
+          />
 
-          <div className="flex flex-col gap-3">
-            <Dropdown
-              label="Service"
-              name="Service"
-              options={servicesData}
-              placeholder="Select a service"
-            />
-          </div>
+          <Input
+            label="Phone Number"
+            type="text"
+            name="Phone"
+            placeholder="Enter your mobile number with its country code"
+          />
 
-          <div className="flex flex-col gap-3">
-            <Dropdown
-              label="Country"
-              name="Country"
-              options={formattedCountriesData}
-              placeholder="Select a country"
-            />
-          </div>
+          <Dropdown
+            label="Service"
+            name="Service"
+            options={servicesData}
+            placeholder="Select a service"
+          />
 
-          <div className="flex flex-col gap-3">
-            <label
-              htmlFor="message"
-              className="text-lg text-afenoid-dark-green font-bold font-raleway msm:text-sm"
-            >
-              MESSAGE <span className="text-[#F12222] ml-1">*</span>
-            </label>
-            <textarea
-              id="message"
-              required
-              placeholder="Hello"
-              className="border-2  py-4 px-3 bg-[#F8FAF4] text-lg font-proxima-nova font-light h-[17rem] focus:outline-none"
-            ></textarea>
-          </div>
+          <Dropdown
+            label="Country"
+            name="Country"
+            options={formattedCountriesData}
+            placeholder="Select a country"
+          />
+
+          <Textarea label="Message" name="Message" placeholder="Hello" />
+
           <div>
             <Button
-              label={loading ? <ButtonLoader/> : "Submit"}
+              label={loading ? <ButtonLoader /> : "Submit"}
               variant="primary"
               customClassName="mb-8"
               type="submit"

@@ -3,17 +3,12 @@ import { Link } from "react-router-dom";
 import { Text } from "../../../ui";
 import { ContactUs } from "../../../components";
 
-interface ConsultationProps {
-  openConsultationModal: () => void;
-}
-
-const CaseStudiesSection: React.FC<ConsultationProps> = (props) => {
-  const { openConsultationModal } = props;
+const CaseStudiesSection = () => {
 
   return (
     <section>
       <div className=" mmd:px-[2rem] msm:my-[1rem]">
-        <ContactUs openConsultationModal={openConsultationModal} />
+        <ContactUs />
       </div>
     </section>
   );

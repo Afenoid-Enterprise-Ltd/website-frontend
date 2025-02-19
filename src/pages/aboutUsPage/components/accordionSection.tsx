@@ -1,14 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionItem, ContactUs } from "../../../components";
 import { Text } from "../../../ui";
 
-interface AccordionProps {
-  openConsultationModal: () => void;
-}
-
-const AccordionSection: React.FC<AccordionProps> = (props) => {
-  const { openConsultationModal } = props;
+const AccordionSection = () => {
 
   return (
     <div className="w-full mt-20 mxs:px-4">
@@ -117,7 +111,7 @@ const AccordionSection: React.FC<AccordionProps> = (props) => {
       </div>
 
       <section className="mmd:px-[3rem] mmd:my-[4rem] mxs:px-[1rem]">
-        <ContactUs openConsultationModal={openConsultationModal} />
+        <ContactUs />
       </section>
     </div>
   );

@@ -1,11 +1,17 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Button, Text } from "../../../ui";
 import { ProtectionImg, ReliabilityImg } from "../../../assets";
 import { IoCheckmarkOutline } from "react-icons/io5";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HeroDivs = () => {
+interface HeroDivsProps {
+  openModal: () => void;
+}
+
+const HeroDivs: React.FC<HeroDivsProps> = (props) => {
+  const { openModal } = props;
+
   const listItems = [
     "Digital Strategy",
     "Performance Improvement",
@@ -51,7 +57,7 @@ const HeroDivs = () => {
             addresses risks across your people, processes, and technology.
           </Text>
           <div>
-            <Button label="Learn More" variant="primary"/>
+            <Button label="Learn More" variant="primary" />
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">
@@ -97,7 +103,11 @@ const HeroDivs = () => {
             ))}
           </ul>
           <div>
-            <Button label="Schedule a Meeting" variant="primary" />
+            <Button
+              label="Schedule a Meeting"
+              variant="primary"
+              onClick={openModal}
+            />
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">

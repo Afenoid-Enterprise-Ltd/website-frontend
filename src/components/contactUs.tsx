@@ -2,14 +2,9 @@ import React from "react";
 import { HandShakeImg, HandShakeImgMbl } from "../assets";
 import { Text, Button } from "../ui";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { Link } from "react-router-dom";
 
-interface CompProps {
-  openConsultationModal: () => void;
-}
-
-const ContactUs: React.FC<CompProps> = (props) => {
-  const { openConsultationModal } = props;
-
+const ContactUs: React.FC = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width: 639px)");
 
   return (
@@ -44,19 +39,21 @@ const ContactUs: React.FC<CompProps> = (props) => {
                   discuss how we can support your organization.
                 </Text>
                 <div>
-                  <Button
-                    variant="secondary"
-                    label="Contact Us"
-                    onClick={openConsultationModal}
-                    customClassName="border-white text-white"
-                  />
+                  <Link className="block" to="/contact-us">
+                    <Button
+                      variant="secondary"
+                      label="Contact Us"
+                      // onClick={openConsultationModal}
+                      customClassName="border-white text-white"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <MobileContactUs openConsultationModal={openConsultationModal} />
+        <MobileContactUs  />
       )}
     </div>
   );
@@ -64,12 +61,7 @@ const ContactUs: React.FC<CompProps> = (props) => {
 
 export { ContactUs };
 
-interface MobileContactUsProps {
-  openConsultationModal: () => void;
-}
-
-export const MobileContactUs: React.FC<MobileContactUsProps> = (props) => {
-  const { openConsultationModal } = props;
+export const MobileContactUs: React.FC = () => {
 
   return (
     <div className="w-full">
@@ -95,14 +87,14 @@ export const MobileContactUs: React.FC<MobileContactUsProps> = (props) => {
           Need to make an inquiry? Reach out to us today and let’s discuss how
           we can support your organization.
         </Text>
-        <div>
+        <Link className="block" to="/contact-us">
           <Button
             variant="secondary"
             label="Contact Us"
-            onClick={openConsultationModal}
+            // onClick={openConsultationModal}
             customClassName="border-white text-white"
           />
-        </div>
+        </Link>
       </div>
       <div className="max-h-[300px] w-full overflow-hidden">
         <img src={HandShakeImgMbl} alt="Contact Us Image" />

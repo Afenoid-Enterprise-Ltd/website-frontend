@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Text } from "../../../ui";
 import { HomeHeroImg } from "../../../assets";
 import AOS from "aos";
@@ -47,9 +48,11 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               >
                 Schedule a Meeting
               </button>
-              <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[80%] mxs:w-[90%]">
-                Contact Us
-              </button>
+              <Link className="block" to="/contact-us">
+                <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[80%] mxs:w-[90%]">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

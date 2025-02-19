@@ -4,7 +4,7 @@ import { Overview } from "./overview";
 import { Auditing } from "./auditing";
 import { Consulting } from "./consulting";
 import { Training } from "./training";
-import { ConsultationForm } from "../../../components";
+import { RequestConsultation } from "../../../components";
 
 const MainSection = () => {
   const location = useLocation();
@@ -93,7 +93,7 @@ const MainSection = () => {
       </div>
       <section>{renderContent()}</section>
       {isContactOpen && (
-        <ConsultationForm isOpen={isContactOpen} onClose={closeContactModal} />
+        <RequestConsultation isOpen={isContactOpen} onClose={closeContactModal} />
       )}
     </section>
   );

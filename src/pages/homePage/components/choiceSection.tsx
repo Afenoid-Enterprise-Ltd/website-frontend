@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { Text } from "../../../ui";
 import { ChoiceAfenoid, AboutUs, SuccessStories } from "../../../components";
@@ -11,7 +12,13 @@ import {
   ApmgLogo,
 } from "../../../assets";
 
-const ChoiceSection = () => {
+interface ChoiceSectionProps {
+  openModal: () => void;
+}
+
+const ChoiceSection: React.FC<ChoiceSectionProps> = (props) => {
+  const { openModal } = props;
+  
   const partners = [
     {
       logo: IsacaLogo,
@@ -36,7 +43,7 @@ const ChoiceSection = () => {
 
   return (
     <section className="my-[3.5rem] px-[5rem] msm:px-6">
-      <HeroDivs />
+      <HeroDivs openModal={openModal} />
       <div className=" flex flex-col mmlg:px-0">
         <ChoiceAfenoid />
         <AboutUs />

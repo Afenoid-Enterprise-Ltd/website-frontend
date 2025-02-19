@@ -43,7 +43,7 @@ const Input: FC<InputProps> = (props) => {
         })}
         {...rest}
         className={clsx(
-          `block w-full border-2 p-4 bg-[#F8FAF4] focus:outline-afenoid-dark-grey focus:bg-afenoid-light-lemon :placeholder:font-raleway placeholder:text-afenoid-dark-grey mxs:p-2`, errMessage ? "border-red-500" : "border-afenoid-light-grey"
+          `block w-full border-2 p-4 font-proxima-nova bg-[#F8FAF4] focus:outline-afenoid-dark-grey focus:bg-afenoid-light-lemon :placeholder:font-proxima-nova placeholder:text-afenoid-dark-grey mxs:p-2`, errMessage ? "border-red-500" : "border-afenoid-light-grey"
         )}
         placeholder={placeholder}
        

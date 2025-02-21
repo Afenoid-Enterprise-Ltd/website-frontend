@@ -61,7 +61,11 @@ const Navbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const handleHoverIn = (section: string) => {
-    if (section === "Services" || section === "Case Studies") {
+    if (
+      section === "Services" ||
+      section === "Case Studies" ||
+      section === "About Us"
+    ) {
       setActiveDropdown(section);
     } else {
       setActiveDropdown(null);
@@ -73,76 +77,76 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav
-      className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] py-6 ${
-        scrollDetected && offset !== 0 ? "shadow-md py-10 mxxl:py-8" : ""
-      } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-10`}
-    >
-      <Link to="/">
-        <MainLogo />
-      </Link>
+    <nav>
+      <nav
+        className={`w-full h-[10vh] bg-white flex items-center justify-between px-[5rem] sticky top-0 z-[999] max-h-[200px] py-6 ${
+          scrollDetected && offset !== 0 ? "shadow-md py-10 mxxl:py-8" : ""
+        } mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem] mxxl:py-10`}
+      >
+        <Link to="/">
+          <MainLogo />
+        </Link>
 
-      {!isSmallDevice ? (
-        <div className="flex items-center justify-evenly gap-6">
-          {navlinks.map((navlink, index) => {
-            const linkText = navlink.link.split("/")[1];
-            const isActive = name === linkText;
+        {!isSmallDevice ? (
+          <div className="flex items-center justify-evenly gap-6">
+            {navlinks.map((navlink, index) => {
+              const linkText = navlink.link.split("/")[1];
+              const isActive = name === linkText;
 
-            return (
-              <div
-                className="relative"
-                key={index}
-                onMouseEnter={() => handleHoverIn(navlink.text)}
-              >
-                <Link
-                  to={navlink.link}
-                  className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
-                    isActive
-                      ? "font-bold hover:scale-100"
-                      : "hover:scale-[1.05] hover:text-afenoid-lemon"
-                  }`}
+              return (
+                <div
+                  className="relative"
+                  key={index}
+                  onMouseEnter={() => handleHoverIn(navlink.text)}
                 >
-                  {navlink.text}
-                </Link>
-              </div>
-            );
-          })}
-          <Link className="block" to="/contact-us">
-            <Button
-              variant="primary"
-              label="Contact Us"
-              customClassName="font-light"
+                  <Link
+                    to={navlink.link}
+                    className={`text-base font-proxima-nova transition ease-in-out delay-100 text-afenoid-dark-green tracking-[0.09rem] cursor-pointer duration-300 ${
+                      isActive
+                        ? "font-bold hover:scale-100"
+                        : "hover:scale-[1.05] hover:text-afenoid-lemon"
+                    }`}
+                  >
+                    {navlink.text}
+                  </Link>
+                </div>
+              );
+            })}
+            <Link className="block" to="/contact-us">
+              <Button
+                variant="primary"
+                label="Contact Us"
+                customClassName="font-light"
+              />
+            </Link>
+          </div>
+        ) : (
+          <>
+            <button
+              onClick={openMblNav}
+              className="flex flex-col gap-2 border-none bg-transparent"
+            >
+              <span className="w-10 h-0.5 bg-afenoid-green"></span>
+              <span className="w-10 h-0.5 bg-afenoid-green"></span>
+              <span className="w-10 h-0.5 bg-afenoid-green"></span>
+            </button>
+            <MobileNavbar
+              isOpen={mblNavOpen}
+              navlinks={navlinks}
+              closeNav={closeMblNav}
             />
-          </Link>
-        </div>
-      ) : (
-        <>
-          <button
-            onClick={openMblNav}
-            className="flex flex-col gap-2 border-none bg-transparent"
-          >
-            <span className="w-10 h-0.5 bg-afenoid-green"></span>
-            <span className="w-10 h-0.5 bg-afenoid-green"></span>
-            <span className="w-10 h-0.5 bg-afenoid-green"></span>
-          </button>
-          <MobileNavbar
-            isOpen={mblNavOpen}
-            navlinks={navlinks}
-            closeNav={closeMblNav}
-            
-          />
-        </>
-      )}
+          </>
+        )}
 
-      
-      {activeDropdown && (
-        <NavDropdown
-          section={activeDropdown}
-          mouseEnter={() => handleHoverIn(activeDropdown)}
-          mouseLeave={handleHoverOut}
-        />
-      )}
-      {isSmallDevice && (name === "services" || name === "case-studies") && (
+        {activeDropdown && (
+          <NavDropdown
+            section={activeDropdown}
+            mouseEnter={() => handleHoverIn(activeDropdown)}
+            mouseLeave={handleHoverOut}
+          />
+        )}
+      </nav>
+      {isSmallDevice && (name === "services" || name === "case-studies" || name === "about-us") && (
         <MobileNavbarDropdown pageLocation={name} />
       )}
     </nav>
@@ -256,7 +260,7 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
   }, [section]);
 
   const servicesLinks = [
-    { text: "Overview", route: "/services" },
+    { text: "Overview", route: "/services#overview" },
     {
       text: "Digital Transformation Consulting",
       route: "/services#consulting",
@@ -266,13 +270,26 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
   ];
 
   const caseStudiesLinks = [
-    { text: "All", route: "/case-studies" },
+    { text: "All", route: "/case-studies#all" },
     {
       text: "Payment card industry data security standard (pci dss)",
       route: "/case-studies#pcidss",
     },
     { text: "isms (iso 27001)", route: "/case-studies#iso27001" },
     { text: "bcms (iso 22301)", route: "/case-studies#iso22301" },
+  ];
+
+  const aboutUsLinks = [
+    {
+      text: "Our Purpose",
+      route: "/about-us#purpose",
+    },
+    { text: "corporate company profile", route: "/about-us#profile" },
+    { text: "frequently asking questions", route: "/about-us#faqs" },
+    {
+      text: "client page",
+      route: "/about-us#clients",
+    },
   ];
 
   const renderContent = () => {
@@ -295,11 +312,13 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
                 frameworks and industry standards. 
               </Text>
               <div>
-                <Button
-                  variant="primary"
-                  label="Explore"
-                  customClassName="font-light"
-                />
+                <Link to="/services">
+                  <Button
+                    variant="primary"
+                    label="Explore"
+                    customClassName="font-light"
+                  />
+                </Link>
               </div>
             </div>
             <div className="flex flex-col gap-8 w-[30%]">
@@ -338,14 +357,16 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
                 posture and achieved excellence with Afenoid's guidance.
               </Text>
               <div>
-                <Button
-                  variant="primary"
-                  label="Explore"
-                  customClassName="font-light"
-                />
+                <Link to="/case-studies">
+                  <Button
+                    variant="primary"
+                    label="Explore"
+                    customClassName="font-light"
+                  />
+                </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-4 w-[30%]">
+            <div className="flex flex-col gap-8 w-[30%]">
               {caseStudiesLinks.map((link, index) => (
                 <div
                   key={index}
@@ -357,6 +378,50 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
                     className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 ${
                       link.text === "All" ? "font-bold" : "font-normal"
                     }`}
+                  >
+                    {link.text}
+                    <GoArrowRight size={25} />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case "About Us":
+        return (
+          <div className="w-full flex justify-start gap-[25rem]">
+            <div className="w-[30%] flex flex-col gap-8">
+              <Text
+                variant="h3"
+                fontFamily="raleway"
+                align="left"
+                fontWeight="medium"
+                customClassName="!text-[1.5rem] leading-[1.4]"
+              >
+                Learn more about Afenoid—our purpose, story, and the
+                organizations we work with—and explore opportunities that can
+                benefit your organization.
+              </Text>
+              <div>
+                <Link to="/about-us">
+                  <Button
+                    variant="primary"
+                    label="Explore"
+                    customClassName="font-light"
+                  />
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col gap-8 w-[30%]">
+              {aboutUsLinks.map((link, index) => (
+                <div
+                  key={index}
+                  className={`opacity-0 translate-y-4 animate-fadeSlideIn`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Link
+                    to={link.route}
+                    className={`text-afenoid-dark-green hover:text-afenoid-lemon uppercase font-proxima-nova text-base flex justify-start items-center gap-4 `}
                   >
                     {link.text}
                     <GoArrowRight size={25} />
@@ -420,6 +485,19 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
     { text: "iso 22301", route: "/case-studies#iso22301" },
   ];
 
+  const aboutUsTab = [
+    {
+      text: "Our Purpose",
+      route: "/about-us#purpose",
+    },
+    { text: "corporate company profile", route: "/about-us#profile" },
+    { text: "frequently asking questions", route: "/about-us#faqs" },
+    {
+      text: "Client Page",
+      route: "/about-us#clients",
+    },
+  ];
+
   const [subMenuArr, setSubMenuArr] = useState<typeof servicesTab | null>(null);
 
   useEffect(() => {
@@ -427,7 +505,9 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
       setSubMenuArr(servicesTab);
     } else if (pageLocation === "case-studies") {
       setSubMenuArr(caseStudiesTab);
-    } else {
+    } else if(pageLocation === "about-us") {
+      setSubMenuArr(aboutUsTab);
+    }else {
       setSubMenuArr(null);
     }
   }, [pageLocation]);

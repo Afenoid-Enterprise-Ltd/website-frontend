@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Text } from "../../../ui";
 import { ProtectionImg, ReliabilityImg } from "../../../assets";
 import { IoCheckmarkOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -57,7 +58,9 @@ const HeroDivs: React.FC<HeroDivsProps> = (props) => {
             addresses risks across your people, processes, and technology.
           </Text>
           <div>
-            <Button label="Learn More" variant="primary" />
+            <Link to="/services">
+              <Button label="Learn More" variant="primary" />
+            </Link>
           </div>
         </div>
         <div className="w-1/2 mmd:hidden">

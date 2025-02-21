@@ -23,7 +23,7 @@ const ContactUsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <Outlet>
-        <section className="overflow-x-hidden my-48 px-[5rem] msm:px-6 msm:my-0">
+        <section className="overflow-x-hidden my-24 px-[5rem] msm:px-6 msm:my-0">
           <div className="flex gap-20 msm:flex-col-reverse">
             <div className="flex flex-col gap-16 w-1/2 msm:w-full">
               <div className="block msm:hidden">

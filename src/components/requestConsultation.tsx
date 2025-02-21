@@ -31,7 +31,7 @@ const RequestConsultation: React.FC<ConsultationProps> = ({
           fontWeight="medium"
           customClassName="my-8"
         >
-          Request Your Consultation
+          Schedule a Meeting
         </Text>
 
         <div className="w-full">

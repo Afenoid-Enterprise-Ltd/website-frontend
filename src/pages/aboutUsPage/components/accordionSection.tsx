@@ -5,7 +5,7 @@ import { Text } from "../../../ui";
 const AccordionSection = () => {
 
   return (
-    <div className="w-full mt-20 mxs:px-4">
+    <div className="w-full mt-20 mxs:px-4" id="faqs">
       <div className="w-full flex justify-center items-center">
         <div className="w-[40%] mlg:w-[60%] msm:w-[70%] mxs:w-[80%] mxxs:w-full">
           <Text
@@ -36,7 +36,7 @@ const AccordionSection = () => {
         </div>
       </div>
 
-      <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" id="faqs">
+      <div className="p-[5rem] msm:p-[3rem] mxs:p-0 mxs:py-[2rem]" >
         <Accordion>
           <AccordionItem
             value="1"

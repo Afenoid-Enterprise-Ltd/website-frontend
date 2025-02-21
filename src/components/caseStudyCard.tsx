@@ -41,7 +41,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           loading="lazy"
         />
       </div>
-      <div className="h-[3.5rem] msm:h-[5rem]">
+      <div className="h-[3.5rem] msm:h-[5rem] mxxss:h-[4rem]">
         <Text
           variant="h5"
           color="af-dark-green"

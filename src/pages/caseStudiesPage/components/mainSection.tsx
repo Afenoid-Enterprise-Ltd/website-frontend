@@ -13,7 +13,7 @@ const MainSection = () => {
 
   const currentCaseStudy = (() => {
     const hash = location.hash.replace("#", "");
-    return hash || "overview";
+    return hash || "all";
   })();
 
   useEffect(() => {
@@ -43,9 +43,9 @@ const MainSection = () => {
     <section className="w-screen 2xl:w-full" id={currentCaseStudy}>
       <div className="bg-afenoid-light-grey py-8 w-full flex justify-center items-center gap-4 mb-[8rem] mlg:px-[3rem] mlg:overflow-x-auto msm:justify-start no-scrollbar mxl:justify-center">
         <button
-          onClick={() => handleNavigation("overview")}
+          onClick={() => handleNavigation("all")}
           className={`text-nowrap font-proxima-nova px-8 py-4 transition-all duration-300 ease-in-out transform hover:bg-afenoid-lemon hover:text-floral-white msm:hidden ${
-            currentCaseStudy === "overview"
+            currentCaseStudy === "all"
               ? "bg-afenoid-green text-floral-white"
               : "bg-white text-black"
           }`}

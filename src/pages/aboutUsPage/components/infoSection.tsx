@@ -15,10 +15,9 @@ import { ChoiceAfenoid, Slogan, DownloadProfile } from "../../../components";
 interface CountUpProps {
   start?: number;
   end: number;
-  
 }
 
-const CountUp: React.FC<CountUpProps> = ({ start = 0, end,  }) => {
+const CountUp: React.FC<CountUpProps> = ({ start = 0, end }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLSpanElement | null>(null);
 
@@ -71,7 +70,7 @@ interface InfoSectionProps {
   openModal: () => void;
 }
 
-const InfoSection:React.FC<InfoSectionProps> = ({openModal}) => {
+const InfoSection: React.FC<InfoSectionProps> = ({ openModal }) => {
   const heroStaticData = [
     {
       heroTexts: {
@@ -198,8 +197,10 @@ const InfoSection:React.FC<InfoSectionProps> = ({openModal}) => {
       <div id="values" className="px-[5rem] msm:p-[3rem] mxs:px-4">
         <ChoiceAfenoid />
       </div>
-      
+
+      <section id="profile">
         <DownloadProfile />
+      </section>
     </section>
   );
 };

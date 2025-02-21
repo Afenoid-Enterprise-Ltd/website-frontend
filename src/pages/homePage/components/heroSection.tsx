@@ -41,15 +41,15 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
               We protect what matters most—your people, your processes and the{" "}
               technology that drives them.
             </Text>
-            <div className="flex justify-start items-center gap-7 mmlg:flex-col mmlg:items-start mmlg:w-[45%] mmd:w-[65%] mxs:w-[75%] ">
+            <div className="flex justify-start items-center gap-7 mmlg:flex-col mmlg:items-start mmlg:w-[45%] mmd:w-[65%] mxs:w-[75%]">
               <button
-                className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%] mxs:text-[14px]"
+                className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%] mxs:text-[14px] mxxss:w-full"
                 onClick={openModal}
               >
                 Schedule a Meeting
               </button>
-              <Link className="block" to="/contact-us">
-                <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[80%] mxs:w-[90%]">
+              <Link className="block mxxss:w-full" to="/contact-us">
+                <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[80%] mxs:w-[90%] mxxss:w-full">
                   Contact Us
                 </button>
               </Link>

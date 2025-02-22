@@ -13,3 +13,4 @@ export * from "./termsOfServicePage";
 export * from "./careerPage";
 export * from "./constructionPage";
 export * from "./siteMapPage";
+export * from "./clientsPage";

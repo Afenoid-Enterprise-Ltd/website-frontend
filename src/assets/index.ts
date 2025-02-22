@@ -125,9 +125,37 @@ import TelephoneIcon from "./telephone.svg";
 import LinkedinGreen from "./linkedin-green.svg";
 import InstagramGreen from "./instagram-green.svg";
 import TwitterGreen from "./twitter-green.svg";
-import FacebookGreen from "./facebook-green.svg"
+import FacebookGreen from "./facebook-green.svg";
+import ICPCIcon from "./icpc.svg"
+import BankOfTanzania from "./bOftan.svg";
+import BankOfBotswanawhite from "./bOfBots2.svg"
+import BankOfKigali from "./bOfKigali.svg";
+import BankOfIndustry from "./bOfIndustry.svg";
+import NationalBank from "./nationalBank.svg";
+import NCBA from "./ncba.svg";
+import NDIC from "./ndic.svg";
+import NIBSS from "./nibss.svg";
+import NIRSAL from "./nirsal.svg";
+import NITDA from "./nitda.svg";
+import NNPC from "./nnpc.svg";
+import NSPM from "./nspm.svg";
+import SECLogo from "./seCommission.svg";
 
 export {
+  ICPCIcon,
+  BankOfTanzania,
+  BankOfKigali,
+  BankOfBotswanawhite,
+  BankOfIndustry,
+  NationalBank,
+  NCBA,
+  NIBSS,
+  NITDA,
+  NDIC,
+  NIRSAL,
+  NNPC,
+  NSPM,
+  SECLogo,
   MainLogoSVG,
   FooterLogoSVG, 
   SkylineImg,

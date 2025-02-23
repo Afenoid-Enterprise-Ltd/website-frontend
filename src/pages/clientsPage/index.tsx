@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet, Text } from "../../ui";
 import { RequestConsultation, ScheduleMeeting } from "../../components";
+import { FinanceSector, PublicSector } from "./components";
 
 const ClientsPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -45,6 +46,13 @@ const ClientsPage = () => {
               cybersecurity, and build digital trust. Our expertise ensures
               resilience and regulatory success.
             </Text>
+          </div>
+
+          <div>
+            <PublicSector />
+          </div>
+          <div>
+            <FinanceSector />
           </div>
           <div className="my-20">
             <ScheduleMeeting openModal={openConsultationModal} />

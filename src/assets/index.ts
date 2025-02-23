@@ -140,8 +140,50 @@ import NITDA from "./nitda.svg";
 import NNPC from "./nnpc.svg";
 import NSPM from "./nspm.svg";
 import SECLogo from "./seCommission.svg";
+import NCAA from "./ncaa.svg";
+import ECOWAS from "./ecowas.svg"
+import ArmPensions from "./armPensions.svg"
+import CRDBBank from "./crdbBank.svg"
+import DigitalSafe from "./digitalSafe.svg"
+import EgolePay from "./egolePay.svg"
+import Fiducia from "./fiducia.svg"
+import FountainPay from "./fountainPay.svg"
+import Habari from "./habari.svg"
+import Innovare from "./innovare.svg"
+import InvestmentOne from "./investmentOne.svg"
+import MicroAccess from "./microAccess.svg"
+import PayExpress from "./payExpress.svg"
+import PolarisBank from "./polarisBank.svg"
+import PremiumTrust from "./premiumTrust.svg"
+import SterlingBank from "./sterling.svg"
+import UnifiedPayment from "./unifiedPayment.svg"
+import UnityBank from "./unityBank.svg"
+import WemaBank from "./wemaBank.svg"
+import Woven from "./woven.svg"
+import Chaka from "./chaka.svg"
 
 export {
+  Chaka,
+  Woven,
+  UnityBank,
+  WemaBank,
+  SterlingBank,
+  PremiumTrust,
+  PolarisBank,
+  InvestmentOne,
+  MicroAccess,
+  PayExpress,
+  Habari,
+  FountainPay,
+  Fiducia,
+  UnifiedPayment,
+  ArmPensions,
+  EgolePay,
+  CRDBBank,
+  Innovare,
+  DigitalSafe,
+  ECOWAS,
+  NCAA,
   ICPCIcon,
   BankOfTanzania,
   BankOfKigali,

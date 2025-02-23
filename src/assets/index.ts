@@ -161,8 +161,40 @@ import UnityBank from "./unityBank.svg"
 import WemaBank from "./wemaBank.svg"
 import Woven from "./woven.svg"
 import Chaka from "./chaka.svg"
+import Wragby from "./wragby.svg"
+import RealInformatics from "./realInformatics.svg"
+import RackCenter from "./rackCenter.svg"
+import QuomodoSystems from "./quomodoSystems.svg"
+import ProcessConsulting from "./processConsulting.svg"
+import PanoramicSynergy from "./panoramicSynergy.svg"
+import Opex from "./opex.svg"
+import Mainstream from "./mainStream.svg"
+import EHealthAfrica from "./eHealthAfrica.svg"
+import DataConnect from "./dataConnect.svg"
+import DiamondSecurity from "./diamondSecurity.svg"
+import DataBridge from "./dataBridge.svg"
+import ComercioPartners from "./comercioPartners.svg"
+import CCSI from "./ccsi.svg"
+import AllianzBridge from "./allianzBridge.svg"
+import AEDC from "./aedc.svg"
 
 export {
+  AEDC,
+  AllianzBridge,
+  CCSI,
+  ComercioPartners,
+  DataBridge,
+  DiamondSecurity,
+  DataConnect,
+  EHealthAfrica,
+  Mainstream,
+  Opex,
+  PanoramicSynergy,
+  ProcessConsulting,
+  QuomodoSystems,
+  RealInformatics,
+  RackCenter,
+  Wragby,
   Chaka,
   Woven,
   UnityBank,

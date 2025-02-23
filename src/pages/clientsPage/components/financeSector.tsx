@@ -29,7 +29,7 @@ import {
   PremiumPensionLogo,
 } from "../../../assets";
 
-const publicImages = [
+const financeSectorImages = [
   StandardCharteredLogo,
   EcobankLogo,
   AXAInsurance,
@@ -72,7 +72,7 @@ const FinanceSector = () => {
         Financial Sector
       </Text>
       <section className="my-20 grid grid-cols-7 place-items-center gap-x-10 gap-y-20 px-[4rem] mxxl:grid-cols-3 msm:grid-cols-1 mmd:px-[3rem] mlg:grid-cols-2 mxxl:px-[3rem]">
-        {publicImages.map((image) => (
+        {financeSectorImages.map((image) => (
           <div className="items-center flex justify-center">
             <img src={image} alt="" />
           </div>

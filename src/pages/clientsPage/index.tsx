@@ -2,7 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Outlet, Text } from "../../ui";
 import { RequestConsultation, ScheduleMeeting } from "../../components";
-import { FinanceSector, PublicSector } from "./components";
+import { FinanceSector, PublicSector, Others } from "./components";
+import Slider from "react-slick";
 
 const ClientsPage = () => {
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
@@ -14,6 +15,20 @@ const ClientsPage = () => {
   const closeConsultationModal = () => {
     setIsConsultationOpen(false);
   };
+
+  const settings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Infinite scrolling
+    speed: 2000, // Transition speed (in ms)
+    slidesToShow: 1, // Number of slides to show at a time
+    slidesToScroll: 1, // Number of slides to scroll at a time
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 1000, // Time between slides (in ms)
+    pauseOnHover: false, // Pause autoplay when the user hovers over the carousel
+    swipe: true,
+    swipeToSlide: true
+  };
+  
 
   return (
     <motion.section
@@ -48,11 +63,15 @@ const ClientsPage = () => {
             </Text>
           </div>
 
-          <div>
-            <PublicSector />
+          <div className="py-0 h-fit">
+            <Slider {...settings} className="h-fit border border-blue-500" >
+              <PublicSector />
+              <FinanceSector />
+              <Others />
+
+            </Slider>
           </div>
           <div>
-            <FinanceSector />
           </div>
           <div className="my-20">
             <ScheduleMeeting openModal={openConsultationModal} />

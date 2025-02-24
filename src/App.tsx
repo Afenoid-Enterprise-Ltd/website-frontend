@@ -21,6 +21,9 @@ const AboutUsPage = lazy(() =>
 const ContactUsPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.ContactUsPage }))
 );
+const ClientsPage = lazy(() =>
+  import("./pages").then((module) => ({ default: module.ClientsPage }))
+);
 const ServicesPage = lazy(() =>
   import("./pages").then((module) => ({ default: module.ServicesPage }))
 );
@@ -64,6 +67,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/clients" element={<ClientsPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/:skills" element={<ServicesSkillsPage />} />

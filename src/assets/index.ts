@@ -125,9 +125,111 @@ import TelephoneIcon from "./telephone.svg";
 import LinkedinGreen from "./linkedin-green.svg";
 import InstagramGreen from "./instagram-green.svg";
 import TwitterGreen from "./twitter-green.svg";
-import FacebookGreen from "./facebook-green.svg"
+import FacebookGreen from "./facebook-green.svg";
+import ICPCIcon from "./icpc.svg"
+import BankOfTanzania from "./bOftan.svg";
+import BankOfBotswanawhite from "./bOfBots2.svg"
+import BankOfKigali from "./bOfKigali.svg";
+import BankOfIndustry from "./bOfIndustry.svg";
+import NationalBank from "./nationalBank.svg";
+import NCBA from "./ncba.svg";
+import NDIC from "./ndic.svg";
+import NIBSS from "./nibss.svg";
+import NIRSAL from "./nirsal.svg";
+import NITDA from "./nitda.svg";
+import NNPC from "./nnpc.svg";
+import NSPM from "./nspm.svg";
+import SECLogo from "./seCommission.svg";
+import NCAA from "./ncaa.svg";
+import ECOWAS from "./ecowas.svg"
+import ArmPensions from "./armPensions.svg"
+import CRDBBank from "./crdbBank.svg"
+import DigitalSafe from "./digitalSafe.svg"
+import EgolePay from "./egolePay.svg"
+import Fiducia from "./fiducia.svg"
+import FountainPay from "./fountainPay.svg"
+import Habari from "./habari.svg"
+import Innovare from "./innovare.svg"
+import InvestmentOne from "./investmentOne.svg"
+import MicroAccess from "./microAccess.svg"
+import PayExpress from "./payExpress.svg"
+import PolarisBank from "./polarisBank.svg"
+import PremiumTrust from "./premiumTrust.svg"
+import SterlingBank from "./sterling.svg"
+import UnifiedPayment from "./unifiedPayment.svg"
+import UnityBank from "./unityBank.svg"
+import WemaBank from "./wemaBank.svg"
+import Woven from "./woven.svg"
+import Chaka from "./chaka.svg"
+import Wragby from "./wragby.svg"
+import RealInformatics from "./realInformatics.svg"
+import RackCenter from "./rackCenter.svg"
+import QuomodoSystems from "./quomodoSystems.svg"
+import ProcessConsulting from "./processConsulting.svg"
+import PanoramicSynergy from "./panoramicSynergy.svg"
+import Opex from "./opex.svg"
+import Mainstream from "./mainStream.svg"
+import EHealthAfrica from "./eHealthAfrica.svg"
+import DataConnect from "./dataConnect.svg"
+import DiamondSecurity from "./diamondSecurity.svg"
+import DataBridge from "./dataBridge.svg"
+import ComercioPartners from "./comercioPartners.svg"
+import CCSI from "./ccsi.svg"
+import AllianzBridge from "./allianzBridge.svg"
+import AEDC from "./aedc.svg"
 
 export {
+  AEDC,
+  AllianzBridge,
+  CCSI,
+  ComercioPartners,
+  DataBridge,
+  DiamondSecurity,
+  DataConnect,
+  EHealthAfrica,
+  Mainstream,
+  Opex,
+  PanoramicSynergy,
+  ProcessConsulting,
+  QuomodoSystems,
+  RealInformatics,
+  RackCenter,
+  Wragby,
+  Chaka,
+  Woven,
+  UnityBank,
+  WemaBank,
+  SterlingBank,
+  PremiumTrust,
+  PolarisBank,
+  InvestmentOne,
+  MicroAccess,
+  PayExpress,
+  Habari,
+  FountainPay,
+  Fiducia,
+  UnifiedPayment,
+  ArmPensions,
+  EgolePay,
+  CRDBBank,
+  Innovare,
+  DigitalSafe,
+  ECOWAS,
+  NCAA,
+  ICPCIcon,
+  BankOfTanzania,
+  BankOfKigali,
+  BankOfBotswanawhite,
+  BankOfIndustry,
+  NationalBank,
+  NCBA,
+  NIBSS,
+  NITDA,
+  NDIC,
+  NIRSAL,
+  NNPC,
+  NSPM,
+  SECLogo,
   MainLogoSVG,
   FooterLogoSVG, 
   SkylineImg,

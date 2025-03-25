@@ -19,7 +19,7 @@ const ClientsPage = () => {
   const settings = {
     dots: true, // Show navigation dots
     infinite: true, // Infinite scrolling
-    speed: 2000, // Transition speed (in ms)
+    speed: 2700, // Transition speed (in ms)
     slidesToShow: 1, // Number of slides to show at a time
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enable autoplay
@@ -64,7 +64,7 @@ const ClientsPage = () => {
           </div>
 
           <div className="py-0 h-fit">
-            <Slider {...settings} className="h-fit border border-blue-500" >
+            <Slider {...settings} className="h-fit" >
               <PublicSector />
               <FinanceSector />
               <Others />

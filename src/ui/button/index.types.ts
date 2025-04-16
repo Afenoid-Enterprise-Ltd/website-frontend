@@ -6,7 +6,7 @@ export enum BtnVariants {
 }
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-  label: string | undefined;
+  label: string | undefined | React.ReactNode;
   variant: keyof typeof BtnVariants;
   customClassName?: string;
   buttonType?: "button" | "submit" | "reset" | undefined;

@@ -22,6 +22,7 @@ Basic description for the project
   `fix` representing fix indicates that the commit fixes a bug, made updates to the code or sorts an issue, in the case in the code block, adjusted animation effect on home page transition.
 - If there is any other info, such as if code you have written would directly affect one on my branch, please let me know in the description while making a PR. Also remember to tag me as a reviewer when making a PR.
 
+
 ### Technologies in use
 - React + Typescript
 - Tailwind CSS

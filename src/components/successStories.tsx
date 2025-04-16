@@ -23,7 +23,7 @@ const SuccessStories = () => {
                 fontWeight="bold"
                 customClassName="!text-[40px]"
               >
-                Security Success Stories
+                Digital Resilience Success Stories
               </Text>
               <Text
                 variant="h6"

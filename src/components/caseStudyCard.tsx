@@ -41,7 +41,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           loading="lazy"
         />
       </div>
-      <div className="h-[3.5rem] msm:h-[5rem] mxxss:h-[4rem]">
+      <div className="h-auto msm:h-[5rem] mxxss:h-[4rem]">
         <Text
           variant="h5"
           color="af-dark-green"
@@ -62,7 +62,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         </Text>
       </div>
 
-      <div className="h-[8rem] msm:h-[12.5rem]">
+      <div className="h-[8rem] mxl:h-[12.5rem]">
         <Text
           variant="body-reg"
           color="af-dark-green"
@@ -90,7 +90,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           to={route}
           className={`mt-[1.5rem] w-[50%] ${
             optionalWidth ? "mmlg:w-full" : "mmlg:w-[60%]"
-          } block mmd:mt-4 mmd:w-[70%] msm:w-[65%] mxs:w-[65%] `}
+          } block mmd:mt-4 mxl:w-[75%] mmd:w-[70%] msm:w-[65%] mxs:w-[65%] `}
         >
           <Button
             variant="secondary"

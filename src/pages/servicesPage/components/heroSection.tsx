@@ -32,7 +32,7 @@ const HSDesktop: React.FC<HeroDesktopProps> = (props) => {
           color="floral-white"
           customClassName="!text-[3rem] leading-[140%]"
         >
-          Prioritizing the <span className="font-bold">security</span> and{" "}
+          Prioritizing the{" "}
           <span className="font-bold">reliability</span> of digital systems,
           services, and transactions.
         </Text>

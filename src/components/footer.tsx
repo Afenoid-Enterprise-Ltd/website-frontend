@@ -11,7 +11,7 @@ import {
 import { SkylineImg } from "../assets";
 
 type Social = {
-  icon: any;
+  icon: React.ReactElement;
   route: string;
 };
 
@@ -46,6 +46,10 @@ const Footer: React.FC = () => {
     {
       title: "Partners",
       array: [
+        {
+          name: "Clients",
+          route: "/clients",
+        },
         {
           name: "PECB",
           route:

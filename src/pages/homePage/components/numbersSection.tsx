@@ -104,7 +104,7 @@ const NumbersSection = () => {
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Providing services to clients in nearly 50 countries.",
+      description: "countries served across the world",
     },
   ];
 
@@ -140,7 +140,7 @@ const NumbersSection = () => {
             fontFamily="raleway"
             customClassName="mb-3 msm:text-h4 msm:mb-0 "
           >
-            Optimize Your Security
+            Optimize Your Digital Posture
           </Text>
           <Text
             variant="h5"

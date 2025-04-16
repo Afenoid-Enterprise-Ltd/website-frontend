@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { MainLogo } from "./mainLogo";
 import { Button, Text } from "../ui";
 import { Link, useLocation } from "react-router-dom";
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 
   const { pathname } = useLocation();
 
-  let name = pathname.split("/")[1];
+  const name = pathname.split("/")[1];
 
   const [scrollDetected, setScrollDetected] = useState<boolean>(false);
   const [offset, setOffset] = useState<number>(0);
@@ -288,7 +288,7 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
     { text: "frequently asking questions", route: "/about-us#faqs" },
     {
       text: "client page",
-      route: "/about-us#clients",
+      route: "/clients",
     },
   ];
 
@@ -309,7 +309,7 @@ export const NavDropdown: React.FC<NavdropdownProps> = (props) => {
                 customClassName="!text-[1.5rem] leading-[1.4]"
               >
                 We strengthen your organization by implementing proven security
-                frameworks and industry standards. 
+                frameworks and industry standards.
               </Text>
               <div>
                 <Link to="/services">
@@ -464,9 +464,9 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
   const { pageLocation } = props;
 
   const { hash } = useLocation();
-  let name = hash.split("#")[1];
+  const name = hash.split("#")[1];
 
-  const servicesTab = [
+  const servicesTab = useMemo(() => [
     { text: "Overview", route: "/services" },
     {
       text: "Digital Transformation Consulting",
@@ -474,18 +474,18 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
     },
     { text: "Digital Trust Services", route: "/services#auditing" },
     { text: "Digital Skills Development", route: "/services#training" },
-  ];
+  ], []);
 
-  const caseStudiesTab = [
+  const caseStudiesTab = useMemo(() => [
     {
       text: "pci dss",
       route: "/case-studies#pcidss",
     },
     { text: "iso 27001", route: "/case-studies#iso27001" },
     { text: "iso 22301", route: "/case-studies#iso22301" },
-  ];
+  ], []);
 
-  const aboutUsTab = [
+  const aboutUsTab = useMemo(() => [
     {
       text: "Our Purpose",
       route: "/about-us#purpose",
@@ -496,7 +496,7 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
       text: "Client Page",
       route: "/about-us#clients",
     },
-  ];
+  ], []);
 
   const [subMenuArr, setSubMenuArr] = useState<typeof servicesTab | null>(null);
 
@@ -510,7 +510,7 @@ export const MobileNavbarDropdown: React.FC<MobileNavbarDropdownProps> = (
     }else {
       setSubMenuArr(null);
     }
-  }, [pageLocation]);
+  }, [aboutUsTab, caseStudiesTab, pageLocation, servicesTab]);
 
   return (
     <nav className="w-screen 2xl:w-full py-4 mmd:px-[3rem] mxs:px-[2rem] mxxs:px-4 mxxl:px-[3rem]">

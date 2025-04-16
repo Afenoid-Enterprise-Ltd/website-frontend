@@ -64,7 +64,7 @@ const ClientsPage = () => {
           </div>
 
           <div className="py-0 h-fit">
-            <Slider {...settings} className="h-fit border border-blue-500" >
+            <Slider {...settings} className="h-fit" >
               <PublicSector />
               <FinanceSector />
               <Others />

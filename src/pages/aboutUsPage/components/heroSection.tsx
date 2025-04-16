@@ -13,7 +13,7 @@ const HeroSection = () => {
       heroTexts: {
         caption: "Our Mission",
         description:
-          "To become a global brand of African origin, that is trusted, respected, and preferred in every market we serve in the 2020s.",
+          "To become a global brand of African origin, that is trusted, respected, and preferred in every market we serve.",
         identifier: "mission",
       },
       image: AboutUsMissionImg,

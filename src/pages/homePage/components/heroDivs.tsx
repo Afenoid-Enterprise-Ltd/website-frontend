@@ -82,7 +82,6 @@ const HeroDivs: React.FC<HeroDivsProps> = (props) => {
             customClassName="msm:text-h4 text-[32px]"
           >
             We prioritize the{" "}
-            <span className="text-afenoid-lemon">security</span> and{" "}
             <span className="text-afenoid-lemon">reliability</span> of digital
             systems, services, and transactions.
           </Text>

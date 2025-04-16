@@ -111,7 +111,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ openModal }) => {
     {
       icon: GlobeIcon,
       title: 50,
-      description: "Providing services to clients in nearly 50 countries.",
+      description:  "countries served across the world",
     },
   ];
 

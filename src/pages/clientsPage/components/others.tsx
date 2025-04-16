@@ -22,6 +22,9 @@ import {
 } from "../../../assets";
 
 const otherSectorImages = [
+  ShellLogo,
+  MTNLogo,
+  IsacaLogo,
   AEDC,
   AllianzBridge,
   CCSI,
@@ -37,10 +40,7 @@ const otherSectorImages = [
   QuomodoSystems,
   RealInformatics,
   RackCenter,
-  Wragby,
-  ShellLogo,
-  MTNLogo,
-  IsacaLogo
+  Wragby
 ];
 
 const Others = () => {
@@ -53,7 +53,7 @@ const Others = () => {
         fontWeight="bold"
         align="center"
       >
-        Public Sector
+        Other Sectors
       </Text>
       <section className="my-20 grid grid-cols-7 place-items-center gap-x-10 gap-y-20 px-[4rem] mxxl:grid-cols-3 msm:grid-cols-1 mmd:px-[3rem] mlg:grid-cols-2 mxxl:px-[3rem]">
         {otherSectorImages.map((image) => (

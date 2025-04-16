@@ -23,7 +23,7 @@ const ClientsPage = () => {
     slidesToShow: 1, // Number of slides to show at a time
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 1000, // Time between slides (in ms)
+    autoplaySpeed: 5000, // Time between slides (in ms)
     pauseOnHover: false, // Pause autoplay when the user hovers over the carousel
     swipe: true,
     swipeToSlide: true

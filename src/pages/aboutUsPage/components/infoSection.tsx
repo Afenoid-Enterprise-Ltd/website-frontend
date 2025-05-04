@@ -147,7 +147,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ openModal }) => {
               customClassName="text-[3rem] msm:text-[1.5rem] mxs:text-[1rem]"
               fontWeight="regular"
             >
-              We strengthen organizations and professionals.
+              We strengthen organizations and equip professionals.
             </Text>
           </div>
         </Slogan>

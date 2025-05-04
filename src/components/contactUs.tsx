@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
                   fontWeight="bold"
                   customClassName="text-[40px] mlg:!text-[32px] mmd:!text-[28px]"
                 >
-                  How can we help you?
+                  Reach out to us?
                 </Text>
                 <Text
                   variant="h6"

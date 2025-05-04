@@ -81,9 +81,8 @@ const HeroDivs: React.FC<HeroDivsProps> = (props) => {
             fontWeight="medium"
             customClassName="msm:text-h4 text-[32px]"
           >
-            We prioritize the{" "}
-            <span className="text-afenoid-lemon">reliability</span> of digital
-            systems, services, and transactions.
+            We prioritize the reliability of digital systems, services, and
+            transactions.
           </Text>
           <div className="hidden mmd:block">
             <img src={ReliabilityImg} alt="Accompanying Image" loading="lazy" />

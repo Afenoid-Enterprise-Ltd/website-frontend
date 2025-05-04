@@ -26,7 +26,7 @@ const HeroSection = () => {
           color="floral-white"
           customClassName="text-[24px] msm:!text-[16px]"
         >
-          Let's explore opportunities that meet your organizational needs.
+          Let's explore opportunities that meet your needs.
         </Text>
         <div className="flex justify-center items-center">
           <a href="/Afenoid Brochure.pdf" download="Company Brochure.pdf">

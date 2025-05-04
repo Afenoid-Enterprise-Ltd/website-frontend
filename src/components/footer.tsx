@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
         </div>
         <div className=" ">
           <FooterLogo customClassName="hidden mmd:block" mblWidth={100} />
-          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-[15rem] mmd:mt-6 msm:gap-x-[12rem] mxxs:gap-x-[5rem]">
+          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-[15rem] mmd:mt-6 msm:gap-x-[12rem] mxs:gap-x-[8rem] mxxs:gap-x-[5rem]">
             {footerLinks.map((footerLink, index) => (
               <div key={index}>
                 <Text

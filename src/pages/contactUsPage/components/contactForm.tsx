@@ -50,7 +50,7 @@ const ContactForm = () => {
       toast.success(
         "Thank you! Your consultation request has been submitted successfully."
       );
-    } catch (e: any) {
+    } catch (e) {
       // Handle error case
       console.error("Error submitting form:", e);
       toast.error("Unable to submit your request. Please try again later.");

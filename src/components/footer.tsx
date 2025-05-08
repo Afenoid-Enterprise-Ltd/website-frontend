@@ -27,9 +27,9 @@ type FooterLink = {
 
 const Footer: React.FC = () => {
   const socials: Social[] = [
-    { icon: <FaSquareXTwitter color="#FFF9F2" size={30} />, route: "/twitter" },
-    { icon: <FaInstagram color="#FFF9F2" size={30} />, route: "/instagram" },
-    { icon: <FaLinkedin color="#FFF9F2" size={30} />, route: "/linkedin" },
+    { icon: <FaSquareXTwitter color="#FFF9F2" size={30} />, route: "https://x.com/Afenoid" },
+    { icon: <FaInstagram color="#FFF9F2" size={30} />, route: "https://www.instagram.com/afenoidenterprise?igsh=MTI4a3Z5OXpycnpoeA==" },
+    { icon: <FaLinkedin color="#FFF9F2" size={30} />, route: "https://www.linkedin.com/company/afenoid-enterprise/" },
     { icon: <FaFacebook color="#FFF9F2" size={30} />, route: "/facebook" },
   ];
 

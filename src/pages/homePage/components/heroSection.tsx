@@ -43,13 +43,13 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
             </Text>
             <div className="flex justify-start items-center gap-7 mmlg:flex-col mmlg:items-start mmlg:w-[45%] mmd:w-[65%] mxs:w-[75%]">
               <button
-                className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent mmlg:w-[80%] mxs:w-[90%] mxs:text-[14px] mxxss:w-full"
+                className="bg-afenoid-green/75 border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-full font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out  hover:bg-afenoid-lemon/75 hover:border-transparent "
                 onClick={openModal}
               >
                 Schedule a Meeting
               </button>
-              <Link className="block mxxss:w-full" to="/contact-us">
-                <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-auto font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon mmlg:w-[80%] mxs:w-[90%] mxxss:w-full">
+              <Link className="block w-full" to="/contact-us">
+                <button className="bg-transparent border-white border-[3px] py-[0.8rem] px-[2.5rem] flex justify-center items-center cursor-pointer text-white text-center text-base h-auto w-full font-proxima-nova font-normal transition delay-150 duration-300 ease-in-out hover:bg-white hover:text-afenoid-lemon ">
                   Contact Us
                 </button>
               </Link>

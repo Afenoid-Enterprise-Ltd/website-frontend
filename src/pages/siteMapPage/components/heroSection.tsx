@@ -1,5 +1,3 @@
-
-
 import { Text } from "../../../ui";
 import { SkylineWhite } from "../../../assets";
 

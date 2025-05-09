@@ -12,8 +12,8 @@ const MainLogo = () => {
 
     // Clean up the event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
-    console.log(screenWidth)
-  }, []);
+    
+  }, [screenWidth]);
 
   return (
     <div className="flex justify-center items-center w-[120px] h-[60px]">

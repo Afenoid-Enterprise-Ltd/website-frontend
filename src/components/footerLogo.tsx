@@ -14,5 +14,5 @@ const FooterLogo: React.FC<FooterlogoProps> = ({customClassName, mblHeight, mblW
     </div>
   );
 }
- 
+
 export {FooterLogo};

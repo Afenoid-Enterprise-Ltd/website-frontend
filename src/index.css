@@ -178,3 +178,11 @@ html, body{
     scrollbar-width: none; 
   }
 }
+
+.with-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(34, 77, 32, 0.5); 
+  z-index: 0;
+}

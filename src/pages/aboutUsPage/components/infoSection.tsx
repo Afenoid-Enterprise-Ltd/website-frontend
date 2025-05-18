@@ -4,11 +4,11 @@ import { Text, Button } from "../../../ui";
 import { HeroDiv } from "./heroDiv";
 import {
   StoryImg,
-  AboutUsTeamImg,
   CreditCardIcon,
   PeopleIcon,
   BankIcon,
   GlobeIcon,
+  NewOurTeamImg
 } from "../../../assets";
 import { ChoiceAfenoid, Slogan, DownloadProfile } from "../../../components";
 
@@ -88,7 +88,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ openModal }) => {
           "At Afenoid, our diverse and skilled team is dedicated to excellence in IT governance, risk management, and compliance. We have certified security assessors, cybersecurity managers, ISO consultants, project managers, and specialists in risk management and NIST frameworks. In Afenoid, our English and French-speaking consultants ensure we meet the unique needs of our clients, helping them achieve their security and compliance goals.",
         identifier: "team",
       },
-      image: AboutUsTeamImg,
+      image: NewOurTeamImg,
     },
   ];
 

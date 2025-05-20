@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Text } from "../../../ui";
-import { HomeHeroImg } from "../../../assets";
+import { NewHeroImg } from "../../../assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -19,8 +19,11 @@ const HeroSection: React.FC<HeroSectionProps> = (props) => {
 
   return (
     <section
-      className="w-screen 2xl:w-full h-[90vh] bg-cover relative flex justify-start items-center overflow-x-hidden mmlg:flex-col mmlg:justify-center"
-      style={{ backgroundImage: `url(${HomeHeroImg})` }}
+      className="w-screen 2xl:w-full h-[90vh] bg-cover relative flex justify-start items-center overflow-x-hidden bg-[#214d1e80] bg-blend-overlay mmlg:flex-col mmlg:justify-center"
+      style={{
+        backgroundImage: `url(${NewHeroImg})`,
+        backgroundPosition: "center",
+      }}
       data-aos="fade-up"
     >
       <div className="flex justify-between items-center px-[5rem] 2xl:w-full mxxl:px-[3rem] mmlg:flex-col msm:px-4">

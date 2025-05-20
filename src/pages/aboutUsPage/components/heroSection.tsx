@@ -2,8 +2,8 @@ import { HeroDiv } from "./heroDiv";
 import {
   AboutUsMissionImg,
   AboutUsPurposeImg,
-  AboutUsHeroImg,
   HomeHeroImage,
+  NewAboutUsHeroImg
 } from "../../../assets";
 import { Text } from "../../../ui";
 
@@ -30,10 +30,10 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className=" bg-white">
+    <section className="bg-white">
       <section
-        className="w-screen 2xl:w-full h-[90vh] bg-cover bg-center flex flex-col justify-center items-center "
-        style={{ backgroundImage: `url(${AboutUsHeroImg})` }}
+        className="w-screen 2xl:w-full h-[90vh] bg-cover bg-center flex flex-col justify-center items-center bg-[#214d1e80] bg-blend-overlay"
+        style={{ backgroundImage: `url(${NewAboutUsHeroImg})` }}
       >
         <Text
           variant="h5"
@@ -51,7 +51,7 @@ const HeroSection = () => {
           fontFamily="proxima-nova"
           align="center"
           color="floral-white"
-          customClassName="!text-[24px]  mxs:!text-[16px]"
+          customClassName="!text-[24px] mxs:!text-[16px]"
         >
           Let's explore opportunities that meet your organizational needs
         </Text>

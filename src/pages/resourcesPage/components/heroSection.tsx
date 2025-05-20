@@ -1,11 +1,11 @@
 import { Text } from "../../../ui";
-import { ResourcesHero } from "../../../assets";
+import { NewReourcesHeroImg } from "../../../assets";
 
 const HeroSection = () => {
   return (
     <section
-      className="w-screen h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-center items-center 2xl:w-full"
-      style={{ backgroundImage: `url(${ResourcesHero})` }}
+      className="w-screen h-[90vh] bg-[#214d1e80] bg-blend-overlay bg-cover bg-center flex justify-center items-center 2xl:w-full"
+      style={{ backgroundImage: `url(${NewReourcesHeroImg})` }}
     >
       <div>
         <Text

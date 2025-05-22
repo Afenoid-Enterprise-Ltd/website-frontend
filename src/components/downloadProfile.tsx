@@ -1,6 +1,6 @@
 import { Text } from "../ui";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import { AboutUsDownloadProfileMbl, AboutUsDownloadProfile } from "../assets";
+import { NewProfileDownloadImg } from "../assets";
 
 const DownloadProfile = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width: 639px)");
@@ -10,8 +10,8 @@ const DownloadProfile = () => {
   ) : (
     <div className="px-[5rem] msm:p-[3rem] mxs:px-4">
       <div
-        className="w-full h-[600px] bg-cover bg-no-repeat bg-center flex justify-start items-center my-[5rem] mmd:h-[400px]"
-        style={{ backgroundImage: `url(${AboutUsDownloadProfile})` }}
+        className="w-full h-[600px] bg-cover bg-no-repeat bg-center flex justify-start items-center bg-[#214d1e80] bg-blend-overlay my-[5rem] mmd:h-[400px]"
+        style={{ backgroundImage: `url(${NewProfileDownloadImg})` }}
       >
         <div className="w-full px-[4rem]">
           <div className="flex flex-col w-[50%] mlg:w-[70%] mmd:w-[85%] ">
@@ -85,9 +85,10 @@ export const MobileProfileDownload = () => {
           </a>
         </div>
       </div>
-      <div className="max-h-[300px] w-full overflow-hidden">
-        <img src={AboutUsDownloadProfileMbl} alt="Download Profile Image" />
-      </div>
+      <div
+        className="h-[300px] w-full overflow-hidden bg-cover bg-no-repeat bg-center flex justify-start items-center bg-[#214d1e80] bg-blend-overlay"
+        style={{ backgroundImage: `url(${NewProfileDownloadImg})` }}
+      ></div>
     </div>
   );
 };

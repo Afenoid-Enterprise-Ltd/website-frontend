@@ -27,9 +27,9 @@ type FooterLink = {
 
 const Footer: React.FC = () => {
   const socials: Social[] = [
-    { icon: <FaSquareXTwitter color="#FFF9F2" size={30} />, route: "/twitter" },
-    { icon: <FaInstagram color="#FFF9F2" size={30} />, route: "/instagram" },
-    { icon: <FaLinkedin color="#FFF9F2" size={30} />, route: "/linkedin" },
+    { icon: <FaSquareXTwitter color="#FFF9F2" size={30} />, route: "https://x.com/Afenoid" },
+    { icon: <FaInstagram color="#FFF9F2" size={30} />, route: "https://www.instagram.com/afenoidenterprise?igsh=MTI4a3Z5OXpycnpoeA==" },
+    { icon: <FaLinkedin color="#FFF9F2" size={30} />, route: "https://www.linkedin.com/company/afenoid-enterprise/" },
     { icon: <FaFacebook color="#FFF9F2" size={30} />, route: "/facebook" },
   ];
 
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
         </div>
         <div className=" ">
           <FooterLogo customClassName="hidden mmd:block" mblWidth={100} />
-          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-[15rem] mmd:mt-6 msm:gap-x-[12rem] mxxs:gap-x-[5rem]">
+          <div className="flex gap-16 mlg:gap-10 mmd:grid mmd:grid-cols-2 mmd:gap-x-[15rem] mmd:mt-6 msm:gap-x-[12rem] mxs:gap-x-[8rem] mxxs:gap-x-[5rem]">
             {footerLinks.map((footerLink, index) => (
               <div key={index}>
                 <Text

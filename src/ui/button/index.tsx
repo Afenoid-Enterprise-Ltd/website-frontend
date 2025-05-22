@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from "react";
 import { ButtonProps } from "./index.types";
 import { cva } from "class-variance-authority";

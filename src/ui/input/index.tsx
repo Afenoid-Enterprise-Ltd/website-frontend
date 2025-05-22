@@ -49,7 +49,7 @@ const Input: FC<InputProps> = (props) => {
        
       />
       {errMessage && typeof errMessage === "string" && (
-        <div className="text-red-500 text-xs">{errMessage}</div>
+        <div className="text-red-500 text-xs font-raleway">{errMessage}</div>
       )}
     </div>
   );

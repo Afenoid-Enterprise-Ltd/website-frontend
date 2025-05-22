@@ -19,11 +19,11 @@ const ClientsPage = () => {
   const settings = {
     dots: true, // Show navigation dots
     infinite: true, // Infinite scrolling
-    speed: 2700, // Transition speed (in ms)
+    speed: 4500, // Transition speed (in ms)
     slidesToShow: 1, // Number of slides to show at a time
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 1000, // Time between slides (in ms)
+    autoplaySpeed: 2500, // Time between slides (in ms)
     pauseOnHover: false, // Pause autoplay when the user hovers over the carousel
     swipe: true,
     swipeToSlide: true
@@ -63,16 +63,15 @@ const ClientsPage = () => {
             </Text>
           </div>
 
-          <div className="py-0 h-fit">
-            <Slider {...settings} className="h-fit" >
+          <div className="py-0 h-fit w-full flex justify-center items-center">
+            <Slider {...settings} className="h-fit w-[90%]" >
               <PublicSector />
               <FinanceSector />
               <Others />
-
             </Slider>
           </div>
-          <div>
-          </div>
+          {/* <div>
+          </div> */}
           <div className="my-20">
             <ScheduleMeeting openModal={openConsultationModal} />
           </div>

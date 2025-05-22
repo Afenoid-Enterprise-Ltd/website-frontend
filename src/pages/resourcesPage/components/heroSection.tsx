@@ -1,11 +1,11 @@
 import { Text } from "../../../ui";
-import { ResourcesHero } from "../../../assets";
+import { NewReourcesHeroImg } from "../../../assets";
 
 const HeroSection = () => {
   return (
     <section
-      className="w-screen h-[90vh] bg-[#214d1e98] bg-blend-overlay bg-cover bg-center flex justify-center items-center 2xl:w-full"
-      style={{ backgroundImage: `url(${ResourcesHero})` }}
+      className="w-screen h-[90vh] bg-[#214d1e80] bg-blend-overlay bg-cover bg-center flex justify-center items-center 2xl:w-full"
+      style={{ backgroundImage: `url(${NewReourcesHeroImg})` }}
     >
       <div>
         <Text
@@ -26,7 +26,7 @@ const HeroSection = () => {
           color="floral-white"
           customClassName="text-[24px] msm:!text-[16px]"
         >
-          Let's explore opportunities that meet your organizational needs.
+          Let's explore opportunities that meet your needs.
         </Text>
         <div className="flex justify-center items-center">
           <a href="/Afenoid Brochure.pdf" download="Company Brochure.pdf">

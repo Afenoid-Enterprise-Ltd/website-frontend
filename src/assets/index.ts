@@ -177,6 +177,11 @@ import ComercioPartners from "./comercioPartners.svg"
 import CCSI from "./ccsi.svg"
 import AllianzBridge from "./allianzBridge.svg"
 import AEDC from "./aedc.svg"
+import NewHeroImg from "./new-hero-img.webp"
+import NewAboutUsHeroImg from "./new-about-us-hero-img.webp"
+import NewReourcesHeroImg from "./new-resources-hero-img.webp"
+import NewProfileDownloadImg from "./new-download-profile-img.webp"
+import NewOurTeamImg from "./new-our-team-img.webp";
 
 export {
   AEDC,
@@ -356,5 +361,10 @@ export {
   TwitterGreen,
   LinkedinGreen,
   FacebookGreen,
-  InstagramGreen
+  InstagramGreen,
+  NewHeroImg,
+  NewAboutUsHeroImg,
+  NewReourcesHeroImg,
+  NewProfileDownloadImg,
+  NewOurTeamImg
 };

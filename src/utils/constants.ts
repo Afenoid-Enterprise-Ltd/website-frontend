@@ -2,7 +2,7 @@ import DOMPurify from 'dompurify';
 
 
 export const SCRIPT_DETAILS = {
-  link: "https://script.google.com/macros/s/AKfycbwODiym1_DZPittbat60hgqefZnMgP0Hy04MfRb6JAyzZMZQl1-Z_7-WVbx79FJ-cYbZg/exec"
+  link: "https://script.google.com/macros/s/AKfycbytVcvlOL4ulKpqGuqIZTPpOY8XumBbEcrBd4hjEl8A53ubO61BLoCpMlDMmil-uUDozA/exec"
 }
 
 export const sanitize = (content:any) => {
@@ -11,3 +11,6 @@ export const sanitize = (content:any) => {
     ? DOMPurify.sanitize(content) 
     : content;
 };
+
+
+

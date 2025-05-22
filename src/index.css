@@ -84,16 +84,32 @@ html, body{
   font-style: italic;
 }
 
+
+
 @font-face {
   font-family: "Proxima-Nova";
   src: url("/fonts/Proxima-Nova-Light.otf");
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Proxima-Nova";
   src: url("/fonts/Proxima-Nova-LightItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Thin.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-ThinItalic.otf");
   font-weight: 300;
   font-style: italic;
 }
@@ -109,20 +125,6 @@ html, body{
   font-family: "Gambetta";
   src: url("/fonts/Proxima-Nova-RegularItalic.otf");
   font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Proxima-Nova";
-  src: url("/fonts/Proxima-Nova-Medium.otf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima-Nova";
-  src: url("/fonts/Proxima-Nova-MediumItalic.otf");
-  font-weight: 500;
   font-style: italic;
 }
 
@@ -154,6 +156,34 @@ html, body{
   font-style: italic;
 }
 
+@font-face{
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-ExtraBold.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-ExtraBoldItalic.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-Black.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Proxima-Nova";
+  src: url("/fonts/Proxima-Nova-BlackItalic.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
 :root{
   --af-green: #224D20;
   --af-lemon: #76A62E;
@@ -183,6 +213,6 @@ html, body{
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(34, 77, 32, 0.5); 
+  background-color: rgba(34, 77, 32, 0.5proxima); 
   z-index: 0;
 }

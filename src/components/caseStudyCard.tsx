@@ -41,13 +41,13 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
           loading="lazy"
         />
       </div>
-      <div className="h-auto msm:h-[5rem] mxxss:h-[4rem]">
+      <div className="h-auto msm:h-[5rem] mxs:h-auto">
         <Text
           variant="h5"
           color="af-dark-green"
           fontFamily="raleway"
           fontWeight="medium"
-          customClassName="!text-[1.25rem]"
+          customClassName="!text-[1.25rem] !leading-[1.5rem] mxs:!text-[1.15rem] mxs:!leading-[1.25rem]"
         >
           {title?.split("*").map((part, index) => (
             <React.Fragment key={index}>
@@ -62,7 +62,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = (props) => {
         </Text>
       </div>
 
-      <div className="h-[8rem] mxl:h-[12.5rem]">
+      <div className="h-[8rem] mxl:h-[12.5rem] mxs:h-auto">
         <Text
           variant="body-reg"
           color="af-dark-green"
